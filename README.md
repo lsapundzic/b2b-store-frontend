@@ -3,3 +3,7 @@
 ## Technologies used:
 
 - React
+
+### NPMs:
+
+- SASS
