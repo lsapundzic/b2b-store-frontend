@@ -1,9 +1,7 @@
-# Bachelor Thesis Project: Create a B2B web store
+# Bachelor Thesis Project: Create a B2B Web Store
 
-## Technologies used:
+## Technologies used
 
 - React
 
-### NPMs:
-
-- SASS
+### NPMs
