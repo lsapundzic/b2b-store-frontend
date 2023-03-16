@@ -1,9 +1,13 @@
-import "./App.css";
+// Page imports
+import Header from "./header/Header";
+
+// Style imports
+import "./styles/App.css";
 
 function App() {
   return (
     <div>
-      <h1>Welcome to the bachelor thesis project</h1>
+      <Header />
     </div>
   );
 }
