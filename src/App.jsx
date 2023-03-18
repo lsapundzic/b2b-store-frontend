@@ -2,6 +2,8 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 // Page imports
+import Products from "./pages/Products";
+import Home from "./pages/Home";
 
 // Style imports
 import "./styles/App.css";
