@@ -1,6 +1,6 @@
 // Page imports
 import Header from "./header/Header";
-import Footer from "./footer/Footer";
+import Footer from "./components/footer/Footer";
 
 // Style imports
 import "./styles/App.css";
