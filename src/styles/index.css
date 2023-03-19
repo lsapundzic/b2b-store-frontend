@@ -3,4 +3,6 @@
   border: 0;
   margin: 0;
   font-size: 10px;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
 }

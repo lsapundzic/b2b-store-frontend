@@ -1,0 +1,14 @@
+header {
+  background-color: #fcb800;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.header-top > div {
+  flex-basis: 30%;
+}

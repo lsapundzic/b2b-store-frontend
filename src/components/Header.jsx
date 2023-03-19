@@ -1,8 +1,9 @@
 import Router from "./router/Router";
+import "../styles/header.css";
 
 const Header = () => {
   return (
-    <div>
+    <header>
       <div className="header-top">
         <div className="header-top-left">LOGO</div>
         <div className="header-top-center">Search Bar</div>
@@ -11,7 +12,7 @@ const Header = () => {
       <nav>
         <Router />
       </nav>
-    </div>
+    </header>
   );
 };
 
