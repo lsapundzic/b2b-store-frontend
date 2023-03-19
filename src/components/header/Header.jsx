@@ -1,4 +1,4 @@
-// Page imports
+import Router from "../router/Router";
 
 const Header = () => {
   return (
@@ -8,7 +8,9 @@ const Header = () => {
         <div className="header-top-center">Search Bar</div>
         <div className="header-top-right">Actions</div>
       </div>
-      <nav></nav>
+      <nav>
+        <Router />
+      </nav>
     </div>
   );
 };
