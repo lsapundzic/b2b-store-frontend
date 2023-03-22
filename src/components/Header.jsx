@@ -1,5 +1,5 @@
 import Router from "./router/Router";
-import "../styles/header.css";
+import "../styles/header-style.css";
 
 const Header = () => {
   return (
