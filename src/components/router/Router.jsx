@@ -9,7 +9,7 @@ import {
 // Pages import
 import Contact from "../../pages/Contact";
 import Deal from "../../pages/Deal";
-import Home from "../../pages/Home";
+import Homepage from "../../pages/Homepage";
 import Products from "../../pages/Products";
 import Distributor from "../../pages/Distributor";
 
@@ -25,7 +25,7 @@ const Router = () => {
       </div>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Homepage />} />
         <Route path="/deal" element={<Deal />} />
         <Route path="/products" element={<Products />} />
         <Route path="/distributor" element={<Distributor />} />
