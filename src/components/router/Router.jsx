@@ -7,11 +7,7 @@ import {
 } from "react-router-dom";
 
 // Pages import
-
-import Deal from "../../pages/Deal";
-import Homepage from "../../pages/Homepage";
 import Products from "../../pages/Products";
-import Distributor from "../../pages/Distributor";
 import SingleType from "../../pages/SingleType";
 
 const Router = () => {
