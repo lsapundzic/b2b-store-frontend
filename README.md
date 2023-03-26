@@ -10,4 +10,4 @@
 
 - Axios
 
-- Pico CSS (temporary)
+- Pico CSS (temporary) (npm install @picocss/pico)
