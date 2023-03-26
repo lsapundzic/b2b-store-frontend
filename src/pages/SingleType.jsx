@@ -15,8 +15,12 @@ const SingleType = ({ partialURL }) => {
       })
       .catch((response) => {
         console.log(`Error in ${partialURL}.jsx, message: ${response.message}`);
+      })
+      .finally(() => {
+        console.log(`${partialURL}.jsx `);
       });
   }, [partialURL]);
+  // TODO: What was the second parameter in useEffect?
 
   return (
     <div>

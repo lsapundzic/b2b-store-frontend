@@ -10,4 +10,6 @@
 
 ## Next Steps
 
+- URGENT: pages called by the router are generated in the header. That is not OK. 
+
 - Read Strapi documentation
