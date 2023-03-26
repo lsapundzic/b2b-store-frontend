@@ -5,6 +5,7 @@ const SingleType = ({ partialURL }) => {
   console.log(`${partialURL}.jsx running...`);
   const [page, setPage] = useState({});
 
+  //   TODO: Is useEffect used correctly here?
   useEffect(() => {
     axios
       .get(`http://localhost:1337/api/${partialURL}`)
@@ -15,12 +16,12 @@ const SingleType = ({ partialURL }) => {
       .catch((response) => {
         console.log(`Error in ${partialURL}.jsx, message: ${response.message}`);
       });
-  }, []);
+  });
 
   return (
     <div>
-      <h1>{page.Title}</h1>
-      <p>{page.Body}</p>
+      <h1>{page.title}</h1>
+      <p>{page.body}</p>
     </div>
   );
 };

@@ -16,17 +16,15 @@ const Router = () => {
       <div>
         <Link to="/">Home</Link>
         <Link to="/deal">Deal</Link>
-        <Link to="/products">Products</Link>
-        <Link to="/distributor">Distributor</Link>
+        <Link to="/distributorship">Distributorship</Link>
         <Link to="/contact">Contact</Link>
       </div>
 
       <Routes>
         <Route path="/" element={<SingleType partialURL={"homepage"} />} />
         <Route path="/deal" element={<SingleType pageURL={"deal"} />} />
-        <Route path="/products" element={<Products />} />
         <Route
-          path="/distributor"
+          path="/distributorship"
           element={<SingleType pageURL={"distributorship"} />}
         />
         <Route path="/contact" element={<SingleType pageURL={"contact"} />} />
