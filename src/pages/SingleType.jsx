@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 const SingleType = ({ partialURL }) => {
   console.log(`${partialURL}.jsx running...`);
   const [page, setPage] = useState({});
+  const [error, setError] = useState(null);
 
   //   TODO: Is useEffect used correctly here?
   useEffect(() => {
@@ -14,13 +15,19 @@ const SingleType = ({ partialURL }) => {
         setPage(response.data.data.attributes);
       })
       .catch((response) => {
+        setError(response.message);
         console.log(`Error in ${partialURL}.jsx, message: ${response.message}`);
-      })
-      .finally(() => {
-        console.log(`${partialURL}.jsx `);
       });
   }, [partialURL]);
   // TODO: What was the second parameter in useEffect?
+
+  if (error) {
+    return <div>Sorry, there was an error getting this data *cries*</div>;
+  }
+
+  if (!page) {
+    return <div>Page loading...</div>;
+  }
 
   return (
     <div>
