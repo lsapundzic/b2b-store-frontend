@@ -9,3 +9,5 @@
 - react-router-dom
 
 - Axios
+
+- Pico CSS (temporary)

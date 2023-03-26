@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 
 // Style imports
 import "./styles/App.css";
+import "@picocss/pico";
 
 function App() {
   return (
