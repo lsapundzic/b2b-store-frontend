@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const SingleType = ({ partialURL }) => {
-  console.log("Single-type page running...");
+  console.log(`${partialURL}.jsx running...`);
   const [page, setPage] = useState({});
 
   useEffect(() => {
@@ -13,10 +13,7 @@ const SingleType = ({ partialURL }) => {
         setPage(response.data.data.attributes);
       })
       .catch((response) => {
-        console.log(
-          "Error in single-type page GET request. Status: ",
-          response.message
-        );
+        console.log(`Error in ${partialURL}.jsx, message: ${response.message}`);
       });
   }, []);
 

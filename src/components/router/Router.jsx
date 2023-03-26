@@ -23,21 +23,13 @@ const Router = () => {
 
       <Routes>
         <Route path="/" element={<SingleType partialURL={"homepage"} />} />
-        {/* <Route
-          path="/deal"
-          element={<SingleType pageURL={"http://localhost:1337/api/deal"} />}
-        /> */}
+        <Route path="/deal" element={<SingleType pageURL={"deal"} />} />
         <Route path="/products" element={<Products />} />
         <Route
           path="/distributor"
-          element={
-            <SingleType pageURL={"http://localhost:1337/api/distributorship"} />
-          }
+          element={<SingleType pageURL={"distributorship"} />}
         />
-        <Route
-          path="/contact"
-          element={<SingleType pageURL={"http://localhost:1337/api/contact"} />}
-        />
+        <Route path="/contact" element={<SingleType pageURL={"contact"} />} />
       </Routes>
     </NavRouter>
   );
