@@ -7,11 +7,12 @@ import {
 } from "react-router-dom";
 
 // Pages import
-import Contact from "../../pages/Contact";
+
 import Deal from "../../pages/Deal";
 import Homepage from "../../pages/Homepage";
 import Products from "../../pages/Products";
 import Distributor from "../../pages/Distributor";
+import SingleType from "../../pages/SingleType";
 
 const Router = () => {
   return (
@@ -25,11 +26,22 @@ const Router = () => {
       </div>
 
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/deal" element={<Deal />} />
+        <Route path="/" element={<SingleType partialURL={"homepage"} />} />
+        {/* <Route
+          path="/deal"
+          element={<SingleType pageURL={"http://localhost:1337/api/deal"} />}
+        /> */}
         <Route path="/products" element={<Products />} />
-        <Route path="/distributor" element={<Distributor />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/distributor"
+          element={
+            <SingleType pageURL={"http://localhost:1337/api/distributorship"} />
+          }
+        />
+        <Route
+          path="/contact"
+          element={<SingleType pageURL={"http://localhost:1337/api/contact"} />}
+        />
       </Routes>
     </NavRouter>
   );
