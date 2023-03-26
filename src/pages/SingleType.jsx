@@ -16,7 +16,7 @@ const SingleType = ({ partialURL }) => {
       .catch((response) => {
         console.log(`Error in ${partialURL}.jsx, message: ${response.message}`);
       });
-  });
+  }, [partialURL]);
 
   return (
     <div>

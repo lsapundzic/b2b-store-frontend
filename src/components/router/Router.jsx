@@ -21,13 +21,16 @@ const Router = () => {
       </div>
 
       <Routes>
-        <Route path="/" element={<SingleType partialURL={"homepage"} />} />
-        <Route path="/deal" element={<SingleType pageURL={"deal"} />} />
+        <Route path="/" element={<SingleType partialURL={`homepage`} />} />
+        <Route path="/deal" element={<SingleType partialURL={`deal`} />} />
         <Route
           path="/distributorship"
-          element={<SingleType pageURL={"distributorship"} />}
+          element={<SingleType partialURL={`distributorship`} />}
         />
-        <Route path="/contact" element={<SingleType pageURL={"contact"} />} />
+        <Route
+          path="/contact"
+          element={<SingleType partialURL={"contact"} />}
+        />
       </Routes>
     </NavRouter>
   );
