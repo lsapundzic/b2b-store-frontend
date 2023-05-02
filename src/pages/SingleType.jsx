@@ -23,11 +23,8 @@ const SingleType = ({ partialURL }) => {
 
   //   ? Are these alternatives necessary and if so should they be improved?
   if (error) {
-    return (
-      <div>
-        Message generated from SingleType.jsx: error with displaying the data
-      </div>
-    );
+    console.log("Error in SingleType.jsx");
+    return <div>Error retrieving the data</div>;
   }
 
   if (!page) {
