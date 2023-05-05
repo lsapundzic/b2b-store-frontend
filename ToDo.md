@@ -2,7 +2,7 @@
 
 ## Immediate Action
 
-- URGENT: pages called by the router are generated in the header. That is not OK. 
+- URGENT: pages called by the router are generated in the header.
 
 ## Next Steps
 

@@ -9,5 +9,3 @@
 - react-router-dom
 
 - Axios
-
-- Pico CSS (temporary) (npm install @picocss/pico)
