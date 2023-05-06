@@ -19,17 +19,6 @@ const SingleType = ({ partialURL }) => {
         console.log(`Error in ${partialURL}.jsx, message: ${response.message}`);
       });
   }, [partialURL]);
-  // TODO: What was the second parameter in useEffect?
-
-  //   ? Are these alternatives necessary and if so should they be improved?
-  if (error) {
-    console.log("Error in SingleType.jsx");
-    return <div>Error retrieving the data</div>;
-  }
-
-  if (!page) {
-    return <div>Page loading...</div>;
-  }
 
   return (
     <div>
