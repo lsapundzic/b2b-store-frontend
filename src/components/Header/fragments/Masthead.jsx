@@ -1,7 +1,9 @@
+import Logo from "./Logo";
+
 export default function Masthead() {
   return (
-    <div>
-      <p>Where the masthead goes</p>
+    <div className="h-40 bg-yellow-400">
+      <Logo />
     </div>
   );
 }
