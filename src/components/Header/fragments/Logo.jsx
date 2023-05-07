@@ -1,11 +1,12 @@
 import Image from "next/image";
 
 export default function Logo() {
-  const imageSize = 120;
+  const imageSize = 150;
+  const source = "/img/logo-no-background.png";
   return (
     <div>
       <Image
-        src="/public/img/png/logo-no-background.png"
+        src={source}
         alt="Sotla company logo"
         width={imageSize}
         height={imageSize}
