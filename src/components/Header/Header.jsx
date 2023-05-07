@@ -9,8 +9,8 @@ import Navbar from "/src/components/header/fragments/Navbar.jsx";
 export default function Header() {
   return (
     <header>
-      {/* <Banner />
-      <Masthead /> */}
+      <Banner />
+      {/* <Masthead /> */}
       <Navbar />
     </header>
   );
