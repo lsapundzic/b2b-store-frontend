@@ -10,7 +10,7 @@ export default function Header() {
   return (
     <header>
       <Banner />
-      <Masthead />
+      {/* <Masthead /> */}
       <Navbar />
     </header>
   );
