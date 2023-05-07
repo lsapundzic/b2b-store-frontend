@@ -1,9 +1,6 @@
 // Global style import
 import "/src/styles/globals.css";
 
-// Next imports
-import Link from "next/link";
-
 // Fragments import
 import Banner from "/src/components/header/fragments/Banner.jsx";
 import Masthead from "/src/components/header/fragments/Masthead.jsx";
@@ -12,8 +9,8 @@ import Navbar from "/src/components/header/fragments/Navbar.jsx";
 export default function Header() {
   return (
     <header>
-      <Banner />
-      <Masthead />
+      {/* <Banner />
+      <Masthead /> */}
       <Navbar />
     </header>
   );
