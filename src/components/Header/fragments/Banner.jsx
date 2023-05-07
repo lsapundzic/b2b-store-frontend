@@ -1,3 +1,5 @@
+// Banner is the top-most sub-component of the Header. It has the most urgent information displayed
+
 export default function Banner() {
   return (
     <div className="bg-black  h-10 flex items-center ">

@@ -1,3 +1,5 @@
+// Navbar is the bottom-most sub-component of the header.
+
 import Link from "next/link";
 
 export default function Navbar() {

@@ -1,3 +1,5 @@
+// This is the main component with 3 sub-components
+
 // Global style import
 import "/src/styles/globals.css";
 
