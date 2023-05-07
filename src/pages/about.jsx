@@ -1,6 +1,10 @@
-import Header from "@/components/header/Header";
+import Header from "/src/components/header/Header";
+import axios from "axios";
+import { useState } from "react";
 
 export default function About() {
+  [data, getData] = useState();
+
   return (
     <>
       <Header />
