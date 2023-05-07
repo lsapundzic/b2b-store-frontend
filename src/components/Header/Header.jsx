@@ -5,8 +5,16 @@ import "/src/styles/globals.css";
 import Link from "next/link";
 
 // Fragments import
-import Banner from "/src/components/Header";
+import Banner from "/src/components/header/fragments/Banner.jsx";
+import Masthead from "/src/components/header/fragments/Masthead.jsx";
+import Navbar from "/src/components/header/fragments/Navbar.jsx";
 
 export default function Header() {
-  return <header></header>;
+  return (
+    <header>
+      <Banner />
+      <Masthead />
+      <Navbar />
+    </header>
+  );
 }
