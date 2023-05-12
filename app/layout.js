@@ -8,7 +8,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      {/* Suppress Hydration Warning added to stop the browser console message caused by Grammarly*/}
+      <body suppressHydrationWarning={true}>
         <Header />
         {children}
       </body>
