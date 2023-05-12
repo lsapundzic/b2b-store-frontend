@@ -1,4 +1,5 @@
 import Header from "@/app/components/header";
+import Footer from "./components/footer";
 
 export const metadata = {
   title: "Sotla Lab",
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
