@@ -20,7 +20,7 @@ export default function Navbar() {
     <nav className="bg-white w-full border-b md:border-0 md:static">
       <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
-          <Link href="/home">
+          <Link href="/">
             <Image
               src="https://www.floatui.com/logo.svg"
               width={120}
@@ -65,30 +65,36 @@ export default function Navbar() {
             </button>
           </div>
         </div>
+
+        {/* Navbar is generated here */}
         <div
           className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
             state ? "block" : "hidden"
           }`}
         >
           <ul className="justify-center items-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-            {navigation.map((item, idx) => {
+            {navigation.map((item, id) => {
               return (
-                <li key={idx} className="text-gray-600 hover:text-indigo-600">
+                <li key={id} className="text-gray-600 hover:text-indigo-600">
                   <Link href={item.path}>{item.title}</Link>
                 </li>
               );
             })}
           </ul>
         </div>
+
+        {/* Button on the right hand side */}
         <div className="hidden md:inline-block">
-          <a
-            href="javascript:void(0)"
+          <Link
+            href="/"
             className="py-3 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow"
           >
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
+
+      {/* A Gray line that separates navigation from the body content */}
       <div class="border-t border-gray-300"></div>
     </nav>
   );
