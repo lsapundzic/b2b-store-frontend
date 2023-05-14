@@ -1,7 +1,6 @@
-import "/app/globals.css";
 import Banner from "./components/Banner";
-import Navbar from "@/app/components/Navbar";
-import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import "/app/globals.css";
 
 export const metadata = {
   title: "Sotla Lab",
@@ -14,7 +13,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       {/* Suppress Hydration Warning added to stop the browser console message caused by Grammarly*/}
       <body suppressHydrationWarning={true}>
-        <Header />
+        <Banner
+          message={"The issue with the UI libraries has been resolved!"}
+        />
+        <Navbar />
         {children}
       </body>
     </html>

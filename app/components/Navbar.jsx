@@ -10,17 +10,17 @@ export default function Navbar() {
 
   // Replace javascript:void(0) path with your path
   const navigation = [
-    { title: "About", path: "javascript:void(0)" },
-    { title: "Deals", path: "javascript:void(0)" },
-    { title: "Products", path: "javascript:void(0)" },
-    { title: "Contact", path: "javascript:void(0)" },
+    { title: "About", path: "/about" },
+    { title: "Deals", path: "/deals" },
+    { title: "Products", path: "/products" },
+    { title: "Contact", path: "/contact" },
   ];
 
   return (
     <nav className="bg-white w-full border-b md:border-0 md:static">
       <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
-          <Link href="javascript:void(0)">
+          <Link href="/home">
             <Image
               src="https://www.floatui.com/logo.svg"
               width={120}
@@ -74,7 +74,7 @@ export default function Navbar() {
             {navigation.map((item, idx) => {
               return (
                 <li key={idx} className="text-gray-600 hover:text-indigo-600">
-                  <a href={item.path}>{item.title}</a>
+                  <Link href={item.path}>{item.title}</Link>
                 </li>
               );
             })}
@@ -89,6 +89,7 @@ export default function Navbar() {
           </a>
         </div>
       </div>
+      <div class="border-t border-gray-300"></div>
     </nav>
   );
 }
