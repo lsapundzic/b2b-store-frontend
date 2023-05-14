@@ -1,7 +1,7 @@
-import Construction from "./components/construction";
-import Header from "@/app/components/header";
-
 import "/app/globals.css";
+import Banner from "./components/Banner";
+import Navbar from "@/app/components/Navbar";
+import Header from "./components/Header";
 
 export const metadata = {
   title: "Sotla Lab",
@@ -15,11 +15,6 @@ export default function RootLayout({ children }) {
       {/* Suppress Hydration Warning added to stop the browser console message caused by Grammarly*/}
       <body suppressHydrationWarning={true}>
         <Header />
-        <Construction
-          message={
-            "Problems with the UI have been resolved. The project construction continues..."
-          }
-        />
         {children}
       </body>
     </html>

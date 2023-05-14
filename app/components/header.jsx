@@ -1,16 +1,13 @@
-import Link from "next/link";
+"use client";
+
+import Banner from "./banner";
+import Navbar from "./navbar";
 
 export default function Header() {
   return (
-    <div>
-      <ul>
-        <li>
-          <Link href="/">Home</Link>
-        </li>
-        <li>
-          <Link href="/about">About</Link>
-        </li>
-      </ul>
-    </div>
+    <>
+      <Banner />
+      <Navbar />
+    </>
   );
 }
