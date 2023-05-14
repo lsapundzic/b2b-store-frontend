@@ -6,7 +6,7 @@ import Navbar from "./navbar";
 export default function Header() {
   return (
     <>
-      <Banner />
+      <Banner message={"The issue with the UI libraries has been resolved!"} />
       <Navbar />
     </>
   );
