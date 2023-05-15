@@ -3,6 +3,7 @@
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import Alt from "./components/Alternative";
 import "/app/globals.css";
 
 // * Header and footer navigation
@@ -24,12 +25,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       {/* Suppress Hydration Warning added to stop the browser console message caused by Grammarly*/}
       <body suppressHydrationWarning={true}>
+        <Alt />
         <Banner
           message={"The issue with the UI libraries has been resolved!"}
         />
-        <Navbar navigation={navigation} />
+        {/* <Navbar navigation={navigation} /> */}
         {children}
-        <Footer navigation={navigation} />
+        {/* <Footer navigation={navigation} /> */}
       </body>
     </html>
   );
