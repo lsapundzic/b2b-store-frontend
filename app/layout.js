@@ -5,21 +5,21 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "/app/globals.css";
 
+// * Header and footer navigation
+const navigation = [
+  { page: "About", path: "/about" },
+  { page: "Deals", path: "/deals" },
+  { page: "Products", path: "/products" },
+  { page: "Contact", path: "/contact" },
+];
+
 export const metadata = {
-  title: "Sotla Lab",
+  title: "Sotla Lab Experts d.o.o.",
   description:
     "Sotla d.o.o. is a manufacturer, distributor, and retailer of high quality laboratory equipment",
 };
 
 export default function RootLayout({ children }) {
-  // * Header and footer navigation
-  const navigation = [
-    { page: "About", path: "/about" },
-    { page: "Deals", path: "/deals" },
-    { page: "Products", path: "/products" },
-    { page: "Contact", path: "/contact" },
-  ];
-
   return (
     <html lang="en">
       {/* Suppress Hydration Warning added to stop the browser console message caused by Grammarly*/}
