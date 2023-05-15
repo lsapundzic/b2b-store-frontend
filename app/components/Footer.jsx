@@ -3,34 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Footer() {
-  const footerNavs = [
-    {
-      href: "javascript:void()",
-      name: "About",
-    },
-    {
-      href: "javascript:void()",
-      name: "Blog",
-    },
-    {
-      href: "javascript:void()",
-      name: "",
-    },
-    {
-      href: "javascript:void()",
-      name: "Team",
-    },
-    {
-      href: "javascript:void()",
-      name: "Careers",
-    },
-
-    {
-      href: "javascript:void()",
-      name: "Support",
-    },
-  ];
+export default function Footer({ navigation }) {
   return (
     <footer className="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8">
       <div className="max-w-lg sm:mx-auto sm:text-center">
@@ -48,9 +21,9 @@ export default function Footer() {
         </p>
       </div>
       <ul className="items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0">
-        {footerNavs.map((item, id) => (
+        {navigation.map((item, id) => (
           <li key={id} className=" hover:text-gray-800">
-            <Link href={item.href}>{item.name}</Link>
+            <Link href={item.path}>{item.page}</Link>
           </li>
         ))}
       </ul>

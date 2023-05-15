@@ -1,3 +1,5 @@
+"use client";
+
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -10,6 +12,14 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  // * Header and footer navigation
+  const navigation = [
+    { page: "About", path: "/about" },
+    { page: "Deals", path: "/deals" },
+    { page: "Products", path: "/products" },
+    { page: "Contact", path: "/contact" },
+  ];
+
   return (
     <html lang="en">
       {/* Suppress Hydration Warning added to stop the browser console message caused by Grammarly*/}
@@ -17,9 +27,9 @@ export default function RootLayout({ children }) {
         <Banner
           message={"The issue with the UI libraries has been resolved!"}
         />
-        <Navbar />
+        {/* <Navbar navigation={navigation} /> */}
         {children}
-        <Footer />
+        <Footer navigation={navigation} />
       </body>
     </html>
   );

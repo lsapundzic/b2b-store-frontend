@@ -5,16 +5,16 @@ import Link from "next/link";
 
 import { useState } from "react";
 
-export default function Navbar() {
+export default function Navbar({ navigation }) {
   const [state, setState] = useState(false);
 
   // Replace javascript:void(0) path with your path
-  const navigation = [
-    { title: "About", path: "/about" },
-    { title: "Deals", path: "/deals" },
-    { title: "Products", path: "/products" },
-    { title: "Contact", path: "/contact" },
-  ];
+  // const navigation = [
+  //   { title: "About", path: "/about" },
+  //   { title: "Deals", path: "/deals" },
+  //   { title: "Products", path: "/products" },
+  //   { title: "Contact", path: "/contact" },
+  // ];
 
   return (
     <nav className="bg-white w-full border-b md:border-0 md:static">
@@ -76,7 +76,7 @@ export default function Navbar() {
             {navigation.map((item, id) => {
               return (
                 <li key={id} className="text-gray-600 hover:text-indigo-600">
-                  <Link href={item.path}>{item.title}</Link>
+                  <Link href={item.path}>{item.page}</Link>
                 </li>
               );
             })}
