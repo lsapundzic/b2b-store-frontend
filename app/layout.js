@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
         <Banner
           message={"The issue with the UI libraries has been resolved!"}
         />
-        {/* <Navbar navigation={navigation} /> */}
+        <Navbar navigation={navigation} />
         {children}
         <Footer navigation={navigation} />
       </body>
