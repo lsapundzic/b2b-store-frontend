@@ -3,7 +3,7 @@
 ## Frontend
 
 [ ] Find out how to make API calls in Next.js
-[ ] Improve navigation JSON
+[x] Improve navigation JSON
 
 ## Backend
 
