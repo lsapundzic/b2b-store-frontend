@@ -12,13 +12,9 @@ export default function Navbar({ navigation }) {
     <nav className="bg-white w-full border-b md:border-0 md:static">
       <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
         <div className="flex items-center justify-between py-3 md:py-5 md:block">
+          {/* Clickable logo */}
           <Link href="/">
-            <Image
-              src="https://www.floatui.com/logo.svg"
-              width={120}
-              height={50}
-              alt="Company logo"
-            />
+            <Image src="" width={80} height={80} alt="Sotla Company Logo" />
           </Link>
           <div className="md:hidden">
             <button
@@ -76,14 +72,14 @@ export default function Navbar({ navigation }) {
         </div>
 
         {/* Button on the right hand side */}
-        <div className="hidden md:inline-block">
+        {/* <div className="hidden md:inline-block">
           <Link
             href="/"
             className="py-3 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow"
           >
             Get Started
           </Link>
-        </div>
+        </div> */}
       </div>
 
       {/* A Gray line that separates navigation from the body content */}

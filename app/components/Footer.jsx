@@ -6,18 +6,24 @@ import Link from "next/link";
 export default function Footer({ navigation }) {
   return (
     <footer className="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8">
+      {/* A Gray line that separates footer from the body content */}
+      <div class="border-t border-gray-300"></div>
+
       <div className="max-w-lg sm:mx-auto sm:text-center">
         <Image
           alt="company logo"
-          src="https://www.floatui.com/logo.svg"
+          src=""
           width={120}
           height={50}
           className="w-32 sm:mx-auto"
         />
+        {/* Footer conclusion paragraph */}
         <p className="leading-relaxed mt-2 text-[15px]">
-          Lorem Ipsum has been the industry standard dummy text ever since the
-          1500s, when an unknown printer took a galley of type and scrambled it
-          to make a type specimen book.
+          Sotla Lab Experts is a trusted manufacturer and distributor of
+          high-quality laboratory equipment serving Slovenia, the Balkans, and
+          the EU. With a commitment to excellence and innovation, we provide a
+          wide range of cutting-edge solutions for scientific research,
+          education, and healthcare industries.
         </p>
       </div>
       <ul className="items-center justify-center mt-8 space-y-5 sm:flex sm:space-x-4 sm:space-y-0">
