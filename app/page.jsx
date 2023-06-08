@@ -1,9 +1,12 @@
+import UnderConstruction from "./components/UnderConstruction";
+
 export default function Homepage() {
+  console.log("Main page running...");
   return (
     <div>
-      <h1>
-        The project is currently under construction. Please come back later.
-      </h1>
+      <div className="ml-52 mr-52">
+        <UnderConstruction />
+      </div>
     </div>
   );
 }

@@ -1,5 +1,3 @@
-"use client";
-
 // Component imports
 import Navbar from "./components/Navbar";
 import "/app/globals.css";
