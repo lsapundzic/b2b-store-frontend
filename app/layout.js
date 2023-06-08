@@ -24,9 +24,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       {/* Suppress Hydration Warning added to stop the browser console message caused by Grammarly*/}
       <body suppressHydrationWarning={true}>
-        <Banner
-          message={"The issue with the UI libraries has been resolved!"}
-        />
+        <Banner message={"Special Discount Today Banner"} />
         <Navbar navigation={navigation} />
         {children}
         <Footer navigation={navigation} />
