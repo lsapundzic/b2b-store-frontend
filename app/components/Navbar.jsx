@@ -72,18 +72,15 @@ export default function Navbar({ navigation }) {
         </div>
 
         {/* Button on the right hand side */}
-        {/* <div className="hidden md:inline-block">
+        <div className="hidden md:inline-block">
           <Link
             href="/"
             className="py-3 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow"
           >
-            Get Started
+            Distributors
           </Link>
-        </div> */}
+        </div>
       </div>
-
-      {/* A Gray line that separates navigation from the body content */}
-      <div class="border-t border-gray-300"></div>
     </nav>
   );
 }

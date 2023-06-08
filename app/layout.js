@@ -1,9 +1,13 @@
-// "use client";
+"use client";
 
+// Component imports
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "/app/globals.css";
+
+// Fragment imports
+import Separator from "./fragments/Separator.jsx";
 
 // * Header and footer navigation
 const navigation = [
@@ -24,9 +28,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       {/* Suppress Hydration Warning added to stop the browser console message caused by Grammarly*/}
       <body suppressHydrationWarning={true}>
-        <Banner message={"Special Discount Today Banner"} />
+        {/* Banner disabled */}
+        {/* <Banner message={"Special Discount Today Banner"} /> */}
         <Navbar navigation={navigation} />
+        <Separator />
         <main>{children}</main>
+        <Separator />
         <Footer navigation={navigation} />
       </body>
     </html>

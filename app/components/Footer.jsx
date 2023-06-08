@@ -6,9 +6,6 @@ import Link from "next/link";
 export default function Footer({ navigation }) {
   return (
     <footer className="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8">
-      {/* A Gray line that separates footer from the body content */}
-      <div class="border-t border-gray-300"></div>
-
       <div className="max-w-lg sm:mx-auto sm:text-center">
         <Image
           alt="company logo"
