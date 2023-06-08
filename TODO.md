@@ -19,3 +19,7 @@
 [x] Find a suitable UI library
 
 [x] Learn about the layout.js
+
+[ ] DaisyUI vs Float UI
+
+[ ] Remove separator once the UI basics are established
