@@ -4,9 +4,6 @@
 import Navbar from "./components/Navbar";
 import "/app/globals.css";
 
-// Fragment imports
-import Separator from "./fragments/Separator.jsx";
-
 export const metadata = {
   title: "Sotla Lab Experts d.o.o.",
   description:
@@ -19,9 +16,7 @@ export default function RootLayout({ children }) {
       {/* Suppress Hydration Warning added to stop the browser console message caused by Grammarly*/}
       <body suppressHydrationWarning={true}>
         <Navbar />
-        <Separator />
         <main>{children}</main>
-        <Separator />
       </body>
     </html>
   );
