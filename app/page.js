@@ -1,3 +1,7 @@
 export default function Homepage() {
-  return <div>{<h1>The landing page placeholder</h1>}</div>;
+  return (
+    <h1>
+      The project is currently under construction. Please come back later.
+    </h1>
+  );
 }

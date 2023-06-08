@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true}>
         <Banner message={"Special Discount Today Banner"} />
         <Navbar navigation={navigation} />
-        {children}
+        <main>{children}</main>
         <Footer navigation={navigation} />
       </body>
     </html>
