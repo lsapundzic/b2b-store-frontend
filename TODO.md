@@ -22,4 +22,6 @@
 
 [ ] DaisyUI vs Float UI
 
+[ ] Learn DaisyUI
+
 [ ] Remove separator once the UI basics are established
