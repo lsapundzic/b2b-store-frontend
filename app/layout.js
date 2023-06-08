@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       {/* Suppress Hydration Warning added to stop the browser console message caused by Grammarly*/}
       <body suppressHydrationWarning={true}>
-        <Navbar navigation={navigation} />
+        <Navbar />
         <Separator />
         <main>{children}</main>
         <Separator />
