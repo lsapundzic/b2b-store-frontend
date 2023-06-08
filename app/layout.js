@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
         <Separator />
         <main>{children}</main>
         <Separator />
-        <Footer navigation={navigation} />
+        {/* <Footer navigation={navigation} /> */}
       </body>
     </html>
   );
