@@ -7,14 +7,6 @@ import "/app/globals.css";
 // Fragment imports
 import Separator from "./fragments/Separator.jsx";
 
-// * Header and footer navigation
-const navigation = [
-  { page: "About", path: "/about" },
-  { page: "Deals", path: "/deals" },
-  { page: "Products", path: "/products" },
-  { page: "Contact", path: "/contact" },
-];
-
 export const metadata = {
   title: "Sotla Lab Experts d.o.o.",
   description:
