@@ -1,7 +1,11 @@
+// Main navbar
+
 const Navbar = () => {
+  console.log("Navbar running...");
+
   return (
-    <div className="navbar bg-base-100">
-      <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+    <div>
+      <h1>Navbar</h1>
     </div>
   );
 };

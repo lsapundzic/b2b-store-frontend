@@ -1,3 +1,5 @@
+// Main layout
+
 // Component imports
 import Navbar from "./components/Navbar";
 import "/app/globals.css";
