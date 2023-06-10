@@ -1,4 +1,5 @@
 // Main layout
+'use client';
 
 import Navbar from "./components/Navbar";
 import "/app/globals.css";
