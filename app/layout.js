@@ -1,7 +1,5 @@
 // Main layout
 
-// Component imports
-
 import "/app/globals.css";
 
 export const metadata = {

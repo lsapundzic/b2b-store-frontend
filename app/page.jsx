@@ -5,11 +5,12 @@ export default function Homepage() {
 
   return (
     <div>
-      <div className="bg-blue-300 grid gap-4 grid-cols-3 grid-rows-3">
-        <div>Center?</div>
-        <div>Center?</div>
-        <div>Center?</div>
-        <div>Center?</div>
+      <div class="flex min-h-screen flex-col">
+        <header class="p-4">Header</header>
+        <div class="flex flex-1 flex-row">
+          <main class="flex-1 p-4">Content</main>
+        </div>
+        <footer class="p-4">Footer</footer>
       </div>
     </div>
   );
