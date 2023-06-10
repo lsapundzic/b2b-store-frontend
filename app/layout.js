@@ -1,7 +1,7 @@
 // Main layout
 
 // Component imports
-import Navbar from "./components/Navbar";
+
 import "/app/globals.css";
 
 export const metadata = {
@@ -15,7 +15,6 @@ export default function RootLayout({ children }) {
     <html lang="en">
       {/* Suppress Hydration Warning added to stop the browser console message caused by Grammarly*/}
       <body suppressHydrationWarning={true}>
-        <Navbar />
         <main>{children}</main>
       </body>
     </html>

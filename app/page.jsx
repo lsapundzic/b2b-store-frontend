@@ -5,10 +5,11 @@ export default function Homepage() {
 
   return (
     <div>
-      <h1>This is the homepage</h1>
-
-      <div className="bg-yellow-300 border-solid border-indigo-600">
-        X Test Container X
+      <div className="bg-blue-300 grid gap-4 grid-cols-3 grid-rows-3">
+        <div>Center?</div>
+        <div>Center?</div>
+        <div>Center?</div>
+        <div>Center?</div>
       </div>
     </div>
   );
