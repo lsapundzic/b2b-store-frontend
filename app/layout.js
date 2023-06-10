@@ -1,7 +1,10 @@
 // Main layout
 
+// Project components
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+
+// Styles
 import "/app/globals.css";
 
 export const metadata = {
@@ -11,13 +14,38 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  console.log("Root layout running...");
+
+  const menuNavigation = {
+    menu: [
+      {
+        name: "AAbout",
+        url: "./about",
+      },
+      {
+        name: "Products",
+        url: "/products",
+        submenu: [
+          {
+            name: "CategoryOne",
+            url: "/categoryone",
+          },
+        ],
+      },
+      {
+        name: "Contact Us",
+        url: "/contact",
+      },
+    ],
+  };
+
   return (
     <html lang="en">
       {/* Suppress Hydration Warning added to stop the browser console message caused by Grammarly*/}
       <body suppressHydrationWarning={true}>
         <div className="flex min-h-screen flex-col">
           <header className="p-4 bg-red-500">
-            <Navbar />
+            <Navbar navigation={menuNavigation} />
           </header>
           <div className="flex flex-1 flex-row">
             <main className="flex-1 p-4 bg-green-500">{children}</main>

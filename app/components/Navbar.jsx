@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Navbar() {
+export default function Navbar({ navigation }) {
   console.log("Navbar running...");
 
   return (
@@ -66,6 +66,28 @@ export default function Navbar() {
         <div className="navbar-center hidden lg:flex">
           {/* Desktop Menu */}
           <ul className="menu menu-horizontal px-1">
+            {/* Generate menu content */}
+            {navigation.menu.map((menuItem, id) =>
+              menuItem.submenu ? (
+                <li key={id} tabIndex={0}>
+                  <details>
+                    {/* <summary>{menuItem}</summary>
+                    <ul className="p-2">
+                      {menuItem.submenu.map((subMenuItem, id) => (
+                        <li key={id}>
+                          <Link href={subMenuItem.url}>{subMenuItem}</Link>
+                        </li>
+                      ))}
+                    </ul> */}
+                  </details>
+                </li>
+              ) : (
+                <li key={id}>
+                  <Link href={menuItem.url}>{menuItem.name}</Link>
+                </li>
+              )
+            )}
+
             <li>
               <Link href="/about">About</Link>
             </li>
@@ -78,24 +100,18 @@ export default function Navbar() {
                     <Link href="/">Category 1</Link>
                   </li>
                   <li>
-                    <Link href="/">Category 1</Link>
+                    <Link href="/">Category 2</Link>
                   </li>
                   <li>
-                    <Link href="/">Category 1</Link>
+                    <Link href="/">Category 3</Link>
                   </li>
                   <li>
-                    <Link href="/">Category 1</Link>
+                    <Link href="/">Category 4</Link>
                   </li>
                 </ul>
               </details>
             </li>
             <li>
-              <Image
-                src="/public/icons/check_box_FILL0_wght400_GRAD0_opsz48.png"
-                alt="checkbox"
-                width="20"
-                height="20"
-              />
               <Link href="/">Contact Us</Link>
             </li>
             <li>
