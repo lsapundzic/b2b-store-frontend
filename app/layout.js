@@ -1,5 +1,6 @@
 // Main layout
 
+import Navbar from "./components/Navbar";
 import "/app/globals.css";
 
 export const metadata = {
@@ -14,7 +15,9 @@ export default function RootLayout({ children }) {
       {/* Suppress Hydration Warning added to stop the browser console message caused by Grammarly*/}
       <body suppressHydrationWarning={true}>
         <div class="flex min-h-screen flex-col">
-          <header class="p-4 bg-red-500">Header</header>
+          <header class="p-4 bg-red-500">
+            <Navbar />
+          </header>
           <div class="flex flex-1 flex-row">
             <main class="flex-1 p-4 bg-green-500">{children}</main>
           </div>
