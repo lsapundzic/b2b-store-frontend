@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   console.log("Navbar running...");
@@ -89,6 +90,12 @@ export default function Navbar() {
               </details>
             </li>
             <li>
+              <Image
+                src="/public/icons/check_box_FILL0_wght400_GRAD0_opsz48.png"
+                alt="checkbox"
+                width="20"
+                height="20"
+              />
               <Link href="/">Contact Us</Link>
             </li>
             <li>
