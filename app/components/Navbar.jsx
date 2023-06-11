@@ -35,6 +35,27 @@ export default function Navbar({ navigation }) {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
+              {/*  */}
+              {/* Generate mobile menu content */}
+              {navigation.menu.map((menuItem, id) =>
+                menuItem.submenu ? (
+                  <li key={id}>
+                    <Link href={menuItem.url}>{menuItem.name}</Link>
+                    <ul className="p-2">
+                      {menuItem.submenu.map((subMenuItem, id) => (
+                        <li key={id}>
+                          <Link href={subMenuItem.url}>{subMenuItem.name}</Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                ) : (
+                  <li key={id}>
+                    <Link href={menuItem.url}>{menuItem.name}</Link>
+                  </li>
+                )
+              )}
+
               <li>
                 <Link href="/about">About</Link>
               </li>
@@ -68,10 +89,11 @@ export default function Navbar({ navigation }) {
           {/* Desktop Menu */}
           <ul className="menu menu-horizontal px-1">
             {/*  */}
-            {/* Generate menu content */}
+            {/* Generate desktop menu content */}
             {navigation.menu.map((menuItem, id) =>
               menuItem.submenu ? (
                 <li key={id} tabIndex={0}>
+                  {/* Details & Summary: HTML elements that performs drop-down action */}
                   <details>
                     <summary>{menuItem.name}</summary>
                     <ul className="p-2">
