@@ -19,7 +19,11 @@ export default function RootLayout({ children }) {
   const menuNavigation = {
     menu: [
       {
-        name: "AAbout",
+        name: "Home",
+        url: "/",
+      },
+      {
+        name: "About",
         url: "./about",
       },
       {
@@ -27,7 +31,7 @@ export default function RootLayout({ children }) {
         url: "/products",
         submenu: [
           {
-            name: "CategoryOne",
+            name: "Centrifuges",
             url: "/categoryone",
           },
         ],

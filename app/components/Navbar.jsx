@@ -55,27 +55,6 @@ export default function Navbar({ navigation }) {
                   </li>
                 )
               )}
-
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-              <li>
-                <Link href="/products">Products</Link>
-                <ul className="p-2">
-                  <li>
-                    <Link href="/">Category 1</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Category 2</Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Link href="/contact">Contact Us</Link>
-              </li>
-              <li>
-                <Link href="/">Blog</Link>
-              </li>
             </ul>
           </div>
 
@@ -111,36 +90,6 @@ export default function Navbar({ navigation }) {
                 </li>
               )
             )}
-
-            <li>
-              <Link href="/about">About</Link>
-            </li>
-            <li tabIndex={0}>
-              {/* Details & Summary: HTML elements that performs drop-down action */}
-              <details>
-                <summary>Products</summary>
-                <ul className="p-2">
-                  <li>
-                    <Link href="/">Category 1</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Category 2</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Category 3</Link>
-                  </li>
-                  <li>
-                    <Link href="/">Category 4</Link>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <Link href="/">Contact Us</Link>
-            </li>
-            <li>
-              <Link href="/">Blog</Link>
-            </li>
           </ul>
         </div>
         <div className="navbar-end">
