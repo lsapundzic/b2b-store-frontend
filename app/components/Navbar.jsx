@@ -64,21 +64,23 @@ export default function Navbar({ navigation }) {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
+          {/*  */}
           {/* Desktop Menu */}
           <ul className="menu menu-horizontal px-1">
+            {/*  */}
             {/* Generate menu content */}
             {navigation.menu.map((menuItem, id) =>
               menuItem.submenu ? (
                 <li key={id} tabIndex={0}>
                   <details>
-                    {/* <summary>{menuItem}</summary>
+                    <summary>{menuItem.name}</summary>
                     <ul className="p-2">
                       {menuItem.submenu.map((subMenuItem, id) => (
                         <li key={id}>
-                          <Link href={subMenuItem.url}>{subMenuItem}</Link>
+                          <Link href={subMenuItem.url}>{subMenuItem.name}</Link>
                         </li>
                       ))}
-                    </ul> */}
+                    </ul>
                   </details>
                 </li>
               ) : (
