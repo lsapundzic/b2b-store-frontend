@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function Footer({ navigation }) {
   return (
     <div className="footer p-10 bg-base-200 text-base-content">
       <div>
