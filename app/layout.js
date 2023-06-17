@@ -18,12 +18,18 @@ export default function RootLayout({ children }) {
   const menuNavigation = {
     menu: [
       {
-        name: "Home",
-        url: "/",
-      },
-      {
-        name: "About",
-        url: "./about",
+        name: "Company",
+        url: "/about",
+        submenu: [
+          {
+            name: "About",
+            url: "/about",
+          },
+          {
+            name: "Strategy",
+            url: "/strategy",
+          },
+        ],
       },
       {
         name: "Products",
@@ -31,9 +37,25 @@ export default function RootLayout({ children }) {
         submenu: [
           {
             name: "Centrifuges",
-            url: "/categoryone",
+            url: "/centrifuges",
+          },
+          {
+            name: "Microscopes",
+            url: "/microscopes",
+          },
+          {
+            name: "Drying Ovens",
+            url: "/dryingovens",
           },
         ],
+      },
+      {
+        name: "News",
+        url: "/news",
+      },
+      {
+        name: "Careers",
+        url: "/careers",
       },
       {
         name: "Contact Us",

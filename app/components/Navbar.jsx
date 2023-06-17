@@ -10,7 +10,7 @@ export default function Navbar({ navigation }) {
     <nav>
       <div className="navbar bg-base-100">
         <div className="navbar-start">
-          {/* Mobine mode dropdown menu */}
+          {/* Mobile mode dropdown menu */}
           <div className="dropdown">
             {/* Mobile menu Icon */}
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
