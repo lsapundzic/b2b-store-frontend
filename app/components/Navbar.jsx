@@ -84,7 +84,7 @@ export default function Navbar({ navigation }) {
                               alt="menu icon"
                               width="30"
                               height="30"
-                              src={}
+                              src="/icons/icon-microscope.png"
                             ></Image>
                             {subMenuItem.name}
                           </Link>

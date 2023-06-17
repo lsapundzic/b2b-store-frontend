@@ -21,14 +21,14 @@ export default function RootLayout({ children }) {
       {/* Suppress Hydration Warning added to stop the browser console message caused by Grammarly*/}
       <body suppressHydrationWarning={true}>
         <div className="flex min-h-screen flex-col">
-          <header className="p-4 bg-red-500">
+          <header className="p-4">
             <Navbar navigation={navContent} />
           </header>
 
           <div className="flex flex-1 flex-row">
-            <main className="flex-1 p-4 bg-green-500">{children}</main>
+            <main className="flex-1 p-4">{children}</main>
           </div>
-          <footer className="p-4 bg-blue-500">TBA</footer>
+          <footer className="p-4">TBA</footer>
         </div>
       </body>
     </html>

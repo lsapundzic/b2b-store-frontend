@@ -1,3 +1,5 @@
+const temp = "/icons/check_box.png";
+
 const navContent = {
   menu: [
     {
@@ -7,39 +9,14 @@ const navContent = {
         {
           name: "About",
           url: "/about",
-          icon: "/icons/check_box_FILL0_wght400_GRAD0_opsz48.png",
+          icon: temp,
         },
         {
           name: "Strategy",
           url: "/strategy",
+          icon: temp,
         },
       ],
-    },
-    {
-      name: "Products",
-      url: "/products",
-      submenu: [
-        {
-          name: "Centrifuges",
-          url: "/centrifuges",
-        },
-        {
-          name: "Microscopes",
-          url: "/microscopes",
-        },
-        {
-          name: "Drying Ovens",
-          url: "/dryingovens",
-        },
-      ],
-    },
-    {
-      name: "News",
-      url: "/news",
-    },
-    {
-      name: "Careers",
-      url: "/careers",
     },
     {
       name: "Contact Us",
