@@ -2,10 +2,11 @@
 
 // Project components
 import Navbar from "@/app/components/Navbar";
-import navContent from "@/app/util/navContent";
+import routes from "@/app/routes/routes";
 
 // Styles
 import "/app/globals.css";
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: "Sotla Lab Experts d.o.o.",
@@ -22,13 +23,15 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true}>
         <div className="flex min-h-screen flex-col">
           <header className="p-4">
-            <Navbar navigation={navContent} />
+            <Navbar routes={routes} />
           </header>
 
           <div className="flex flex-1 flex-row">
             <main className="flex-1 p-4">{children}</main>
           </div>
-          <footer className="p-4">Footer will be here</footer>
+          <div className="p-4">
+            <Footer />
+          </div>
         </div>
       </body>
     </html>

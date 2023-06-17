@@ -1,13 +1,10 @@
 const navContent = {
   menu: [
     {
-      name: "Company",
+      name: "About",
       url: "/about",
     },
-    {
-      name: "Contact Us",
-      url: "/contact",
-    },
+
     {
       name: "Products",
       url: "/products",
@@ -21,6 +18,10 @@ const navContent = {
           url: "/centrifuges",
         },
       ],
+    },
+    {
+      name: "Contact Us",
+      url: "/contact",
     },
   ],
 };

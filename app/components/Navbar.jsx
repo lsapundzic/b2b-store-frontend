@@ -1,14 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 
-export default function Navbar({ navigation }) {
+export default function Navbar({ routes }) {
   console.log("Navbar running...");
 
   return (
     <nav>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 bg-primary">
         <div className="navbar-start">
           {/* Mobile mode dropdown menu */}
           <div className="dropdown">
@@ -38,7 +37,7 @@ export default function Navbar({ navigation }) {
               {/* Map through the entire menu object.
               If there is a sub-menu generate a sub-ul in one way.
               If there is no sub-menu generate  li*/}
-              {navigation.menu.map((menuItem, id) =>
+              {routes.menu.map((menuItem, id) =>
                 menuItem.submenu ? (
                   <li key={id}>
                     <Link href={menuItem.url}>{menuItem.name}</Link>
@@ -70,7 +69,7 @@ export default function Navbar({ navigation }) {
           <ul className="menu menu-horizontal px-1">
             {/*  */}
             {/* Generate desktop menu content */}
-            {navigation.menu.map((menuItem, id) =>
+            {routes.menu.map((menuItem, id) =>
               menuItem.submenu ? (
                 <li key={id} tabIndex={0}>
                   {/* Details & Summary: HTML elements that performs drop-down action */}
