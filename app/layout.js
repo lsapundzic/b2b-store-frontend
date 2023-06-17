@@ -2,6 +2,7 @@
 
 // Project components
 import Navbar from "./components/Navbar";
+import navContent from "@/app/navContent";
 
 // Styles
 import "/app/globals.css";
@@ -15,62 +16,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   console.log("Root layout running...");
 
-  const menuNavigation = {
-    menu: [
-      {
-        name: "Company",
-        url: "/about",
-        submenu: [
-          {
-            name: "About",
-            url: "/about",
-          },
-          {
-            name: "Strategy",
-            url: "/strategy",
-          },
-        ],
-      },
-      {
-        name: "Products",
-        url: "/products",
-        submenu: [
-          {
-            name: "Centrifuges",
-            url: "/centrifuges",
-          },
-          {
-            name: "Microscopes",
-            url: "/microscopes",
-          },
-          {
-            name: "Drying Ovens",
-            url: "/dryingovens",
-          },
-        ],
-      },
-      {
-        name: "News",
-        url: "/news",
-      },
-      {
-        name: "Careers",
-        url: "/careers",
-      },
-      {
-        name: "Contact Us",
-        url: "/contact",
-      },
-    ],
-  };
-
   return (
     <html lang="en">
       {/* Suppress Hydration Warning added to stop the browser console message caused by Grammarly*/}
       <body suppressHydrationWarning={true}>
         <div className="flex min-h-screen flex-col">
           <header className="p-4 bg-red-500">
-            <Navbar navigation={menuNavigation} />
+            <Navbar navigation={navContent} />
           </header>
 
           <div className="flex flex-1 flex-row">
