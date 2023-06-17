@@ -79,14 +79,15 @@ export default function Navbar({ navigation }) {
                     <ul className="p-2">
                       {menuItem.submenu.map((subMenuItem, id) => (
                         <li key={id}>
-                          <Image
-                            alt="menu icon"
-                            width="30"
-                            height="30"
-                            src="/icons/check_box_FILL0_wght400_GRAD0_opsz48.svg"
-                            className="bg-blue-200 inline"
-                          ></Image>
-                          <Link href={subMenuItem.url}>{subMenuItem.name}</Link>
+                          <Link href={subMenuItem.url}>
+                            <Image
+                              alt="menu icon"
+                              width="30"
+                              height="30"
+                              src={}
+                            ></Image>
+                            {subMenuItem.name}
+                          </Link>
                         </li>
                       ))}
                     </ul>

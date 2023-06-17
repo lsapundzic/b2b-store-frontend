@@ -7,7 +7,7 @@ const navContent = {
         {
           name: "About",
           url: "/about",
-          icon: "/icons/check_box_FILL0_wght400_GRAD0_opsz48.svg",
+          icon: "/icons/check_box_FILL0_wght400_GRAD0_opsz48.png",
         },
         {
           name: "Strategy",
