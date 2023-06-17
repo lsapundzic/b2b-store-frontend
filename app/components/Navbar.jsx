@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar({ navigation }) {
   console.log("Navbar running...");
@@ -12,7 +12,7 @@ export default function Navbar({ navigation }) {
         <div className="navbar-start">
           {/* Mobile mode dropdown menu */}
           <div className="dropdown">
-            {/* Mobile menu Icon */}
+            {/* Mobile menu icon */}
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -78,6 +78,13 @@ export default function Navbar({ navigation }) {
                     <ul className="p-2">
                       {menuItem.submenu.map((subMenuItem, id) => (
                         <li key={id}>
+                          <Image
+                            alt="menu icon"
+                            width="30"
+                            height="30"
+                            src={subMenuItem.icon}
+                            className="bg-blue-200 inline-block"
+                          ></Image>
                           <Link href={subMenuItem.url}>{subMenuItem.name}</Link>
                         </li>
                       ))}
