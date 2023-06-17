@@ -83,7 +83,7 @@ export default function Navbar({ navigation }) {
                             width="30"
                             height="30"
                             src={subMenuItem.icon}
-                            className="bg-blue-200 inline-block"
+                            className="bg-blue-200 inline"
                           ></Image>
                           <Link href={subMenuItem.url}>{subMenuItem.name}</Link>
                         </li>
