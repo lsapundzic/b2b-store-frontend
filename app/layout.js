@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
           <div className="flex flex-1 flex-row">
             <main className="flex-1 p-4">{children}</main>
           </div>
-          <footer className="p-4">TBA</footer>
+          <footer className="p-4">Footer will be here</footer>
         </div>
       </body>
     </html>

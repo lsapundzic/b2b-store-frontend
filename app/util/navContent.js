@@ -1,5 +1,3 @@
-const temp = "/icons/check_box.png";
-
 const navContent = {
   menu: [
     {
@@ -9,12 +7,11 @@ const navContent = {
         {
           name: "About",
           url: "/about",
-          icon: temp,
         },
         {
           name: "Strategy",
           url: "/strategy",
-          icon: temp,
+          icon: "/icons/icon-microscope.png",
         },
       ],
     },

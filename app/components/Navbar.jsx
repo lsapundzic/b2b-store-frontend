@@ -45,7 +45,19 @@ export default function Navbar({ navigation }) {
                     <ul className="p-2">
                       {menuItem.submenu.map((subMenuItem, id) => (
                         <li key={id}>
-                          <Link href={subMenuItem.url}>{subMenuItem.name}</Link>
+                          <Link href={subMenuItem.url}>
+                            {subMenuItem.icon ? (
+                              <Image
+                                alt="menu icon"
+                                width="30"
+                                height="30"
+                                src={subMenuItem.icon}
+                              ></Image>
+                            ) : (
+                              console.log("Happen")
+                            )}
+                            {subMenuItem.name}
+                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -80,12 +92,16 @@ export default function Navbar({ navigation }) {
                       {menuItem.submenu.map((subMenuItem, id) => (
                         <li key={id}>
                           <Link href={subMenuItem.url}>
-                            <Image
-                              alt="menu icon"
-                              width="30"
-                              height="30"
-                              src="/icons/icon-microscope.png"
-                            ></Image>
+                            {subMenuItem.icon ? (
+                              <Image
+                                alt="menu icon"
+                                width="30"
+                                height="30"
+                                src={subMenuItem.icon}
+                              ></Image>
+                            ) : (
+                              console.log("Happen")
+                            )}
                             {subMenuItem.name}
                           </Link>
                         </li>
