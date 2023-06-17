@@ -35,8 +35,9 @@ export default function Navbar({ navigation }) {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
             >
-              {/*  */}
-              {/* Generate mobile menu content */}
+              {/* Map through the entire menu object.
+              If there is a sub-menu generate a sub-ul in one way.
+              If there is no sub-menu generate  li*/}
               {navigation.menu.map((menuItem, id) =>
                 menuItem.submenu ? (
                   <li key={id}>
@@ -82,8 +83,8 @@ export default function Navbar({ navigation }) {
                             alt="menu icon"
                             width="30"
                             height="30"
-                            src={subMenuItem.icon}
-                            className="bg-blue-200 inline-block"
+                            src="/icons/check_box_FILL0_wght400_GRAD0_opsz48.svg"
+                            className="bg-blue-200 inline"
                           ></Image>
                           <Link href={subMenuItem.url}>{subMenuItem.name}</Link>
                         </li>
