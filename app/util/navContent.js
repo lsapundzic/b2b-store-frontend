@@ -3,21 +3,24 @@ const navContent = {
     {
       name: "Company",
       url: "/about",
-      submenu: [
-        {
-          name: "About",
-          url: "/about",
-        },
-        {
-          name: "Strategy",
-          url: "/strategy",
-          icon: "/icons/icon-microscope.png",
-        },
-      ],
     },
     {
       name: "Contact Us",
       url: "/contact",
+    },
+    {
+      name: "Products",
+      url: "/products",
+      submenu: [
+        {
+          name: "Microscopes",
+          url: "/microscopes",
+        },
+        {
+          name: "Centrifuges",
+          url: "/centrifuges",
+        },
+      ],
     },
   ],
 };
