@@ -1,7 +1,6 @@
 // Main layout
 
 // Project components
-import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
 // Styles
@@ -51,12 +50,11 @@ export default function RootLayout({ children }) {
           <header className="p-4 bg-red-500">
             <Navbar navigation={menuNavigation} />
           </header>
+
           <div className="flex flex-1 flex-row">
             <main className="flex-1 p-4 bg-green-500">{children}</main>
           </div>
-          <footer className="p-4 bg-blue-500">
-            <Footer navigation={menuNavigation} />
-          </footer>
+          <footer className="p-4 bg-blue-500"></footer>
         </div>
       </body>
     </html>
