@@ -1,11 +1,11 @@
 // Main layout
 
 // Project components
-import Navbar from "@/app/components/Navbar";
-import navContent from "@/app/util/navContent";
+import Navbar from "@/app/components/DefaultNavbar";
 
 // Styles
 import "/app/globals.css";
+import DefaultNavbar from "@/app/components/DefaultNavbar";
 
 export const metadata = {
   title: "Sotla Lab Experts d.o.o.",
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true}>
         <div className="flex min-h-screen flex-col">
           <header className="p-4 bg-red-500">
-            <Navbar navigation={navContent} />
+            <DefaultNavbar />
           </header>
 
           <div className="flex flex-1 flex-row">
