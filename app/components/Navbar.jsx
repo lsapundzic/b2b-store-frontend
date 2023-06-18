@@ -7,7 +7,7 @@ export default function Navbar({ routes }) {
 
   return (
     <nav>
-      <div className="navbar bg-base-100 bg-primary">
+      <div className="navbar bg-base-100 bg-primary rounded-md">
         <div className="navbar-start">
           {/* Mobile mode dropdown menu */}
           <div className="dropdown">

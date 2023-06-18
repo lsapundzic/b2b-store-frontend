@@ -2,9 +2,7 @@
 
 ## Frontend
 
-[ ] Find out how to make API calls in Next.js
-
-[x] Improve navigation JSON
+[X] Find out how to make API calls in Next.js
 
 ## Backend
 
@@ -13,12 +11,6 @@
 [ ] What is the issue with the fetch?
 
 ## Other
-
-[x] Successfully host the project on Vercel
-
-[x] Find a suitable UI library
-
-[x] Learn about the layout.js
 
 [ ] DaisyUI vs Float UI
 
