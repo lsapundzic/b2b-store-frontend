@@ -1,8 +1,10 @@
 // Main layout
+"use client";
 
 // Project sections
 import Navbar from "@/app/sections/Navbar";
 import routes from "@/app/routes/routes";
+import { NextUIProvider } from "@nextui-org/react";
 
 // Styles
 import "/app/globals.css";
@@ -19,21 +21,22 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      {/* Suppress Hydration Warning added to stop the browser console message caused by Grammarly*/}
-      <body suppressHydrationWarning={true}>
-        <div className="flex min-h-screen flex-col">
-          <header className="p-4">
-            <Navbar routes={routes} />
-          </header>
+      <NextUIProvider>
+        <body>
+          <div className="flex min-h-screen flex-col">
+            <header className="p-4">
+              <Navbar routes={routes} />
+            </header>
 
-          <div className="flex flex-1 flex-row">
-            <main className="flex-1 p-4">{children}</main>
+            <div className="flex flex-1 flex-row">
+              <main className="flex-1 p-4">{children}</main>
+            </div>
+            <div className="p-4">
+              <Footer />
+            </div>
           </div>
-          <div className="p-4">
-            <Footer />
-          </div>
-        </div>
-      </body>
+        </body>
+      </NextUIProvider>
     </html>
   );
 }
