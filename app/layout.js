@@ -1,12 +1,12 @@
 // Main layout
 
-// Project components
-import Navbar from "@/app/components/Navbar";
+// Project sections
+import Navbar from "@/app/sections/Navbar";
 import routes from "@/app/routes/routes";
 
 // Styles
 import "/app/globals.css";
-import Footer from "./components/Footer";
+import Footer from "./sections/Footer";
 
 export const metadata = {
   title: "Sotla Lab Experts d.o.o.",
