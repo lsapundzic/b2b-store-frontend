@@ -5,7 +5,7 @@ import { Layout } from "./Layout.js";
 import { AcmeLogo } from "./AcmeLogo.js";
 import { VariantsSelectorWrapper } from "./VariantsSelectorWrapper.js";
 
-export default function App() {
+export default function Navbarr() {
   const [variant, setVariant] = React.useState("static");
 
   const variants = ["static", "floating", "sticky"];
