@@ -6,7 +6,7 @@ export default function Homepage() {
 
   return (
     <div>
-      <div className="bg-slate-500 "></div>
+      <div className="bg-slate-500 ">Hi</div>
     </div>
   );
 }
