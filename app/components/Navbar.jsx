@@ -1,7 +1,8 @@
-"use client";
+import React from "react";
+import { Switch } from "antd";
 
-export default function Navbar({ routes }) {
-  console.log("Navbar running...");
-
-  return <nav></nav>;
-}
+const onChange = (checked) => {
+  console.log(`switch to ${checked}`);
+};
+const Navigation = () => <Switch defaultChecked onChange={onChange} />;
+export default Navigation;

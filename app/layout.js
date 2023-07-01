@@ -2,7 +2,6 @@
 
 // Project components
 import Navbar from "@/app/components/Navbar";
-import routes from "@/app/routes/routes";
 
 // Styles
 import "/app/globals.css";
@@ -23,7 +22,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning={true}>
         <div className="flex min-h-screen flex-col">
           <header className="p-4">
-            <Navbar routes={routes} />
+            <Navbar />
           </header>
 
           <div className="flex flex-1 flex-row">
