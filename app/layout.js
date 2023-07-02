@@ -40,6 +40,8 @@ const footerStyle = {
   // backgroundColor: "#7dbcea",
 };
 
+// TODO: Something in the header layout is giving Navbar a padding that looks terrible
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
