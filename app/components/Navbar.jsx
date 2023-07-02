@@ -12,12 +12,12 @@ const routes = [
     icon: <AimOutlined />,
   },
   {
-    label: <Link href="/">About</Link>,
+    label: <Link href="/about">About</Link>,
     key: "about",
     icon: <UserOutlined />,
   },
   {
-    label: <Link href="/">Products</Link>,
+    label: <Link href="/products">Products</Link>,
     key: "products",
     icon: <GiftOutlined />,
   },
