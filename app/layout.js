@@ -1,6 +1,11 @@
+"use client";
+
 import { Inter } from "next/font/google";
 import Navbar from "./components/navbar";
 import routes from "./routes/routes";
+
+import { Layout } from "antd";
+const { Header, Footer, Content } = Layout;
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,10 +19,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header>
-          <Navbar routes={routes}></Navbar>
-        </header>
-        {children}
+        <Layout>
+          <Header>
+            <Navbar routes={routes}></Navbar>
+          </Header>
+          <Content>{children}</Content>
+          <Footer></Footer>
+        </Layout>
       </body>
     </html>
   );
