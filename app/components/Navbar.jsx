@@ -1,7 +1,12 @@
 "use client";
+
+// AntD icons
 import {AimOutlined, GiftOutlined, UserOutlined} from "@ant-design/icons";
 
+//AntD components
 import {Menu} from "antd";
+
+// React components
 import Link from "next/link";
 import {useState} from "react";
 

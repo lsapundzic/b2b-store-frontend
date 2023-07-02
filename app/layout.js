@@ -4,8 +4,8 @@
 import {Inter} from "next/font/google";
 
 // Project components
-import Navbar from "./components/navbar";
-import CustomFooter from "./components/footer";
+import Navbar from "./components/Navbar";
+import CustomFooter from "./components/Footer";
 
 
 import {Layout} from "antd";
