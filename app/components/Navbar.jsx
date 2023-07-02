@@ -1,9 +1,29 @@
 "use client";
+import { GiftOutlined, AimOutlined, UserOutlined } from "@ant-design/icons";
 
 import { Menu } from "antd";
+import Link from "next/link";
 import { useState } from "react";
 
-export default function Navbar({ routes }) {
+const routes = [
+  {
+    label: <Link href="/">Home</Link>,
+    key: "home",
+    icon: <AimOutlined />,
+  },
+  {
+    label: <Link href="/">About</Link>,
+    key: "about",
+    icon: <UserOutlined />,
+  },
+  {
+    label: <Link href="/">Products</Link>,
+    key: "products",
+    icon: <GiftOutlined />,
+  },
+];
+
+export default function Navbar() {
   console.log("Navbar running");
 
   // Use State
