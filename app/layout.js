@@ -5,9 +5,7 @@ import {Inter} from "next/font/google";
 
 // Project components
 import {Layout, Space} from "antd";
-import Banner from "@/app/components/Banner";
 import Navbar from "@/app/components/Navbar";
-import CustomFooter from "@/app/components/Footer";
 
 const {Header, Footer, Content} = Layout;
 
@@ -21,12 +19,22 @@ export const metadata = {
 
 // TODO: Something in the header layout is giving Navbar a padding that looks terrible
 
+const headerStyle = {
+    textAlign: 'center',
+    color: '#fff',
+    height: 64,
+    paddingInline: 50,
+    lineHeight: '64px',
+    backgroundColor: '#7dbcea',
+};
+
 export default function RootLayout({children}) {
     return (
         <html lang="en">
         <body className={inter.className}>
+
         <Space>
-            <Layout>
+            <Layout style={headerStyle}>
                 <Header>
                     {/*<Banner content="Welcome to the big summer sale!"/>*/}
                     <Navbar/>
