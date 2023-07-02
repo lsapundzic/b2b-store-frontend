@@ -1,3 +1,5 @@
+// THIS IS MY PROJECT TEMPLATE
+
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
