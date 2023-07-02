@@ -36,13 +36,14 @@ export default function Navbar() {
   };
 
   return (
-    <div>
+    <nav>
       <Menu
+        theme="dark"
         onClick={onClick}
         selectedKeys={[current]}
         mode="horizontal"
         items={routes}
       ></Menu>
-    </div>
+    </nav>
   );
 }
