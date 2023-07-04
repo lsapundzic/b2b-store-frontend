@@ -43,7 +43,7 @@ export default function Navbar() {
   return (
     <nav>
       <Menu
-        theme="dark"
+        // theme="dark"
         onClick={onClick}
         selectedKeys={[current]}
         mode="horizontal"
