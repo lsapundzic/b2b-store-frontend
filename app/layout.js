@@ -6,6 +6,7 @@ import { Inter } from "next/font/google";
 // Project components
 import { Layout, Space } from "antd";
 import Navbar from "@/app/components/Navbar";
+import Footerc from "./components/FooterC";
 
 const { Header, Footer, Content } = Layout;
 
@@ -39,8 +40,10 @@ export default function RootLayout({ children }) {
               <Navbar />
             </Header>
             <Content>{children}</Content>
+
+            {/* TODO: Footer is producing <ul> & not displaying content */}
             <Footer>
-              This is where the footer will be it just exists here
+              <Footerc />
             </Footer>
           </Layout>
         </Space>
