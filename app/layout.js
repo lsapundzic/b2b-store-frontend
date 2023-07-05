@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
               templateAreas={`"header"
                   "main"
                   "footer"`}
-              gridTemplateRows={"50px 1fr 30px"}
+              gridTemplateRows={"80px 1fr 180px"}
               gridTemplateColumns={"1fr"}
               h="200px"
               gap="1"
