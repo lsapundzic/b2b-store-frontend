@@ -13,11 +13,11 @@ const { Header, Content } = Layout;
 const inter = Inter({ subsets: ["latin"] });
 
 // Metadata that would be in header
-export const metadata = {
-  title: "Sotla Laboratory Experts",
-  description:
-    "Manufacturers, distributors, and sellers of laboratory equipment & lab consumables",
-};
+// export const metadata = {
+//   title: "Sotla Laboratory Experts",
+//   description:
+//     "Manufacturers, distributors, and sellers of laboratory equipment & lab consumables",
+// };
 
 // TODO: Check if header styling is necessary and what it does
 // Header styling
