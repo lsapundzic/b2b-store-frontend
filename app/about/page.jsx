@@ -3,13 +3,13 @@
 import { Divider, Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
-export default function Home() {
-  console.log("Homepage running...");
+export default function About() {
+  console.log("About page running...");
 
   return (
     <main>
       <Typography>
-        <Title>Homepage!</Title>
+        <Title>About!</Title>
         <Title level={2}>Some Content</Title>
         <Paragraph>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut culpa
