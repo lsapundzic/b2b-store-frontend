@@ -21,11 +21,6 @@ const routes = [
     key: "about",
     icon: <UserOutlined />,
   },
-  {
-    label: <Link href="/products">Products</Link>,
-    key: "products",
-    icon: <GiftOutlined />,
-  },
 ];
 
 export default function Navbar() {
