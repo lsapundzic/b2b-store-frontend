@@ -10,9 +10,12 @@ import Navbar from "@/app/components/Navbar";
 // AntD imports
 const { Header, Content } = Layout;
 
+// Next components
+import { Metadata } from "next";
+
 const inter = Inter({ subsets: ["latin"] });
 
-// Metadata that would be in header
+// TODO: Metadata disabled, conflicts with use client find alternative way to add it
 // export const metadata = {
 //   title: "Sotla Laboratory Experts",
 //   description:

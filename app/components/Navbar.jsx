@@ -31,7 +31,6 @@ export default function Navbar() {
 
   //   It changes useState which highlights the pressed tab
   const onClick = (e) => {
-    console.log(`${e.key} has been clicked`, e);
     setCurrent(e.key);
   };
 
