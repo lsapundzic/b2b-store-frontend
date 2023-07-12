@@ -24,21 +24,15 @@ const inter = Inter({ subsets: ["latin"] });
 // };
 
 // Dynamic metadata
-// export async function generateMetadata({ params }) {
-//   return {
-//     title: "Sotla Lab",
-//     description: "The best website",
-//   };
-// }
+export async function generateMetadata({ params }) {
+  return {
+    title: "Dynamic meta generation",
+    description: "The best website",
+  };
+}
 
-// TODO: Check if all the other attributes are necessary
 // Header styling
 const headerStyle = {
-  // textAlign: "center",
-  // color: "#fff",
-  // height: 64,
-  // paddingLeft: -50,
-  // lineHeight: "64px",
   backgroundColor: "white",
 };
 
