@@ -1,4 +1,4 @@
-// THIS IS MY PROJECT TEMPLATE
+// EMPTY PROJECT TEMPLATE
 
 // Google Fonts import
 import { Inter } from "next/font/google";
