@@ -1,28 +1,23 @@
-"use client";
+async function getData() {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`
+  );
 
-import Fetch from "../temp/fetch";
+  if (!res.ok) {
+    throw new Error("Custom error message: data fetching failed");
+  }
 
-import { Typography } from "antd";
-const { Title, Paragraph } = Typography;
+  return res.json();
+}
 
-export default function About() {
+export default async function About() {
   console.log("About page running...");
+
+  const data = await getData();
 
   return (
     <main>
-      <Typography>
-        <Title>About!</Title>
-        <Title level={2}>Some Content</Title>
-        <Paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut culpa
-          doloribus id soluta? Accusantium alias cumque ipsum nisi, rem sapiente
-          vel. A amet consequatur cupiditate, deleniti dignissimos distinctio et
-          fugiat fugit, hic ipsum iure labore laudantium magnam maxime nesciunt
-          nihil non quibusdam quidem tenetur, velit veniam veritatis vero
-          voluptas voluptates.
-        </Paragraph>
-        <Paragraph>Fetching content?</Paragraph>
-      </Typography>
+      <h1>Testing API calls</h1>
     </main>
   );
 }
