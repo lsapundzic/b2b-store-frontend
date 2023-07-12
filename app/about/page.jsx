@@ -1,6 +1,8 @@
 "use client";
 
-import { Divider, Typography } from "antd";
+import Fetch from "../temp/fetch";
+
+import { Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
 export default function About() {
@@ -19,6 +21,7 @@ export default function About() {
           nihil non quibusdam quidem tenetur, velit veniam veritatis vero
           voluptas voluptates.
         </Paragraph>
+        <Paragraph>Fetching content?</Paragraph>
       </Typography>
     </main>
   );
