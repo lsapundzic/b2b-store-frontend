@@ -1,10 +1,25 @@
 "use client";
 
-import { Divider, Typography } from "antd";
+// AntD imports
+import { Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
-export default function Home() {
+async function getData() {
+  const res = await fetch("https://api.themoviedb.org/3/movie/popular");
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+}
+
+export default async function Home() {
   console.log("Homepage running...");
+
+  const data = await getData();
+
+  console.log(data);
 
   return (
     <main>
