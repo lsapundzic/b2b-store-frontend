@@ -1,5 +1,14 @@
-export default function Home() {
-  console.log("Homepage running...");
+export default async function Home() {
+  const data = fetch(
+    `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`
+  );
 
-  return <main></main>;
+  const res = await data.json();
+  console.log(res);
+
+  return (
+    <main>
+      <h1>Testing Fetch!</h1>
+    </main>
+  );
 }
