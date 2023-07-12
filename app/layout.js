@@ -1,4 +1,4 @@
-// THIS IS MY PROJECT TEMPLATE
+// FOR TESTING NEXTJS CONCEPTS - LEARNING AREA
 
 // Google Fonts import
 import { Inter } from "next/font/google";
