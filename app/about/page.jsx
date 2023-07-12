@@ -9,13 +9,13 @@ async function getData() {
 
   return res.json();
 }
-``;
+
 export default async function About() {
   console.log("About page running...");
 
   const data = await getData();
 
-  console.log("Attempt OK");
+  console.log(data);
   return (
     <main>
       <h1>Testing API calls</h1>
