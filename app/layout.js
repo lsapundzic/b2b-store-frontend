@@ -23,14 +23,6 @@ const inter = Inter({ subsets: ["latin"] });
 //     "Manufacturers, distributors, and sellers of laboratory equipment & lab consumables",
 // };
 
-// Dynamic metadata
-export async function generateMetadata({ params }) {
-  return {
-    title: "Dynamic meta generation",
-    description: "The best website",
-  };
-}
-
 // Header styling
 const headerStyle = {
   backgroundColor: "white",
@@ -41,7 +33,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       {/* Doesn't seem to be working anyway */}
       <Head>
-        <title>Head Component</title>
+        <title>Meta from head component</title>
         {/*<meta*/}
         {/*  property="description"*/}
         {/*  content="Manufacturers, distributors, and sellers of laboratory equipment & lab consumables"*/}
