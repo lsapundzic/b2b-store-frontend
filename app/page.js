@@ -10,9 +10,12 @@ export default async function Home() {
   const res = await data.json();
   console.log(res);
 
+  console.log("fincheck");
+
   return (
     <main>
       <h1>Testing Fetch!</h1>
+      <div></div>
     </main>
   );
 }
