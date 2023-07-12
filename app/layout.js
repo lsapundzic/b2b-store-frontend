@@ -7,20 +7,29 @@ import { Inter } from "next/font/google";
 import { Layout, Space } from "antd";
 import Navbar from "@/app/components/Navbar";
 
+// React imports
+import Head from "next/head";
+
 // AntD imports
 const { Header, Content } = Layout;
 
-// Next components
-import { Metadata } from "next";
-
 const inter = Inter({ subsets: ["latin"] });
 
-// TODO: Metadata disabled, conflicts with use client find alternative way to add it
+// ! Metadata disabled, conflicts with use client
+// ? Testing if adding a Header component will fix the problem
 // export const metadata = {
 //   title: "Sotla Laboratory Experts",
 //   description:
 //     "Manufacturers, distributors, and sellers of laboratory equipment & lab consumables",
 // };
+
+// Dynamic metadata
+// export async function generateMetadata({ params }) {
+//   return {
+//     title: "Sotla Lab",
+//     description: "The best website",
+//   };
+// }
 
 // TODO: Check if header styling is necessary and what it does
 // Header styling
@@ -36,18 +45,22 @@ const headerStyle = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <title>Sotla Lab Experts</title>
+        <meta
+          property="description"
+          content="Manufacturers, distributors, and sellers of laboratory equipment & lab consumables"
+        />
+      </Head>
       <body className={inter.className}>
-        {/* TODO: Check if the Space component is necessary */}
-        <Space>
-          {/* AntD holy grail layout */}
-          <Layout>
-            {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
-            <Header style={{ backgroundColor: "white" }}>
-              <Navbar />
-            </Header>
-            <Content>{children}</Content>
-          </Layout>
-        </Space>
+        {/* AntD header-body-footer layout */}
+        <Layout>
+          {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
+          <Header style={{ backgroundColor: "white" }}>
+            <Navbar />
+          </Header>
+          <Content>{children}</Content>
+        </Layout>
       </body>
     </html>
   );
