@@ -24,8 +24,6 @@ const routes = [
 ];
 
 export default function Navbar() {
-  console.log("Navbar running");
-
   // Use State
   const [current, setCurrent] = useState("mail");
 

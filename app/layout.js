@@ -31,14 +31,6 @@ const headerStyle = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* Doesn't seem to be working anyway */}
-      <Head>
-        <title>Meta from head component</title>
-        {/*<meta*/}
-        {/*  property="description"*/}
-        {/*  content="Manufacturers, distributors, and sellers of laboratory equipment & lab consumables"*/}
-        {/*/>*/}
-      </Head>
       <body className={inter.className}>
         {/* AntD header-body-footer layout */}
         <Layout>
