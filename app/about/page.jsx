@@ -2,9 +2,10 @@
 
 const baseURL = `https://cdn.contentful.com`;
 const getAllEntries = `${baseURL}/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
+const getSingleEntry = `${baseURL}/spaces/${process.env.SPACE_ID}/environments/master/entries/5wXQGH7Of5nYxWqPzLh8SM?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
 
 async function getData() {
-  const res = await fetch(`${getAllEntries}`);
+  const res = await fetch(`${getSingleEntry}`);
 
   if (!res.ok) {
     console.log(`FETCH FAIL`);
@@ -22,15 +23,12 @@ export default async function About() {
 
   const data = await getData();
 
-  console.log(data.items[0]);
-
-  const pageTitle = data.items[0].fields.title;
-  const pageBody = data.items[0].fields.body;
+  console.log(data);
 
   return (
     <main>
-      <h1>{pageTitle}</h1>
-      <p>{pageBody}</p>
+      <h1>{data.fields.title}</h1>
+      <p>{data.fields.body}</p>
     </main>
   );
 }
