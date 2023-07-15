@@ -1,5 +1,4 @@
 // ! Check if exporting functions and fetching data from remote folder is OK
-// ! **possible async problem** data not fetching unless refreshed - ON VERCEL ONLY
 
 const baseURL = `https://cdn.contentful.com`;
 
