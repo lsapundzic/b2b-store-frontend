@@ -12,8 +12,6 @@ const getContentType = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID
 // Get all entries of a space
 const getAllEntries = `${baseURL}/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
 
-const fetchType = [getSpace, getContentModel, getContentType];
-
 async function getData() {
   const res = await fetch(`${getAllEntries}`);
 
