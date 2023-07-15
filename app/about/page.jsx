@@ -1,11 +1,11 @@
-import ContentFetch from "../api/content-types";
+import getData from "../api/fetchData";
 
 export default async function About() {
   console.log("About page running...");
 
-  const data = await ContentFetch(2);
+  const data = await getData(2);
 
-  console.log(data);
+  console.log(data.sys);
 
   return (
     <main>

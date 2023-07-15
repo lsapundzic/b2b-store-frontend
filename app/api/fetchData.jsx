@@ -8,18 +8,18 @@ const getContentType = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID
 
 const fetchType = [getSpace, getContentModel, getContentType];
 
-async function FetchContentTypes(fetchRequest) {
+async function getData(fetchRequest) {
   const res = await fetch(fetchType[fetchRequest]);
 
   if (!res.ok) {
-    console.log("Custom message: fetch fail");
+    console.log(`FETCH FAIL`);
   } else {
-    console.log("Custom message: fetch success");
+    console.log(`FETCH SUCCESS`);
   }
 
-  console.log("Fetch finished");
+  console.log(`FETCH FINISHED`);
 
   return res.json();
 }
 
-export default FetchContentTypes;
+export default getData;
