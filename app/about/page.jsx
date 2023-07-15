@@ -1,8 +1,4 @@
 // import getData from "../api/fetchData";
-"use client";
-// AntD imports
-import { Typography } from "antd";
-const { Title, Paragraph } = Typography;
 
 const baseURL = `https://cdn.contentful.com`;
 const getAllEntries = `${baseURL}/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
