@@ -15,11 +15,13 @@
 
 async function getData() {
   const res = await fetch(
-    `https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}?access_token=${process.env.CONTENTFUL_ACCESS_TOKEN}`
+    `https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}?access_token=${process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN}`
   );
 
   if (!res.ok) {
     console.log("Error fetching data");
+  } else {
+    console.log("Fetch OK?");
   }
 
   return res.json();
@@ -35,6 +37,7 @@ export default async function About() {
   return (
     <main>
       <h1>Testing API calls</h1>
+      <p>Some contenet goes heere</p>
     </main>
   );
 }
