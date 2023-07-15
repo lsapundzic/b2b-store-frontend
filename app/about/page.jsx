@@ -1,4 +1,4 @@
-// import getData from "../api/fetchData";
+// import FetchData from "../api/fetchData";
 
 const baseURL = `https://cdn.contentful.com`;
 const getAllEntries = `${baseURL}/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
@@ -25,13 +25,13 @@ export default async function About() {
 
   console.log(data);
 
-  const title = data.fields.title;
-  const body = data.fields.body;
+  // const title = data.fields.title;
+  // const body = data.fields.body;
 
   return (
     <main>
-      <h1>{title}</h1>
-      <p>{body}</p>
+      {/* <h1>{title}</h1>
+      <p>{body}</p> */}
     </main>
   );
 }

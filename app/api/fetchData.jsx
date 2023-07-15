@@ -12,7 +12,7 @@ const getContentType = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID
 const getAllEntries = `${baseURL}/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
 const getSingleEntry = `${baseURL}/spaces/${process.env.SPACE_ID}/environments/master/entries/5wXQGH7Of5nYxWqPzLh8SM?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
 
-async function getData() {
+async function FetchData() {
   const res = await fetch(`${getAllEntries}`);
 
   if (!res.ok) {
