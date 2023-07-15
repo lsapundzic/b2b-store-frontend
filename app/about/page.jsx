@@ -1,10 +1,7 @@
-// import FetchData from "../api/fetchData";
-
-const baseURL = `https://cdn.contentful.com`;
-const getAllEntries = `${baseURL}/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
-const getSingleEntry = `${baseURL}/spaces/${process.env.SPACE_ID}/environments/master/entries/5wXQGH7Of5nYxWqPzLh8SM?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
-
 async function getData() {
+  // Get About page URL
+  const getSingleEntry = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/entries/5wXQGH7Of5nYxWqPzLh8SM?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
+
   const res = await fetch(`${getSingleEntry}`);
 
   if (!res.ok) {
@@ -25,8 +22,8 @@ export default async function About() {
 
   console.log(data);
 
-  // const title = data.fields.title;
-  // const body = data.fields.body;
+  const title = data.fields.title;
+  const body = data.fields.body;
 
   return (
     <main>
