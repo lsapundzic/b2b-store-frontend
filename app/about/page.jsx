@@ -1,34 +1,37 @@
-async function getData() {
-  // Get About page URL
-  const getSingleEntry = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/entries/5wXQGH7Of5nYxWqPzLh8SM?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
-
-  const res = await fetch(`${getSingleEntry}`);
-
-  if (!res.ok) {
-    console.log(`FETCH FAIL`);
-  } else {
-    console.log(`FETCH SUCCESS`);
-  }
-
-  console.log(`FETCH FINISHED`);
-
-  return res.json();
-}
+import { client } from "../lib/contentful/client.js";
 
 export default async function About() {
-  console.log("About page running...");
+  const entryID = "5wXQGH7Of5nYxWqPzLh8SM";
 
-  const data = await getData();
-
-  console.log(data);
-
-  const title = data.fields.title;
-  const body = data.fields.body;
+  console.log("About page running....");
+  client
+    .getEntry(`${entryID}`)
+    .then((entry) => console.log(entry))
+    .catch(console.error);
 
   return (
     <main>
-      {/* <h1>{title}</h1>
-      <p>{body}</p> */}
+      <h1>Some Title</h1>
+      <p>Some content right here</p>
     </main>
   );
 }
+
+// export const getStaticProps = async () => {
+//   console.log("Get props");
+//   const response = await client.getEntries({ content_type: "staticPages" });
+
+//   if (!response.ok) {
+//     console.log("Error fetching data");
+//   } else {
+//     console.log("Fetch success");
+//     console.log(response);
+//   }
+
+//   return {
+//     props: {
+//       pages: response.items,
+//       revalidated: 60,
+//     },
+//   };
+// };
