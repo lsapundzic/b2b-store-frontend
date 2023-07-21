@@ -6,17 +6,20 @@ const client = contentful.createClient({
   accessToken: process.env.DELIVERY_ACCESS_TOKEN,
 });
 
-client
-  .getEntry("5wXQGH7Of5nYxWqPzLh8SM")
-  .then((entry) => console.log("Display data:", entry.fields.title))
-  .catch(console.error);
+// client
+//   .getEntry("5wXQGH7Of5nYxWqPzLh8SM")
+//   .then((entry) => console.log("Display data:", entry.fields.title))
+//   .catch(console.error);
 
-export default async function About() {
+const entry = await client.getEntry("5wXQGH7Of5nYxWqPzLh8SM");
+console.log(entry);
+
+export default function About() {
   console.log("About page running.....");
 
   return (
     <main>
-      <h1>About Page</h1>
+      <h1>{entry.fields.title}</h1>
       <p>Testing server side</p>
     </main>
   );
