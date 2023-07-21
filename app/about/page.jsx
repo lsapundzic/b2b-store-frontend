@@ -10,11 +10,11 @@ const client = contentful.createClient({
 
 client
   .getEntry("5wXQGH7Of5nYxWqPzLh8SM")
-  .then((entry) => console.log(entry))
+  .then((entry) => console.log("Display data:", entry.fields.title))
   .catch(console.error);
 
 export default async function About() {
-  console.log("About page running...");
+  console.log("About page running.....");
 
   return (
     <main>
