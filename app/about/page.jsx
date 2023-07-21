@@ -20,7 +20,7 @@ export default function About() {
   return (
     <main>
       <h1>{entry.fields.title}</h1>
-      <p>Testing server side</p>
+      <p>{entry.fields.body}</p>
     </main>
   );
 }
