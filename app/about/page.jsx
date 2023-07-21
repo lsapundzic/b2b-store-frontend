@@ -8,7 +8,10 @@ const client = contentful.createClient({
 
 client
   .getEntry("5wXQGH7Of5nYxWqPzLh8SM")
-  .then((entry) => console.log("Display data:", entry.fields.title))
+  .then((entry) => {
+    console.log(entry);
+    // const localStorage = entry;
+  })
   .catch(console.error);
 
 export default async function About() {
