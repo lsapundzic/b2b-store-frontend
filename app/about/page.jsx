@@ -1,10 +1,4 @@
-const contentful = require("contentful");
-
-const client = contentful.createClient({
-  space: process.env.SPACE_ID,
-  environment: "master",
-  accessToken: process.env.DELIVERY_ACCESS_TOKEN,
-});
+import { client } from "../lib/contentful/client.js";
 
 client
   .getEntry("5wXQGH7Of5nYxWqPzLh8SM")
