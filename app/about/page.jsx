@@ -3,6 +3,8 @@
 // import { client } from "../lib/contentful/client.js";
 
 export default async function About() {
+  console.log("About page running....");
+
   // * Trying to fetch data with the latest NextJS functions
   // ! This method used to work, and at some point it just decided not to.
 
@@ -16,23 +18,22 @@ export default async function About() {
     const res = await fetch(`${getSingleEntry}`);
 
     if (!res.ok) {
-      console.log("FETCH FAIL");
+      // * Throwing errors is better than console.log because it prevents the re-fetch
+      throw new Error("Failed to fetch data");
     } else {
       console.log(`FETCH SUCCESS`);
     }
 
-    console.log(`FETCH FINISHED`);
+    console.log(`Fetch process finished`);
 
     return res.json();
   }
-
-  console.log("About page running....");
 
   const data = await getData();
 
   console.log("The fetched data is: ", data);
 
-  console.log("FINISH");
+  console.log("Process Complete");
 
   return (
     <main>

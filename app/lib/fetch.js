@@ -1,6 +1,6 @@
 // This fetch is according ot the recommendation by the latest NextJS documentation: https://nextjs.org/docs/app/building-your-application/data-fetching/fetching
 
-// ! This fetch is currently disabled as I am trying other options
+// ! This is a NextJS fetch, it is presently not used
 
 async function getData() {
   // Get About page URL
