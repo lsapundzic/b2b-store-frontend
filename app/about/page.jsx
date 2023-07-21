@@ -1,20 +1,29 @@
-import { client } from "../lib/contentful/client.js";
+import { client } from "../lib/contentful/client";
 
-client
-  .getEntry("5wXQGH7Of5nYxWqPzLh8SM")
-  .then((entry) => {
-    console.log(entry);
-    // const localStorage = entry;
-  })
-  .catch(console.error);
+export default async function Page({ repo }) {
+  console.log("About running...");
 
-export default async function About() {
-  console.log("About page running.....");
+  const entry = await client.getEntry("5wXQGH7Of5nYxWqPzLh8SM");
+  console.log(entry);
 
+  console.log("Repo content: ", repo);
   return (
     <main>
-      <h1>About Page</h1>
-      <p>Testing server side</p>
+      <h1>{entry.fields.title}</h1>
+      <h2>Some content here</h2>
     </main>
   );
 }
+
+// export const getStaticProps = async () => {
+//   let repo;
+
+//   client
+//     .getEntry("<entry_id>")
+//     .then((entry) => {})
+//     .catch(console.error);
+
+//   return {
+//     props: { repo },
+//   };
+// };
