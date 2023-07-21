@@ -1,5 +1,3 @@
-"use client";
-
 const contentful = require("contentful");
 
 const client = contentful.createClient({
@@ -19,6 +17,7 @@ export default async function About() {
   return (
     <main>
       <h1>About Page</h1>
+      <p>Testing server side</p>
     </main>
   );
 }
