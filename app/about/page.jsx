@@ -8,12 +8,12 @@ export default async function About() {
 
   async function getData() {
     // About page ID
-    // const pageID = "5wXQGH7Of5nYxWqPzLh8SM";
+    const pageID = "5wXQGH7Of5nYxWqPzLh8SM";
 
     // Get About page URL
-    // const getSingleEntry = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/entries/${pageID}?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
+    const getSingleEntry = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/entries/${pageID}?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
 
-    const getSingleEntry = `https://api.whatdoestrumpthink.com/api/v1/quotes/random`;
+    // const getSingleEntry = `https://api.whatdoestrumpthink.com/api/v1/quotes/random`;
 
     const res = await fetch(`${getSingleEntry}`);
 
@@ -32,7 +32,7 @@ export default async function About() {
 
   const data = await getData();
 
-  console.log("The fetched data is: ", data.message);
+  console.log("The fetched data is: ", data);
 
   return (
     <main>
