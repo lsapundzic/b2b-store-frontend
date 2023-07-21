@@ -18,7 +18,7 @@ export default async function About() {
     const res = await fetch(`${getSingleEntry}`);
 
     if (!res.ok) {
-      // * Throwing errors is better than console.log because it prevents the re-fetch
+      // * Throwing errors is better than console.log it prevents the re-fetch (not completely)
       throw new Error("Failed to fetch data");
     } else {
       console.log(`FETCH SUCCESS`);
