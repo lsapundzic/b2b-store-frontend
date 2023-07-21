@@ -13,8 +13,6 @@ export default async function About() {
     // Get About page URL
     const getSingleEntry = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/entries/${pageID}?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
 
-    // const getSingleEntry = `https://api.whatdoestrumpthink.com/api/v1/quotes/random`;
-
     const res = await fetch(`${getSingleEntry}`);
 
     if (!res.ok) {
@@ -33,6 +31,8 @@ export default async function About() {
   const data = await getData();
 
   console.log("The fetched data is: ", data);
+
+  console.log("FINISH");
 
   return (
     <main>
