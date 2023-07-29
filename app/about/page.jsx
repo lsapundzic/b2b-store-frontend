@@ -9,7 +9,9 @@ export default function About() {
   useEffect(() => {
     const url = `https://cdn.contentful.com/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/entries/5wXQGH7Of5nYxWqPzLh8SM?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}`;
 
-    fetch(url)
+    const urltwo = `https://cdn.contentful.com/spaces/wzh8zqkwvm1v/environments/master/entries/5wXQGH7Of5nYxWqPzLh8SM?access_token=ggKW5t86EQMqBvvLqmrC-vuCZg77_bqdNy-IxsF_lHk`;
+
+    fetch(urltwo)
       .then((resolve) => resolve.json())
       .then((fetched) => {
         setData(fetched);
