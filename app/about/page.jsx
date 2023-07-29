@@ -1,26 +1,20 @@
-const contentful = require("contentful");
+// "use client";
 
-const client = contentful.createClient({
-  space: process.env.SPACE_ID,
-  environment: "master",
-  accessToken: process.env.DELIVERY_ACCESS_TOKEN,
-});
+import { client } from "../contentful/client.js";
 
-// client
-//   .getEntry("5wXQGH7Of5nYxWqPzLh8SM")
-//   .then((entry) => console.log("Display data:", entry.fields.title))
-//   .catch(console.error);
-
-const entry = await client.getEntry("5wXQGH7Of5nYxWqPzLh8SM");
-console.log(entry);
-
-export default function About() {
+export default async function About() {
   console.log("About page running.....");
+
+  const AboutPage = "5wXQGH7Of5nYxWqPzLh8SM";
+
+  const result = await client.getEntry(AboutPage);
+
+  console.log(result);
 
   return (
     <main>
-      <h1>{entry.fields.title}</h1>
-      <p>{entry.fields.body}</p>
+      <h1>{result.fields.title}</h1>
+      <p>{result.fields.body}</p>
     </main>
   );
 }
