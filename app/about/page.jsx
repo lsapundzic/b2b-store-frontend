@@ -1,26 +1,34 @@
-const contentful = require("contentful");
+"use client";
 
-const client = contentful.createClient({
-  space: process.env.SPACE_ID,
-  environment: "master",
-  accessToken: process.env.DELIVERY_ACCESS_TOKEN,
-});
+import { useState, useEffect } from "react";
 
-// client
-//   .getEntry("5wXQGH7Of5nYxWqPzLh8SM")
-//   .then((entry) => console.log("Display data:", entry.fields.title))
-//   .catch(console.error);
+function About() {
+  const [data, setData] = useState(null);
+  const [isLoading, setLoading] = useState(true);
 
-const entry = await client.getEntry("5wXQGH7Of5nYxWqPzLh8SM");
-console.log(entry);
+  const testURL = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/content_types/staticPages?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
 
-export default function About() {
-  console.log("About page running.....");
+  useEffect(() => {
+    fetch("https://api.whatdoestrumpthink.com/api/v1/quotes/random")
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+        setLoading(false);
+      });
+  }, []);
+
+  console.log(data);
+
+  if (isLoading) return <p>Loading...</p>;
+  if (!data) return <p>No profile data</p>;
 
   return (
-    <main>
-      <h1>{entry.fields.title}</h1>
-      <p>{entry.fields.body}</p>
-    </main>
+    <div>
+      <h1>Client Side API Fetch</h1>
+      <h2>Does it work?</h2>
+      <p>{data.message}</p>
+    </div>
   );
 }
+
+export default About;
