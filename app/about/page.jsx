@@ -6,10 +6,12 @@ function About() {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
 
-  const testURL = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/content_types/staticPages?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
+  // const testAPI = "https://api.whatdoestrumpthink.com/api/v1/quotes/random";
 
   useEffect(() => {
-    fetch("https://api.whatdoestrumpthink.com/api/v1/quotes/random")
+    const url = `https://cdn.contentful.com/spaces/wzh8zqkwvm1v/environments/master/entries/5wXQGH7Of5nYxWqPzLh8SM?access_token=ggKW5t86EQMqBvvLqmrC-vuCZg77_bqdNy-IxsF_lHk`;
+
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -26,7 +28,7 @@ function About() {
     <div>
       <h1>Client Side API Fetch</h1>
       <h2>Does it work?</h2>
-      <p>{data.message}</p>
+      <p>{data.fields.title}</p>
     </div>
   );
 }
