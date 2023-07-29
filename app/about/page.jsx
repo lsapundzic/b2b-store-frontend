@@ -2,17 +2,12 @@
 
 import { useState, useEffect } from "react";
 
-function About() {
+export default function About() {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
 
-  // const testAPI = "https://api.whatdoestrumpthink.com/api/v1/quotes/random";
-
   useEffect(() => {
-    const spaceid = process.env.NEXT_PUBLIC_SPACE_ID;
-    console.log("space id is: ", spaceid);
-
-    const url = `https://cdn.contentful.com/spaces/${spaceid}/environments/master/entries/5wXQGH7Of5nYxWqPzLh8SM?access_token=ggKW5t86EQMqBvvLqmrC-vuCZg77_bqdNy-IxsF_lHk`;
+    const url = `https://cdn.contentful.com/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/entries/5wXQGH7Of5nYxWqPzLh8SM?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}`;
 
     fetch(url)
       .then((resolve) => resolve.json())
@@ -30,10 +25,8 @@ function About() {
   return (
     <div>
       <h1>Client Side API Fetch</h1>
-      <h2>Does it work?</h2>
-      <p>{data.fields.title}</p>
+      <h2>{data.fields.title}</h2>
+      <p>{data.fields.body}</p>
     </div>
   );
 }
-
-export default About;
