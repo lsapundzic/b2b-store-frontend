@@ -1,5 +1,4 @@
-// "use client";
-
+// Contentful client fetch
 import { client } from "../contentful/client.js";
 
 export default async function About() {
