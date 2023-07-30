@@ -12,7 +12,7 @@ export default async function About() {
 
   return (
     <main>
-      <h1>Client + Separate fetch + client render in component</h1>
+      <h1>Client + Separate fetch + client render in component + local env</h1>
       <Body content={data} />
     </main>
   );
