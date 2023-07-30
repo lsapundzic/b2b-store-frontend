@@ -13,7 +13,7 @@ export default async function About() {
 
   return (
     <main>
-      <h1>Client + Separate fetch</h1>
+      <h1>Client + Separate fetch + env var</h1>
       <h2>{data.fields.title}</h2>
       <p>
         A server-side fetch has been performed, and page has been rendered on

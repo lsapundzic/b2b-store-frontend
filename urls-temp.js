@@ -12,3 +12,6 @@ const getSingleEntry = `${baseURL}/spaces/${process.env.SPACE_ID}/environments/m
 
 // Test API
 const testAPI = `https://api.whatdoestrumpthink.com/api/v1/quotes/random`;
+
+// ! UNSAFE! About
+const aboutAPI = `https://cdn.contentful.com/spaces/wzh8zqkwvm1v/environments/master/entries/5wXQGH7Of5nYxWqPzLh8SM?access_token=ggKW5t86EQMqBvvLqmrC-vuCZg77_bqdNy-IxsF_lHk`;
