@@ -1,3 +1,5 @@
+"use client";
+
 import { getData } from "./getData";
 
 export default async function About() {
@@ -6,14 +8,16 @@ export default async function About() {
 
   console.log("Fetched data: ", data);
 
-  console.log("Separate fetch?");
+  console.log("Separate fetch test");
+  console.log("------------------------------------");
 
   return (
     <main>
-      <h1>About</h1>
+      <h1>Client + Separate fetch</h1>
+      <h2>{data.fields.title}</h2>
       <p>
-        The following is the fetched on the server side - separate! - :{" "}
-        {data.fields.body}
+        A server-side fetch has been performed, and page has been rendered on
+        client: {data.fields.body}
       </p>
     </main>
   );
