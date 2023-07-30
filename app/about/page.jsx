@@ -1,3 +1,4 @@
+import Body from "./body";
 import { getData } from "./getData";
 
 export default async function About() {
@@ -11,12 +12,8 @@ export default async function About() {
 
   return (
     <main>
-      <h1>Client + Separate fetch + env var</h1>
-      <h2>{data.fields.title}</h2>
-      <p>
-        A server-side fetch has been performed, and page has been rendered on
-        client: {data.fields.body}
-      </p>
+      <h1>Client + Separate fetch + client render in component</h1>
+      <Body content={data} />
     </main>
   );
 }
