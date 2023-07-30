@@ -1,5 +1,3 @@
-"use client";
-
 import { getData } from "./getData";
 
 export default async function About() {
