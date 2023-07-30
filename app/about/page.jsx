@@ -1,4 +1,4 @@
-import Body from "./body";
+import Body from "../components/Body";
 import { getData } from "./getData";
 
 export default async function About() {
