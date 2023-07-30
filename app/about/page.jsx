@@ -19,7 +19,10 @@ export default async function About() {
   return (
     <main>
       <h1>About</h1>
-      <p>The following is the fetched: {data.fields.title}</p>
+      <p>
+        The following is the fetched on the server side - sign - :{" "}
+        {data.fields.body}
+      </p>
     </main>
   );
 }
