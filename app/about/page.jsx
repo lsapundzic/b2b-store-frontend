@@ -7,13 +7,19 @@ export default async function About() {
 
   console.log("Fetched data: ", data);
 
-  console.log("Separate fetch test");
   console.log("------------------------------------");
 
   return (
     <main>
-      <h1>Client + Separate fetch + client render in component + local env</h1>
-      <Body content={data} />
+      <h1>Client + Separate fetch + local env attempt</h1>
+      <div>
+        Rendering data from the server:
+        <p>{data.fields.body}</p>
+      </div>
+      <div>
+        Rendering data from the client:
+        {/* <Body content={data} /> */}
+      </div>
     </main>
   );
 }
