@@ -16,4 +16,10 @@ Incorporating website metadata into the top-level page.js file, following the gu
 
 #### Fetching Data
 
-There are a number of ways to [fetch data in Next.js](https://medium.com/@brianridolcedev/every-possible-way-to-fetch-data-in-next-js-a569a816784a) and according to the [latest documentation](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching) the recommended method is with async-await which is also a server-side function. The alternative utilized in this project is an older [client-side](https://nextjs.org/docs/pages/building-your-application/data-fetching/client-side) fetching with useState and useEffect hooks.
+There are a number of ways to [fetch data in Next.js](https://medium.com/@brianridolcedev/every-possible-way-to-fetch-data-in-next-js-a569a816784a) and according to the latest documentation the [recommended method](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching) is with async-await which is also a server-side function. The alternative utilized in this project is an older [client-side](https://nextjs.org/docs/pages/building-your-application/data-fetching/client-side) fetching with useState and useEffect hooks, much like in React.
+
+## Using Environment Variables
+
+Following the standard practice of keeping API keys as environment variables in an .env.local file does not work and it may also be related to server vs. client rendering issue. When printing the environment variable in the console it is undefined.
+
+The first workaround was to add NEXT_PUBLIC prefix to the variable names which does work well locally in the development, during the build time on Vercel, even when in production. However, once the data fetch is triggered, the browser console throws a vague error and the page is not rendered.
