@@ -1,4 +1,4 @@
-// THis method of fetching data with Contentful library is an example taken from a YT video: https://youtu.be/ApztAQuXisU?t=1604
+// Method of fetching with Contentful Client
 const contentful = require("contentful");
 
 export const client = contentful.createClient({
