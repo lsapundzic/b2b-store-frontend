@@ -5,8 +5,7 @@ export default async function About() {
   console.log("About running...");
   const data = await getData();
 
-  console.log("Fetched data: ", data);
-
+  console.log("--- FETCHED DATA: ", data);
   console.log("------------------------------------");
 
   return (
