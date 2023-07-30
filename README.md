@@ -22,4 +22,4 @@ There are a number of ways to [fetch data in Next.js](https://medium.com/@brianr
 
 Following the standard practice of keeping API keys as environment variables in an .env.local file does not work and it may also be related to server vs. client rendering issue. When printing the environment variable in the console it is undefined.
 
-The first workaround was to add NEXT_PUBLIC prefix to the variable names which does work well locally in the development, during the build time on Vercel, even when in production. However, once the data fetch is triggered, the browser console throws a vague error and the page is not rendered.
+The first workaround was to add NEXT_PUBLIC prefix to the variable names which is a way to get variable names on the client side. This works well locally in the development, during the build time on Vercel, even when in production. However, once the data fetch is triggered, the browser console throws a vague error and the page is not rendered.

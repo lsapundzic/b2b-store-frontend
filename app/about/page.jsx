@@ -22,7 +22,7 @@ export default function About() {
   if (isLoading) return <p>Loading...</p>;
   if (!data) return <p>No data fetched</p>;
 
-  console.log(data);
+  console.log("Data received: ", data);
 
   return (
     <div>
