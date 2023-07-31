@@ -4,4 +4,6 @@
 
 [ ] Metadata conflicts with "use client".
 
-[ ] Using variables from .env.local doesn't work either in production, during build, and in deployment on Vercel. Short term solution is to simply not use variables.
+[ ] Try different fetch methods
+
+[ ] Try different project structure
