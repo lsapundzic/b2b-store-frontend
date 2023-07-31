@@ -9,15 +9,7 @@ export default async function About() {
 
   return (
     <main>
-      <h1>Success: remote env keys working</h1>
-      <div>
-        Rendering data from the server:
-        <p>{data.fields.body}</p>
-      </div>
-      <div>
-        Rendering data from the client:
-        <Body content={data} />
-      </div>
+      <Body content={data} />
     </main>
   );
 }
