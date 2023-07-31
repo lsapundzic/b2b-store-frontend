@@ -6,18 +6,17 @@ export default async function About() {
   const data = await getData();
 
   console.log("--- FETCHED DATA: ", data);
-  console.log("------------------------------------");
 
   return (
     <main>
-      <h1>Client + Separate fetch + local env attempt</h1>
+      <h1>Success: remote env keys working</h1>
       <div>
         Rendering data from the server:
         <p>{data.fields.body}</p>
       </div>
       <div>
         Rendering data from the client:
-        {/* <Body content={data} /> */}
+        <Body content={data} />
       </div>
     </main>
   );
