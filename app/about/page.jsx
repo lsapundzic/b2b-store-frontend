@@ -9,8 +9,6 @@ export default async function About() {
 
   return (
     <main>
-      <h1>The env is:{testenv} </h1>
-
       <Body content={data} />
     </main>
   );
