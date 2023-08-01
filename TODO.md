@@ -4,6 +4,6 @@
 
 [ ] Metadata conflicts with "use client".
 
-[ ] Try different fetch methods
+[ ] Find a better fitting server side fetch method
 
-[ ] Try different project structure
+[ ] Reorganize the project structure in relationship to fetching data & UI components

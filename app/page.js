@@ -4,7 +4,7 @@
 import { Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
-export default function Home() {
+export default function Homepage() {
   console.log("Homepage running...");
 
   return (
