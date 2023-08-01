@@ -1,10 +1,10 @@
-export async function getSingleEntry(singlePage) {
-  const urlHolder = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/entries/${singlePage}?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
+export async function getSingleEntry(singleEntryID) {
+  const singleEntryURL = `https://cdn.contentful.com/spaces/${process.env.SPACE_ID}/environments/master/entries/${singleEntryID}?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
 
-  const res = await fetch(urlHolder);
+  const res = await fetch(singleEntryURL);
 
   if (!res.ok) {
-    throw new Error("--- Failed to fetch data ---");
+    throw new Error("Error message: failed to fetch data");
   }
 
   return res.json();
