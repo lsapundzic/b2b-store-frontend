@@ -15,3 +15,4 @@ export const GET_SINGLE_ENTRY = `${BASE_URL}/spaces/${process.env.SPACE_ID}/envi
 
 // Page IDs
 export const ABOUT_ID = `5wXQGH7Of5nYxWqPzLh8SM`;
+export const CONTACT_ID = `2UDWb179AgOuPSwqzLytSM`;

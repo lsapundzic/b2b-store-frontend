@@ -2,10 +2,10 @@
 
 // AntD icons
 import {
-  AimOutlined,
+  HomeOutlined,
   CoffeeOutlined,
   ExperimentOutlined,
-  CommentOutlined,
+  MailOutlined,
 } from "@ant-design/icons";
 
 //AntD components
@@ -19,7 +19,7 @@ const routes = [
   {
     label: <Link href="/">Home</Link>,
     key: "home",
-    icon: <AimOutlined />,
+    icon: <HomeOutlined />,
   },
   {
     label: <Link href="/about">About</Link>,
@@ -34,7 +34,7 @@ const routes = [
   {
     label: <Link href="/contact">Contact Us</Link>,
     key: "contact",
-    icon: <CommentOutlined />,
+    icon: <MailOutlined />,
   },
 ];
 
