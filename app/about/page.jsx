@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 // Project imports
 import { fetchData } from "../services/fetchData";
 import { ABOUT_ID } from "../services/requests";
+import { pageStyle, textStyle } from "../styles/globalStyles";
 
 // AntD Imports
 import { Empty, Skeleton, Typography } from "antd";
@@ -33,15 +34,6 @@ function About() {
 
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
-
-  const pageStyle = {
-    paddingLeft: 50,
-    paddingRight: 50,
-  };
-
-  const textStyle = {
-    lineHeight: 2,
-  };
 
   return (
     <div style={pageStyle}>

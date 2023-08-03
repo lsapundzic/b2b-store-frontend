@@ -20,7 +20,12 @@ const inter = Inter({ subsets: ["latin"] });
 //     "Manufacturers, distributors, and sellers of laboratory equipment & lab consumables",
 // };
 
-// Header styling
+// Used so that the content stretches throughout the page
+const globalLayoutStyle = {
+  minHeight: "100vh",
+};
+
+// Prevents black boxes appearing on the sides of the navbar
 const headerStyle = {
   backgroundColor: "white",
 };
@@ -29,7 +34,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Layout>
+        <Layout style={globalLayoutStyle}>
           {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
           <Header style={headerStyle}>
             <Navbar />
