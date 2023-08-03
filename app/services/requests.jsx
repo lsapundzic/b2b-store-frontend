@@ -1,4 +1,3 @@
-// TODO: These URLs are not properly impleneted into the project
 export const BASE_URL = `https://cdn.contentful.com`;
 
 // Content types

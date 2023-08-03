@@ -1,7 +1,9 @@
 "use client";
 
+import { BASE_URL } from "./requests";
+
 export function fetchData(entryID) {
-  const url = `https://cdn.contentful.com/spaces/wzh8zqkwvm1v/environments/master/entries/${entryID}?access_token=ggKW5t86EQMqBvvLqmrC-vuCZg77_bqdNy-IxsF_lHk`;
+  const url = `${BASE_URL}/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/entries/${entryID}?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}`;
 
   return fetch(url).then((res) => res.json());
 }
