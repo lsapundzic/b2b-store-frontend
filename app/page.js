@@ -2,7 +2,7 @@
 
 // AntD imports
 import { Typography } from "antd";
-const { Title, Paragraph } = Typography;
+const { Title } = Typography;
 
 export default function Homepage() {
   console.log("Homepage running...");
@@ -11,8 +11,6 @@ export default function Homepage() {
     <main>
       <Typography>
         <Title>Homepage!</Title>
-        <Title level={2}>Some Content</Title>
-        <Paragraph>Lorem ipsum</Paragraph>
       </Typography>
     </main>
   );
