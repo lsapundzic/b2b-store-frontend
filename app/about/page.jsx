@@ -10,8 +10,7 @@ import { pageStyle, textStyle } from "../styles/globalStyles";
 
 // AntD Imports
 import { Empty, Skeleton, Typography } from "antd";
-import Title from "antd/es/typography/Title";
-import Paragraph from "antd/es/typography/Paragraph";
+const { Title, Paragraph } = Typography;
 
 function About() {
   console.log("About page rendered...");
