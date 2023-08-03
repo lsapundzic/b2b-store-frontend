@@ -8,17 +8,18 @@ import { fetchData } from "../services/fetchData";
 import { ABOUT_ID } from "../services/requests";
 
 // AntD Imports
-import { Empty } from "antd";
+import { Empty, Skeleton } from "antd";
 
 function About() {
   console.log("About page rendered...");
   const [data, setData] = useState(null);
-  // const [isLoading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchData(ABOUT_ID)
       .then((data) => {
         setData(data);
+        setLoading(false);
         console.log("Data fetched ", data);
       })
       .catch((error) => {
@@ -26,9 +27,7 @@ function About() {
       });
   }, []);
 
-  // console.log(a);
-
-  // if (isLoading) return <p>Loading...</p>;
+  if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
 
   return (
