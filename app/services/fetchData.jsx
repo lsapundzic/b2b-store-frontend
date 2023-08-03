@@ -6,6 +6,7 @@ export async function fetchData() {
   const AboutPage = "5wXQGH7Of5nYxWqPzLh8SM";
 
   const result = await client.getEntry(AboutPage);
+
   if (!result.ok) {
     throw new Error("Failed to fetch data");
   }
