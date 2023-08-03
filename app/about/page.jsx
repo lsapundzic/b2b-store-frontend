@@ -16,6 +16,8 @@ function About() {
   // const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
+    // A
+
     fetchData(ABOUT_ID)
       .then((data) => {
         setData(data);
