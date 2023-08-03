@@ -4,11 +4,11 @@
 import { Inter } from "next/font/google";
 
 // Project components
-import { Layout } from "antd";
 import Navbar from "@/app/components/Navbar";
-import { Footer } from "antd/es/layout/layout";
 
-// AntD imports
+// AntD components
+import { Layout } from "antd";
+import { Footer } from "antd/es/layout/layout";
 const { Header, Content } = Layout;
 
 const inter = Inter({ subsets: ["latin"] });
@@ -29,7 +29,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* AntDesign layout structure */}
         <Layout>
           {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
           <Header style={headerStyle}>
