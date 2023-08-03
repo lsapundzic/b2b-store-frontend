@@ -1,4 +1,4 @@
-import { getData } from "../data/getData";
+import { getData } from "../utils/getData";
 import StaticContent from "../components/StaticContent";
 import { ABOUT_ID } from "../utils/settings";
 
