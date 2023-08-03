@@ -1,14 +1,34 @@
-import { getData } from "../utils/getData";
-import StaticContent from "../components/StaticContent";
-import { ABOUT_ID } from "../utils/settings";
+"use client";
 
-export default async function About() {
-  console.log("About page rendered...");
-  const data = await getData(ABOUT_ID);
+import { useState, useEffect } from "react";
+
+function About() {
+  const [data, setData] = useState(null);
+  const [isLoading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const url = `https://cdn.contentful.com/spaces/wzh8zqkwvm1v/environments/master/entries/5wXQGH7Of5nYxWqPzLh8SM?access_token=ggKW5t86EQMqBvvLqmrC-vuCZg77_bqdNy-IxsF_lHk`;
+
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data);
+        setLoading(false);
+      });
+  }, []);
+
+  console.log(data);
+
+  if (isLoading) return <p>Loading...</p>;
+  if (!data) return <p>No profile data</p>;
 
   return (
-    <main>
-      <StaticContent content={data} />
-    </main>
+    <div>
+      <h1>Client Side API Fetch</h1>
+      <h2>{data.fields.title}</h2>
+      <p>{data.fields.body}</p>
+    </div>
   );
 }
+
+export default About;

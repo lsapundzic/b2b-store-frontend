@@ -1,14 +1,5 @@
-import { getData } from "../utils/getData";
-import StaticContent from "../components/StaticContent";
-import { CONTACT_ID } from "../utils/settings";
-
-export default async function Contact() {
+export default function Contact() {
   console.log("Contact page rendered...");
-  const data = await getData(CONTACT_ID);
 
-  return (
-    <main>
-      <StaticContent content={data} />
-    </main>
-  );
+  return <main></main>;
 }
