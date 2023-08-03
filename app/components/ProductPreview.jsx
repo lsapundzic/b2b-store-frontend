@@ -15,7 +15,7 @@ const ProductPreview = () => {
         />
       }
     >
-      <Meta title="Europe Street beat" description="www.instagram.com" />
+      <Meta title="OPTIC900B" description="Binocular biological microscope" />
     </Card>
   );
 };
