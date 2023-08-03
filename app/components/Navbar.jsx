@@ -1,7 +1,12 @@
 "use client";
 
 // AntD icons
-import { AimOutlined, GiftOutlined, UserOutlined } from "@ant-design/icons";
+import {
+  AimOutlined,
+  CoffeeOutlined,
+  ExperimentOutlined,
+  CommentOutlined,
+} from "@ant-design/icons";
 
 //AntD components
 import { Menu } from "antd";
@@ -19,13 +24,23 @@ const routes = [
   {
     label: <Link href="/about">About</Link>,
     key: "about",
-    icon: <UserOutlined />,
+    icon: <CoffeeOutlined />,
+  },
+  {
+    label: <Link href="/products">Products</Link>,
+    key: "products",
+    icon: <ExperimentOutlined />,
+  },
+  {
+    label: <Link href="/contact">Contact Us</Link>,
+    key: "contact",
+    icon: <CommentOutlined />,
   },
 ];
 
 export default function Navbar() {
   // Use State
-  const [current, setCurrent] = useState("mail");
+  const [current, setCurrent] = useState("default");
 
   //   It changes useState which highlights the pressed tab
   const onClick = (e) => {

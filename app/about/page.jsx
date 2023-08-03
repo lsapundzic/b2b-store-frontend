@@ -1,15 +1,14 @@
-import { getSingleEntry } from "../data/getSingleEntry";
-import Body from "../components/Body";
+import { getData } from "../data/getData";
+import StaticContent from "../components/StaticContent";
+import { ABOUT_ID } from "../utils/settings";
 
 export default async function About() {
-  const aboutPageID = "5wXQGH7Of5nYxWqPzLh8SM";
-
-  console.log("About running...");
-  const data = await getSingleEntry(aboutPageID);
+  console.log("About page rendered...");
+  const data = await getData(ABOUT_ID);
 
   return (
     <main>
-      <Body content={data} />
+      <StaticContent content={data} />
     </main>
   );
 }

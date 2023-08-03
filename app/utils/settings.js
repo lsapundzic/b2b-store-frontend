@@ -1,4 +1,4 @@
-// TODO: These URLs are not impleneted into the project
+// TODO: These URLs are not properly impleneted into the project
 export const BASE_URL = `https://cdn.contentful.com`;
 
 // Content types
@@ -10,4 +10,8 @@ export const GET_CONTENT_TYPE = `https://cdn.contentful.com/spaces/${process.env
 
 // Get all entries of a space
 export const GET_ALL_ENTRIES = `${BASE_URL}/spaces/${process.env.SPACE_ID}/environments/master/entries?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
+
 export const GET_SINGLE_ENTRY = `${BASE_URL}/spaces/${process.env.SPACE_ID}/environments/master/entries/5wXQGH7Of5nYxWqPzLh8SM?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
+
+// Page IDs
+export const ABOUT_ID = `5wXQGH7Of5nYxWqPzLh8SM`;
