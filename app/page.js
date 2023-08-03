@@ -11,8 +11,7 @@ export default function Homepage() {
     <main>
       <Typography>
         <Title>Homepage!</Title>
-        <Title level={2}>Some Content</Title>
-        <Paragraph>Lorem ipsum</Paragraph>
+        <Paragraph>The content goes here</Paragraph>
       </Typography>
     </main>
   );
