@@ -7,14 +7,14 @@ import { useState, useEffect } from "react";
 import { fetchData } from "../services/fetchData";
 import { CONTACT_ID } from "../services/requests";
 import { pageStyle, textStyle } from "../styles/globalStyles";
-import ProductPreview from "../components/ProductPreview";
+import Flashcard from "../components/Flashcard";
 
 // AntD Imports
 import { Empty, Skeleton, Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
 function Products() {
-  console.log("Contact page rendered...");
+  console.log("Products page rendered...");
 
   // For holding fetched data and loading state
   const [data, setData] = useState(null);
@@ -28,7 +28,7 @@ function Products() {
         console.log("Data fetched ", data);
       })
       .catch((error) => {
-        console.log("An error has interfered somewhere");
+        console.log("Error fetching data in Products.jsx");
       });
   }, []);
 
@@ -38,9 +38,8 @@ function Products() {
   return (
     <div style={pageStyle}>
       <Typography>
-        <Title>Products</Title>
-        <Title level={2}>{data.fields.title}</Title>
-        <ProductPreview />
+        <Title>Products We Offer</Title>
+        <Flashcard />
       </Typography>
     </div>
   );
