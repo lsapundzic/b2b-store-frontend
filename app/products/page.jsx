@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 import { fetchData } from "../services/fetchData";
 import { CONTACT_ID } from "../services/requests";
 import { pageStyle, textStyle } from "../styles/globalStyles";
-import Flashcard from "../components/Flashcard";
 
 // AntD Imports
 import { Empty, Skeleton, Typography } from "antd";
@@ -39,7 +38,6 @@ function Products() {
     <div style={pageStyle}>
       <Typography>
         <Title>Products We Offer</Title>
-        <Flashcard />
       </Typography>
     </div>
   );
