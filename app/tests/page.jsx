@@ -18,14 +18,14 @@ export async function dataFetch(fetchMe) {
   return res.json();
 }
 
-export default async function Test() {
+export default async function TestPage() {
   console.log("--- --- TESTING PLATFORM RUNNING --- ---");
   const time = new Date();
   const now = `Action on: ${time.getHours()}H ${time.getMinutes()}M ${time.getSeconds()}S`;
 
   const data = await dataFetch(GET_ALL_ENTRIES);
 
-  console.log(now, "Fetched data: ", data.items);
+  console.log(now, "Fetched data: ", data);
 
   console.log("------------------------------------");
 
