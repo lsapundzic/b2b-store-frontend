@@ -6,6 +6,8 @@ import {
   CoffeeOutlined,
   ExperimentOutlined,
   MailOutlined,
+  BugTwoTone,
+  GiftOutlined,
 } from "@ant-design/icons";
 
 //AntD components
@@ -35,6 +37,16 @@ const routes = [
     label: <Link href="/contact">Contact Us</Link>,
     key: "contact",
     icon: <MailOutlined />,
+  },
+  {
+    label: <Link href="/tracking">Tracking</Link>,
+    key: "track",
+    icon: <GiftOutlined />,
+  },
+  {
+    label: <Link href="/tests">Tests</Link>,
+    key: "tests",
+    icon: <BugTwoTone />,
   },
 ];
 

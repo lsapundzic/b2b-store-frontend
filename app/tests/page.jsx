@@ -1,10 +1,15 @@
 // This is only for testing API and GET requests with SSR- no interface
 
-// Fetching data on the server side
-export async function dataFetch() {
-  const testURL = `https://cdn.contentful.com/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/entries/5wXQGH7Of5nYxWqPzLh8SM?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}`;
+import {
+  GET_ALL_ENTRIES,
+  GET_CONTENT_MODEL,
+  GET_CONTENT_TYPE,
+  GET_SPACE,
+} from "../services/requests";
 
-  const res = await fetch(testURL);
+// Fetching data on the server side
+export async function dataFetch(fetchMe) {
+  const res = await fetch(fetchMe);
 
   if (!res.ok) {
     throw new Error("Custom message: failed to fetch data");
@@ -15,15 +20,19 @@ export async function dataFetch() {
 
 export default async function Test() {
   console.log("--- --- TESTING PLATFORM RUNNING --- ---");
-  const data = await dataFetch();
+  const time = new Date();
+  const now = `Action on: ${time.getHours()}H ${time.getMinutes()}M ${time.getSeconds()}S`;
 
-  console.log("Fetched data: ", data);
+  const data = await dataFetch(GET_ALL_ENTRIES);
+
+  console.log(now, "Fetched data: ", data.items);
 
   console.log("------------------------------------");
 
   return (
     <main>
       <h1>Testing Data Fetch</h1>
+      <div></div>
     </main>
   );
 }

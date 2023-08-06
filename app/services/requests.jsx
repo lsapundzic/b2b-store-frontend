@@ -12,6 +12,6 @@ export const GET_ALL_ENTRIES = `${BASE_URL}/spaces/${process.env.SPACE_ID}/envir
 
 export const GET_SINGLE_ENTRY = `${BASE_URL}/spaces/${process.env.SPACE_ID}/environments/master/entries/5wXQGH7Of5nYxWqPzLh8SM?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;
 
-// Page IDs
+// Static Page IDs
 export const ABOUT_ID = `5wXQGH7Of5nYxWqPzLh8SM`;
 export const CONTACT_ID = `2UDWb179AgOuPSwqzLytSM`;
