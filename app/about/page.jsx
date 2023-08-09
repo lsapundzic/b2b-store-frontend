@@ -27,7 +27,7 @@ function About() {
         console.log("Data fetched ", data);
       })
       .catch((error) => {
-        console.log("An error has interfered somewhere");
+        console.error("Failure to fetch data.", error);
       });
   }, []);
 

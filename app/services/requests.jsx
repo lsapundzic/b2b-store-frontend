@@ -4,7 +4,7 @@ export const CONTACT_ID = `2UDWb179AgOuPSwqzLytSM`;
 export const TRACKING_ID = `6xWhYn726PTNQKjnWBQJCj`;
 
 // Contentful API base URL
-export const BASE_URL = `https://cdn.contentful.com`;
+// export const BASE_URL = `https://cdn.contentful.com`;
 
 // SPACE
 export const GET_SPACE = `$https://cdn.contentful.com/spaces/${process.env.SPACE_ID}?access_token=${process.env.DELIVERY_ACCESS_TOKEN}`;

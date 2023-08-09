@@ -1,6 +1,6 @@
 "use client";
 
-import { BASE_URL, GET_ALL_ENTRIES } from "./requests";
+import { GET_ALL_ENTRIES } from "./requests";
 
 export async function fetchData(entryID) {
   let url;
@@ -11,17 +11,20 @@ export async function fetchData(entryID) {
     url = constructEntryURL(entryID);
   }
 
+  // Broader scope error handling
   try {
     const response = await fetch(url);
 
+    // Error handling only for HTTP response status
     if (!response.ok) {
-      throw new Error(`Failed to fetch data. Status: ${response.status}`);
+      throw new Error(
+        `Failed to fetch data. HTTP response status: ${response.status}`
+      );
     }
 
     return response.json();
   } catch (error) {
-    console.error("Error fetching data:", error);
-    throw error;
+    console.error("General problem with fetching data. Error: ", error);
   }
 }
 
