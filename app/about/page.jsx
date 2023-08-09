@@ -10,6 +10,7 @@ import { pageStyle, textStyle } from "../styles/globalStyles";
 
 // AntD Imports
 import { Empty, Skeleton, Typography } from "antd";
+import { singleEntryUrl } from "../services/urlGenerator";
 const { Title, Paragraph } = Typography;
 
 function About() {
@@ -27,7 +28,7 @@ function About() {
         console.log("Data fetched ", data);
       })
       .catch((error) => {
-        console.log("An error has interfered somewhere");
+        console.log("An error has interfered somewhere. Error type: ", error);
       });
   }, []);
 
