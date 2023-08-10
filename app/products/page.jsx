@@ -5,11 +5,11 @@ import { useState, useEffect } from "react";
 
 // Project imports
 import { fetchData } from "../services/fetchData";
-import { CONTACT_ID } from "../services/requests";
 import { pageStyle, textStyle } from "../styles/globalStyles";
 
 // AntD Imports
 import { Empty, Skeleton, Typography, Card, Image, Row, Col } from "antd";
+import ProductCard from "../components/ProductCard";
 const { Title, Paragraph } = Typography;
 
 function Products() {
@@ -35,7 +35,8 @@ function Products() {
   if (!data) return <Empty />;
 
   // ! For development purposes
-  console.log("All the products: ", data.items);
+  // console.log("All the products: ", data.items);
+  // console.log("Accessing the ID: ", data.items[0].sys.id);
 
   return (
     <div style={pageStyle}>
@@ -48,9 +49,9 @@ function Products() {
           lg: 32,
         }}
       >
-        {data.items.map((product, index) => (
+        {data.items.map((product) => (
           <Col
-            key={index}
+            key={product.sys.id}
             span={{
               xs: 24,
               sm: 12,
@@ -58,20 +59,12 @@ function Products() {
               lg: 4,
             }}
           >
-            <Card
-              // key={index}
-              style={{ width: 300 }}
-              hoverable
-              cover={
-                <Image
-                  alt="product image"
-                  src="https://loremflickr.com/320/240"
-                />
-              }
-            >
-              <Title level={3}>{product.fields.name}</Title>
-              <Paragraph>{product.fields.description}</Paragraph>
-            </Card>
+            <ProductCard
+              id={product.sys.id}
+              name={product.fields.name}
+              description={product.fields.description}
+              stock={product.fields.inStock}
+            />
           </Col>
         ))}
       </Row>
