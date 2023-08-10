@@ -9,7 +9,7 @@ import { CONTACT_ID } from "../services/requests";
 import { pageStyle, textStyle } from "../styles/globalStyles";
 
 // AntD Imports
-import { Empty, Skeleton, Typography, Card, Image } from "antd";
+import { Empty, Skeleton, Typography, Card, Image, Row, Col } from "antd";
 const { Title, Paragraph } = Typography;
 
 function Products() {
@@ -37,25 +37,44 @@ function Products() {
   // ! For development purposes
   console.log("All the products: ", data.items);
 
-  const tempImagePlaceholder = `https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png`;
   return (
     <div style={pageStyle}>
-      <Typography>
-        <Title>All Products</Title>
+      <Title>Products</Title>
+      <Row
+        gutter={{
+          xs: 16,
+          sm: 16,
+          md: 24,
+          lg: 32,
+        }}
+      >
         {data.items.map((product, index) => (
-          <Card
+          <Col
             key={index}
-            style={{ width: 300 }}
-            hoverable
-            cover={
-              <Image alt="product image" src="http://placekitten.com/200/300" />
-            }
+            span={{
+              xs: 24,
+              sm: 12,
+              md: 8,
+              lg: 4,
+            }}
           >
-            <p>{product.fields.name}</p>
-            <p>{product.fields.description}</p>
-          </Card>
+            <Card
+              // key={index}
+              style={{ width: 300 }}
+              hoverable
+              cover={
+                <Image
+                  alt="product image"
+                  src="https://loremflickr.com/320/240"
+                />
+              }
+            >
+              <Title level={3}>{product.fields.name}</Title>
+              <Paragraph>{product.fields.description}</Paragraph>
+            </Card>
+          </Col>
         ))}
-      </Typography>
+      </Row>
     </div>
   );
 }
