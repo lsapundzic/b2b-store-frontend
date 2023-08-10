@@ -2,9 +2,10 @@
 
 // AntD Imports
 import { Typography, Card, Image, Badge } from "antd";
+import Link from "next/link";
 const { Title, Paragraph } = Typography;
 
-export default function ProductCard({ productID, name, description, stock }) {
+export default function ProductCard({ id, name, description, stock }) {
   return (
     <Card
       style={{ width: 300 }}
@@ -16,9 +17,12 @@ export default function ProductCard({ productID, name, description, stock }) {
         />
       }
     >
-      <Badge status="success" text="In stock" />
-      <Title level={3}>{name}</Title>
-      <Paragraph>{description}</Paragraph>
+      <Link href={`/${id}`}>
+        <Badge status="success" text="In stock" />
+        <Title level={3}>{name}</Title>
+        <Title level={4}>{id}</Title>
+        <Paragraph>{description}</Paragraph>
+      </Link>
     </Card>
   );
 }

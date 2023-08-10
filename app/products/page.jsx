@@ -35,7 +35,8 @@ function Products() {
   if (!data) return <Empty />;
 
   // ! For development purposes
-  console.log("All the products: ", data.items);
+  // console.log("All the products: ", data.items);
+  // console.log("Accessing the ID: ", data.items[0].sys.id);
 
   return (
     <div style={pageStyle}>
@@ -48,9 +49,9 @@ function Products() {
           lg: 32,
         }}
       >
-        {data.items.map((product, index) => (
+        {data.items.map((product) => (
           <Col
-            key={index}
+            key={product.sys.id}
             span={{
               xs: 24,
               sm: 12,
@@ -59,7 +60,7 @@ function Products() {
             }}
           >
             <ProductCard
-              productID={index}
+              id={product.sys.id}
               name={product.fields.name}
               description={product.fields.description}
               stock={product.fields.inStock}
