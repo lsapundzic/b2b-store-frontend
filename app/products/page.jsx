@@ -9,7 +9,7 @@ import { CONTACT_ID } from "../services/requests";
 import { pageStyle, textStyle } from "../styles/globalStyles";
 
 // AntD Imports
-import { Empty, Skeleton, Typography } from "antd";
+import { Empty, Skeleton, Typography, Card } from "antd";
 const { Title, Paragraph } = Typography;
 
 function Products() {
@@ -39,7 +39,10 @@ function Products() {
       <Typography>
         <Title>All Products</Title>
         {data.items.map((product, index) => (
-          <div key={index}>Name: {product.fields.name}</div>
+          <Card key={index} style={{ width: 300 }}>
+            <p>{product.fields.name}</p>
+            <p>{product.fields.description}</p>
+          </Card>
         ))}
       </Typography>
     </div>
