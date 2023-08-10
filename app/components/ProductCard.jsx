@@ -1,10 +1,10 @@
 "use client";
 
 // AntD Imports
-import { Typography, Card, Image } from "antd";
+import { Typography, Card, Image, Badge } from "antd";
 const { Title, Paragraph } = Typography;
 
-export default function ProductCard({ productID, name, description }) {
+export default function ProductCard({ productID, name, description, stock }) {
   return (
     <Card
       style={{ width: 300 }}
@@ -16,6 +16,7 @@ export default function ProductCard({ productID, name, description }) {
         />
       }
     >
+      <Badge status="success" text="In stock" />
       <Title level={3}>{name}</Title>
       <Paragraph>{description}</Paragraph>
     </Card>

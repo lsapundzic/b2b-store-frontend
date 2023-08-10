@@ -62,6 +62,7 @@ function Products() {
               productID={index}
               name={product.fields.name}
               description={product.fields.description}
+              stock={product.fields.inStock}
             />
           </Col>
         ))}
