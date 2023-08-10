@@ -5,11 +5,11 @@ import { useState, useEffect } from "react";
 
 // Project imports
 import { fetchData } from "../services/fetchData";
-import { CONTACT_ID } from "../services/requests";
 import { pageStyle, textStyle } from "../styles/globalStyles";
 
 // AntD Imports
 import { Empty, Skeleton, Typography, Card, Image, Row, Col } from "antd";
+import ProductCard from "../components/ProductCard";
 const { Title, Paragraph } = Typography;
 
 function Products() {
@@ -58,20 +58,11 @@ function Products() {
               lg: 4,
             }}
           >
-            <Card
-              // key={index}
-              style={{ width: 300 }}
-              hoverable
-              cover={
-                <Image
-                  alt="product image"
-                  src="https://loremflickr.com/320/240"
-                />
-              }
-            >
-              <Title level={3}>{product.fields.name}</Title>
-              <Paragraph>{product.fields.description}</Paragraph>
-            </Card>
+            <ProductCard
+              productID={index}
+              name={product.fields.name}
+              description={product.fields.description}
+            />
           </Col>
         ))}
       </Row>
