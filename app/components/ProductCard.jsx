@@ -20,7 +20,6 @@ export default function ProductCard({ id, name, description, stock }) {
       <Link href={`/${id}`}>
         <Badge status="success" text="In stock" />
         <Title level={3}>{name}</Title>
-        <Title level={4}>{id}</Title>
         <Paragraph>{description}</Paragraph>
       </Link>
     </Card>
