@@ -20,24 +20,26 @@ function Products() {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchData(CONTACT_ID)
+    fetchData(0)
       .then((data) => {
         setData(data);
         setLoading(false);
-        console.log("Data fetched ", data);
+        console.log("Data fetched: ", data);
       })
       .catch((error) => {
-        console.log("Error fetching data in Products.jsx");
+        console.error("Failure to fetch data.", error);
       });
   }, []);
 
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
 
+  console.log("--- Product data--- ", data.items);
+
   return (
     <div style={pageStyle}>
       <Typography>
-        <Title>Products We Offer</Title>
+        <Title>All Products</Title>
       </Typography>
     </div>
   );

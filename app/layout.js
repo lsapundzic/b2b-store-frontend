@@ -9,7 +9,6 @@ import Navbar from "@/app/components/Navbar";
 // AntD components
 import { Layout } from "antd";
 import { Footer } from "antd/es/layout/layout";
-import Brand from "./components/Brand";
 const { Header, Content } = Layout;
 
 const inter = Inter({ subsets: ["latin"] });
@@ -38,7 +37,6 @@ export default function RootLayout({ children }) {
         <Layout style={globalLayoutStyle}>
           {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
           <Header style={headerStyle}>
-            {/* <Brand /> */}
             <Navbar />
           </Header>
           <Content>{children}</Content>

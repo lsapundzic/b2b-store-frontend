@@ -4,6 +4,7 @@ import {
   GET_ALL_ENTRIES,
   GET_CONTENT_MODEL,
   GET_CONTENT_TYPE,
+  GET_CONTENT_TYPE_ENTRIES,
   GET_SPACE,
 } from "../services/requests";
 
@@ -23,9 +24,11 @@ export default async function TestPage() {
   const time = new Date();
   const now = `Action on: ${time.getHours()}H ${time.getMinutes()}M ${time.getSeconds()}S`;
 
-  const data = await dataFetch(GET_ALL_ENTRIES);
+  const data = await dataFetch(GET_CONTENT_TYPE_ENTRIES);
 
-  console.log(now, "Fetched data: ", data);
+  console.log(now, "--- Fetched data: --- ", data);
+
+  console.log("Filter", data.items);
 
   console.log("------------------------------------");
 

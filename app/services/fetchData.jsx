@@ -1,12 +1,11 @@
 "use client";
 
-import { GET_ALL_ENTRIES } from "./requests";
-
 export async function fetchData(entryID) {
   let url;
 
   if (entryID === 0) {
-    url = GET_ALL_ENTRIES;
+    // Substitute for GET_CONTENT_TYPE_ENTRIES
+    url = `https://cdn.contentful.com/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/entries?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}&content_type=product`;
   } else {
     url = constructEntryURL(entryID);
   }
@@ -30,5 +29,6 @@ export async function fetchData(entryID) {
 
 // URL constructor separated from fetching for clarity
 function constructEntryURL(entryID) {
+  // Substitute for GET_SINGLE_ENTRY
   return `https://cdn.contentful.com/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/entries/${entryID}?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}`;
 }
