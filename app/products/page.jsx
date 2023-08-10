@@ -34,12 +34,13 @@ function Products() {
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
 
-  console.log("--- Product data--- ", data.items);
-
   return (
     <div style={pageStyle}>
       <Typography>
         <Title>All Products</Title>
+        {data.items.map((product, index) => (
+          <div key={index}>Name: {product.fields.name}</div>
+        ))}
       </Typography>
     </div>
   );
