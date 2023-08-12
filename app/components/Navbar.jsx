@@ -33,16 +33,16 @@ const routes = [
     key: "products",
     icon: <ExperimentOutlined />,
   },
-  {
-    label: <Link href="/contact">Contact Us</Link>,
-    key: "contact",
-    icon: <MailOutlined />,
-  },
-  {
-    label: <Link href="/tracking">Tracking</Link>,
-    key: "track",
-    icon: <GiftOutlined />,
-  },
+  // {
+  //   label: <Link href="/contact">Contact Us</Link>,
+  //   key: "contact",
+  //   icon: <MailOutlined />,
+  // },
+  // {
+  //   label: <Link href="/tracking">Tracking</Link>,
+  //   key: "track",
+  //   icon: <GiftOutlined />,
+  // },
   {
     label: <Link href="/tests">Tests</Link>,
     key: "tests",

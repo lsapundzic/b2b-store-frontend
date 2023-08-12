@@ -1,21 +1,28 @@
-// "use client";
-
 const baseURL = "https://cdn.contentful.com";
 
-// Get a single content entry
-export function constructEntryURL(entryID) {
+// Static Page IDs
+export const ABOUT_ID = `5wXQGH7Of5nYxWqPzLh8SM`;
+
+// For a single entry based on its Contentful ID
+export function BuildSingleEntryURL(entryID) {
   const url = `${baseURL}/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/entries/${entryID}?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}`;
   return url;
 }
 
-// Get all entries from a content type
-export function constructGetAllContentTypeEntries(productType) {
+// For all entries in the Contentful space
+export function BuildAllEnatriesURL(productType) {
+  const url = `${baseURL}/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/entries?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}`;
+  return url;
+}
+
+// For all entries of a specific content type
+export function BuildProductTypeEntriesURL(productType) {
   const url = `${baseURL}/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/entries?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}&content_type=${productType}`;
   return url;
 }
 
-// Get a single asset (image, .pdf)
-export function constructGetAsset(assetID) {
+// For assets like images and pdfs
+export function BuildSingleAssetURL(assetID) {
   const url = `${baseURL}/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/assets/${assetID}/?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}`;
   return url;
 }

@@ -10,7 +10,7 @@ import { pageStyle, textStyle } from "../styles/globalStyles";
 // AntD Imports
 import { Empty, Skeleton, Typography, Card, Image, Row, Col } from "antd";
 import ProductCard from "../components/ProductCard";
-import { constructGetAllContentTypeEntries } from "../services/constructURL";
+import { BuildProductTypeEntriesURL } from "../services/buildURL";
 const { Title, Paragraph } = Typography;
 
 function Products() {
@@ -21,7 +21,7 @@ function Products() {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchData(constructGetAllContentTypeEntries("product"))
+    fetchData(BuildProductTypeEntriesURL("product"))
       .then((data) => {
         setData(data);
         setLoading(false);
