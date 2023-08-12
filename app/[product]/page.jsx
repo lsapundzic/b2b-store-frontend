@@ -35,6 +35,8 @@ export default function Product({ params }) {
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
 
+  // console.log("Accessing image: ", data.fields.image);
+
   return (
     <div style={pageStyle}>
       <Typography>
