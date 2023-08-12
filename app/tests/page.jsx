@@ -53,7 +53,8 @@ export default async function TestPage() {
 
   return (
     <main>
-      <h1>Testing Data Fetch</h1>
+      <h1>PAGE FOR TESTING UI COMPONENTS & FUNCTIONALITY</h1>
+      <h2>Nothing for you to see here, leave immediately</h2>
       <div>
         {/* <Image
           alt="Some image"
