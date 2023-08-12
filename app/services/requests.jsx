@@ -1,3 +1,5 @@
+"use client";
+
 // Page IDs
 export const ABOUT_ID = `5wXQGH7Of5nYxWqPzLh8SM`;
 export const CONTACT_ID = `2UDWb179AgOuPSwqzLytSM`;

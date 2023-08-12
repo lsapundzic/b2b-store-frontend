@@ -10,6 +10,7 @@ import { pageStyle, textStyle } from "../styles/globalStyles";
 
 // AntD Imports
 import { Empty, Skeleton, Typography } from "antd";
+import { constructEntryURL } from "../services/constructURL";
 const { Title, Paragraph } = Typography;
 
 function About() {
@@ -20,14 +21,17 @@ function About() {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchData(ABOUT_ID)
+    fetchData(constructEntryURL(ABOUT_ID))
       .then((data) => {
         setData(data);
         setLoading(false);
         console.log("Data fetched ", data);
       })
       .catch((error) => {
-        console.error("Failure to fetch data.", error);
+        console.error(
+          "This is a custom message. Failure to fetch data.",
+          error
+        );
       });
   }, []);
 

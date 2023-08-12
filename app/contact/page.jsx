@@ -10,6 +10,7 @@ import { pageStyle, textStyle } from "../styles/globalStyles";
 
 // AntD Imports
 import { Empty, Skeleton, Typography } from "antd";
+import { constructEntryURL } from "../services/constructURL";
 const { Title, Paragraph } = Typography;
 
 function Contact() {
@@ -20,7 +21,7 @@ function Contact() {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchData(CONTACT_ID)
+    fetchData(constructEntryURL(CONTACT_ID))
       .then((data) => {
         setData(data);
         setLoading(false);

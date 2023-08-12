@@ -1,16 +1,6 @@
 "use client";
 
-export async function fetchData(entryID) {
-  let url;
-
-  if (entryID === 0) {
-    // Substitute for GET_CONTENT_TYPE_ENTRIES
-    url = `https://cdn.contentful.com/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/entries?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}&content_type=product`;
-  } else {
-    url = constructEntryURL(entryID);
-  }
-
-  // Broader scope error handling
+export async function fetchData(url) {
   try {
     const response = await fetch(url);
 
@@ -22,13 +12,8 @@ export async function fetchData(entryID) {
     }
 
     return response.json();
+    // General error handling
   } catch (error) {
     console.error("General problem with fetching data. Error: ", error);
   }
-}
-
-// URL constructor separated from fetching for clarity
-function constructEntryURL(entryID) {
-  // Substitute for GET_SINGLE_ENTRY
-  return `https://cdn.contentful.com/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/entries/${entryID}?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}`;
 }

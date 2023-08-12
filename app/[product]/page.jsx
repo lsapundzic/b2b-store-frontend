@@ -9,6 +9,7 @@ import { pageStyle, textStyle } from "../styles/globalStyles";
 
 // AntD Imports
 import { Empty, Image, Skeleton, Typography } from "antd";
+import { constructEntryURL } from "../services/constructURL";
 const { Title, Paragraph } = Typography;
 
 export default function Product({ params }) {
@@ -21,7 +22,7 @@ export default function Product({ params }) {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchData(product)
+    fetchData(constructEntryURL(product))
       .then((data) => {
         setData(data);
         setLoading(false);
