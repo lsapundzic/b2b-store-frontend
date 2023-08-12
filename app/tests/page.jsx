@@ -28,13 +28,13 @@ export default async function TestPage() {
   const assetID = `4acFDyMvoCr0if9nHEGZBC`;
   const accessToken = process.env.DELIVERY_ACCESS_TOKEN;
 
-  const retrievalURL = `${baseURL}/spaces/${spaceID}/environments/${environmentID}/assets/${assetID}/?access_token=${accessToken}`;
+  const url = `${baseURL}/spaces/${spaceID}/environments/${environmentID}/assets/${assetID}/?access_token=${accessToken}`;
 
   const time = new Date();
   const now = `Action on: ${time.getHours()}H ${time.getMinutes()}M ${time.getSeconds()}S`;
 
   // DATA FETCH INSERT HERE
-  const data = await dataFetch(retrievalURL);
+  const data = await dataFetch(url);
 
   console.log(now, "--- Fetched data: --- ", data.fields.file.url);
   const imageURL = data.fields.file.url;

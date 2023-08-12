@@ -9,19 +9,22 @@ import { pageStyle, textStyle } from "../styles/globalStyles";
 
 // AntD Imports
 import { Empty, Image, Skeleton, Typography } from "antd";
-import { BuildSingleEntryURL } from "../services/buildURL";
+import { BuildSingleAssetURL, BuildSingleEntryURL } from "../services/buildURL";
 const { Title, Paragraph } = Typography;
 
 export default function Product({ params }) {
   console.log("Product page rendered...");
-  // This is the product ID passed from the ProductCard.jsx
   const { product } = params;
 
-  // For holding fetched data and loading state
+  // For holding page content
   const [data, setData] = useState(null);
+  const [asset, setAsset] = useState(null);
+
+  // For toggling general loading status
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
+    // Fetch page content
     fetchData(BuildSingleEntryURL(product))
       .then((data) => {
         setData(data);
@@ -36,7 +39,11 @@ export default function Product({ params }) {
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
 
-  // console.log("Accessing image: ", data.fields.image);
+  // const myimage = data.fields.image.sys.id;
+  // const imageurl = BuildSingleAssetURL(myimage);
+  // console.log("Accessing image: ", imageurl);
+
+  // console.log("-----Asset fetched: ", asset);
 
   return (
     <div style={pageStyle}>

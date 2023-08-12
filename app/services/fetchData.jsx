@@ -4,7 +4,7 @@ export async function fetchData(url) {
   try {
     const response = await fetch(url);
 
-    // Error handling only for HTTP response status
+    // Only for handling HTTP status errors
     if (!response.ok) {
       throw new Error(
         `Failed to fetch data. HTTP response status: ${response.status}`
@@ -12,7 +12,8 @@ export async function fetchData(url) {
     }
 
     return response.json();
-    // General error handling
+
+    // For general error handling
   } catch (error) {
     console.error("General problem with fetching data. Error: ", error);
   }
