@@ -46,7 +46,7 @@ export default function Product({ params }) {
         <Paragraph style={textStyle}>{data.fields.description}</Paragraph>
         <Image
           alt={`Image of ${data.fields.name} ${data.fields.fullName}`}
-          src="https://placekitten.com/640/360"
+          src="https://images.ctfassets.net/wzh8zqkwvm1v/4acFDyMvoCr0if9nHEGZBC/fb49e80cf8095c9a7565ca2599b5a741/Microscope.jpg"
         ></Image>
       </Typography>
     </div>
