@@ -1,8 +1,10 @@
 "use client";
 
-// AntD Imports
-import { Typography, Card, Image, Badge } from "antd";
+// Next Imports
 import Link from "next/link";
+
+// AntD Imports
+import { Typography, Image, Card, Badge } from "antd";
 const { Title, Paragraph } = Typography;
 
 export default function ProductCard({ id, name, fullName, stock }) {

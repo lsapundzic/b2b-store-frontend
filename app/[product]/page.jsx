@@ -45,6 +45,7 @@ export default function Product({ params }) {
         </Title>
         <Paragraph style={textStyle}>{data.fields.description}</Paragraph>
         <Image
+          preview="false"
           alt={`Image of ${data.fields.name} ${data.fields.fullName}`}
           src="https://placekitten.com/640/360"
         ></Image>
