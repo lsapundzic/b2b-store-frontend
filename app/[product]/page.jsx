@@ -38,7 +38,9 @@ export default function Product({ params }) {
   return (
     <div style={pageStyle}>
       <Typography>
-        <Title>{data.fields.name}</Title>
+        <Title>
+          {data.fields.name} - {data.fields.fullName}
+        </Title>
         <Paragraph style={textStyle}>{data.fields.description}</Paragraph>
       </Typography>
     </div>

@@ -62,7 +62,7 @@ function Products() {
             <ProductCard
               id={product.sys.id}
               name={product.fields.name}
-              description={product.fields.description}
+              fullName={product.fields.fullName}
               stock={product.fields.inStock}
             />
           </Col>
