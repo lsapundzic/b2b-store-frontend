@@ -8,7 +8,7 @@ import { fetchData } from "../services/fetchData";
 import { pageStyle, textStyle } from "../styles/globalStyles";
 
 // AntD Imports
-import { Empty, Skeleton, Typography } from "antd";
+import { Empty, Image, Skeleton, Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
 export default function Product({ params }) {
@@ -42,6 +42,10 @@ export default function Product({ params }) {
           {data.fields.name} - {data.fields.fullName}
         </Title>
         <Paragraph style={textStyle}>{data.fields.description}</Paragraph>
+        <Image
+          alt={`Image of ${data.fields.name} ${data.fields.fullName}`}
+          src="https://placekitten.com/640/360"
+        ></Image>
       </Typography>
     </div>
   );
