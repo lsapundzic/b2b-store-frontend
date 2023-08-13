@@ -17,7 +17,7 @@ import { fetchData } from "../services/fetchData";
 import { SingleAssetURL } from "./buildURL";
 
 // AntD imports
-import { Image, Skeleton } from "antd";
+import { Image } from "antd";
 
 export default function ImageGenerator({ assetID }) {
   const [data, setData] = useState(null);
@@ -35,16 +35,14 @@ export default function ImageGenerator({ assetID }) {
       });
   }, [assetID]);
 
-  if (isLoading) return <Skeleton active />;
-
   return (
     <div>
-      {/* <Image
+      <Image
         src={data.fields.file.url}
         alt={data.fields.description}
         width={400}
         height={600}
-      /> */}
+      />
     </div>
   );
 }
