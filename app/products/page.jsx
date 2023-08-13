@@ -35,10 +35,6 @@ function Products() {
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
 
-  // ! For development purposes
-  // console.log("All the products: ", data.items);
-  // console.log("Accessing the ID: ", data.items[0].sys.id);
-
   return (
     <div style={pageStyle}>
       <Title>Products</Title>
