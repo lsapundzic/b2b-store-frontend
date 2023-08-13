@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 // Project imports
 import { fetchData } from "../services/fetchData";
 import { pageStyle, textStyle } from "../styles/globalStyles";
-import { BuildSingleEntryURL, ABOUT_ID } from "../services/buildURL";
+import { SingleEntryURL, ABOUT_ID } from "../services/buildURL";
 
 // AntD Imports
 import { Empty, Skeleton, Typography } from "antd";
@@ -20,7 +20,7 @@ export default function About() {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchData(BuildSingleEntryURL(ABOUT_ID))
+    fetchData(SingleEntryURL(ABOUT_ID))
       .then((data) => {
         setData(data);
         setLoading(false);

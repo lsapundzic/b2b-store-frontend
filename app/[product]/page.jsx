@@ -9,7 +9,7 @@ import { pageStyle, textStyle } from "../styles/globalStyles";
 
 // AntD Imports
 import { Empty, Image, Skeleton, Typography } from "antd";
-import { BuildSingleAssetURL, BuildSingleEntryURL } from "../services/buildURL";
+import { SingleAssetURL, SingleEntryURL } from "../services/buildURL";
 const { Title, Paragraph } = Typography;
 
 export default function Product({ params }) {
@@ -18,14 +18,13 @@ export default function Product({ params }) {
 
   // For holding page content
   const [data, setData] = useState(null);
-  const [asset, setAsset] = useState(null);
 
   // For toggling general loading status
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     // Fetch page content
-    fetchData(BuildSingleEntryURL(product))
+    fetchData(SingleEntryURL(product))
       .then((data) => {
         setData(data);
         setLoading(false);
