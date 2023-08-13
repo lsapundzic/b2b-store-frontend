@@ -17,7 +17,6 @@ export default function Product({ params }) {
   console.log("Product page rendered...");
   const { product } = params;
 
-  // For holding page content
   const [data, setData] = useState(null);
 
   // For toggling general loading status

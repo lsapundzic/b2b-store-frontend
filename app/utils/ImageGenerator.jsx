@@ -21,27 +21,37 @@ import { Image } from "antd";
 
 export default function ImageGenerator({ assetID }) {
   const [data, setData] = useState(null);
+  const [asset, setAsset] = useState(null);
 
   useEffect(() => {
     // Fetch page content
     fetchData(SingleAssetURL(assetID))
       .then((data) => {
         setData(data);
-        setLoading(false);
-        console.log("Data fetched ", data);
+        console.log(
+          "Data fetched inside of the ImageGenerator component: ",
+          data
+        );
+        setAsset(data.fields.file.url);
       })
       .catch((error) => {
-        console.error("Failure to fetch data.", error);
+        console.error(
+          "Failure to fetch data inside of the ImageGenerator component.",
+          error
+        );
       });
   }, [assetID]);
+
+  // const a = `https:${data.fields.file.url}`;
+  console.log("Image URL: ", asset);
 
   return (
     <div>
       <Image
-        src={data.fields.file.url}
-        alt={data.fields.description}
-        width={400}
-        height={600}
+        src={asset}
+        // alt={data.fields.description}
+        // width={400}
+        // height={600}
       />
     </div>
   );
