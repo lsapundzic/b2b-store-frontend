@@ -42,7 +42,7 @@ export default function ImageGenerator({ assetID }) {
       <Image
         src={data.fields.file.url}
         alt={data.fields.description}
-        width={400}
+        // width={400}
         // height={600}
       />
     </div>
