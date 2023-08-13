@@ -6,10 +6,11 @@ import { useState, useEffect } from "react";
 // Project imports
 import { fetchData } from "../services/fetchData";
 import { pageStyle, textStyle } from "../styles/globalStyles";
+import { SingleAssetURL, SingleEntryURL } from "../utils/buildURL";
 
 // AntD Imports
-import { Empty, Image, Skeleton, Typography } from "antd";
-import { SingleAssetURL, SingleEntryURL } from "../services/buildURL";
+import { Empty, Skeleton, Typography } from "antd";
+import ImageGenerator from "../utils/ImageGenerator";
 const { Title, Paragraph } = Typography;
 
 export default function Product({ params }) {
@@ -38,12 +39,6 @@ export default function Product({ params }) {
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
 
-  // const myimage = data.fields.image.sys.id;
-  // const imageurl = BuildSingleAssetURL(myimage);
-  // console.log("Accessing image: ", imageurl);
-
-  // console.log("-----Asset fetched: ", asset);
-
   return (
     <div style={pageStyle}>
       <Typography>
@@ -51,11 +46,7 @@ export default function Product({ params }) {
           {data.fields.name} - {data.fields.fullName}
         </Title>
         <Paragraph style={textStyle}>{data.fields.description}</Paragraph>
-        <Image
-          preview="false"
-          alt={`Image of ${data.fields.name} ${data.fields.fullName}`}
-          src="https://placekitten.com/640/360"
-        ></Image>
+        <ImageGenerator assetID={data.fields.image.sys.id} />
       </Typography>
     </div>
   );

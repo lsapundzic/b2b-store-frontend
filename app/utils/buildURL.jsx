@@ -23,6 +23,6 @@ export function ProductTypeEntriesURL(productType) {
 
 // For assets like images and pdfs
 export function SingleAssetURL(assetID) {
-  const url = `${baseURL}/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/assets/${assetID}/?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}`;
+  const url = `${baseURL}/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/assets/${assetID}?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}`;
   return url;
 }

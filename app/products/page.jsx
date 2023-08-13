@@ -10,7 +10,7 @@ import { pageStyle, textStyle } from "../styles/globalStyles";
 // AntD Imports
 import { Empty, Skeleton, Typography, Card, Image, Row, Col } from "antd";
 import ProductCard from "../components/ProductCard";
-import { ProductTypeEntriesURL } from "../services/buildURL";
+import { ProductTypeEntriesURL } from "../utils/buildURL";
 const { Title, Paragraph } = Typography;
 
 function Products() {

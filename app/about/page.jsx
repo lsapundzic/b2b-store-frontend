@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 // Project imports
 import { fetchData } from "../services/fetchData";
 import { pageStyle, textStyle } from "../styles/globalStyles";
-import { SingleEntryURL, ABOUT_ID } from "../services/buildURL";
+import { SingleEntryURL, ABOUT_ID } from "../utils/buildURL";
 
 // AntD Imports
 import { Empty, Skeleton, Typography } from "antd";
