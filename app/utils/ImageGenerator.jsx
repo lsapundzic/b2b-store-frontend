@@ -39,12 +39,12 @@ export default function ImageGenerator({ assetID }) {
 
   return (
     <div>
-      <Image
+      {/* <Image
         src={data.fields.file.url}
         alt={data.fields.description}
         width={400}
         height={600}
-      />
+      /> */}
     </div>
   );
 }
