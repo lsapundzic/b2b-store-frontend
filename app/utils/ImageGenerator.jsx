@@ -17,14 +17,13 @@ import { fetchData } from "../services/fetchData";
 import { SingleAssetURL } from "./buildURL";
 
 // AntD imports
-import { Image } from "antd";
+import { Image, Skeleton } from "antd";
 
 export default function ImageGenerator({ assetID }) {
   const [data, setData] = useState(null);
-  const [asset, setAsset] = useState(null);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Fetch page content
     fetchData(SingleAssetURL(assetID))
       .then((data) => {
         setData(data);
@@ -32,7 +31,7 @@ export default function ImageGenerator({ assetID }) {
           "Data fetched inside of the ImageGenerator component: ",
           data
         );
-        setAsset(data.fields.file.url);
+        setLoading(false);
       })
       .catch((error) => {
         console.error(
@@ -42,14 +41,13 @@ export default function ImageGenerator({ assetID }) {
       });
   }, [assetID]);
 
-  // const a = `https:${data.fields.file.url}`;
-  console.log("Image URL: ", asset);
+  if (isLoading) return <Skeleton active />;
 
   return (
     <div>
       <Image
-        src={asset}
-        // alt={data.fields.description}
+        src={data.fields.file.url}
+        alt={data.fields.description}
         // width={400}
         // height={600}
       />
