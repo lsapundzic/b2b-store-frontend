@@ -14,10 +14,11 @@ import {
 import { Menu } from "antd";
 
 // React components
-import Link from "next/link";
 import { useState } from "react";
+import Link from "next/link";
 
-const routes = [
+// Object from which the navbar is generated
+const menuItems = [
   {
     label: <Link href="/">Home</Link>,
     key: "home",
@@ -51,10 +52,9 @@ const routes = [
 ];
 
 export default function Navbar() {
-  // Use State
   const [current, setCurrent] = useState("default");
 
-  //   It changes useState which highlights the pressed tab
+  //   Function that changes useState so that the active tab can remain underlined
   const onClick = (e) => {
     setCurrent(e.key);
   };
@@ -66,7 +66,7 @@ export default function Navbar() {
         onClick={onClick}
         selectedKeys={[current]}
         mode="horizontal"
-        items={routes}
+        items={menuItems}
       />
     </nav>
   );

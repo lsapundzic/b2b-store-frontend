@@ -1,8 +1,10 @@
 /*
 Fetching an asset from Contentful is convoluted. 
-- Page entries with which asset is associated with only have assetID in JSON
-- AssetID is used create a url that fetches that specific asset JSON
-- Inside of the asset JSON is a URL to the actual image
+- Entries with which asset is associated with only contain assetID, not the direct URL
+- AssetID is used create another URL that fetches that specific asset data
+- Inside of the asset data is the URL to the actual image
+
+Asset retreival procedure ends up being the same like for an entry. Get the ID, generate URL, fetch data according to the url
 
 ! There is a way to create image URL directly without fetching, but parameters are unclear or inconvenient
 */
@@ -13,13 +15,13 @@ Fetching an asset from Contentful is convoluted.
 import { usePageContent } from "../hooks/usePageContent.jsx";
 
 // Project imports
-import { SingleAssetURL } from "./buildURL.jsx";
+import { AssetURL } from "./buildURL.jsx";
 
 // AntD imports
 import { Image, Skeleton, Empty } from "antd";
 
 export default function ImageAsset({ assetID, width, height }) {
-  const { data, isLoading } = usePageContent(SingleAssetURL(assetID));
+  const { data, isLoading } = usePageContent(AssetURL(assetID));
 
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;

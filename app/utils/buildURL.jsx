@@ -1,3 +1,5 @@
+// Globally accessible functions for generating URLs for Contentful API
+
 const baseURL = "https://cdn.contentful.com";
 
 // Static Page IDs
@@ -16,13 +18,13 @@ export function AllEnatriesURL(productType) {
 }
 
 // For all entries of a specific content type
-export function ProductTypeEntriesURL(productType) {
+export function ContentTypeEntriesURL(productType) {
   const url = `${baseURL}/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/entries?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}&content_type=${productType}`;
   return url;
 }
 
 // For assets like images and pdfs
-export function SingleAssetURL(assetID) {
+export function AssetURL(assetID) {
   const url = `${baseURL}/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/assets/${assetID}?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}`;
   return url;
 }

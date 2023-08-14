@@ -8,7 +8,7 @@ import { Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
 export default function Homepage() {
-  console.log("Homepage running...");
+  console.log("Homepage rendered");
 
   return (
     <div style={pageStyle}>

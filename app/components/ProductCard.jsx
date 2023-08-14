@@ -1,11 +1,19 @@
+/*
+- ProductCard component receives data of an individual product from Products.jsx
+- entryID is used to generate a slug that will lead to specific entry
+- assetID is used to generate a product image through the use of ImageAsset component
+*/
+
 "use client";
 
-// Next Imports
+// React imports
 import Link from "next/link";
 
-// AntD Imports
-import { Typography, Image, Card, Badge } from "antd";
+// Project imports
 import ImageAsset from "../utils/ImageAsset";
+
+// AntD imports
+import { Typography, Image, Card, Badge } from "antd";
 const { Title, Paragraph } = Typography;
 
 export default function ProductCard({
@@ -15,11 +23,13 @@ export default function ProductCard({
   fullName,
   stock,
 }) {
+  console.log("ProductsCard.jsx rendered");
+
   return (
     <Card
       style={{ width: 300 }}
       hoverable
-      cover={<ImageAsset assetID={assetID} height={320} width={240} />}
+      cover={<ImageAsset assetID={assetID} height={320} width={300} />}
     >
       <Link href={`/products/${entryID}`}>
         <Badge status="success" text="In stock" />

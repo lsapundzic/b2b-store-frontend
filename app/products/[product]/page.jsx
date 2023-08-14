@@ -1,3 +1,9 @@
+/*
+- Product page can access assetID which was passed as a slug by the ProductCard component.
+- It uses the entryID to fetch entry data  
+- With retreived entry data it can access assetID which is passed to ImageAssets component to generate an image
+*/
+
 "use client";
 
 // React imports
@@ -8,13 +14,14 @@ import { pageStyle, textStyle } from "../../styles/globalStyles.js";
 import { SingleEntryURL } from "../../utils/buildURL.jsx";
 import ImageAsset from "../../utils/ImageAsset.jsx";
 
-// AntD Imports
+// AntD imports
 import { Empty, Skeleton, Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
 export default function Product({ params }) {
+  // For accessing slug which is the entryID
   const { product } = params;
-  console.log("Product page rendered...");
+  console.log("Product.jsx");
 
   const { data, isLoading } = usePageContent(SingleEntryURL(product));
 
@@ -31,7 +38,7 @@ export default function Product({ params }) {
         <ImageAsset
           assetID={data.fields.image.sys.id}
           width={350}
-          height={450}
+          height={"auto"}
         />
       </Typography>
     </div>

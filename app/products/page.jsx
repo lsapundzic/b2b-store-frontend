@@ -1,3 +1,12 @@
+/*
+- Products.jsx fetches all Contentful entries of the "product" content type
+- Each entry has a unique ID 
+- Each entry has an asset (image) that has its own unique ID
+- .map function generates ProductCard components for each entry
+- Each ProductCard is passed entryID which will be used in [product].jsx to fetch that page
+- Each ProductCard is passed assetID which will be used by ImageAsset.jsx to generate an image
+*/
+
 "use client";
 
 // React imports
@@ -9,13 +18,13 @@ import { pageStyle } from "../styles/globalStyles";
 // AntD Imports
 import { Empty, Skeleton, Typography, Row, Col } from "antd";
 import ProductCard from "../components/ProductCard";
-import { ProductTypeEntriesURL } from "../utils/buildURL";
+import { ContentTypeEntriesURL } from "../utils/buildURL";
 const { Title } = Typography;
 
 function Products() {
-  console.log("Products page rendered...");
+  console.log("Products.jsx rendered");
 
-  const { data, isLoading } = usePageContent(ProductTypeEntriesURL("product"));
+  const { data, isLoading } = usePageContent(ContentTypeEntriesURL("product"));
 
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;

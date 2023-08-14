@@ -1,3 +1,5 @@
+// Not working, only used for testing
+
 "use client";
 
 // Contentful client
