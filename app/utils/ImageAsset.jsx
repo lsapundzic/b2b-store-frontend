@@ -13,7 +13,6 @@ Fetching an asset from Contentful is convoluted.
 import { usePageContent } from "../hooks/usePageContent.jsx";
 
 // Project imports
-import { fetchData } from "../services/fetchData.jsx";
 import { SingleAssetURL } from "./buildURL.jsx";
 
 // AntD imports
