@@ -21,7 +21,7 @@ export default function ProductCard({
       hoverable
       cover={<ImageAsset assetID={assetID} height={320} width={240} />}
     >
-      <Link href={`/${entryID}`}>
+      <Link href={`/products/${entryID}`}>
         <Badge status="success" text="In stock" />
         <Title level={3}>{name}</Title>
         <Paragraph>{fullName}</Paragraph>

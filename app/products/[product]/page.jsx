@@ -1,15 +1,15 @@
 "use client";
 
 // React imports
-import { usePageContent } from "../hooks/usePageContent.jsx";
+import { usePageContent } from "../../hooks/usePageContent.jsx";
 
 // Project imports
-import { pageStyle, textStyle } from "../styles/globalStyles";
-import { SingleEntryURL } from "../utils/buildURL";
+import { pageStyle, textStyle } from "../../styles/globalStyles.js";
+import { SingleEntryURL } from "../../utils/buildURL.jsx";
+import ImageAsset from "../../utils/ImageAsset.jsx";
 
 // AntD Imports
 import { Empty, Skeleton, Typography } from "antd";
-import ImageAsset from "../utils/ImageAsset.jsx";
 const { Title, Paragraph } = Typography;
 
 export default function Product({ params }) {
