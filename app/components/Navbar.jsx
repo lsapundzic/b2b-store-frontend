@@ -43,11 +43,11 @@ const routes = [
   //   key: "track",
   //   icon: <GiftOutlined />,
   // },
-  {
-    label: <Link href="/tests">Tests</Link>,
-    key: "tests",
-    icon: <BugTwoTone />,
-  },
+  // {
+  //   label: <Link href="/tests">Tests</Link>,
+  //   key: "tests",
+  //   icon: <BugTwoTone />,
+  // },
 ];
 
 export default function Navbar() {
