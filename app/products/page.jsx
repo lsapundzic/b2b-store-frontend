@@ -4,7 +4,7 @@
 import { usePageContent } from "../hooks/usePageContent.jsx";
 
 // Project imports
-import { pageStyle, textStyle } from "../styles/globalStyles";
+import { pageStyle } from "../styles/globalStyles";
 
 // AntD Imports
 import { Empty, Skeleton, Typography, Row, Col } from "antd";
@@ -42,7 +42,8 @@ function Products() {
             }}
           >
             <ProductCard
-              id={product.sys.id}
+              entryID={product.sys.id}
+              assetID={product.fields.image.sys.id}
               name={product.fields.name}
               fullName={product.fields.fullName}
               stock={product.fields.inStock}

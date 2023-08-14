@@ -9,7 +9,7 @@ import { SingleEntryURL } from "../utils/buildURL";
 
 // AntD Imports
 import { Empty, Skeleton, Typography } from "antd";
-import ImageGenerator from "../utils/ImageGenerator";
+import ImageAsset from "../utils/ImageAsset.jsx";
 const { Title, Paragraph } = Typography;
 
 export default function Product({ params }) {
@@ -28,7 +28,11 @@ export default function Product({ params }) {
           {data.fields.name} - {data.fields.fullName}
         </Title>
         <Paragraph style={textStyle}>{data.fields.description}</Paragraph>
-        <ImageGenerator assetID={data.fields.image.sys.id} />
+        <ImageAsset
+          assetID={data.fields.image.sys.id}
+          width={350}
+          height={450}
+        />
       </Typography>
     </div>
   );
