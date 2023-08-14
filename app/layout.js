@@ -30,6 +30,7 @@ const headerStyle = {
   backgroundColor: "white",
 };
 
+// TODO: Create an actual footer component
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -40,7 +41,13 @@ export default function RootLayout({ children }) {
             <Navbar />
           </Header>
           <Content>{children}</Content>
-          <Footer>Footer goes here</Footer>
+
+          <Footer style={{ textAlign: "center" }}>
+            <h3>SOTLA Laboratory Experts d.o.o.</h3>
+            <p>Polje ob Sotli 4</p>
+            <p>3255 Buče</p>
+            <p>Slovenia</p>
+          </Footer>
         </Layout>
       </body>
     </html>

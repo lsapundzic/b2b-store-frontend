@@ -29,7 +29,7 @@ export default function ProductCard({
     <Card
       style={{ width: 300 }}
       hoverable
-      cover={<ImageAsset assetID={assetID} height={320} width={300} />}
+      cover={<ImageAsset assetID={assetID} height={320} width={"auto"} />}
     >
       <Link href={`/products/${entryID}`}>
         <Badge status="success" text="In stock" />
