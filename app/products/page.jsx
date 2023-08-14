@@ -1,36 +1,21 @@
 "use client";
 
 // React imports
-import { useState, useEffect } from "react";
+import { usePageContent } from "../hooks/usePageContent.jsx";
 
 // Project imports
-import { fetchData } from "../services/fetchData";
 import { pageStyle, textStyle } from "../styles/globalStyles";
 
 // AntD Imports
-import { Empty, Skeleton, Typography, Card, Image, Row, Col } from "antd";
+import { Empty, Skeleton, Typography, Row, Col } from "antd";
 import ProductCard from "../components/ProductCard";
 import { ProductTypeEntriesURL } from "../utils/buildURL";
-const { Title, Paragraph } = Typography;
+const { Title } = Typography;
 
 function Products() {
   console.log("Products page rendered...");
 
-  // For holding fetched data and loading state
-  const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(true);
-
-  useEffect(() => {
-    fetchData(ProductTypeEntriesURL("product"))
-      .then((data) => {
-        setData(data);
-        setLoading(false);
-        console.log("Data fetched: ", data);
-      })
-      .catch((error) => {
-        console.error("Failure to fetch data.", error);
-      });
-  }, []);
+  const { data, isLoading } = usePageContent(ProductTypeEntriesURL("product"));
 
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;

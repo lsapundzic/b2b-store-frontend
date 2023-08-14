@@ -4,7 +4,7 @@ import { Typography, Skeleton, Empty } from "antd";
 const { Title, Paragraph } = Typography;
 
 import { pageStyle, textStyle } from "../styles/globalStyles.js";
-import { usePageContent } from "../utils/hooks/usePageContent";
+import { usePageContent } from "../hooks/usePageContent.jsx";
 import { SingleEntryURL, ABOUT_ID } from "../utils/buildURL";
 
 export default function About() {
