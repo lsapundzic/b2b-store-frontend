@@ -41,14 +41,6 @@ export default function Product({ params }) {
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
 
-  const dsrc = [
-    "Racing car sprays burning fuel into crowd.",
-    "Japanese princess to wed commoner.",
-    "Australian walks 100km after outback crash.",
-    "Man charged over missing wedding girl.",
-    "Los Angeles battles huge wildfires.",
-  ];
-
   return (
     // <div style={pageStyle}>
     <Layout>

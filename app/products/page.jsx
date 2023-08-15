@@ -11,6 +11,7 @@
 
 // React imports
 import { usePageContent } from "../hooks/usePageContent.jsx";
+import { useState } from "react";
 
 // Project imports
 import { pageStyle } from "../styles/globalStyles";
@@ -20,20 +21,28 @@ import { ContentTypeEntriesURL } from "../utils/buildURL";
 
 // AntD Imports
 import { Empty, Skeleton, Typography, Row, Col } from "antd";
+import filterProducts from "../utils/filterProducts.jsx";
 const { Title } = Typography;
 
 function Products() {
   console.log("Products.jsx rendered");
 
+  // Fetch all products
   const { data, isLoading } = usePageContent(ContentTypeEntriesURL("product"));
 
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
 
+  const filteredProducts = data.items.filter(
+    (filtered) => filtered.fields.category === "Drying Oven"
+  );
+
+  // const filteredData = filterProducts(data, "all");
+
   return (
     <div style={pageStyle}>
       <Row gutter={64}>
-        {data.items.map((product) => (
+        {filteredProducts.map((product) => (
           <Col
             key={product.sys.id}
             span={{
