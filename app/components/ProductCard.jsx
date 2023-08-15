@@ -38,7 +38,7 @@ export default function ProductCard({
       >
         <Link href={`/products/${entryID}`}>
           <Title level={3}>{name}</Title>
-          <Paragraph>{fullName}</Paragraph>
+          <Paragraph ellipsis={(true, { rows: 2 })}>{fullName}</Paragraph>
         </Link>
       </Card>
     </Badge.Ribbon>

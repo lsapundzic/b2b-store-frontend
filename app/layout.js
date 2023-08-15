@@ -6,11 +6,14 @@ import { Inter } from "next/font/google";
 // Project components
 
 // AntD components
-import { Layout } from "antd";
+import { Col, Divider, Layout, Row } from "antd";
 import { Footer } from "antd/es/layout/layout";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import CompanyHeader from "./components/CompanyHeader";
+import Title from "antd/es/typography/Title";
+import Link from "antd/es/typography/Link";
+import FooterContent from "./components/FooterContent";
 const { Header, Content } = Layout;
 
 const inter = Inter({ subsets: ["latin"] });
@@ -45,11 +48,8 @@ export default function RootLayout({ children }) {
           </Header>
           <Banner width={100} height={50} bannerMessage={""} />
           <Content>{children}</Content>
-          <Footer style={{ textAlign: "center" }}>
-            <h3>SOTLA Laboratory Experts d.o.o.</h3>
-            <p>Polje ob Sotli 4</p>
-            <p>3255 Buče</p>
-            <p>Slovenia</p>
+          <Footer>
+            <FooterContent />
           </Footer>
         </Layout>
       </body>
