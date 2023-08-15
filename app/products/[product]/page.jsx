@@ -6,6 +6,7 @@
 
 "use client";
 
+import Separator from "@/app/components/Separator.jsx";
 // React imports
 import { usePageContent } from "../../hooks/usePageContent.jsx";
 
@@ -39,6 +40,7 @@ export default function Product({ params }) {
 
   return (
     <div style={pageStyle}>
+      <Separator />
       <Row>
         <Col span={8}>
           <ImageAsset
