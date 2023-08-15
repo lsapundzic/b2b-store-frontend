@@ -28,7 +28,7 @@ export default function ProductCard({
   console.log("ProductsCard.jsx rendered");
 
   return (
-    <Badge.Ribbon text="In Stock">
+    <Badge.Ribbon text="In Stock" color="green">
       <Card
         style={{ width: `${cardWidth}px`, height: "100%" }}
         hoverable

@@ -4,7 +4,7 @@
 import { pageStyle, textStyle } from "./styles/globalStyles";
 
 // AntD imports
-import { Carousel, Image, Typography } from "antd";
+import { Carousel, Divider, Image, Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
 const contentStyle = {
@@ -34,9 +34,9 @@ export default function Homepage() {
           <Image alt="placeholder image" src="https://placehold.co/1600x400" />
         </div>
       </Carousel>
+      <Divider />
       <Typography>
-        <Title>Homepage</Title>
-        <Paragraph style={textStyle}>The content goes here</Paragraph>
+        <Title level={2}>Special Offers</Title>
       </Typography>
     </div>
   );
