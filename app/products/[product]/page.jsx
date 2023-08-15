@@ -6,7 +6,6 @@
 
 "use client";
 
-import Banner from "@/app/components/Banner.jsx";
 // React imports
 import { usePageContent } from "../../hooks/usePageContent.jsx";
 

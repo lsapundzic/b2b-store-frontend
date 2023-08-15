@@ -4,7 +4,6 @@
 import { Col, Divider, Row } from "antd";
 import Title from "antd/es/typography/Title";
 import Link from "antd/es/typography/Link";
-import Paragraph from "antd/es/typography/Paragraph";
 
 export default function FooterContent() {
   return (
@@ -14,12 +13,12 @@ export default function FooterContent() {
         <Col span={8}>
           <Title level={4}>Contact us</Title>
           <p>Call us 24/7</p>
-          <a
+          <Link
             href="tel:+386 852 547 593"
             style={{ fontWeight: "bold", color: "green", fontSize: "18px" }}
           >
             +386 852 547 593
-          </a>
+          </Link>
           <p>Sotla Lab Equipment d.o.o.</p>
           <p>Steklarska B5</p>
           <p>3825 Rogaska Slatina</p>

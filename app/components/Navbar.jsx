@@ -1,14 +1,7 @@
 "use client";
 
 // AntD icons
-import {
-  HomeOutlined,
-  CoffeeOutlined,
-  ExperimentOutlined,
-  MailOutlined,
-  BugTwoTone,
-  GiftOutlined,
-} from "@ant-design/icons";
+import { HomeOutlined, CoffeeOutlined, ShopOutlined } from "@ant-design/icons";
 
 //AntD components
 import { Menu } from "antd";
@@ -32,23 +25,42 @@ const menuItems = [
   {
     label: <Link href="/products">Products</Link>,
     key: "products",
-    icon: <ExperimentOutlined />,
+    icon: <ShopOutlined />,
+    children: [
+      {
+        type: "group",
+        label: "Equipment",
+        children: [
+          {
+            label: <Link href="/">Microscopes</Link>,
+            key: "microscopes",
+          },
+          {
+            label: "Centrifuges",
+            key: "centrifuges",
+          },
+          {
+            label: "Drying Ovens",
+            key: "ovens",
+          },
+        ],
+      },
+      {
+        type: "group",
+        label: "Consumables",
+        children: [
+          {
+            label: <Link href="/">Pipettes</Link>,
+            key: "pipettes",
+          },
+          {
+            label: "Syringes",
+            key: "syringes",
+          },
+        ],
+      },
+    ],
   },
-  // {
-  //   label: <Link href="/contact">Contact Us</Link>,
-  //   key: "contact",
-  //   icon: <MailOutlined />,
-  // },
-  // {
-  //   label: <Link href="/tracking">Tracking</Link>,
-  //   key: "track",
-  //   icon: <GiftOutlined />,
-  // },
-  // {
-  //   label: <Link href="/tests">Tests</Link>,
-  //   key: "tests",
-  //   icon: <BugTwoTone />,
-  // },
 ];
 
 export default function Navbar() {
