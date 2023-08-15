@@ -79,7 +79,7 @@ export default function Product({ params }) {
                   backgroundColor: "green",
                 }}
               >
-                Contact Sales Support
+                Request a Quote
               </Button>
             </Typography>
           </Col>

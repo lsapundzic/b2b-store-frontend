@@ -1,7 +1,15 @@
 "use client";
 
 // AntD icons
-import { HomeOutlined, CoffeeOutlined, ShopOutlined } from "@ant-design/icons";
+import {
+  AimOutlined,
+  HomeOutlined,
+  CoffeeOutlined,
+  DashboardOutlined,
+  ShopOutlined,
+  ExperimentOutlined,
+  FireOutlined,
+} from "@ant-design/icons";
 
 //AntD components
 import { Menu } from "antd";
@@ -26,40 +34,40 @@ const menuItems = [
     label: <Link href="/products">Products</Link>,
     key: "products",
     icon: <ShopOutlined />,
-    children: [
-      {
-        type: "group",
-        label: "Equipment",
-        children: [
-          {
-            label: <Link href="/">Microscopes</Link>,
-            key: "microscopes",
-          },
-          {
-            label: "Centrifuges",
-            key: "centrifuges",
-          },
-          {
-            label: "Drying Ovens",
-            key: "ovens",
-          },
-        ],
-      },
-      {
-        type: "group",
-        label: "Consumables",
-        children: [
-          {
-            label: <Link href="/">Pipettes</Link>,
-            key: "pipettes",
-          },
-          {
-            label: "Syringes",
-            key: "syringes",
-          },
-        ],
-      },
-    ],
+    // children: [
+    //   {
+    //     type: "group",
+    //     label: "Equipment",
+    //     children: [
+    //       {
+    //         label: <Link href="/">Microscopes</Link>,
+    //         key: "microscopes",
+    //         icon: <AimOutlined />,
+    //       },
+    //       {
+    //         label: "Centrifuges",
+    //         key: "centrifuges",
+    //         icon: <DashboardOutlined />,
+    //       },
+    //       {
+    //         label: "Drying Ovens",
+    //         key: "ovens",
+    //         icon: <FireOutlined />,
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     type: "group",
+    //     label: "Glassware",
+    //     children: [
+    //       {
+    //         label: <Link href="/">Flasks</Link>,
+    //         key: "flasks",
+    //         icon: <ExperimentOutlined />,
+    //       },
+    //     ],
+    //   },
+    // ],
   },
 ];
 
