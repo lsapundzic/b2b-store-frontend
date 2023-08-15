@@ -14,29 +14,29 @@ export function usePageContent(url) {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    // General purpose error handling
-    try {
-      fetch(url)
-        .then((response) => {
-          // Error handling only for bad HTTP response
-          if (!response.ok) {
-            throw new Error(
-              `Failed to fetch data. HTTP response status: ${response.status}`
-            );
-          }
-          return response.json();
-        })
-        .then((fetchedData) => {
-          setData(fetchedData);
-          setLoading(false);
-          console.log("Data fetched: ", fetchedData);
-        });
-    } catch (error) {
-      console.error(
-        "General error occurred while fetching data. Message: ",
-        error
-      );
+    async function fetchData() {
+      try {
+        const response = await fetch(url);
+
+        if (!response.ok) {
+          throw new Error(
+            `Failed to fetch data. HTTP response status: ${response.status}`
+          );
+        }
+
+        const fetchedData = await response.json();
+        setData(fetchedData);
+        setLoading(false);
+        console.log("Data fetched: ", fetchedData);
+      } catch (error) {
+        console.error(
+          "General error occurred while fetching data. Message: ",
+          error
+        );
+      }
     }
+
+    fetchData();
   }, [url]);
 
   return { data, isLoading };
