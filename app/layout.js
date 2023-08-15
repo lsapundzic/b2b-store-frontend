@@ -40,6 +40,7 @@ export default function RootLayout({ children }) {
           <Header style={headerStyle}>
             <Navbar />
           </Header>
+
           <Content>{children}</Content>
 
           <Footer style={{ textAlign: "center" }}>

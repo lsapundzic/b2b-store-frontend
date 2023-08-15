@@ -13,7 +13,7 @@ import Link from "next/link";
 import ImageAsset from "../utils/ImageAsset";
 
 // AntD imports
-import { Typography, Image, Card, Badge } from "antd";
+import { Badge, Card, Space, Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
 export default function ProductCard({
@@ -26,18 +26,17 @@ export default function ProductCard({
   console.log("ProductsCard.jsx rendered");
 
   return (
-    <Card
-      style={{ width: 300 }}
-      hoverable
-      cover={<ImageAsset assetID={assetID} height={320} width={"auto"} />}
-    >
-      <Link href={`/products/${entryID}`}>
-        <Badge status="success" text="In stock" />
-        <Title level={3}>{name}</Title>
-        <Paragraph>{fullName}</Paragraph>
-      </Link>
-    </Card>
+    <Badge.Ribbon text="In Stock">
+      <Card
+        style={{ width: 300 }}
+        hoverable
+        cover={<ImageAsset assetID={assetID} height={320} width={"auto"} />}
+      >
+        <Link href={`/products/${entryID}`}>
+          <Title level={3}>{name}</Title>
+          <Paragraph>{fullName}</Paragraph>
+        </Link>
+      </Card>
+    </Badge.Ribbon>
   );
 }
-
-// "https://loremflickr.com/320/240"

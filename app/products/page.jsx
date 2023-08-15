@@ -31,7 +31,6 @@ function Products() {
 
   return (
     <div style={pageStyle}>
-      <Title>Products</Title>
       <Row
         gutter={{
           xs: 16,

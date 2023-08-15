@@ -15,7 +15,16 @@ import { SingleEntryURL } from "../../utils/buildURL.jsx";
 import ImageAsset from "../../utils/ImageAsset.jsx";
 
 // AntD imports
-import { Button, Col, Divider, Empty, Row, Skeleton, Typography } from "antd";
+import {
+  Button,
+  Col,
+  Divider,
+  Empty,
+  Row,
+  Skeleton,
+  Space,
+  Typography,
+} from "antd";
 const { Title, Paragraph } = Typography;
 
 export default function Product({ params }) {
@@ -60,6 +69,7 @@ export default function Product({ params }) {
         </Col>
         <Col span={4}>Conditions card will go here</Col>
       </Row>
+
       <Row>
         <Col span={15}>
           <table>
