@@ -6,12 +6,12 @@
 
 "use client";
 
-import Separator from "@/app/components/Separator.jsx";
+import Banner from "@/app/components/Banner.jsx";
 // React imports
 import { usePageContent } from "../../hooks/usePageContent.jsx";
 
 // Project imports
-import { pageStyle, textStyle } from "../../styles/globalStyles.js";
+import { textStyle } from "../../styles/globalStyles.js";
 import { SingleEntryURL } from "../../utils/buildURL.jsx";
 import ImageAsset from "../../utils/ImageAsset.jsx";
 
@@ -21,11 +21,15 @@ import {
   Col,
   Divider,
   Empty,
+  List,
   Row,
   Skeleton,
   Space,
   Typography,
 } from "antd";
+
+import Layout, { Content } from "antd/es/layout/layout.js";
+import Sider from "antd/es/layout/Sider.js";
 const { Title, Paragraph } = Typography;
 
 export default function Product({ params }) {
@@ -38,70 +42,60 @@ export default function Product({ params }) {
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
 
-  return (
-    <div style={pageStyle}>
-      <Separator />
-      <Row>
-        <Col span={8}>
-          <ImageAsset
-            assetID={data.fields.image.sys.id}
-            width={350}
-            height={"auto"}
-          />
-        </Col>
-        <Col span={12}>
-          <Typography>
-            <Title level={4}>
-              {data.fields.name} - {data.fields.fullName}
-            </Title>
-            <Divider />
-            <Paragraph style={textStyle}>{data.fields.description}</Paragraph>
-            <Divider />
-            <Button
-              type="primary"
-              style={{
-                width: `100%`,
-                height: 45,
-                backgroundColor: "green",
-              }}
-            >
-              Contact Sales Support
-            </Button>
-          </Typography>
-        </Col>
-        <Col span={4}>Conditions card will go here</Col>
-      </Row>
+  const dsrc = [
+    "Racing car sprays burning fuel into crowd.",
+    "Japanese princess to wed commoner.",
+    "Australian walks 100km after outback crash.",
+    "Man charged over missing wedding girl.",
+    "Los Angeles battles huge wildfires.",
+  ];
 
-      <Row>
-        <Col span={15}>
-          <table>
-            <thead>
-              <tr>
-                <th>Header 1</th>
-                <th>Header 2</th>
-                <th>Header 3</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Row 1, Cell 1</td>
-                <td>Row 1, Cell 2</td>
-                <td>Row 1, Cell 3</td>
-              </tr>
-              <tr>
-                <td>Row 2, Cell 1</td>
-                <td>Row 2, Cell 2</td>
-                <td>Row 2, Cell 3</td>
-              </tr>
-              <tr>
-                <td>Row 3, Cell 1</td>
-                <td>Row 3, Cell 2</td>
-                <td>Row 3, Cell 3</td>
-              </tr>
-            </tbody>
-          </table>
-        </Col>
-      </Row>
-    </div>
+  return (
+    // <div style={pageStyle}>
+    <Layout>
+      <Content>
+        <Row gutter={[16, 24]}>
+          <Col span={10}>
+            <ImageAsset
+              style={{ paddingTop: "26.6" }}
+              assetID={data.fields.image.sys.id}
+              width={"auto"}
+              height={"auto"}
+            />
+          </Col>
+
+          <Col span={14}>
+            {/* <List
+              header="Product Overview"
+              bordered
+              dataSource={dsrc}
+              renderItem={(item) => <List.Item>{item}</List.Item>}
+            /> */}
+            <Typography>
+              <Title level={4}>
+                {data.fields.name} - {data.fields.fullName}
+              </Title>
+              <Divider />
+              <Paragraph style={textStyle}>{data.fields.description}</Paragraph>
+              <Divider />
+              <Button
+                type="primary"
+                style={{
+                  width: `100%`,
+                  height: 45,
+                  backgroundColor: "green",
+                }}
+              >
+                Contact Sales Support
+              </Button>
+            </Typography>
+          </Col>
+        </Row>
+        <Row>
+          <Col span={20}></Col>
+        </Row>
+      </Content>
+    </Layout>
+    // </div>
   );
 }

@@ -14,11 +14,12 @@ import { usePageContent } from "../hooks/usePageContent.jsx";
 
 // Project imports
 import { pageStyle } from "../styles/globalStyles";
+import ProductCard from "../components/ProductCard";
+
+import { ContentTypeEntriesURL } from "../utils/buildURL";
 
 // AntD Imports
 import { Empty, Skeleton, Typography, Row, Col } from "antd";
-import ProductCard from "../components/ProductCard";
-import { ContentTypeEntriesURL } from "../utils/buildURL";
 const { Title } = Typography;
 
 function Products() {

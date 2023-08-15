@@ -4,11 +4,12 @@
 import { Inter } from "next/font/google";
 
 // Project components
-import Navbar from "@/app/components/Navbar";
 
 // AntD components
 import { Layout } from "antd";
 import { Footer } from "antd/es/layout/layout";
+import Navbar from "./components/Navbar";
+import Banner from "./components/Banner";
 const { Header, Content } = Layout;
 
 const inter = Inter({ subsets: ["latin"] });
@@ -40,9 +41,8 @@ export default function RootLayout({ children }) {
           <Header style={headerStyle}>
             <Navbar />
           </Header>
-
+          <Banner width={100} height={50} />
           <Content>{children}</Content>
-
           <Footer style={{ textAlign: "center" }}>
             <h3>SOTLA Laboratory Experts d.o.o.</h3>
             <p>Polje ob Sotli 4</p>
