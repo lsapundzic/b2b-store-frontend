@@ -1,14 +1,9 @@
-export default function filterProducts(products, criteria) {
-  try {
-    if (criteria === "all") {
-      return products;
-    }
+// TODO: Implement search safety measures immediately
 
-    return products.items.filter(
-      (product) => product.fields.category === criteria
-    );
-  } catch {
-    console.error("ERROR FILTERING DATA, RETURNING DEFAULT VALUE");
-    return products;
+export default function filterProducts(data, criteria) {
+  if (criteria === "all") {
+    return data.items;
   }
+
+  return data.items.filter((filtered) => filtered.fields.category === criteria);
 }

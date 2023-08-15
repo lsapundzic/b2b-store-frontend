@@ -33,16 +33,16 @@ function Products() {
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
 
-  const filteredProducts = data.items.filter(
-    (filtered) => filtered.fields.category === "Drying Oven"
-  );
+  // const filteredData = data.items.filter(
+  //   (filtered) => filtered.fields.category === "Drying Oven"
+  // );
 
-  // const filteredData = filterProducts(data, "all");
+  const filteredData = filterProducts(data, "all");
 
   return (
     <div style={pageStyle}>
       <Row gutter={64}>
-        {filteredProducts.map((product) => (
+        {filteredData.map((product) => (
           <Col
             key={product.sys.id}
             span={{
