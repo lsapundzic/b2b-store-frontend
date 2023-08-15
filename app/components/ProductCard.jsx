@@ -21,16 +21,20 @@ export default function ProductCard({
   assetID,
   name,
   fullName,
-  stock,
+  stockStatus,
+  cardWidth,
+  cardHeight,
 }) {
   console.log("ProductsCard.jsx rendered");
 
   return (
     <Badge.Ribbon text="In Stock">
       <Card
-        style={{ width: 300 }}
+        style={{ width: `${cardWidth}px`, height: "100%" }}
         hoverable
-        cover={<ImageAsset assetID={assetID} height={320} width={"auto"} />}
+        cover={
+          <ImageAsset assetID={assetID} height={cardHeight} width={cardWidth} />
+        }
       >
         <Link href={`/products/${entryID}`}>
           <Title level={3}>{name}</Title>

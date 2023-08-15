@@ -32,14 +32,7 @@ function Products() {
 
   return (
     <div style={pageStyle}>
-      <Row
-        gutter={{
-          xs: 16,
-          sm: 16,
-          md: 24,
-          lg: 32,
-        }}
-      >
+      <Row gutter={64}>
         {data.items.map((product) => (
           <Col
             key={product.sys.id}
@@ -55,7 +48,9 @@ function Products() {
               assetID={product.fields.image.sys.id}
               name={product.fields.name}
               fullName={product.fields.fullName}
-              stock={product.fields.inStock}
+              stockStatus={product.fields.inStock}
+              cardWidth={300}
+              cardHeight={"auto"}
             />
           </Col>
         ))}

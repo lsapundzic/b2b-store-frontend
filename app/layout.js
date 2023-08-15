@@ -10,6 +10,7 @@ import { Layout } from "antd";
 import { Footer } from "antd/es/layout/layout";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
+import CompanyHead from "./components/CompanyHead";
 const { Header, Content } = Layout;
 
 const inter = Inter({ subsets: ["latin"] });
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Layout style={globalLayoutStyle}>
+          <CompanyHead />
           {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
           <Header style={headerStyle}>
             <Navbar />
