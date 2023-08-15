@@ -65,12 +65,6 @@ export default function Product({ params }) {
           </Col>
 
           <Col span={14}>
-            {/* <List
-              header="Product Overview"
-              bordered
-              dataSource={dsrc}
-              renderItem={(item) => <List.Item>{item}</List.Item>}
-            /> */}
             <Typography>
               <Title level={4}>
                 {data.fields.name} - {data.fields.fullName}

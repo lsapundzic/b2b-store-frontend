@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
           <Header style={headerStyle}>
             <Navbar />
           </Header>
-          <Banner width={100} height={50} />
+          <Banner width={100} height={50} bannerMessage={""} />
           <Content>{children}</Content>
           <Footer style={{ textAlign: "center" }}>
             <h3>SOTLA Laboratory Experts d.o.o.</h3>
