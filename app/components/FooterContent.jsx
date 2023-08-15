@@ -14,10 +14,15 @@ export default function FooterContent() {
         <Col span={8}>
           <Title level={4}>Contact us</Title>
           <p>Call us 24/7</p>
-          <p>+386 64 247 593</p>
+          <a
+            href="tel:+386 852 547 593"
+            style={{ fontWeight: "bold", color: "green", fontSize: "18px" }}
+          >
+            +386 852 547 593
+          </a>
           <p>Sotla Lab Equipment d.o.o.</p>
-          <p>Polje ob Sotli 4</p>
-          <p>3255 Podcetrtek</p>
+          <p>Steklarska B5</p>
+          <p>3825 Rogaska Slatina</p>
           <p>Slovenia</p>
         </Col>
         <Col span={6}>
