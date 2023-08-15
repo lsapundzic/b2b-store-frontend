@@ -7,6 +7,7 @@ Fetching an asset from Contentful is convoluted.
 Asset retreival procedure ends up being the same like for an entry. Get the ID, generate URL, fetch data according to the url
 
 ! There is a way to create image URL directly without fetching, but parameters are unclear or inconvenient
+TODO: Consider making this a custom hook
 */
 
 "use client";
@@ -15,7 +16,7 @@ Asset retreival procedure ends up being the same like for an entry. Get the ID, 
 import { usePageContent } from "../hooks/usePageContent.jsx";
 
 // Project imports
-import { AssetURL } from "./buildURL.jsx";
+import { AssetURL } from "../utils/buildURL.jsx";
 
 // AntD imports
 import { Image, Skeleton, Empty } from "antd";
@@ -33,6 +34,7 @@ export default function ImageAsset({ assetID, width, height }) {
         alt={data.fields.description}
         width={width}
         height={height}
+        preview={false}
       />
     </div>
   );

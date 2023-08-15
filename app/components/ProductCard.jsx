@@ -10,7 +10,7 @@
 import Link from "next/link";
 
 // Project imports
-import ImageAsset from "../utils/ImageAsset";
+import ImageAsset from "./ImageAsset";
 
 // AntD imports
 import { Badge, Card, Space, Typography } from "antd";

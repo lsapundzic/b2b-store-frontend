@@ -12,7 +12,7 @@ import { usePageContent } from "../../hooks/usePageContent.jsx";
 // Project imports
 import { textStyle } from "../../styles/globalStyles.js";
 import { SingleEntryURL } from "../../utils/buildURL.jsx";
-import ImageAsset from "../../utils/ImageAsset.jsx";
+import ImageAsset from "../../components/ImageAsset.jsx";
 
 // AntD imports
 import {
@@ -28,7 +28,6 @@ import {
 } from "antd";
 
 import Layout, { Content } from "antd/es/layout/layout.js";
-import Sider from "antd/es/layout/Sider.js";
 const { Title, Paragraph } = Typography;
 
 export default function Product({ params }) {
