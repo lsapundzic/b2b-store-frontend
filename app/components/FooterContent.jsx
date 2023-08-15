@@ -4,10 +4,12 @@
 import { Col, Divider, Row } from "antd";
 import Title from "antd/es/typography/Title";
 import Link from "antd/es/typography/Link";
+import Paragraph from "antd/es/typography/Paragraph";
 
 export default function FooterContent() {
   return (
     <div>
+      <Divider />
       <Row>
         <Col span={8}>
           <Title level={4}>Contact us</Title>
@@ -35,7 +37,9 @@ export default function FooterContent() {
         </Col>
       </Row>
       <Divider />
-      <p>© 2023 SOTLA Lab Equipment d.o.o. All Rights Reserved</p>
+      <p style={{ fontSize: "10px", textAlign: "right" }}>
+        © 2023 SOTLA Lab Equipment d.o.o. All Rights Reserved
+      </p>
     </div>
   );
 }
