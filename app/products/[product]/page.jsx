@@ -25,6 +25,7 @@ import {
   Row,
   Skeleton,
   Space,
+  Tabs,
   Typography,
 } from "antd";
 
@@ -42,11 +43,28 @@ export default function Product({ params }) {
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
 
+  const onChange = (key) => {
+    console.log(key);
+  };
+
+  const items = [
+    {
+      key: "1",
+      label: `Description`,
+      children: `${data.fields.description}`,
+    },
+    {
+      key: "2",
+      label: `Specifications`,
+      children: `Content of Tab Pane 2`,
+    },
+  ];
+
   return (
     <div style={pageStyle}>
       <Layout>
         <Content>
-          <Row gutter={[16, 24]}>
+          <Row gutter={[64, 24]}>
             <Col span={8}>
               <ImageAsset
                 style={{ paddingTop: "26.6" }}
@@ -57,7 +75,7 @@ export default function Product({ params }) {
               />
             </Col>
 
-            <Col span={12}>
+            <Col span={11}>
               <Typography>
                 <Title level={3}>
                   {data.fields.name} - {data.fields.fullName}
@@ -82,15 +100,22 @@ export default function Product({ params }) {
                 </Button>
               </Typography>
             </Col>
-            <Col span={4}>
+            <Col span={5}>
               <TCCard />
             </Col>
           </Row>
           <div style={{ height: "120px" }}></div>
           <Row gutter={[16, 24]}>
             <Col span={24}>
-              <Divider orientation="left">Description</Divider>
-              <Paragraph style={textStyle}>{data.fields.description}</Paragraph>
+              {/* <Divider orientation="left">Description</Divider> */}
+              {/* <Paragraph style={textStyle}>{data.fields.description}</Paragraph> */}
+              <Tabs
+                defaultActiveKey="1"
+                items={items}
+                centered
+                onChange={onChange}
+                style={{ height: "250px" }}
+              />
             </Col>
           </Row>
         </Content>
