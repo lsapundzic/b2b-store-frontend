@@ -28,19 +28,24 @@ export default function ProductCard({
   console.log("ProductsCard.jsx rendered");
 
   return (
-    <Badge.Ribbon text="In Stock" color="green">
-      <Card
-        style={{ width: `${cardWidth}px`, height: "100%" }}
-        hoverable
-        cover={
-          <ImageAsset assetID={assetID} height={cardHeight} width={cardWidth} />
-        }
-      >
-        <Link href={`/products/${entryID}`}>
+    <Link href={`/products/${entryID}`}>
+      <Badge.Ribbon text="In Stock" color="green">
+        <Card
+          style={{ width: `${cardWidth}px`, height: "100%" }}
+          hoverable
+          cover={
+            <ImageAsset
+              assetID={assetID}
+              height={cardHeight}
+              width={cardWidth}
+              preview={false}
+            />
+          }
+        >
           <Title level={3}>{name}</Title>
           <Paragraph ellipsis={(true, { rows: 2 })}>{fullName}</Paragraph>
-        </Link>
-      </Card>
-    </Badge.Ribbon>
+        </Card>
+      </Badge.Ribbon>
+    </Link>
   );
 }

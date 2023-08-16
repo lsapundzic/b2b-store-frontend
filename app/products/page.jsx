@@ -37,11 +37,11 @@ function Products() {
   //   (filtered) => filtered.fields.category === "Drying Oven"
   // );
 
-  const filteredData = filterProducts(data, "all");
+  const filteredData = filterProducts(data, "Microscope");
 
   return (
     <div style={pageStyle}>
-      <Row gutter={64}>
+      <Row gutter={[32, 64]}>
         {filteredData.map((product) => (
           <Col
             key={product.sys.id}

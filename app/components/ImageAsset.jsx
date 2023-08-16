@@ -21,7 +21,7 @@ import { AssetURL } from "../utils/buildURL.jsx";
 // AntD imports
 import { Image, Skeleton, Empty } from "antd";
 
-export default function ImageAsset({ assetID, width, height }) {
+export default function ImageAsset({ assetID, width, height, preview }) {
   const { data, isLoading } = usePageContent(AssetURL(assetID));
 
   if (isLoading) return <Skeleton active />;
@@ -34,7 +34,7 @@ export default function ImageAsset({ assetID, width, height }) {
         alt={data.fields.description}
         width={width}
         height={height}
-        preview={false}
+        preview={preview}
       />
     </div>
   );
