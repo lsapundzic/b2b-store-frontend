@@ -3,15 +3,18 @@
 // Google fonts
 import { Inter } from "next/font/google";
 
-// Project components
+// React
+import { useState, createContext } from "react";
 
-// AntD components
-import { Col, Divider, Layout, Row } from "antd";
-import { Footer } from "antd/es/layout/layout";
-import Navbar from "./components/Navbar";
+// Project
 import CustomBanner from "./components/CustomBanner";
 import CustomHeader from "./components/CustomHeader";
 import CustomFooter from "./components/CustomFooter";
+
+// AntD
+import { Layout } from "antd";
+import { Footer } from "antd/es/layout/layout";
+import Navbar from "./components/Navbar";
 
 const { Header, Content } = Layout;
 

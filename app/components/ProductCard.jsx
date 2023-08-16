@@ -29,7 +29,10 @@ export default function ProductCard({
 
   return (
     <Link href={`/products/${entryID}`}>
-      <Badge.Ribbon text="In Stock" color="green">
+      <Badge.Ribbon
+        text={stockStatus ? "In stock" : "Not in stock"}
+        color={stockStatus ? "blue" : "red"}
+      >
         <Card
           style={{ width: `${cardWidth}px`, height: "100%" }}
           hoverable
