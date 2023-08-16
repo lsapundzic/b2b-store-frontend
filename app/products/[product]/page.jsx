@@ -56,7 +56,7 @@ export default function Product({ params }) {
     {
       key: "2",
       label: `Specifications`,
-      children: `Content of Tab Pane 2`,
+      children: `${data.fields.name} technical specifications placeholder`,
     },
   ];
 
@@ -116,6 +116,37 @@ export default function Product({ params }) {
                 onChange={onChange}
                 style={{ height: "250px" }}
               />
+            </Col>
+          </Row>
+          <Row gutter={[16, 24]}>
+            <Col span={24}>
+              <Divider orientation="left" orientationMargin="0">
+                Terms & Conditions
+              </Divider>
+              <Paragraph>
+                1. Product Orders 1.1 All product orders are subject to
+                availability and acceptance by [Your Company Name]. 1.2 The
+                prices of products displayed on our website are in [currency]
+                and do not include applicable taxes, shipping, handling, and
+                other charges, unless stated otherwise. 2. Order Confirmation
+                2.1 Once you place an order, you will receive an order
+                confirmation email containing your order details and an order
+                number. This email does not signify our acceptance of your
+                order, but merely confirms that we have received it. 2.2
+                Acceptance of your order occurs when we ship the product(s) to
+                you. We reserve the right to reject any order at our discretion.
+                3. Payment 3.1 Payment for product orders is due at the time of
+                purchase. 3.2 Payment methods accepted include [list accepted
+                payment methods]. 3.3 You agree to provide accurate and
+                up-to-date payment information. By providing your payment
+                details, you confirm that you are authorized to use the selected
+                payment method. 4. Shipping & Delivery 4.1 Shipping costs are
+                calculated based on the destination, shipping method, and order
+                weight. These costs will be clearly stated during the checkout
+                process. 4.2 Delivery times are estimates and may vary due to
+                factors beyond our control. 4.3 We are not responsible for
+                delays or damages caused by shipping carriers.
+              </Paragraph>
             </Col>
           </Row>
         </Content>
