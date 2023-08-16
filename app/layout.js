@@ -34,7 +34,6 @@ const headerStyle = {
   backgroundColor: "white",
 };
 
-// TODO: Create an actual footer component
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
