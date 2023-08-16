@@ -1,17 +1,18 @@
 "use client";
 
-import { Image, Space } from "antd";
+import { Divider, Image, Space } from "antd";
 import Link from "antd/es/typography/Link";
 import Title from "antd/es/typography/Title";
 
-const ComponentHeaderLayout = {
+const customHeaderStyle = {
   backgroundColor: "white",
   paddingLeft: 50,
   paddingRight: 50,
 };
+
 export default function CustomHeader() {
   return (
-    <Space style={ComponentHeaderLayout} align="center">
+    <Space style={customHeaderStyle} align="center" size="large">
       <Link href="/">
         <Image
           alt="Sotla Company Logo"

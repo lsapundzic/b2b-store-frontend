@@ -22,7 +22,6 @@ import { ContentTypeEntriesURL } from "../utils/buildURL";
 // AntD Imports
 import { Empty, Skeleton, Typography, Row, Col } from "antd";
 import filterProducts from "../utils/filterProducts.jsx";
-const { Title } = Typography;
 
 function Products() {
   console.log("Products.jsx rendered");
@@ -33,16 +32,12 @@ function Products() {
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
 
-  // const filteredData = data.items.filter(
-  //   (filtered) => filtered.fields.category === "Drying Oven"
-  // );
-
-  const filteredData = filterProducts(data, "Microscope");
+  // const filteredData = filterProducts(data, "all");
 
   return (
     <div style={pageStyle}>
       <Row gutter={[32, 64]}>
-        {filteredData.map((product) => (
+        {filterProducts(data, "Drying Oven").map((product) => (
           <Col
             key={product.sys.id}
             span={{

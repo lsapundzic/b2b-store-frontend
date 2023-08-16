@@ -32,6 +32,7 @@ import {
 import Layout, { Content } from "antd/es/layout/layout.js";
 import TCCard from "@/app/components/TCCard.jsx";
 import ProductTabs from "@/app/components/ProductTabs.jsx";
+import CustomBanner from "@/app/components/CustomBanner.jsx";
 const { Title, Paragraph } = Typography;
 
 export default function Product({ params }) {
@@ -67,7 +68,8 @@ export default function Product({ params }) {
                   {data.fields.name} - {data.fields.fullName}
                 </Title>
                 <p>
-                  Category: {data.fields.category} | SKU: {data.fields.sku}
+                  Category: <Button type="text">{data.fields.category}</Button>{" "}
+                  | SKU: {data.fields.sku}
                 </p>
                 <Divider />
                 <Paragraph style={textStyle}>
@@ -87,13 +89,14 @@ export default function Product({ params }) {
               </Typography>
             </Col>
 
-            {/* Terms and Conditions Column */}
+            {/* Terms & Conditions Card */}
             <Col span={5}>
               <TCCard />
             </Col>
           </Row>
 
-          <div style={{ height: "120px" }}></div>
+          {/* Separator */}
+          <CustomBanner height={80} width={100} />
 
           {/* Technical Specifications Row */}
           <Row gutter={[16, 24]}>
@@ -104,12 +107,15 @@ export default function Product({ params }) {
               />
             </Col>
 
-            <div style={{ height: "320px" }}></div>
+            {/* Separator */}
+            <CustomBanner height={80} width={100} />
+
+            {/* Similar Products Row */}
           </Row>
           <Row gutter={[16, 24]}>
             <Col span={24}>
               <Divider orientation="left" orientationMargin="0">
-                Terms & Conditions
+                Similar Products
               </Divider>
             </Col>
           </Row>
