@@ -1,5 +1,9 @@
 "use client";
 
+// React components
+import { useState } from "react";
+import Link from "next/link";
+
 // AntD icons
 import {
   AimOutlined,
@@ -13,10 +17,6 @@ import {
 
 //AntD components
 import { Menu } from "antd";
-
-// React components
-import { useState } from "react";
-import Link from "next/link";
 
 // Object from which the navbar is generated
 const menuItems = [
