@@ -107,8 +107,6 @@ export default function Product({ params }) {
           <div style={{ height: "120px" }}></div>
           <Row gutter={[16, 24]}>
             <Col span={24}>
-              {/* <Divider orientation="left">Description</Divider> */}
-              {/* <Paragraph style={textStyle}>{data.fields.description}</Paragraph> */}
               <Tabs
                 defaultActiveKey="1"
                 items={items}
