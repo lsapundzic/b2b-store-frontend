@@ -11,7 +11,7 @@ import {
   YoutubeOutlined,
 } from "@ant-design/icons";
 
-export default function FooterContent() {
+export default function CustomFooter() {
   return (
     <div>
       <Divider />

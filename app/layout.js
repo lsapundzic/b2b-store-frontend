@@ -9,11 +9,10 @@ import { Inter } from "next/font/google";
 import { Col, Divider, Layout, Row } from "antd";
 import { Footer } from "antd/es/layout/layout";
 import Navbar from "./components/Navbar";
-import EmptyBanner from "./components/EmptyBanner";
-import CompanyHeader from "./components/CompanyHeader";
-import Title from "antd/es/typography/Title";
-import Link from "antd/es/typography/Link";
-import FooterContent from "./components/FooterContent";
+import CustomBanner from "./components/CustomBanner";
+import CustomHeader from "./components/CustomHeader";
+import CustomFooter from "./components/CustomFooter";
+
 const { Header, Content } = Layout;
 
 const inter = Inter({ subsets: ["latin"] });
@@ -41,15 +40,15 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Layout style={globalLayoutStyle}>
-          <CompanyHeader />
+          <CustomHeader />
           {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
           <Header style={headerStyle}>
             <Navbar />
           </Header>
-          <EmptyBanner width={100} height={50} bannerMessage={""} />
+          <CustomBanner width={100} height={50} bannerMessage={""} />
           <Content>{children}</Content>
           <Footer>
-            <FooterContent />
+            <CustomFooter />
           </Footer>
         </Layout>
       </body>

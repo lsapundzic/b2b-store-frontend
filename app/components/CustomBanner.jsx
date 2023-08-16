@@ -1,6 +1,6 @@
 import Paragraph from "antd/es/typography/Paragraph";
 
-const EmptyBanner = ({ width, height, bannerMessage }) => {
+const CustomBanner = ({ width, height, bannerMessage }) => {
   const separatorStye = {
     width: `${width}%`,
     height: `${height}px`,
@@ -12,4 +12,4 @@ const EmptyBanner = ({ width, height, bannerMessage }) => {
   );
 };
 
-export default EmptyBanner;
+export default CustomBanner;

@@ -9,7 +9,7 @@ const ComponentHeaderLayout = {
   paddingLeft: 50,
   paddingRight: 50,
 };
-export default function CompanyHeader() {
+export default function CustomHeader() {
   return (
     <Space style={ComponentHeaderLayout} align="center">
       <Link href="/">
