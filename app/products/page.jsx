@@ -32,8 +32,6 @@ function Products() {
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
 
-  // const filteredData = filterProducts(data, "all");
-
   return (
     <div style={pageStyle}>
       <Row gutter={[32, 64]}>
