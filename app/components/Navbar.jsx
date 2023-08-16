@@ -1,7 +1,7 @@
 "use client";
 
 // React components
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Link from "next/link";
 
 // AntD icons
@@ -17,6 +17,7 @@ import {
 
 //AntD components
 import { Menu } from "antd";
+import { PageContext } from "../layout";
 
 // Object from which the navbar is generated
 const menuItems = [
@@ -72,11 +73,13 @@ const menuItems = [
 ];
 
 export default function Navbar() {
+  let { page, setPage } = useContext(PageContext);
   const [current, setCurrent] = useState("default");
 
   //   Function that changes useState so that the active tab can remain underlined
   const onClick = (e) => {
     setCurrent(e.key);
+    setPage(e.key);
   };
 
   return (

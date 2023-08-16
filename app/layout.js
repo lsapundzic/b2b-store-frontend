@@ -37,23 +37,29 @@ const headerStyle = {
   backgroundColor: "white",
 };
 
+export const PageContext = createContext();
+
 export default function RootLayout({ children }) {
+  const [page, setPage] = useState("");
+
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Layout style={globalLayoutStyle}>
-          <CustomHeader />
-          {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
-          <Header style={headerStyle}>
-            <Navbar />
-          </Header>
-          <CustomBanner width={100} height={50} bannerMessage={""} />
-          <Content>{children}</Content>
-          <Footer>
-            <CustomFooter />
-          </Footer>
-        </Layout>
-      </body>
+      <PageContext.Provider value={{ page, setPage }}>
+        <body className={inter.className}>
+          <Layout style={globalLayoutStyle}>
+            <CustomHeader />
+            {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
+            <Header style={headerStyle}>
+              <Navbar />
+            </Header>
+            <CustomBanner width={100} height={50} bannerMessage={""} />
+            <Content>{children}</Content>
+            <Footer>
+              <CustomFooter />
+            </Footer>
+          </Layout>
+        </body>
+      </PageContext.Provider>
     </html>
   );
 }

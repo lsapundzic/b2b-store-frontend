@@ -1,18 +1,25 @@
 "use client";
 
-// Custom hooks
+// React
 import { usePageContent } from "../hooks/usePageContent.jsx";
+import { useContext } from "react";
 
-// Project imports
+// Project
 import { pageStyle, textStyle } from "../styles/globalStyles.js";
 import { ABOUT_ID, SingleEntryURL } from "../utils/buildURL";
+import { PageContext } from "../layout.js";
 
-// AntD imports
+// AntD
 import { Empty, Skeleton, Typography } from "antd";
+
 const { Title, Paragraph } = Typography;
 
 export default function About() {
   console.log("About.jsx rendered");
+
+  let { page, setPage } = useContext(PageContext);
+
+  console.log("Check global context", page);
 
   const { data, isLoading } = usePageContent(SingleEntryURL(ABOUT_ID));
 
