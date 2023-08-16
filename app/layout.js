@@ -9,7 +9,7 @@ import { Inter } from "next/font/google";
 import { Col, Divider, Layout, Row } from "antd";
 import { Footer } from "antd/es/layout/layout";
 import Navbar from "./components/Navbar";
-import Banner from "./components/Banner";
+import EmptyBanner from "./components/EmptyBanner";
 import CompanyHeader from "./components/CompanyHeader";
 import Title from "antd/es/typography/Title";
 import Link from "antd/es/typography/Link";
@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
           <Header style={headerStyle}>
             <Navbar />
           </Header>
-          <Banner width={100} height={50} bannerMessage={""} />
+          <EmptyBanner width={100} height={50} bannerMessage={""} />
           <Content>{children}</Content>
           <Footer>
             <FooterContent />
