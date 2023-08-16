@@ -1,20 +1,35 @@
 "use client";
 
-import { Card, Typography } from "antd";
+import { Card, Space, Typography } from "antd";
 const { Paragraph } = Typography;
 
-import { TrophyTwoTone } from "@ant-design/icons";
+import {
+  GlobalOutlined,
+  ApiOutlined,
+  CarryOutOutlined,
+} from "@ant-design/icons";
 
 export default function TCCard() {
   return (
     <Card>
-      <Paragraph>
-        <TrophyTwoTone />
-        Worldwide Shipping
-      </Paragraph>
-      <Paragraph>
-        <TrophyTwoTone />1 Year Warranty
-      </Paragraph>
+      <div>
+        <Space size="middle">
+          <GlobalOutlined />
+          <p>Worldwide Shipping</p>
+        </Space>
+      </div>
+      <div>
+        <Space size="middle">
+          <CarryOutOutlined />
+          <p>Two Year Warranty</p>
+        </Space>
+      </div>
+      <div>
+        <Space size="middle">
+          <ApiOutlined />
+          <p>Commissioning & Servicing included </p>
+        </Space>
+      </div>
     </Card>
   );
 }
