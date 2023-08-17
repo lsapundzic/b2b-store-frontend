@@ -40,7 +40,7 @@ const headerStyle = {
 export const PageContext = createContext();
 
 export default function RootLayout({ children }) {
-  const [page, setPage] = useState("");
+  const [page, setPage] = useState("home");
 
   return (
     <html lang="en">

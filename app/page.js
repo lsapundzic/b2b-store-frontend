@@ -1,9 +1,13 @@
 "use client";
 
-// Project imports
-import { pageStyle, textStyle } from "./styles/globalStyles";
+// React
+import { useContext } from "react";
 
-// AntD imports
+// Project
+import { pageStyle } from "./styles/globalStyles";
+import { PageContext } from "./layout";
+
+// AntD
 import { Carousel, Divider, Image, Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
@@ -16,7 +20,8 @@ const contentStyle = {
 };
 
 export default function Homepage() {
-  console.log("Homepage rendered");
+  const { page } = useContext(PageContext);
+  console.log(`${page} rendered`);
 
   return (
     <div style={pageStyle}>
