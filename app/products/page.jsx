@@ -36,7 +36,7 @@ function Products() {
   return (
     <div style={pageStyle}>
       <Row gutter={[32, 64]}>
-        {filterProducts(data, "Microscope").map((product) => (
+        {filterProducts(data, page).map((product) => (
           <Col
             key={product.sys.id}
             span={{

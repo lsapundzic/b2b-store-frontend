@@ -6,7 +6,7 @@ export default function filterProducts(data, criteria) {
 
   // console.log("Unique categories; ", uniqueCategories);
 
-  if (criteria === "all") {
+  if (criteria === "products") {
     return data.items;
   }
 

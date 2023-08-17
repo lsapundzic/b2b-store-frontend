@@ -35,40 +35,40 @@ const menuItems = [
     label: <Link href="/products">Products</Link>,
     key: "products",
     icon: <ShopOutlined />,
-    // children: [
-    //   {
-    //     type: "group",
-    //     label: "Equipment",
-    //     children: [
-    //       {
-    //         label: <Link href="/">Microscopes</Link>,
-    //         key: "microscopes",
-    //         icon: <AimOutlined />,
-    //       },
-    //       {
-    //         label: "Centrifuges",
-    //         key: "centrifuges",
-    //         icon: <DashboardOutlined />,
-    //       },
-    //       {
-    //         label: "Drying Ovens",
-    //         key: "ovens",
-    //         icon: <FireOutlined />,
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     type: "group",
-    //     label: "Glassware",
-    //     children: [
-    //       {
-    //         label: <Link href="/">Flasks</Link>,
-    //         key: "flasks",
-    //         icon: <ExperimentOutlined />,
-    //       },
-    //     ],
-    //   },
-    // ],
+    children: [
+      {
+        type: "group",
+        label: "Equipment",
+        children: [
+          {
+            label: <Link href="/products">Microscopes</Link>,
+            key: "microscopes",
+            // icon: <AimOutlined />,
+          },
+          {
+            label: <Link href="/products">Centrifuges</Link>,
+            key: "centrifuges",
+            // icon: <DashboardOutlined />,
+          },
+          {
+            label: <Link href="/products">Drying Ovens</Link>,
+            key: "ovens",
+            // icon: <FireOutlined />,
+          },
+        ],
+      },
+      {
+        type: "group",
+        label: "Glassware",
+        children: [
+          {
+            label: <Link href="/products">Flasks</Link>,
+            key: "flasks",
+            // icon: <ExperimentOutlined />,
+          },
+        ],
+      },
+    ],
   },
 ];
 

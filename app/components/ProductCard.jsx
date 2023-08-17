@@ -25,7 +25,7 @@ export default function ProductCard({
   cardWidth,
   cardHeight,
 }) {
-  console.log("ProductsCard.jsx rendered");
+  console.log("ProductsCard rendered");
 
   return (
     <Link href={`/products/${entryID}`}>
