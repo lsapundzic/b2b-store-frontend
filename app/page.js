@@ -1,8 +1,17 @@
-export default async function Home() {
+"use client";
+
+import { useState } from "react";
+
+export default function Home() {
+  const [current, setCurrent] = useState("mail");
+  const onClick = (e) => {
+    console.log("click ", e);
+    setCurrent(e.key);
+  };
   return (
-    <main>
-      <h1>DANGER ZONE - EMPTY PROJECT</h1>
-      <div>RETURN TO MAIN BRANCH IMMEDIATELY</div>
-    </main>
+    <div>
+      <h1>TESTING AREA</h1>
+      <h2>LEAVE THIS BRANCH IMMEDIATELY</h2>
+    </div>
   );
 }
