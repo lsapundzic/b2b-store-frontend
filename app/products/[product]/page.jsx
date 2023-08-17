@@ -8,7 +8,8 @@
 
 // React
 import { useContext, useState } from "react";
-import { usePageContent } from "../hooks/usePageContent.jsx";
+import { PageContext } from "../../layout.js";
+import { usePageContent } from "../../hooks/usePageContent";
 
 // Project
 import { textStyle, pageStyle } from "../../styles/globalStyles.js";

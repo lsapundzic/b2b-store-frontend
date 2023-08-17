@@ -1,5 +1,3 @@
-// TODO: Implement search safety measures immediately
-
 export default function filterProducts(data, criteria) {
   // Get unique categories from the data
   const uniqueCategories = [
@@ -24,6 +22,4 @@ export default function filterProducts(data, criteria) {
     console.error(`Invalid filter criteria: ${criteria}`);
     return data.items;
   }
-
-  return data.items.filter((filtered) => filtered.fields.category === criteria);
 }

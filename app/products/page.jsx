@@ -9,17 +9,18 @@
 
 "use client";
 
-// React imports
+// React
 import { useContext, useState } from "react";
+import { PageContext } from "../layout.js";
 import { usePageContent } from "../hooks/usePageContent.jsx";
 
-// Project imports
+// Project
 import { pageStyle } from "../styles/globalStyles";
 import ProductCard from "../components/ProductCard";
 import { ContentTypeEntriesURL } from "../utils/buildURL";
 import filterProducts from "../utils/filterProducts.jsx";
 
-// AntD Imports
+// AntD
 import { Empty, Skeleton, Typography, Row, Col } from "antd";
 
 function Products() {
@@ -35,7 +36,7 @@ function Products() {
   return (
     <div style={pageStyle}>
       <Row gutter={[32, 64]}>
-        {filterProducts(data, "all").map((product) => (
+        {filterProducts(data, "Microscope").map((product) => (
           <Col
             key={product.sys.id}
             span={{
