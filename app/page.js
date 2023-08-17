@@ -1,21 +1,8 @@
 export default async function Home() {
-  const data = await fetch(
-    `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.API_KEY}`
-  );
-
-  if (!data.ok) {
-    console.log(`ERROR: ${data}`);
-  }
-
-  const res = await data.json();
-  console.log(res);
-
-  console.log("fincheck");
-
   return (
     <main>
-      <h1>Testing Fetch!</h1>
-      <div></div>
+      <h1>DANGER ZONE - EMPTY PROJECT</h1>
+      <div>RETURN TO MAIN BRANCH IMMEDIATELY</div>
     </main>
   );
 }
