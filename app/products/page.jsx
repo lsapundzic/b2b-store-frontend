@@ -10,21 +10,21 @@
 "use client";
 
 // React imports
+import { useContext, useState } from "react";
 import { usePageContent } from "../hooks/usePageContent.jsx";
-import { useState } from "react";
 
 // Project imports
 import { pageStyle } from "../styles/globalStyles";
 import ProductCard from "../components/ProductCard";
-
 import { ContentTypeEntriesURL } from "../utils/buildURL";
+import filterProducts from "../utils/filterProducts.jsx";
 
 // AntD Imports
 import { Empty, Skeleton, Typography, Row, Col } from "antd";
-import filterProducts from "../utils/filterProducts.jsx";
 
 function Products() {
-  console.log("Products.jsx rendered");
+  let { page } = useContext(PageContext);
+  console.log(`${page} rendered`);
 
   // Fetch all products
   const { data, isLoading } = usePageContent(ContentTypeEntriesURL("product"));

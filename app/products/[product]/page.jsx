@@ -6,15 +6,19 @@
 
 "use client";
 
-// React imports
-import { usePageContent } from "../../hooks/usePageContent.jsx";
+// React
+import { useContext, useState } from "react";
+import { usePageContent } from "../hooks/usePageContent.jsx";
 
-// Project imports
+// Project
 import { textStyle, pageStyle } from "../../styles/globalStyles.js";
 import { SingleEntryURL } from "../../utils/buildURL.jsx";
 import ImageAsset from "../../components/ImageAsset.jsx";
+import TCCard from "@/app/components/TCCard.jsx";
+import ProductTabs from "@/app/components/ProductTabs.jsx";
+import CustomBanner from "@/app/components/CustomBanner.jsx";
 
-// AntD imports
+// AntD
 import {
   Button,
   Col,
@@ -27,15 +31,14 @@ import {
 } from "antd";
 
 import Layout, { Content } from "antd/es/layout/layout.js";
-import TCCard from "@/app/components/TCCard.jsx";
-import ProductTabs from "@/app/components/ProductTabs.jsx";
-import CustomBanner from "@/app/components/CustomBanner.jsx";
 const { Title, Paragraph } = Typography;
 
 export default function Product({ params }) {
   // For accessing slug which is the entryID
   const { product } = params;
-  console.log("Product.jsx");
+
+  let { page } = useContext(PageContext);
+  console.log(`${page} rendered`);
 
   const { data, isLoading } = usePageContent(SingleEntryURL(product));
 

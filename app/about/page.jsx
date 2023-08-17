@@ -15,11 +15,8 @@ import { Empty, Skeleton, Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
 export default function About() {
-  console.log("About.jsx rendered");
-
-  let { page, setPage } = useContext(PageContext);
-
-  console.log("Check global context", page);
+  let { page } = useContext(PageContext);
+  console.log(`${page} rendered`);
 
   const { data, isLoading } = usePageContent(SingleEntryURL(ABOUT_ID));
 
