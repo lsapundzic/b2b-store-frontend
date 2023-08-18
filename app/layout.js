@@ -13,10 +13,12 @@ import CustomFooter from "./components/CustomFooter";
 
 // AntD
 import { Layout } from "antd";
+const { Header, Content } = Layout;
 import { Footer } from "antd/es/layout/layout";
 import Navbar from "./components/Navbar";
 
-const { Header, Content } = Layout;
+// Contexts
+export const PageContext = createContext();
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +29,8 @@ export const metadata = {
     "Manufacturers, distributors, and sellers of laboratory equipment & lab consumables",
 };
 
+// Styling
+
 // Used so that the content stretches throughout the page
 const globalLayoutStyle = {
   minHeight: "100vh",
@@ -36,8 +40,6 @@ const globalLayoutStyle = {
 const headerStyle = {
   backgroundColor: "white",
 };
-
-export const PageContext = createContext();
 
 export default function RootLayout({ children }) {
   const [page, setPage] = useState("home");

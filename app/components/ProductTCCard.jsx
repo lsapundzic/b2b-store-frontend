@@ -9,7 +9,7 @@ import {
   CarryOutOutlined,
 } from "@ant-design/icons";
 
-export default function TCCard() {
+export default function ProductTCCard() {
   return (
     <Card>
       <div>

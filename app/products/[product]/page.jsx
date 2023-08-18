@@ -15,7 +15,7 @@ import { usePageContent } from "../../hooks/usePageContent";
 import { textStyle, pageStyle } from "../../styles/globalStyles.js";
 import { SingleEntryURL } from "../../utils/buildURL.jsx";
 import ImageAsset from "../../components/ImageAsset.jsx";
-import TCCard from "@/app/components/TCCard.jsx";
+import ProductTCCard from "@/app/components/ProductTCCard.jsx";
 import ProductTabs from "@/app/components/ProductTabs.jsx";
 import CustomBanner from "@/app/components/CustomBanner.jsx";
 
@@ -92,7 +92,7 @@ export default function Product({ params }) {
 
             {/* Terms & Conditions Card */}
             <Col span={5}>
-              <TCCard />
+              <ProductTCCard />
             </Col>
           </Row>
 
