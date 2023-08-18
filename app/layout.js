@@ -21,11 +21,11 @@ const { Header, Content } = Layout;
 const inter = Inter({ subsets: ["latin"] });
 
 // ! Metadata disabled, conflicts with use client
-// export const metadata = {
-//   title: "Sotla Laboratory Experts",
-//   description:
-//     "Manufacturers, distributors, and sellers of laboratory equipment & lab consumables",
-// };
+export const metadata = {
+  title: "Sotla Laboratory Experts",
+  description:
+    "Manufacturers, distributors, and sellers of laboratory equipment & lab consumables",
+};
 
 // Used so that the content stretches throughout the page
 const globalLayoutStyle = {
