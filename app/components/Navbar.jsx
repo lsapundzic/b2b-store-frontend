@@ -32,10 +32,15 @@ const menuItems = [
     icon: <CoffeeOutlined />,
   },
   {
-    label: <Link href="/products">Products</Link>,
-    key: "products",
+    label: "Store",
+    key: "store",
     icon: <ShopOutlined />,
     children: [
+      {
+        label: <Link href="/products">All Products</Link>,
+        key: "products",
+        icon: <CoffeeOutlined />,
+      },
       {
         type: "group",
         label: "Equipment",
