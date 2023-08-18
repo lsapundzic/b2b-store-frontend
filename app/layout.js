@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
             <Header style={headerStyle}>
               <Navbar />
             </Header>
-            <CustomBanner width={100} height={50} bannerMessage={""} />
+            <CustomBanner bannerContent={""} />
             <Content>{children}</Content>
             <Footer>
               <CustomFooter />

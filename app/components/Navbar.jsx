@@ -7,6 +7,7 @@ import Link from "next/link";
 // AntD icons
 import {
   AimOutlined,
+  BookOutlined,
   HomeOutlined,
   CoffeeOutlined,
   DashboardOutlined,
@@ -39,7 +40,7 @@ const menuItems = [
       {
         label: <Link href="/products">All Products</Link>,
         key: "products",
-        icon: <CoffeeOutlined />,
+        icon: <BookOutlined />,
       },
       {
         type: "group",
@@ -48,17 +49,17 @@ const menuItems = [
           {
             label: <Link href="/products">Microscopes</Link>,
             key: "microscopes",
-            // icon: <AimOutlined />,
+            icon: <AimOutlined />,
           },
           {
             label: <Link href="/products">Centrifuges</Link>,
             key: "centrifuges",
-            // icon: <DashboardOutlined />,
+            icon: <DashboardOutlined />,
           },
           {
             label: <Link href="/products">Drying Ovens</Link>,
             key: "ovens",
-            // icon: <FireOutlined />,
+            icon: <FireOutlined />,
           },
         ],
       },
@@ -69,7 +70,7 @@ const menuItems = [
           {
             label: <Link href="/products">Flasks</Link>,
             key: "flasks",
-            // icon: <ExperimentOutlined />,
+            icon: <ExperimentOutlined />,
           },
         ],
       },

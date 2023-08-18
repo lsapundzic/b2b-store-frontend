@@ -1,13 +1,14 @@
 import Paragraph from "antd/es/typography/Paragraph";
 
-const CustomBanner = ({ width, height, bannerMessage }) => {
+const CustomBanner = ({ bannerContent }) => {
   const separatorStye = {
-    width: `${width}%`,
-    height: `${height}px`,
+    paddingLeft: "50px",
+    width: `100%`,
+    height: `50px`,
   };
   return (
     <div style={separatorStye}>
-      <Paragraph>{bannerMessage}</Paragraph>
+      <div>{bannerContent}</div>
     </div>
   );
 };

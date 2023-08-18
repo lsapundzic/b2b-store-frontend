@@ -27,7 +27,7 @@ export default function TCCard() {
       <div>
         <Space size="middle">
           <ApiOutlined />
-          <p>Commissioning & Servicing included </p>
+          <p>Commissioning & Servicing Included </p>
         </Space>
       </div>
     </Card>
