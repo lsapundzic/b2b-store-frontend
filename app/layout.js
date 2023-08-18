@@ -23,11 +23,11 @@ export const PageContext = createContext();
 const inter = Inter({ subsets: ["latin"] });
 
 // ! Metadata disabled, conflicts with use client
-export const metadata = {
-  title: "Sotla Laboratory Experts",
-  description:
-    "Manufacturers, distributors, and sellers of laboratory equipment & lab consumables",
-};
+// export const metadata = {
+//   title: "Sotla Laboratory Experts",
+//   description:
+//     "Manufacturers, distributors, and sellers of laboratory equipment & lab consumables",
+// };
 
 // Styling
 
