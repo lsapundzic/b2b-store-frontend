@@ -1,7 +1,7 @@
 "use client";
 
 // React
-import { usePageContent } from "../hooks/usePageContent.jsx";
+import { useContentRetriever } from "../hooks/useContentRetriever.jsx";
 import { useContext } from "react";
 
 // Project
@@ -18,7 +18,7 @@ export default function Test() {
   let { page } = useContext(PageContext);
   console.log(`${page} rendered`);
 
-  const { data, isLoading } = usePageContent(AllEnatriesURL());
+  const { data, isLoading } = useContentRetriever(AllEnatriesURL());
 
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;

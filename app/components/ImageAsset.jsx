@@ -13,7 +13,7 @@ TODO: Consider making this a custom hook
 "use client";
 
 // React imports
-import { usePageContent } from "../hooks/usePageContent.jsx";
+import { useContentRetriever } from "../hooks/useContentRetriever.jsx";
 
 // Project imports
 import { AssetURL } from "../utils/buildURL.jsx";
@@ -22,7 +22,7 @@ import { AssetURL } from "../utils/buildURL.jsx";
 import { Image, Skeleton, Empty } from "antd";
 
 export default function ImageAsset({ assetID, width, height, preview }) {
-  const { data, isLoading } = usePageContent(AssetURL(assetID));
+  const { data, isLoading } = useContentRetriever(AssetURL(assetID));
 
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;

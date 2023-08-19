@@ -8,7 +8,7 @@
 
 // React
 import { useState } from "react";
-import { usePageContent } from "../../hooks/usePageContent";
+import { useContentRetriever } from "../../hooks/useContentRetriever";
 
 // Project
 import { textStyle, pageStyle } from "../../styles/globalStyles.js";
@@ -28,7 +28,7 @@ export default function Product({ params }) {
   // For accessing slug which is the entryID
   const { product } = params;
 
-  const { data, isLoading } = usePageContent(SingleEntryURL(product));
+  const { data, isLoading } = useContentRetriever(SingleEntryURL(product));
 
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;

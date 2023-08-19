@@ -9,7 +9,7 @@ will be passed to variables and will not be overwritten once fetch is complete.
 
 import { useState, useEffect } from "react";
 
-export function usePageContent(url) {
+export function useContentRetriever(url) {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
 
