@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Button, Form, Input, Select } from "antd";
+import { Button, Form, Input, Select, Space } from "antd";
 
 const { Option } = Select;
 
@@ -56,78 +56,49 @@ export default function ContactForm() {
     });
   };
   return (
-    <Form
-      {...layout}
-      ref={formRef}
-      name="control-ref"
-      onFinish={onFinish}
-      style={{
-        maxWidth: 600,
-      }}
-    >
-      <Form.Item
-        name="note"
-        label="Note"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
-      >
-        <Input />
-      </Form.Item>
-      <Form.Item
-        name="gender"
-        label="Gender"
-        rules={[
-          {
-            required: true,
-          },
-        ]}
-      >
-        <Select
-          placeholder="Select a option and change input text above"
-          onChange={onGenderChange}
-          allowClear
+    <Space direction="vertical" align="center">
+      <Form name="contactForm" onFinish={onFinish}>
+        <Form.Item
+          label="Name"
+          name="name"
+          rules={[{ required: true, message: "Enter your name" }]}
         >
-          <Option value="male">male</Option>
-          <Option value="female">female</Option>
-          <Option value="other">other</Option>
-        </Select>
-      </Form.Item>
-      <Form.Item
-        noStyle
-        shouldUpdate={(prevValues, currentValues) =>
-          prevValues.gender !== currentValues.gender
-        }
-      >
-        {({ getFieldValue }) =>
-          getFieldValue("gender") === "other" ? (
-            <Form.Item
-              name="customizeGender"
-              label="Customize Gender"
-              rules={[
-                {
-                  required: true,
-                },
-              ]}
-            >
-              <Input />
-            </Form.Item>
-          ) : null
-        }
-      </Form.Item>
-      <Form.Item {...tailLayout}>
-        <Button type="primary" htmlType="submit">
-          Submit
-        </Button>
-        <Button htmlType="button" onClick={onReset}>
-          Reset
-        </Button>
-        <Button type="link" htmlType="button" onClick={onFill}>
-          Fill form
-        </Button>
-      </Form.Item>
-    </Form>
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          label="Company"
+          name="company"
+          rules={[{ required: true, message: "Enter your company" }]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          label="Email"
+          name="email"
+          rules={[
+            { required: true, message: "Enter your email" },
+            { type: "email", message: "Invalid email format" },
+          ]}
+        >
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          label="Message"
+          name="message"
+          rules={[{ required: true, message: "Enter your message" }]}
+        >
+          <Input.TextArea rows={4} />
+        </Form.Item>
+
+        <Form.Item>
+          <Button type="primary" htmlType="submit">
+            Submit Form
+          </Button>
+        </Form.Item>
+      </Form>
+    </Space>
   );
 }

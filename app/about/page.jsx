@@ -36,7 +36,7 @@ export default function About() {
         <Col span={24}>
           <Image
             alt="Team picture"
-            src="https://placehold.co/1800x600"
+            src="https://placehold.co/1800x400"
             preview={false}
           />
         </Col>
