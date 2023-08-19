@@ -6,7 +6,7 @@ import { useContext } from "react";
 
 // Project
 import { pageStyle, textStyle } from "../styles/globalStyles.js";
-import { ABOUT_ID, AllEnatriesURL } from "../utils/buildURL";
+import { ABOUT_ID, AllEntriesURL } from "../utils/buildURL";
 import { PageCategoryContext } from "../layout.js";
 
 // AntD
@@ -18,7 +18,7 @@ export default function Test() {
   let { page } = useContext(PageCategoryContext);
   console.log(`${page} rendered`);
 
-  const { data, isLoading } = useDataRetriever(AllEnatriesURL());
+  const { data, isLoading } = useDataRetriever(AllEntriesURL());
 
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;

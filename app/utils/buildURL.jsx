@@ -12,7 +12,7 @@ export function SingleEntryURL(entryID) {
 }
 
 // For all entries in the Contentful space
-export function AllEnatriesURL() {
+export function AllEntriesURL() {
   const url = `${baseURL}/spaces/${process.env.NEXT_PUBLIC_SPACE_ID}/environments/master/entries?access_token=${process.env.NEXT_PUBLIC_DELIVERY_ACCESS_TOKEN}`;
   return url;
 }
