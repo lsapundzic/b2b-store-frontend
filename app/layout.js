@@ -18,6 +18,7 @@ export const PageCategoryContext = createContext();
 import CustomBanner from "./components/CustomBanner";
 import CustomHeader from "./components/CustomHeader";
 import CustomFooter from "./components/CustomFooter";
+import Newsletter from "./components/Newsletter";
 
 // AntD
 import { Empty, Layout, Skeleton } from "antd";
@@ -61,6 +62,7 @@ export default function RootLayout({ children }) {
             </Header>
             <CustomBanner bannerContent={""} />
             <Content>{children}</Content>
+            {/* <Newsletter /> */}
             <Footer>
               <CustomFooter />
             </Footer>

@@ -27,16 +27,16 @@ export default function Homepage() {
     <div style={pageStyle}>
       <Carousel autoplay>
         <div>
-          <Image alt="placeholder image" src="https://placehold.co/1600x400" />
+          <Image alt="placeholder image" src="https://placehold.co/1600x600" />
         </div>
         <div>
-          <Image alt="placeholder image" src="https://placehold.co/1600x400" />
+          <Image alt="placeholder image" src="https://placehold.co/1600x600" />
         </div>
         <div>
-          <Image alt="placeholder image" src="https://placehold.co/1600x400" />
+          <Image alt="placeholder image" src="https://placehold.co/1600x600" />
         </div>
         <div>
-          <Image alt="placeholder image" src="https://placehold.co/1600x400" />
+          <Image alt="placeholder image" src="https://placehold.co/1600x600" />
         </div>
       </Carousel>
       <Divider />

@@ -37,7 +37,7 @@ export default function About() {
         <Col span={24}>
           <Image
             alt="Team picture"
-            src="https://placehold.co/1800x400"
+            src="https://placehold.co/1800x600"
             preview={false}
           />
         </Col>
@@ -79,7 +79,8 @@ export default function About() {
         </Col>
       </Row>
       <CustomBanner bannerContent={""} />
-      <Divider orientation="left">Awards & Recognitions</Divider>
+      <Divider></Divider>
+      <Title level={2}>Awards & Recognitions</Title>
       <Row>
         <Col span={4}>
           <Image
