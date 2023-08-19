@@ -20,8 +20,8 @@ const contentStyle = {
 };
 
 export default function Homepage() {
-  const { page } = useContext(PageCategoryContext);
-  console.log(`${page} rendered`);
+  const { pageCategory } = useContext(PageCategoryContext);
+  console.log(`${pageCategory} rendered`);
 
   return (
     <div style={pageStyle}>
