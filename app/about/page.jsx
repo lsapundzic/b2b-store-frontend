@@ -36,7 +36,7 @@ export default function About() {
         <Col span={24}>
           <Image
             alt="Team picture"
-            src="https://placehold.co/1800x400"
+            src="https://picsum.photos/1800/400"
             preview={false}
           />
         </Col>
@@ -51,27 +51,31 @@ export default function About() {
       </Row>
       <Row>
         <Col span={6}>
-          <Image alt="CEO" src="http://placekitten.com/200/300">
+          <Image
+            alt="Company CEO"
+            src="https://picsum.photos/200/300"
+            preview={false}
+          >
             Our CEO
           </Image>
         </Col>
         <Col span={6}>
           <Image
-            alt="CEO"
+            alt="Chief Financial Officer"
             src="http://placekitten.com/200/300"
             preview={false}
           ></Image>
         </Col>
         <Col span={6}>
           <Image
-            alt="CEO"
+            alt="Chief Technical Officer"
             src="http://placekitten.com/200/300"
             preview={false}
           ></Image>
         </Col>
         <Col span={6}>
           <Image
-            alt="CEO"
+            alt="Sales Manager"
             src="http://placekitten.com/200/300"
             preview={false}
           ></Image>
