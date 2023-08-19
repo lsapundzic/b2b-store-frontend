@@ -91,11 +91,11 @@ const menuItems = [
 ];
 
 export default function Navbar() {
-  //  For keeping track of the navbar highlight based on the page the user is on
-  const [current, setCurrent] = useState("home");
-
   // Global context that is used as a product filter based on navigation location
   let { pageCategory, setPageCategory } = useContext(PageCategoryContext);
+
+  //  For keeping track of the navbar highlight based on the page the user is on
+  const [current, setCurrent] = useState("default");
 
   //   Function that changes useState so that the active tab can remain underlined
   const onClick = (e) => {
