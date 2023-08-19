@@ -13,7 +13,7 @@ import Link from "next/link";
 import ImageAsset from "./ImageAsset";
 
 // AntD imports
-import { Badge, Card, Space, Typography } from "antd";
+import { Badge, Card, Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
 export default function ProductCard({
