@@ -1,13 +1,13 @@
 "use client";
 
 // AntD
-import { Col, Divider, Space, Row, Typography } from "antd";
-import DetailedContact from "../components/DetailedContact.jsx";
+import { Col, Divider, Row, Space, Typography } from "antd";
+const { Title, Paragraph } = Typography;
 
-export default function DetailedContact() {
+export default function DetailedContact({ sectionTitle }) {
   return (
     <div>
-      <Title style={{ textAlign: "center" }}>{data.fields.title}</Title>
+      <Title style={{ textAlign: "center" }}>{sectionTitle}</Title>
       <Space direction="vertical">
         <Title level={3}>Direct Contact</Title>
         <div>office@sotla.si</div>
@@ -15,6 +15,26 @@ export default function DetailedContact() {
       </Space>
       <Space direction="vertical">
         <Title level={3}>Headquarters</Title>
+        <div>office@sotla.si</div>
+        <div>+386 852 547 593</div>
+      </Space>
+      <Space direction="vertical">
+        <Title level={3}>Work With Us</Title>
+        <div>office@sotla.si</div>
+        <div>+386 852 547 593</div>
+      </Space>
+      <Space direction="vertical">
+        <Title level={3}>Customer Service</Title>
+        <div>office@sotla.si</div>
+        <div>+386 852 547 593</div>
+      </Space>
+      <Space direction="vertical">
+        <Title level={3}>Work With Us</Title>
+        <div>office@sotla.si</div>
+        <div>+386 852 547 593</div>
+      </Space>
+      <Space direction="vertical">
+        <Title level={3}>Work With Us</Title>
         <div>office@sotla.si</div>
         <div>+386 852 547 593</div>
       </Space>

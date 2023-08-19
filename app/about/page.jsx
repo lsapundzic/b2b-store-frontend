@@ -14,7 +14,6 @@ import CustomBanner from "../components/CustomBanner.jsx";
 
 // AntD
 import { Col, Divider, Image, Row, Typography } from "antd";
-
 const { Title, Paragraph } = Typography;
 
 export default function About() {
