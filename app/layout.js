@@ -47,11 +47,11 @@ const headerStyle = {
 };
 
 export default function RootLayout({ children }) {
-  const [page, setPage] = useState("home");
+  const [pageCategory, setPageCategory] = useState("home");
 
   return (
     <html lang="en">
-      <PageCategoryContext.Provider value={{ page, setPage }}>
+      <PageCategoryContext.Provider value={{ pageCategory, setPageCategory }}>
         <body className={inter.className}>
           <Layout style={globalLayoutStyle}>
             <CustomHeader />

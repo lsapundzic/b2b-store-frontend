@@ -91,13 +91,13 @@ const menuItems = [
 ];
 
 export default function Navbar() {
-  let { page, setPage } = useContext(PageCategoryContext);
+  let { pageCategory, setPageCategory } = useContext(PageCategoryContext);
   const [current, setCurrent] = useState("default");
 
   //   Function that changes useState so that the active tab can remain underlined
   const onClick = (e) => {
     setCurrent(e.key);
-    setPage(e.key);
+    setPageCategory(e.key);
   };
 
   return (

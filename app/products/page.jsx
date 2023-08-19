@@ -24,8 +24,8 @@ import filterProducts from "../utils/filterProducts.jsx";
 import { Empty, Skeleton, Typography, Row, Col } from "antd";
 
 function Products() {
-  let { page } = useContext(PageCategoryContext);
-  console.log(`${page} rendered`);
+  let { pageCategory } = useContext(PageCategoryContext);
+  console.log(`${pageCategory} rendered`);
 
   // Fetch all products
   const { data, isLoading } = useDataRetriever(
@@ -39,7 +39,7 @@ function Products() {
     <div style={pageStyle}>
       <Row gutter={[32, 64]}>
         {/* For filtering products based on their category / navbar option */}
-        {filterProducts(data, page).map((product) => (
+        {filterProducts(data, pageCategory).map((product) => (
           <Col
             key={product.sys.id}
             span={{

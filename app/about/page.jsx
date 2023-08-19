@@ -15,8 +15,8 @@ import { Empty, Skeleton, Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
 export default function About() {
-  let { page } = useContext(PageCategoryContext);
-  console.log(`${page} rendered`);
+  let { pageCategory } = useContext(PageCategoryContext);
+  console.log(`${pageCategory} rendered`);
 
   const { data, isLoading } = useDataRetriever(SingleEntryURL(ABOUT_ID));
 
