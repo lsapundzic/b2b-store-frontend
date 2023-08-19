@@ -4,6 +4,7 @@ const baseURL = "https://cdn.contentful.com";
 
 // Static Page IDs
 export const ABOUT_ID = `5wXQGH7Of5nYxWqPzLh8SM`;
+export const CONTACT_ID = `2UDWb179AgOuPSwqzLytSM`;
 
 // For a single entry based on its Contentful ID
 export function SingleEntryURL(entryID) {

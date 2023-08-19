@@ -9,11 +9,11 @@ import { pageStyle, textStyle } from "../styles/globalStyles.js";
 import { ABOUT_ID, SingleEntryURL } from "../utils/buildURL";
 import { PageCategoryContext } from "../layout.js";
 import CustomSkeleton from "../components/CustomSkeleton.jsx";
+import CustomEmpty from "../components/CustomEmpty.jsx";
+import CustomBanner from "../components/CustomBanner.jsx";
 
 // AntD
 import { Col, Divider, Image, Row, Typography } from "antd";
-import CustomEmpty from "../components/CustomEmpty.jsx";
-import CustomBanner from "../components/CustomBanner.jsx";
 
 const { Title, Paragraph } = Typography;
 
