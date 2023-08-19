@@ -11,8 +11,9 @@ import { PageCategoryContext } from "../layout.js";
 import CustomSkeleton from "../components/CustomSkeleton.jsx";
 
 // AntD
-import { Typography } from "antd";
+import { Col, Divider, Image, Row, Typography } from "antd";
 import CustomEmpty from "../components/CustomEmpty.jsx";
+import CustomBanner from "../components/CustomBanner.jsx";
 
 const { Title, Paragraph } = Typography;
 
@@ -32,10 +33,97 @@ export default function About() {
 
   return (
     <div style={pageStyle}>
-      <Typography>
-        <Title>{data.fields.title}</Title>
-        <Paragraph style={textStyle}>{data.fields.body}</Paragraph>
-      </Typography>
+      <Row>
+        <Col span={24}>
+          <Image
+            alt="Team picture"
+            src="https://placehold.co/1800x400"
+            preview={false}
+          />
+        </Col>
+      </Row>
+      <Row>
+        <Col span={24}>
+          <Typography>
+            <Title>{data.fields.title}</Title>
+            <Paragraph style={textStyle}>{data.fields.body}</Paragraph>
+          </Typography>
+        </Col>
+      </Row>
+      <Row>
+        <Col span={6}>
+          <Image alt="CEO" src="http://placekitten.com/200/300">
+            Our CEO
+          </Image>
+        </Col>
+        <Col span={6}>
+          <Image
+            alt="CEO"
+            src="http://placekitten.com/200/300"
+            preview={false}
+          ></Image>
+        </Col>
+        <Col span={6}>
+          <Image
+            alt="CEO"
+            src="http://placekitten.com/200/300"
+            preview={false}
+          ></Image>
+        </Col>
+        <Col span={6}>
+          <Image
+            alt="CEO"
+            src="http://placekitten.com/200/300"
+            preview={false}
+          ></Image>
+        </Col>
+      </Row>
+      <CustomBanner bannerContent={""} />
+      <Divider orientation="left">Awards & Recognitions</Divider>
+      <Row>
+        <Col span={4}>
+          <Image
+            alt="CEO"
+            src="http://placekitten.com/200/300"
+            preview={false}
+          ></Image>
+        </Col>
+        <Col span={4}>
+          <Image
+            alt="CEO"
+            src="http://placekitten.com/200/300"
+            preview={false}
+          ></Image>
+        </Col>
+        <Col span={4}>
+          <Image
+            alt="CEO"
+            src="http://placekitten.com/200/300"
+            preview={false}
+          ></Image>
+        </Col>
+        <Col span={4}>
+          <Image
+            alt="CEO"
+            src="http://placekitten.com/200/300"
+            preview={false}
+          ></Image>
+        </Col>
+        <Col span={4}>
+          <Image
+            alt="CEO"
+            src="http://placekitten.com/200/300"
+            preview={false}
+          ></Image>
+        </Col>
+        <Col span={4}>
+          <Image
+            alt="CEO"
+            src="http://placekitten.com/200/300"
+            preview={false}
+          ></Image>
+        </Col>
+      </Row>
     </div>
   );
 }
