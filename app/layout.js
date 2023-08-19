@@ -22,7 +22,7 @@ export const PageContext = createContext();
 
 const inter = Inter({ subsets: ["latin"] });
 
-// ! Metadata disabled: in production Vercel throws an error that it conflicts with "use client"
+// ! Metadata disabled: in production Vercel throws an error that it conflicts with "use client "
 // export const metadata = {
 //   title: "Sotla Laboratory Experts",
 //   description:
