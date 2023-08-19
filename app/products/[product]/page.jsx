@@ -17,9 +17,10 @@ import ProductTCCard from "@/app/components/ProductTCCard.jsx";
 import ProductTabs from "@/app/components/ProductTabs.jsx";
 import CustomBanner from "@/app/components/CustomBanner.jsx";
 import CustomSkeleton from "@/app/components/CustomSkeleton";
+import CustomEmpty from "@/app/components/CustomEmpty";
 
 // AntD
-import { Button, Col, Divider, Empty, Row, Typography } from "antd";
+import { Button, Col, Divider, Row, Typography } from "antd";
 
 import Layout, { Content } from "antd/es/layout/layout.js";
 
@@ -32,7 +33,7 @@ export default function Product({ params }) {
   const { data, isLoading } = useDataRetriever(SingleEntryURL(product));
 
   if (isLoading) return <CustomSkeleton />;
-  if (!data) return <Empty />;
+  if (!data) return <CustomEmpty />;
 
   console.log(`${data.fields.name} rendered`);
 

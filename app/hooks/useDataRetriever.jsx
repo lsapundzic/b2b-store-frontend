@@ -19,6 +19,7 @@ export function useDataRetriever(url) {
         const response = await fetch(url);
 
         if (!response.ok) {
+          setData(false);
           throw new Error(
             `Dev. msg: failed to fetch data. HTTP response status: ${response.status}`
           );

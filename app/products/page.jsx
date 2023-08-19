@@ -10,7 +10,7 @@
 "use client";
 
 // React
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { PageCategoryContext } from "../layout.js";
 import { useDataRetriever } from "../hooks/useDataRetriever.jsx";
 
@@ -22,7 +22,8 @@ import filterProducts from "../utils/filterProducts.jsx";
 import CustomSkeleton from "../components/CustomSkeleton.jsx";
 
 // AntD
-import { Empty, Row, Col } from "antd";
+import { Row, Col } from "antd";
+import CustomEmpty from "../components/CustomEmpty.jsx";
 
 function Products() {
   let { pageCategory } = useContext(PageCategoryContext);
@@ -34,7 +35,7 @@ function Products() {
   );
 
   if (isLoading) return <CustomSkeleton />;
-  if (!data) return <Empty />;
+  if (!data) return <CustomEmpty />;
 
   return (
     <div style={pageStyle}>

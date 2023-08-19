@@ -11,7 +11,8 @@ import { PageCategoryContext } from "../layout.js";
 import CustomSkeleton from "../components/CustomSkeleton.jsx";
 
 // AntD
-import { Empty, Typography } from "antd";
+import { Typography } from "antd";
+import CustomEmpty from "../components/CustomEmpty.jsx";
 
 const { Title, Paragraph } = Typography;
 
@@ -22,7 +23,7 @@ export default function About() {
   const { data, isLoading } = useDataRetriever(SingleEntryURL(ABOUT_ID));
 
   if (isLoading) return <CustomSkeleton />;
-  if (!data) return <Empty />;
+  if (!data) return <CustomEmpty />;
 
   return (
     <div style={pageStyle}>
