@@ -7,8 +7,7 @@
 "use client";
 
 // React
-import { useContext, useState } from "react";
-import { PageContext } from "../../layout.js";
+import { useState } from "react";
 import { usePageContent } from "../../hooks/usePageContent";
 
 // Project
@@ -20,16 +19,7 @@ import ProductTabs from "@/app/components/ProductTabs.jsx";
 import CustomBanner from "@/app/components/CustomBanner.jsx";
 
 // AntD
-import {
-  Button,
-  Col,
-  Divider,
-  Empty,
-  Row,
-  Skeleton,
-  Space,
-  Typography,
-} from "antd";
+import { Button, Col, Divider, Empty, Row, Skeleton, Typography } from "antd";
 
 import Layout, { Content } from "antd/es/layout/layout.js";
 const { Title, Paragraph } = Typography;
@@ -38,13 +28,12 @@ export default function Product({ params }) {
   // For accessing slug which is the entryID
   const { product } = params;
 
-  let { page } = useContext(PageContext);
-  console.log(`${page} rendered`);
-
   const { data, isLoading } = usePageContent(SingleEntryURL(product));
 
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
+
+  console.log(`${data.fields.name} rendered`);
 
   return (
     <div style={pageStyle}>

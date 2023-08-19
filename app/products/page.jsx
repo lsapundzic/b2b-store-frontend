@@ -36,6 +36,7 @@ function Products() {
   return (
     <div style={pageStyle}>
       <Row gutter={[32, 64]}>
+        {/* For filtering products based on their category / navbar option */}
         {filterProducts(data, page).map((product) => (
           <Col
             key={product.sys.id}
