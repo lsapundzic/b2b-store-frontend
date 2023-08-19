@@ -99,7 +99,7 @@ export default function Navbar() {
 
   //   Function that changes useState so that the active tab can remain underlined
   const onClick = (e) => {
-    setCurrent(e.key);
+    // setCurrent(e.key);
     setPageCategory(e.key);
   };
 
@@ -108,7 +108,7 @@ export default function Navbar() {
       <Menu
         // theme="dark"
         onClick={onClick}
-        selectedKeys={[current]}
+        selectedKeys={[pageCategory]}
         mode="horizontal"
         items={menuItems}
       />

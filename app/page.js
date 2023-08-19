@@ -9,7 +9,7 @@ import { PageCategoryContext } from "./layout";
 
 // AntD
 import { Carousel, Divider, Image, Typography } from "antd";
-const { Title, Paragraph } = Typography;
+const { Title } = Typography;
 
 const contentStyle = {
   height: "400px",
