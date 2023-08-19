@@ -7,7 +7,9 @@ import Link from "next/link";
 // AntD icons
 import {
   AimOutlined,
+  ApartmentOutlined,
   BookOutlined,
+  CustomerServiceOutlined,
   HomeOutlined,
   CoffeeOutlined,
   DashboardOutlined,
@@ -75,6 +77,16 @@ const menuItems = [
         ],
       },
     ],
+  },
+  {
+    label: <Link href="/distributors">Find a Distributor</Link>,
+    key: "distributors",
+    icon: <ApartmentOutlined />,
+  },
+  {
+    label: <Link href="/contact">Contact Us</Link>,
+    key: "contact",
+    icon: <CustomerServiceOutlined />,
   },
 ];
 

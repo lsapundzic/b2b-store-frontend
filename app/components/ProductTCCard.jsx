@@ -4,6 +4,7 @@ import { Card, Space, Typography } from "antd";
 const { Paragraph } = Typography;
 
 import {
+  AuditOutlined,
   GlobalOutlined,
   ApiOutlined,
   CarryOutOutlined,
@@ -28,6 +29,12 @@ export default function ProductTCCard() {
         <Space size="middle">
           <ApiOutlined />
           <p>Commissioning & Servicing Included </p>
+        </Space>
+      </div>
+      <div>
+        <Space size="middle">
+          <AuditOutlined />
+          <p>CE & ISO Certified</p>
         </Space>
       </div>
     </Card>
