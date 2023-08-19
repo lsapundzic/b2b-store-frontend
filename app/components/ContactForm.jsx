@@ -56,7 +56,16 @@ export default function ContactForm() {
     });
   };
   return (
-    <Space direction="vertical" align="center">
+    <Space
+      direction="vertical"
+      align="center"
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
+      }}
+    >
       <Form name="contactForm" onFinish={onFinish}>
         <Form.Item
           label="Name"
