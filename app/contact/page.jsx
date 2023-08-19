@@ -52,11 +52,11 @@ export default function Contact() {
           <DetailedContact sectionTitle={data.fields.title} />
         </Col>
       </Row>
-      <Row>
+      {/* <Row>
         <Col>
           <ContactForm />
         </Col>
-      </Row>
+      </Row> */}
     </div>
   );
 }

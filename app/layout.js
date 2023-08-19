@@ -48,7 +48,7 @@ const headerStyle = {
 };
 
 export default function RootLayout({ children }) {
-  const [pageCategory, setPageCategory] = useState("home");
+  const [pageCategory, setPageCategory] = useState("default");
 
   return (
     <html lang="en">
