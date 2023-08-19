@@ -7,12 +7,17 @@ import { Inter } from "next/font/google";
 import { useState, createContext } from "react";
 
 // CONTEXTS
-
 /*
    This state has been parentified, in practice it is for communication between navbar and product pages. 
    Navbar provides the key which is used for filtering products by category.
 */
 export const PageCategoryContext = createContext();
+
+/* 
+
+*/
+
+export const GlobalDataAccessContext = createContext();
 
 // Project
 import CustomBanner from "./components/CustomBanner";
@@ -51,29 +56,31 @@ const headerStyle = {
 export default function RootLayout({ children }) {
   const [pageCategory, setPageCategory] = useState("home");
 
-  // const { data, isLoading } = useDataRetriever(AllEntriesURL());
+  const { data, isLoading } = useDataRetriever(AllEntriesURL());
 
   // if (isLoading) return <Skeleton active />;
   // if (!data) return <Empty />;
 
   return (
     <html lang="en">
-      <PageCategoryContext.Provider value={{ pageCategory, setPageCategory }}>
-        <body className={inter.className}>
-          <Layout style={globalLayoutStyle}>
-            <CustomHeader />
-            {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
-            <Header style={headerStyle}>
-              <Navbar />
-            </Header>
-            <CustomBanner bannerContent={""} />
-            <Content>{children}</Content>
-            <Footer>
-              <CustomFooter />
-            </Footer>
-          </Layout>
-        </body>
-      </PageCategoryContext.Provider>
+      <GlobalDataAccessContext.Provider value={{ data, isLoading }}>
+        <PageCategoryContext.Provider value={{ pageCategory, setPageCategory }}>
+          <body className={inter.className}>
+            <Layout style={globalLayoutStyle}>
+              <CustomHeader />
+              {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
+              <Header style={headerStyle}>
+                <Navbar />
+              </Header>
+              <CustomBanner bannerContent={""} />
+              <Content>{children}</Content>
+              <Footer>
+                <CustomFooter />
+              </Footer>
+            </Layout>
+          </body>
+        </PageCategoryContext.Provider>
+      </GlobalDataAccessContext.Provider>
     </html>
   );
 }
