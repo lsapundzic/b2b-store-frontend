@@ -58,6 +58,7 @@ export default function RootLayout({ children }) {
 
   const { data, isLoading } = useDataRetriever(AllEntriesURL());
 
+  // ? Not a good idea to have fallbacks in layout.js
   // if (isLoading) return <Skeleton active />;
   // if (!data) return <Empty />;
 
