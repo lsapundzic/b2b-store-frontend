@@ -34,7 +34,12 @@ function Products() {
     ContentTypeEntriesURL("product")
   );
 
-  if (isLoading) return <CustomSkeleton />;
+  if (isLoading)
+    return (
+      <div style={pageStyle}>
+        <CustomSkeleton />
+      </div>
+    );
   if (!data) return <CustomEmpty />;
 
   return (

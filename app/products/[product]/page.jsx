@@ -32,7 +32,12 @@ export default function Product({ params }) {
 
   const { data, isLoading } = useDataRetriever(SingleEntryURL(product));
 
-  if (isLoading) return <CustomSkeleton />;
+  if (isLoading)
+    return (
+      <div style={pageStyle}>
+        <CustomSkeleton />
+      </div>
+    );
   if (!data) return <CustomEmpty />;
 
   console.log(`${data.fields.name} rendered`);

@@ -22,7 +22,12 @@ export default function About() {
 
   const { data, isLoading } = useDataRetriever(SingleEntryURL(ABOUT_ID));
 
-  if (isLoading) return <CustomSkeleton />;
+  if (isLoading)
+    return (
+      <div style={pageStyle}>
+        <CustomSkeleton />
+      </div>
+    );
   if (!data) return <CustomEmpty />;
 
   return (
