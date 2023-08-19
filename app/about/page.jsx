@@ -8,9 +8,10 @@ import { useContext } from "react";
 import { pageStyle, textStyle } from "../styles/globalStyles.js";
 import { ABOUT_ID, SingleEntryURL } from "../utils/buildURL";
 import { PageCategoryContext } from "../layout.js";
+import CustomSkeleton from "../components/CustomSkeleton.jsx";
 
 // AntD
-import { Empty, Skeleton, Typography } from "antd";
+import { Empty, Typography } from "antd";
 
 const { Title, Paragraph } = Typography;
 
@@ -20,7 +21,7 @@ export default function About() {
 
   const { data, isLoading } = useDataRetriever(SingleEntryURL(ABOUT_ID));
 
-  if (isLoading) return <Skeleton active />;
+  if (isLoading) return <CustomSkeleton />;
   if (!data) return <Empty />;
 
   return (

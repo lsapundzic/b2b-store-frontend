@@ -19,9 +19,10 @@ import { pageStyle } from "../styles/globalStyles";
 import ProductCard from "../components/ProductCard";
 import { ContentTypeEntriesURL } from "../utils/buildURL";
 import filterProducts from "../utils/filterProducts.jsx";
+import CustomSkeleton from "../components/CustomSkeleton.jsx";
 
 // AntD
-import { Empty, Skeleton, Typography, Row, Col } from "antd";
+import { Empty, Row, Col } from "antd";
 
 function Products() {
   let { pageCategory } = useContext(PageCategoryContext);
@@ -32,7 +33,7 @@ function Products() {
     ContentTypeEntriesURL("product")
   );
 
-  if (isLoading) return <Skeleton active />;
+  if (isLoading) return <CustomSkeleton />;
   if (!data) return <Empty />;
 
   return (

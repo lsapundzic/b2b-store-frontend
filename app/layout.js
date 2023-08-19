@@ -6,10 +6,10 @@ import { Inter } from "next/font/google";
 // React
 import { useState, createContext } from "react";
 
-// CONTEXTS
-
+// Context
 /*
-   This state has been parentified, in practice it is for communication between navbar and product pages. 
+   This state has been parentified so that children elements can access it,
+   in practice it is for communication between navbar and product pages. 
    Navbar provides the key which is used for filtering products by category.
 */
 export const PageCategoryContext = createContext();
@@ -24,8 +24,6 @@ import { Empty, Layout, Skeleton } from "antd";
 const { Header, Content } = Layout;
 import { Footer } from "antd/es/layout/layout";
 import Navbar from "./components/Navbar";
-import { useDataRetriever } from "@/app/hooks/useDataRetriever";
-import { AllEntriesURL } from "@/app/utils/buildURL";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -50,11 +48,6 @@ const headerStyle = {
 
 export default function RootLayout({ children }) {
   const [pageCategory, setPageCategory] = useState("home");
-
-  // const { data, isLoading } = useDataRetriever(AllEntriesURL());
-
-  // if (isLoading) return <Skeleton active />;
-  // if (!data) return <Empty />;
 
   return (
     <html lang="en">

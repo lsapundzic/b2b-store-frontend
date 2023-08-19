@@ -5,7 +5,7 @@
 import { Modal, Typography } from "antd";
 const { Paragraph } = Typography;
 
-export default function ProductModal() {
+export default function CustomModal() {
   return (
     <Modal
       title="Purchase Process Information"
