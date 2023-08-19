@@ -10,11 +10,12 @@
 "use client";
 
 // React
-import { useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { PageContext } from "../layout.js";
 import { useContentRetriever } from "../hooks/useContentRetriever.jsx";
 
 // Context
+export const ProductsContext = createContext();
 
 // Project
 import { pageStyle } from "../styles/globalStyles";
@@ -38,32 +39,34 @@ function Products() {
   if (!data) return <Empty />;
 
   return (
-    <div style={pageStyle}>
-      <Row gutter={[32, 64]}>
-        {/* For filtering products based on their category / navbar option */}
-        {filterProducts(data, page).map((product) => (
-          <Col
-            key={product.sys.id}
-            span={{
-              xs: 24,
-              sm: 12,
-              md: 8,
-              lg: 4,
-            }}
-          >
-            <ProductCard
-              entryID={product.sys.id}
-              assetID={product.fields.image.sys.id}
-              name={product.fields.name}
-              fullName={product.fields.fullName}
-              stockStatus={product.fields.inStock}
-              cardWidth={300}
-              cardHeight={"auto"}
-            />
-          </Col>
-        ))}
-      </Row>
-    </div>
+    <ProductsContext.Provider value={{ data }}>
+      <div style={pageStyle}>
+        <Row gutter={[32, 64]}>
+          {/* For filtering products based on their category / navbar option */}
+          {filterProducts(data, page).map((product) => (
+            <Col
+              key={product.sys.id}
+              span={{
+                xs: 24,
+                sm: 12,
+                md: 8,
+                lg: 4,
+              }}
+            >
+              <ProductCard
+                entryID={product.sys.id}
+                assetID={product.fields.image.sys.id}
+                name={product.fields.name}
+                fullName={product.fields.fullName}
+                stockStatus={product.fields.inStock}
+                cardWidth={300}
+                cardHeight={"auto"}
+              />
+            </Col>
+          ))}
+        </Row>
+      </div>
+    </ProductsContext.Provider>
   );
 }
 

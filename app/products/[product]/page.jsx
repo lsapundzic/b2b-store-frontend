@@ -7,8 +7,9 @@
 "use client";
 
 // React
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useContentRetriever } from "../../hooks/useContentRetriever";
+import { ProductsContext } from "../page";
 
 // Project
 import { textStyle, pageStyle } from "../../styles/globalStyles.js";
@@ -25,10 +26,13 @@ import Layout, { Content } from "antd/es/layout/layout.js";
 const { Title, Paragraph } = Typography;
 
 export default function Product({ params }) {
+  // EXPERIMENTAL
+  let { data } = useContext(ProductsContext);
+
   // For accessing slug which is the entryID
   const { product } = params;
 
-  const { data, isLoading } = useContentRetriever(SingleEntryURL(product));
+  // const { data, isLoading } = useContentRetriever(SingleEntryURL(product));
 
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
@@ -36,81 +40,87 @@ export default function Product({ params }) {
   console.log(`${data.fields.name} rendered`);
 
   return (
-    <div style={pageStyle}>
-      <Layout>
-        <Content>
-          <Row gutter={[64, 24]}>
-            {/* Image Column */}
-            <Col span={8}>
-              <ImageAsset
-                style={{ paddingTop: "26.6" }}
-                assetID={data.fields.image.sys.id}
-                width={"auto"}
-                height={"auto"}
-                preview={true}
-              />
-            </Col>
-
-            {/* Product Overview Column */}
-            <Col span={11}>
-              <Typography>
-                <Title level={3}>
-                  {data.fields.name} - {data.fields.fullName}
-                </Title>
-                <p>
-                  Category: <Button type="text">{data.fields.category}</Button>{" "}
-                  | SKU: {data.fields.sku}
-                </p>
-                <Divider />
-                <Paragraph style={textStyle}>
-                  {data.fields.description}
-                </Paragraph>
-                <Divider />
-                <Button
-                  type="primary"
-                  style={{
-                    width: `100%`,
-                    height: 45,
-                    backgroundColor: "green",
-                  }}
-                >
-                  Request a Quote
-                </Button>
-              </Typography>
-            </Col>
-
-            {/* Terms & Conditions Card */}
-            <Col span={5}>
-              <ProductTCCard />
-            </Col>
-          </Row>
-
-          {/* Separator */}
-          <CustomBanner height={80} width={100} />
-
-          {/* Technical Specifications Row */}
-          <Row gutter={[16, 24]}>
-            <Col span={24}>
-              <ProductTabs
-                productDescription={data.fields.description}
-                productSpecifications={data.fields.technicalSpecifications}
-              />
-            </Col>
-
-            {/* Separator */}
-            <CustomBanner height={80} width={100} />
-
-            {/* Similar Products Row */}
-          </Row>
-          <Row gutter={[16, 24]}>
-            <Col span={24}>
-              <Divider orientation="left" orientationMargin="0">
-                Similar Products
-              </Divider>
-            </Col>
-          </Row>
-        </Content>
-      </Layout>
+    <div>
+      <h1>TEST</h1>
     </div>
   );
+
+  // return (
+  //   <div style={pageStyle}>
+  //     <Layout>
+  //       <Content>
+  //         <Row gutter={[64, 24]}>
+  //           {/* Image Column */}
+  //           <Col span={8}>
+  //             <ImageAsset
+  //               style={{ paddingTop: "26.6" }}
+  //               assetID={data.fields.image.sys.id}
+  //               width={"auto"}
+  //               height={"auto"}
+  //               preview={true}
+  //             />
+  //           </Col>
+
+  //           {/* Product Overview Column */}
+  //           <Col span={11}>
+  //             <Typography>
+  //               <Title level={3}>
+  //                 {data.fields.name} - {data.fields.fullName}
+  //               </Title>
+  //               <p>
+  //                 Category: <Button type="text">{data.fields.category}</Button>{" "}
+  //                 | SKU: {data.fields.sku}
+  //               </p>
+  //               <Divider />
+  //               <Paragraph style={textStyle}>
+  //                 {data.fields.description}
+  //               </Paragraph>
+  //               <Divider />
+  //               <Button
+  //                 type="primary"
+  //                 style={{
+  //                   width: `100%`,
+  //                   height: 45,
+  //                   backgroundColor: "green",
+  //                 }}
+  //               >
+  //                 Request a Quote
+  //               </Button>
+  //             </Typography>
+  //           </Col>
+
+  //           {/* Terms & Conditions Card */}
+  //           <Col span={5}>
+  //             <ProductTCCard />
+  //           </Col>
+  //         </Row>
+
+  //         {/* Separator */}
+  //         <CustomBanner height={80} width={100} />
+
+  //         {/* Technical Specifications Row */}
+  //         <Row gutter={[16, 24]}>
+  //           <Col span={24}>
+  //             <ProductTabs
+  //               productDescription={data.fields.description}
+  //               productSpecifications={data.fields.technicalSpecifications}
+  //             />
+  //           </Col>
+
+  //           {/* Separator */}
+  //           <CustomBanner height={80} width={100} />
+
+  //           {/* Similar Products Row */}
+  //         </Row>
+  //         <Row gutter={[16, 24]}>
+  //           <Col span={24}>
+  //             <Divider orientation="left" orientationMargin="0">
+  //               Similar Products
+  //             </Divider>
+  //           </Col>
+  //         </Row>
+  //       </Content>
+  //     </Layout>
+  //   </div>
+  // );
 }
