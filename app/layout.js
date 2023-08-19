@@ -6,6 +6,14 @@ import { Inter } from "next/font/google";
 // React
 import { useState, createContext } from "react";
 
+// CONTEXTS
+
+/*
+   This state has been parentified, in practice it is for communication between navbar and product pages. 
+   Navbar provides the key which is used for filtering products by category.
+*/
+export const PageCategoryContext = createContext();
+
 // Project
 import CustomBanner from "./components/CustomBanner";
 import CustomHeader from "./components/CustomHeader";
@@ -16,9 +24,6 @@ import { Layout } from "antd";
 const { Header, Content } = Layout;
 import { Footer } from "antd/es/layout/layout";
 import Navbar from "./components/Navbar";
-
-// Contexts
-export const PageContext = createContext();
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -46,7 +51,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <PageContext.Provider value={{ page, setPage }}>
+      <PageCategoryContext.Provider value={{ page, setPage }}>
         <body className={inter.className}>
           <Layout style={globalLayoutStyle}>
             <CustomHeader />
@@ -61,7 +66,7 @@ export default function RootLayout({ children }) {
             </Footer>
           </Layout>
         </body>
-      </PageContext.Provider>
+      </PageCategoryContext.Provider>
     </html>
   );
 }

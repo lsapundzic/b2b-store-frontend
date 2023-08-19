@@ -20,7 +20,7 @@ import {
 
 //AntD components
 import { Menu } from "antd";
-import { PageContext } from "../layout";
+import { PageCategoryContext } from "../layout";
 
 // Object from which the navbar is generated
 const menuItems = [
@@ -91,7 +91,7 @@ const menuItems = [
 ];
 
 export default function Navbar() {
-  let { page, setPage } = useContext(PageContext);
+  let { page, setPage } = useContext(PageCategoryContext);
   const [current, setCurrent] = useState("default");
 
   //   Function that changes useState so that the active tab can remain underlined

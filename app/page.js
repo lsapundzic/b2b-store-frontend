@@ -5,7 +5,7 @@ import { useContext } from "react";
 
 // Project
 import { pageStyle } from "./styles/globalStyles";
-import { PageContext } from "./layout";
+import { PageCategoryContext } from "./layout";
 
 // AntD
 import { Carousel, Divider, Image, Typography } from "antd";
@@ -20,7 +20,7 @@ const contentStyle = {
 };
 
 export default function Homepage() {
-  const { page } = useContext(PageContext);
+  const { page } = useContext(PageCategoryContext);
   console.log(`${page} rendered`);
 
   return (

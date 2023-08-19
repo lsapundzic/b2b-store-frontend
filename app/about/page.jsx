@@ -1,13 +1,13 @@
 "use client";
 
 // React
-import { usePageContent } from "../hooks/usePageContent.jsx";
+import { useDataRetriever } from "../hooks/useDataRetriever.jsx";
 import { useContext } from "react";
 
 // Project
 import { pageStyle, textStyle } from "../styles/globalStyles.js";
 import { ABOUT_ID, SingleEntryURL } from "../utils/buildURL";
-import { PageContext } from "../layout.js";
+import { PageCategoryContext } from "../layout.js";
 
 // AntD
 import { Empty, Skeleton, Typography } from "antd";
@@ -15,10 +15,10 @@ import { Empty, Skeleton, Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
 export default function About() {
-  let { page } = useContext(PageContext);
+  let { page } = useContext(PageCategoryContext);
   console.log(`${page} rendered`);
 
-  const { data, isLoading } = usePageContent(SingleEntryURL(ABOUT_ID));
+  const { data, isLoading } = useDataRetriever(SingleEntryURL(ABOUT_ID));
 
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;

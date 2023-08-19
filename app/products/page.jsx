@@ -11,8 +11,8 @@
 
 // React
 import { useContext, useState } from "react";
-import { PageContext } from "../layout.js";
-import { usePageContent } from "../hooks/usePageContent.jsx";
+import { PageCategoryContext } from "../layout.js";
+import { useDataRetriever } from "../hooks/useDataRetriever.jsx";
 
 // Project
 import { pageStyle } from "../styles/globalStyles";
@@ -24,11 +24,13 @@ import filterProducts from "../utils/filterProducts.jsx";
 import { Empty, Skeleton, Typography, Row, Col } from "antd";
 
 function Products() {
-  let { page } = useContext(PageContext);
+  let { page } = useContext(PageCategoryContext);
   console.log(`${page} rendered`);
 
   // Fetch all products
-  const { data, isLoading } = usePageContent(ContentTypeEntriesURL("product"));
+  const { data, isLoading } = useDataRetriever(
+    ContentTypeEntriesURL("product")
+  );
 
   if (isLoading) return <Skeleton active />;
   if (!data) return <Empty />;
