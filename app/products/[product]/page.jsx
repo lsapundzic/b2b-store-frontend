@@ -7,7 +7,7 @@
 "use client";
 
 // React
-import { useDataRetriever } from "../../hooks/useDataRetriever";
+import { useState, useDataRetriever } from "../../hooks/useDataRetriever";
 
 // Project
 import { textStyle, pageStyle } from "../../styles/globalStyles.js";
@@ -18,9 +18,10 @@ import ProductTabs from "@/app/components/ProductTabs.jsx";
 import CustomBanner from "@/app/components/CustomBanner.jsx";
 import CustomSkeleton from "@/app/components/CustomSkeleton";
 import CustomEmpty from "@/app/components/CustomEmpty";
+import CustomModal from "@/app/components/CustomModal";
 
 // AntD
-import { Button, Col, Divider, Row, Typography } from "antd";
+import { Button, Col, Divider, Row, Space, Typography } from "antd";
 
 import Layout, { Content } from "antd/es/layout/layout.js";
 
@@ -30,7 +31,20 @@ export default function Product({ params }) {
   // For accessing slug which is the entryID
   const { product } = params;
 
+  // Fetch entry data
   const { data, isLoading } = useDataRetriever(SingleEntryURL(product));
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
 
   if (isLoading)
     return (
@@ -65,8 +79,7 @@ export default function Product({ params }) {
                   {data.fields.name} - {data.fields.fullName}
                 </Title>
                 <p>
-                  Category: <Button type="text">{data.fields.category}</Button>{" "}
-                  | SKU: {data.fields.sku}
+                  <Title level={5}>SKU: {data.fields.sku}</Title>
                 </p>
                 <Divider />
                 <Paragraph style={textStyle}>
@@ -75,6 +88,7 @@ export default function Product({ params }) {
                 <Divider />
                 <Button
                   type="primary"
+                  onClick={showModal}
                   style={{
                     width: `100%`,
                     height: 45,

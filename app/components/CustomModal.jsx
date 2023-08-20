@@ -1,17 +1,19 @@
-// Currently disabled, I am not vibing with it
-
 "use client";
 
+// Project
+import { textStyle } from "../styles/globalStyles";
+
+// AntD
 import { Modal, Typography } from "antd";
 const { Paragraph } = Typography;
 
-export default function CustomModal() {
+export default function CustomModal({ openStatus, okStatus, cancelStatus }) {
   return (
     <Modal
       title="Purchase Process Information"
-      open={isModalOpen}
-      onOk={handleOk}
-      onCancel={handleCancel}
+      open={openStatus}
+      onOk={okStatus}
+      onCancel={cancelStatus}
     >
       <div>
         <Paragraph style={textStyle}>
