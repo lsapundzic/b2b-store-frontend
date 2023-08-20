@@ -11,6 +11,7 @@ import { PageCategoryContext } from "../layout.js";
 import CustomSkeleton from "../components/CustomSkeleton.jsx";
 import CustomEmpty from "../components/CustomEmpty.jsx";
 import CustomBanner from "../components/CustomBanner.jsx";
+import TeamMembers from "../components/TeamMembers.jsx";
 
 // AntD
 import { Col, Divider, Image, Row, Typography } from "antd";
@@ -33,7 +34,7 @@ export default function About() {
   return (
     <div style={pageStyle}>
       <Row>
-        <Col>
+        <Col xs={0} sm={24}>
           <Image
             alt="Team picture"
             src="https://picsum.photos/1800/400"
@@ -41,46 +42,10 @@ export default function About() {
           />
         </Col>
       </Row>
-      <Row>
-        <Col span={24}>
-          <Typography>
-            <Title>{data.fields.title}</Title>
-            <Paragraph style={textStyle}>{data.fields.body}</Paragraph>
-          </Typography>
-        </Col>
-      </Row>
-      <Row>
-        <Col span={6}>
-          <Image
-            alt="Company CEO"
-            src="https://picsum.photos/200/300"
-            preview={false}
-          >
-            Our CEO
-          </Image>
-        </Col>
-        <Col span={6}>
-          <Image
-            alt="Chief Financial Officer"
-            src="http://placekitten.com/200/300"
-            preview={false}
-          ></Image>
-        </Col>
-        <Col span={6}>
-          <Image
-            alt="Chief Technical Officer"
-            src="http://placekitten.com/200/300"
-            preview={false}
-          ></Image>
-        </Col>
-        <Col span={6}>
-          <Image
-            alt="Sales Manager"
-            src="http://placekitten.com/200/300"
-            preview={false}
-          ></Image>
-        </Col>
-      </Row>
+      <TeamMembers
+        componentTitle={data.fields.title}
+        componentBody={data.fields.body}
+      />
       <CustomBanner bannerContent={""} />
       <Divider></Divider>
       <Title level={2}>Awards & Recognitions</Title>

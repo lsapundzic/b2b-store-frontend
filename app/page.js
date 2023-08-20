@@ -9,6 +9,7 @@ import { PageCategoryContext } from "./layout";
 
 // AntD
 import { Carousel, Col, Divider, Image, Row, Typography } from "antd";
+import ImageAsset from "./components/ImageAsset";
 const { Title } = Typography;
 
 const contentStyle = {
@@ -29,9 +30,10 @@ export default function Homepage() {
         <Col xs={0} sm={24}>
           <Carousel autoplay>
             <div>
-              <Image
-                alt="placeholder image"
-                src="https://picsum.photos/1800/600"
+              <ImageAsset
+                assetID={"3sTbqR9zOSFpn7fnszCQFK"}
+                width={1800}
+                height={"auto"}
                 preview={false}
               />
             </div>
@@ -45,7 +47,16 @@ export default function Homepage() {
             <div>
               <Image
                 alt="placeholder image"
-                src="https://picsum.photos/1800/600"
+                src="https://placehold.co/1800x600"
+                preview={false}
+              />
+            </div>
+            <div>
+              <Image
+                src="../images/carousel-1.jpg"
+                alt="placeholder image"
+                width={1800}
+                height={"auto"}
                 preview={false}
               />
             </div>
