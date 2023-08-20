@@ -40,7 +40,7 @@ export default function About() {
             alt="Placeholder team picture"
             src="http://placekitten.com/1800/400"
             // width={1800}
-            // height={400}
+            // height={600}
             preview={false}
           />
         </Col>

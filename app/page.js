@@ -40,15 +40,15 @@ export default function Homepage() {
             </div>
             <div>
               <Image
-                alt="placeholder image"
-                src="https://picsum.photos/1800/400"
+                alt="A placeholder image"
+                src="https://picsum.photos/1800/600"
                 preview={false}
               />
             </div>
             <div>
               <Image
-                alt="placeholder image"
-                src="https://placehold.co/1800x400"
+                alt="A placeholder image"
+                src="https://placehold.co/1800x600"
                 preview={false}
               />
             </div>

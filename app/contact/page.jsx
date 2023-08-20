@@ -53,9 +53,7 @@ export default function Contact() {
         </Col>
       </Row>
       <Row>
-        <Col>
-          <ContactForm />
-        </Col>
+        <Col>{/* <ContactForm /> */}</Col>
       </Row>
     </div>
   );

@@ -19,7 +19,7 @@ export default function TeamMembers({ componentTitle, componentBody }) {
         </Col>
       </Row>
       <Row>
-        <Col span={6}>
+        <Col span={6} style={{ textAlign: "center" }}>
           <Image
             alt="Company CEO"
             src="https://placehold.co/200x300"
@@ -28,21 +28,21 @@ export default function TeamMembers({ componentTitle, componentBody }) {
             Our CEO
           </Image>
         </Col>
-        <Col span={6}>
+        <Col span={6} style={{ textAlign: "center" }}>
           <Image
             alt="Chief Financial Officer"
             src="https://placehold.co/200x300"
             preview={false}
           ></Image>
         </Col>
-        <Col span={6}>
+        <Col span={6} style={{ textAlign: "center" }}>
           <Image
             alt="Chief Technical Officer"
             src="https://placehold.co/200x300"
             preview={false}
           ></Image>
         </Col>
-        <Col span={6}>
+        <Col span={6} style={{ textAlign: "center" }}>
           <Image
             alt="Sales Manager"
             src="https://placehold.co/200x300"
