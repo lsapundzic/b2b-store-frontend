@@ -26,7 +26,7 @@ export default function Homepage() {
   return (
     <div style={pageStyle}>
       <Row>
-        <Col span={{ xs: 0, sm: 12, md: 12, lg: 12 }}>
+        <Col xs={0} sm={24}>
           <Carousel autoplay>
             <div>
               <Image

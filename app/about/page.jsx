@@ -33,7 +33,7 @@ export default function About() {
   return (
     <div style={pageStyle}>
       <Row>
-        <Col span={24}>
+        <Col>
           <Image
             alt="Team picture"
             src="https://picsum.photos/1800/400"
