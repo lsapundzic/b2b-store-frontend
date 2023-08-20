@@ -8,7 +8,7 @@ import { pageStyle } from "./styles/globalStyles";
 import { PageCategoryContext } from "./layout";
 
 // AntD
-import { Carousel, Divider, Image, Typography } from "antd";
+import { Carousel, Col, Divider, Image, Row, Typography } from "antd";
 const { Title } = Typography;
 
 const contentStyle = {
@@ -25,33 +25,41 @@ export default function Homepage() {
 
   return (
     <div style={pageStyle}>
-      <Carousel autoplay>
-        <div>
-          <Image
-            alt="placeholder image"
-            src="https://picsum.photos/1800/600"
-            preview={false}
-          />
-        </div>
-        <div>
-          <Image
-            alt="placeholder image"
-            src="https://picsum.photos/1800/600"
-            preview={false}
-          />
-        </div>
-        <div>
-          <Image
-            alt="placeholder image"
-            src="https://picsum.photos/1800/600"
-            preview={false}
-          />
-        </div>
-      </Carousel>
+      <Row>
+        <Col span={{ xs: 0, sm: 12, md: 12, lg: 12 }}>
+          <Carousel autoplay>
+            <div>
+              <Image
+                alt="placeholder image"
+                src="https://picsum.photos/1800/600"
+                preview={false}
+              />
+            </div>
+            <div>
+              <Image
+                alt="placeholder image"
+                src="https://picsum.photos/1800/600"
+                preview={false}
+              />
+            </div>
+            <div>
+              <Image
+                alt="placeholder image"
+                src="https://picsum.photos/1800/600"
+                preview={false}
+              />
+            </div>
+          </Carousel>
+        </Col>
+      </Row>
       <Divider />
-      <Typography>
-        <Title level={2}>Special Offers</Title>
-      </Typography>
+      <Row>
+        <Col>
+          <Typography>
+            <Title level={2}>Special Offers</Title>
+          </Typography>
+        </Col>
+      </Row>
     </div>
   );
 }
