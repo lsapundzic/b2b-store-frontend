@@ -30,8 +30,9 @@ export default function Homepage() {
         <Col xs={0} sm={24}>
           <Carousel autoplay>
             <div>
-              <ImageAsset
-                assetID={"3sTbqR9zOSFpn7fnszCQFK"}
+              <Image
+                src="../images/carousel-1.jpg"
+                alt="placeholder image"
                 width={1800}
                 height={"auto"}
                 preview={false}
@@ -48,15 +49,6 @@ export default function Homepage() {
               <Image
                 alt="placeholder image"
                 src="https://placehold.co/1800x600"
-                preview={false}
-              />
-            </div>
-            <div>
-              <Image
-                src="../images/carousel-1.jpg"
-                alt="placeholder image"
-                width={1800}
-                height={"auto"}
                 preview={false}
               />
             </div>
