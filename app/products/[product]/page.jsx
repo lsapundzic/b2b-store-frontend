@@ -34,17 +34,17 @@ export default function Product({ params }) {
   // Fetch entry data
   const { data, isLoading } = useDataRetriever(SingleEntryURL(product));
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  // const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
+  // const showModal = () => {
+  //   setIsModalOpen(true);
+  // };
+  // const handleOk = () => {
+  //   setIsModalOpen(false);
+  // };
+  // const handleCancel = () => {
+  //   setIsModalOpen(false);
+  // };
 
   if (isLoading)
     return (
@@ -78,9 +78,9 @@ export default function Product({ params }) {
                 <Title>
                   {data.fields.name} - {data.fields.fullName}
                 </Title>
-                <p>
+                <div>
                   <Title level={5}>SKU: {data.fields.sku}</Title>
-                </p>
+                </div>
                 <Divider />
                 <Paragraph style={textStyle}>
                   {data.fields.description}
@@ -88,7 +88,7 @@ export default function Product({ params }) {
                 <Divider />
                 <Button
                   type="primary"
-                  onClick={showModal}
+                  // onClick={showModal}
                   style={{
                     width: `100%`,
                     height: 45,
