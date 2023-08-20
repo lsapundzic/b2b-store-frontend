@@ -13,7 +13,7 @@ import Link from "next/link";
 import ImageAsset from "./ImageAsset";
 
 // AntD imports
-import { Badge, Card, Space, Typography } from "antd";
+import { Badge, Card, Divider, Space, Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
 export default function ProductCard({
@@ -34,17 +34,18 @@ export default function ProductCard({
         color={stockStatus ? "blue" : "red"}
       >
         <Card
-          style={{ width: `${cardWidth}px`, height: "100%" }}
+          style={{ width: `${cardWidth}px`, height: `${cardHeight}px` }}
           hoverable
           cover={
             <ImageAsset
               assetID={assetID}
-              height={cardHeight}
-              width={cardWidth}
+              height={"100%"}
+              width={250}
               preview={false}
             />
           }
         >
+          <Divider></Divider>
           <Title level={3}>{name}</Title>
           <Paragraph ellipsis={(true, { rows: 2 })}>{fullName}</Paragraph>
         </Card>

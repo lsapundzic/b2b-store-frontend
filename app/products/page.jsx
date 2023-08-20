@@ -63,7 +63,7 @@ function Products() {
               fullName={product.fields.fullName}
               stockStatus={product.fields.inStock}
               cardWidth={300}
-              cardHeight={"auto"}
+              cardHeight={430}
             />
           </Col>
         ))}
