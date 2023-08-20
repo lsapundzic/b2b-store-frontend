@@ -22,7 +22,7 @@ export default function TeamMembers({ componentTitle, componentBody }) {
         <Col span={6}>
           <Image
             alt="Company CEO"
-            src="http://placekitten.com/200/300"
+            src="https://placehold.co/200x300"
             preview={false}
           >
             Our CEO
@@ -31,21 +31,21 @@ export default function TeamMembers({ componentTitle, componentBody }) {
         <Col span={6}>
           <Image
             alt="Chief Financial Officer"
-            src="http://placekitten.com/200/300"
+            src="https://placehold.co/200x300"
             preview={false}
           ></Image>
         </Col>
         <Col span={6}>
           <Image
             alt="Chief Technical Officer"
-            src="http://placekitten.com/200/300"
+            src="https://placehold.co/200x300"
             preview={false}
           ></Image>
         </Col>
         <Col span={6}>
           <Image
             alt="Sales Manager"
-            src="http://placekitten.com/200/300"
+            src="https://placehold.co/200x300"
             preview={false}
           ></Image>
         </Col>
