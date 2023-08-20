@@ -24,6 +24,7 @@ import CustomModal from "@/app/components/CustomModal";
 import { Button, Col, Divider, Row, Space, Typography } from "antd";
 
 import Layout, { Content } from "antd/es/layout/layout.js";
+import { DownloadOutlined } from "@ant-design/icons";
 
 const { Title, Paragraph } = Typography;
 
@@ -80,6 +81,12 @@ export default function Product({ params }) {
                 </Title>
                 <div>
                   <Title level={5}>SKU: {data.fields.sku}</Title>
+                  <div>
+                    <Button>
+                      <DownloadOutlined />
+                      Download Catalogue
+                    </Button>
+                  </div>
                 </div>
                 <Divider />
                 <Paragraph style={textStyle}>
