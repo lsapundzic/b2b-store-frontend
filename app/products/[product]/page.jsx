@@ -48,7 +48,7 @@ export default function Product({ params }) {
         <Content>
           <Row gutter={[64, 24]}>
             {/* Image Column */}
-            <Col span={8}>
+            <Col xs={0} sm={0} md={10} lg={6} xl={8}>
               <ImageAsset
                 style={{ paddingTop: "26.6" }}
                 assetID={data.fields.image.sys.id}
@@ -59,9 +59,9 @@ export default function Product({ params }) {
             </Col>
 
             {/* Product Overview Column */}
-            <Col span={11}>
+            <Col xs={24} sm={24} md={14} lg={11} xl={11}>
               <Typography>
-                <Title level={3}>
+                <Title>
                   {data.fields.name} - {data.fields.fullName}
                 </Title>
                 <p>
@@ -87,7 +87,7 @@ export default function Product({ params }) {
             </Col>
 
             {/* Terms & Conditions Card */}
-            <Col span={5}>
+            <Col xs={0} sm={0} md={0} lg={7} xl={5}>
               <ProductTCCard />
             </Col>
           </Row>
@@ -110,10 +110,8 @@ export default function Product({ params }) {
             {/* Similar Products Row */}
           </Row>
           <Row gutter={[16, 24]}>
-            <Col span={24}>
-              <Divider orientation="left" orientationMargin="0">
-                Similar Products
-              </Divider>
+            <Col xs={0} sm={24}>
+              <Divider orientation="left">Similar Products</Divider>
             </Col>
           </Row>
         </Content>
