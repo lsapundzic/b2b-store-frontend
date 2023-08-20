@@ -15,6 +15,7 @@ import TeamMembers from "../components/TeamMembers.jsx";
 
 // AntD
 import { Col, Divider, Image, Row, Typography } from "antd";
+import Certificates from "../components/Certificates.jsx";
 const { Title, Paragraph } = Typography;
 
 export default function About() {
@@ -37,9 +38,9 @@ export default function About() {
         <Col xs={0} sm={0} md={24}>
           <Image
             alt="Placeholder team picture"
-            src="/images/about/about.jpg"
-            width={1800}
-            height={400}
+            src="http://placekitten.com/1800/400"
+            // width={1800}
+            // height={400}
             preview={false}
           />
         </Col>
@@ -49,52 +50,8 @@ export default function About() {
         componentBody={data.fields.body}
       />
       <CustomBanner bannerContent={""} />
-      <Divider></Divider>
-      <Title level={2}>Awards & Recognitions</Title>
-      <Row>
-        <Col span={4}>
-          <Image
-            alt="CEO"
-            src="http://placekitten.com/200/300"
-            preview={false}
-          ></Image>
-        </Col>
-        <Col span={4}>
-          <Image
-            alt="CEO"
-            src="http://placekitten.com/200/300"
-            preview={false}
-          ></Image>
-        </Col>
-        <Col span={4}>
-          <Image
-            alt="CEO"
-            src="http://placekitten.com/200/300"
-            preview={false}
-          ></Image>
-        </Col>
-        <Col span={4}>
-          <Image
-            alt="CEO"
-            src="http://placekitten.com/200/300"
-            preview={false}
-          ></Image>
-        </Col>
-        <Col span={4}>
-          <Image
-            alt="CEO"
-            src="http://placekitten.com/200/300"
-            preview={false}
-          ></Image>
-        </Col>
-        <Col span={4}>
-          <Image
-            alt="CEO"
-            src="http://placekitten.com/200/300"
-            preview={false}
-          ></Image>
-        </Col>
-      </Row>
+      <Divider orientation="left">Certificates</Divider>
+      <Certificates />
     </div>
   );
 }
