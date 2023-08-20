@@ -27,13 +27,13 @@ export default function Homepage() {
   return (
     <div style={pageStyle}>
       <Row>
-        <Col xs={0} sm={24}>
+        <Col xs={0} sm={0} md={24}>
           <Carousel autoplay>
             <div>
               <Image
-                src="../images/carousel-1.jpg"
+                src="/images/home/carousel-1.jpg"
                 alt="placeholder image"
-                width={1800}
+                width={"auto"}
                 height={"auto"}
                 preview={false}
               />
@@ -41,14 +41,14 @@ export default function Homepage() {
             <div>
               <Image
                 alt="placeholder image"
-                src="https://picsum.photos/1800/600"
+                src="https://picsum.photos/1800/400"
                 preview={false}
               />
             </div>
             <div>
               <Image
                 alt="placeholder image"
-                src="https://placehold.co/1800x600"
+                src="https://placehold.co/1800x400"
                 preview={false}
               />
             </div>

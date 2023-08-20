@@ -34,10 +34,12 @@ export default function About() {
   return (
     <div style={pageStyle}>
       <Row>
-        <Col xs={0} sm={24}>
+        <Col xs={0} sm={0} md={24}>
           <Image
-            alt="Team picture"
-            src="https://picsum.photos/1800/400"
+            alt="Placeholder team picture"
+            src="/images/about/about.jpg"
+            width={1800}
+            height={400}
             preview={false}
           />
         </Col>
