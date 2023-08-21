@@ -1,10 +1,10 @@
 "use client";
 
 // Google fonts
-import { Inter } from "next/font/google";
+import {Inter} from "next/font/google";
 
 // React
-import { useState, createContext } from "react";
+import {useState, createContext} from "react";
 
 // Context
 /*
@@ -21,12 +21,14 @@ import CustomFooter from "./components/CustomFooter";
 import Newsletter from "./components/Newsletter";
 
 // AntD
-import { Empty, Layout, Skeleton } from "antd";
-const { Header, Content } = Layout;
-import { Footer } from "antd/es/layout/layout";
-import Navbar from "./components/Navbar";
+import {Empty, Layout, Skeleton} from "antd";
 
-const inter = Inter({ subsets: ["latin"] });
+const {Header, Content} = Layout;
+import {Footer} from "antd/es/layout/layout";
+import Navbar from "./components/Navbar";
+import StyledComponentsRegistry from "@/lib/AntdRegistry";
+
+const inter = Inter({subsets: ["latin"]});
 
 // ! Metadata disabled: in production Vercel throws an error that it conflicts with "use client "
 // export const metadata = {
@@ -39,36 +41,38 @@ const inter = Inter({ subsets: ["latin"] });
 
 // Used so that the content stretches throughout the page
 const globalLayoutStyle = {
-  minHeight: "100vh",
+    minHeight: "100vh",
 };
 
 // Prevents black boxes appearing on the sides of the navbar
 const headerStyle = {
-  backgroundColor: "white",
+    backgroundColor: "white",
 };
 
-export default function RootLayout({ children }) {
-  const [pageCategory, setPageCategory] = useState("default");
+export default function RootLayout({children}) {
+    const [pageCategory, setPageCategory] = useState("default");
 
-  return (
-    <html lang="en">
-      <PageCategoryContext.Provider value={{ pageCategory, setPageCategory }}>
+    return (
+        <html lang="en">
         <body className={inter.className}>
-          <Layout style={globalLayoutStyle}>
-            <CustomHeader />
-            {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
-            <Header style={headerStyle}>
-              <Navbar />
-            </Header>
-            <CustomBanner bannerContent={""} />
-            <Content>{children}</Content>
-            {/* <Newsletter /> */}
-            <Footer>
-              <CustomFooter />
-            </Footer>
-          </Layout>
+        <StyledComponentsRegistry>
+            <PageCategoryContext.Provider value={{pageCategory, setPageCategory}}>
+                <Layout style={globalLayoutStyle}>
+                    <CustomHeader/>
+                    {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
+                    <Header style={headerStyle}>
+                        <Navbar/>
+                    </Header>
+                    <CustomBanner bannerContent={""}/>
+                    <Content>{children}</Content>
+                    {/* <Newsletter /> */}
+                    <Footer>
+                        <CustomFooter/>
+                    </Footer>
+                </Layout>
+            </PageCategoryContext.Provider>
+        </StyledComponentsRegistry>
         </body>
-      </PageCategoryContext.Provider>
-    </html>
-  );
+        </html>
+    );
 }
