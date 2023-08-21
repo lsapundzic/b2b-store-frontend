@@ -36,12 +36,12 @@ export default function About() {
   return (
     <div style={pageStyle}>
       <Title>{data.fields.title}</Title>
-      <Paragraph>{data.fields.body}</Paragraph>
+      <Paragraph></Paragraph>
       <Row>
         <Col span={24}>
           <CustomTab
             leftTabTltle={"Become a Distributor"}
-            leftTabDescription={"terms and conditions"}
+            leftTabDescription={data.fields.body}
             rightTabTitle={"Find a Distributor"}
             rightTabDescription={"List of distributors"}
           />
