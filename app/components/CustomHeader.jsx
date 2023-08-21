@@ -1,10 +1,12 @@
 "use client";
 
+// React
+import Image from "next/image";
+
 // AntD
 import { Divider, Space } from "antd";
 import Link from "antd/es/typography/Link";
 import Title from "antd/es/typography/Title";
-import Image from "next/image";
 
 const customHeaderStyle = {
   backgroundColor: "white",
