@@ -15,13 +15,6 @@ import CustomFooter from "@/app/components/CustomFooter";
 const {Header, Content} = Layout;
 import {Footer} from "antd/es/layout/layout";
 
-const contentStyle = {
-    height: "400px",
-    color: "#fff",
-    lineHeight: "160px",
-    textAlign: "center",
-    background: "green",
-};
 // Used so that the content stretches throughout the page
 const globalLayoutStyle = {
     minHeight: "100vh",
@@ -36,21 +29,21 @@ export default function MyLayout({children}) {
 
     return (
         <PageCategoryContext.Provider value={{pageCategory, setPageCategory}}>
-                <Layout style={globalLayoutStyle}>
-                    <CustomHeader/>
-                    {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
-                    <Header style={headerStyle}>
-                        <Navbar/>
-                    </Header>
-                    <CustomBanner bannerContent={""}/>
-                    <Content>
-                        {children}
-                    </Content>
-                    {/* <Newsletter /> */}
-                    <Footer>
-                        <CustomFooter/>
-                    </Footer>
-                </Layout>
+            <Layout style={globalLayoutStyle}>
+                <CustomHeader/>
+                {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
+                <Header style={headerStyle}>
+                    <Navbar/>
+                </Header>
+                <CustomBanner bannerContent={""}/>
+                <Content>
+                    {children}
+                </Content>
+                {/* <Newsletter /> */}
+                <Footer>
+                    <CustomFooter/>
+                </Footer>
+            </Layout>
         </PageCategoryContext.Provider>
     );
 }

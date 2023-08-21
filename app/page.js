@@ -9,14 +9,14 @@ import theme from '../theme/themeConfig.js';
 import {pageStyle} from "./styles/globalStyles";
 
 // AntD
-import MyLayout from "./components/Layout.jsx";
+import MainLayout from "./components/MainLayout.jsx";
 
 const {Title} = Typography;
 
 export default function Homepage() {
     return (
         <ConfigProvider theme={theme}>
-            <MyLayout>
+            <MainLayout>
                 <div style={pageStyle}>
                     <Row>
                         <Col xs={0} sm={0} md={24}>
@@ -56,7 +56,7 @@ export default function Homepage() {
                         </Col>
                     </Row>
                 </div>
-            </MyLayout>
+            </MainLayout>
         </ConfigProvider>
     );
 }
