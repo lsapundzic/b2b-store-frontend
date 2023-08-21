@@ -1,8 +1,13 @@
 "use client";
 
-import { Divider, Image, Space } from "antd";
+// Project
+import { companyLogo } from "../../public/icons/brand/svg/logo-color.svg";
+
+// AntD
+import { Divider, Space } from "antd";
 import Link from "antd/es/typography/Link";
 import Title from "antd/es/typography/Title";
+import Image from "next/image";
 
 const customHeaderStyle = {
   backgroundColor: "white",
@@ -12,18 +17,19 @@ const customHeaderStyle = {
 
 export default function CustomHeader() {
   return (
-    <Space style={customHeaderStyle} align="center" size="large">
+    <Space style={customHeaderStyle} align="center" size="small">
       <Link href="/">
         <Image
-          alt="Sotla Company Logo"
-          src="../icon.png"
-          width={80}
-          height={80}
-          preview={false}
+          src="/icons/brand/png/logo-no-background.png"
+          alt="Company Logo"
+          width={110}
+          height={70}
         />
       </Link>
       <Link href="/">
-        <Title level={2}>Sotla Laboratory Equipment</Title>
+        <Title level={2} style={{ alignContent: "center" }}>
+          Sotla Laboratory Equipment
+        </Title>
       </Link>
     </Space>
   );
