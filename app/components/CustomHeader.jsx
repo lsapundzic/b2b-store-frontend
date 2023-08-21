@@ -17,7 +17,7 @@ export default function CustomHeader() {
     <Space style={customHeaderStyle} align="center" size="small">
       <Link href="/">
         <Image
-          src="/icons/brand/png/logo-no-background.png"
+          src="/icons/png/logo-no-background.png"
           alt="Company Logo"
           width={110}
           height={70}
