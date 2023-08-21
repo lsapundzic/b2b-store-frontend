@@ -14,7 +14,6 @@ import CustomFooter from "@/app/components/CustomFooter";
 
 const {Header, Content} = Layout;
 import {Footer} from "antd/es/layout/layout";
-import theme from '../../theme/themeConfig.js';
 
 const contentStyle = {
     height: "400px",
@@ -37,7 +36,6 @@ export default function MyLayout({children}) {
 
     return (
         <PageCategoryContext.Provider value={{pageCategory, setPageCategory}}>
-            <ConfigProvider theme={theme}>
                 <Layout style={globalLayoutStyle}>
                     <CustomHeader/>
                     {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
@@ -53,7 +51,6 @@ export default function MyLayout({children}) {
                         <CustomFooter/>
                     </Footer>
                 </Layout>
-            </ConfigProvider>
         </PageCategoryContext.Provider>
     );
 }
