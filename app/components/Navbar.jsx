@@ -29,11 +29,7 @@ const menuItems = [
     key: "home",
     icon: <HomeOutlined />,
   },
-  {
-    label: <Link href="/about">About</Link>,
-    key: "about",
-    icon: <CoffeeOutlined />,
-  },
+
   {
     label: "Store",
     key: "store",
@@ -82,6 +78,11 @@ const menuItems = [
     label: <Link href="/distributors">Find a Distributor</Link>,
     key: "distributors",
     icon: <ApartmentOutlined />,
+  },
+  {
+    label: <Link href="/about">About</Link>,
+    key: "about",
+    icon: <CoffeeOutlined />,
   },
   {
     label: <Link href="/contact">Contact Us</Link>,
