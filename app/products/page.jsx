@@ -10,66 +10,66 @@
 "use client";
 
 // React
-import { useContext } from "react";
-import { PageCategoryContext } from "../components/MainLayout.jsx";
-import { useDataRetriever } from "../hooks/useDataRetriever.jsx";
+import {useContext} from "react";
+import MainLayout, {PageCategoryContext} from "../components/MainLayout.jsx";
+import {useDataRetriever} from "../hooks/useDataRetriever.jsx";
 
 // Project
-import { pageStyle } from "../styles/globalStyles";
+import {pageStyle} from "../styles/globalStyles";
 import ProductCard from "../components/ProductCard";
-import { ContentTypeEntriesURL } from "../utils/buildURL";
+import {ContentTypeEntriesURL} from "../utils/buildURL";
 import filterProducts from "../utils/filterProducts.jsx";
 import CustomSkeleton from "../components/CustomSkeleton.jsx";
 
 // AntD
-import { Row, Col } from "antd";
+import {Row, Col} from "antd";
 import CustomEmpty from "../components/CustomEmpty.jsx";
 
 function Products() {
-  let { pageCategory } = useContext(PageCategoryContext);
-  console.log(`${pageCategory} rendered`);
+    let {pageCategory} = useContext(PageCategoryContext);
+    console.log(`${pageCategory} rendered`);
 
-  // Fetch all products
-  const { data, isLoading } = useDataRetriever(
-    ContentTypeEntriesURL("product")
-  );
-
-  if (isLoading)
-    return (
-      <div style={pageStyle}>
-        <CustomSkeleton />
-      </div>
+    // Fetch all products
+    const {data, isLoading} = useDataRetriever(
+        ContentTypeEntriesURL("product")
     );
-  if (!data) return <CustomEmpty />;
 
-  return (
-    <div style={pageStyle}>
-      <Row gutter={[32, 64]}>
-        {/* For filtering products based on their category / navbar option */}
-        {filterProducts(data, pageCategory).map((product) => (
-          <Col
-            key={product.sys.id}
-            span={{
-              xs: 24,
-              sm: 12,
-              md: 8,
-              lg: 4,
-            }}
-          >
-            <ProductCard
-              entryID={product.sys.id}
-              assetID={product.fields.image.sys.id}
-              name={product.fields.name}
-              fullName={product.fields.fullName}
-              stockStatus={product.fields.inStock}
-              cardWidth={300}
-              cardHeight={430}
-            />
-          </Col>
-        ))}
-      </Row>
-    </div>
-  );
+    return (
+        <MainLayout>
+            <div style={pageStyle}>
+                {(isLoading || !data) ?
+                    <CustomSkeleton/>
+                    :
+                    <>
+                        <Row gutter={[32, 64]}>
+                            {/* For filtering products based on their category / navbar option */}
+                            {filterProducts(data, pageCategory).map((product) => (
+                                <Col
+                                    key={product.sys.id}
+                                    span={{
+                                        xs: 24,
+                                        sm: 12,
+                                        md: 8,
+                                        lg: 4,
+                                    }}
+                                >
+                                    <ProductCard
+                                        entryID={product.sys.id}
+                                        assetID={product.fields.image.sys.id}
+                                        name={product.fields.name}
+                                        fullName={product.fields.fullName}
+                                        stockStatus={product.fields.inStock}
+                                        cardWidth={300}
+                                        cardHeight={430}
+                                    />
+                                </Col>
+                            ))}
+                        </Row>
+                    </>
+                }
+            </div>
+        </MainLayout>
+    );
 }
 
 export default Products;

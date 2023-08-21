@@ -7,7 +7,7 @@ import {useContext} from "react";
 // Project
 import {pageStyle} from "../styles/globalStyles.js";
 import {ABOUT_ID, SingleEntryURL} from "../utils/buildURL";
-import MyLayout, {PageCategoryContext} from "../components/MainLayout.jsx";
+import MainLayout, {PageCategoryContext} from "../components/MainLayout.jsx";
 import CustomSkeleton from "../components/CustomSkeleton.jsx";
 import CustomBanner from "../components/CustomBanner.jsx";
 import TeamMembers from "../components/TeamMembers.jsx";
@@ -23,12 +23,12 @@ export default function About() {
     const {data, isLoading} = useDataRetriever(SingleEntryURL(ABOUT_ID));
 
     return (
-        <MyLayout>
+        <MainLayout>
             <div style={pageStyle}>
                 {(isLoading || !data) ?
                     <CustomSkeleton/>
                     :
-                    <div>
+                    <>
                         <Row>
                             <Col xs={0} sm={0} md={24}>
                                 <Image
@@ -46,10 +46,9 @@ export default function About() {
                         <CustomBanner bannerContent={""}/>
                         <Divider orientation="left">Certificates</Divider>
                         <Certificates/>
-                    </div>
+                    </>
                 }
             </div>
-        </MyLayout>
-    )
-        ;
+        </MainLayout>
+    );
 }

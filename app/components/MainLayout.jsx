@@ -1,5 +1,7 @@
 "use client";
 
+import theme from '../../theme/themeConfig.js';
+
 // React
 import {createContext, useState} from "react";
 
@@ -24,10 +26,11 @@ const globalLayoutStyle = {
 const headerStyle = {
     backgroundColor: "white",
 };
-export default function MyLayout({children}) {
+export default function MainLayout({children}) {
     const [pageCategory, setPageCategory] = useState("default");
 
     return (
+        <ConfigProvider theme={theme}>
         <PageCategoryContext.Provider value={{pageCategory, setPageCategory}}>
             <Layout style={globalLayoutStyle}>
                 <CustomHeader/>
@@ -45,5 +48,6 @@ export default function MyLayout({children}) {
                 </Footer>
             </Layout>
         </PageCategoryContext.Provider>
+        </ConfigProvider>
     );
 }
