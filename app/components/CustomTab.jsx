@@ -16,13 +16,13 @@ export default function CustomTab({
   const tabsItems = [
     {
       key: "1",
-      label: `Description`,
+      label: `${leftTabTltle}`,
       children: `${leftTabDescription}`,
     },
     {
       key: "2",
-      label: `Specifications`,
-      children: `${rightTabDescription} technical specifications placeholder`,
+      label: `${rightTabTitle}`,
+      children: `${rightTabDescription}`,
     },
   ];
 
