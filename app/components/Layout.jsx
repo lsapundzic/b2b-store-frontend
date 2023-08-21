@@ -1,17 +1,20 @@
 "use client";
 
 // React
-import { createContext, useState } from "react";
+import {createContext, useState} from "react";
+
 export const PageCategoryContext = createContext({pageCategory: "default"});
 
 // AntD
-import {Layout} from "antd";
+import {ConfigProvider, Layout} from "antd";
 import CustomHeader from "@/app/components/CustomHeader";
 import Navbar from "@/app/components/Navbar";
 import CustomBanner from "@/app/components/CustomBanner";
 import CustomFooter from "@/app/components/CustomFooter";
+
 const {Header, Content} = Layout;
 import {Footer} from "antd/es/layout/layout";
+import theme from '../../theme/themeConfig.js';
 
 const contentStyle = {
     height: "400px",
@@ -34,21 +37,23 @@ export default function MyLayout({children}) {
 
     return (
         <PageCategoryContext.Provider value={{pageCategory, setPageCategory}}>
-            <Layout style={globalLayoutStyle}>
-                <CustomHeader/>
-                {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
-                <Header style={headerStyle}>
-                    <Navbar/>
-                </Header>
-                <CustomBanner bannerContent={""}/>
-                <Content>
-                    {children}
-                </Content>
-                {/* <Newsletter /> */}
-                <Footer>
-                    <CustomFooter/>
-                </Footer>
-            </Layout>
+            <ConfigProvider theme={theme}>
+                <Layout style={globalLayoutStyle}>
+                    <CustomHeader/>
+                    {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
+                    <Header style={headerStyle}>
+                        <Navbar/>
+                    </Header>
+                    <CustomBanner bannerContent={""}/>
+                    <Content>
+                        {children}
+                    </Content>
+                    {/* <Newsletter /> */}
+                    <Footer>
+                        <CustomFooter/>
+                    </Footer>
+                </Layout>
+            </ConfigProvider>
         </PageCategoryContext.Provider>
     );
 }
