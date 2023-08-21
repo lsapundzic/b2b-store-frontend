@@ -11,7 +11,7 @@
 
 // React
 import { useContext } from "react";
-import { PageCategoryContext } from "../layout.js";
+import { PageCategoryContext } from "../components/Layout.jsx";
 import { useDataRetriever } from "../hooks/useDataRetriever.jsx";
 
 // Project

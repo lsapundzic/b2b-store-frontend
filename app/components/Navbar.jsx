@@ -20,7 +20,7 @@ import {
 
 //AntD components
 import { Menu } from "antd";
-import { PageCategoryContext } from "../layout";
+import { PageCategoryContext } from "../components/Layout.jsx";
 
 // Object from which the navbar is generated
 const menuItems = [
