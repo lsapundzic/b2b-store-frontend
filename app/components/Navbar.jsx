@@ -75,7 +75,7 @@ const menuItems = [
     ],
   },
   {
-    label: <Link href="/distributors">Find a Distributor</Link>,
+    label: <Link href="/distributors">Distributors</Link>,
     key: "distributors",
     icon: <ApartmentOutlined />,
   },

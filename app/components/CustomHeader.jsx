@@ -1,8 +1,5 @@
 "use client";
 
-// Project
-import { companyLogo } from "../../public/icons/brand/svg/logo-color.svg";
-
 // AntD
 import { Divider, Space } from "antd";
 import Link from "antd/es/typography/Link";

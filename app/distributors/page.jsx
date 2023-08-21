@@ -16,6 +16,7 @@ import TeamMembers from "../components/TeamMembers.jsx";
 // AntD
 import { Col, Divider, Image, Row, Typography } from "antd";
 import Certificates from "../components/Certificates.jsx";
+import CustomTab from "../components/CustomTab.jsx";
 const { Title, Paragraph } = Typography;
 
 export default function About() {
@@ -36,6 +37,16 @@ export default function About() {
     <div style={pageStyle}>
       <Title>{data.fields.title}</Title>
       <Paragraph>{data.fields.body}</Paragraph>
+      <Row>
+        <Col span={24}>
+          <CustomTab
+            leftTabTltle={"Become a Distributor"}
+            leftTabDescription={"terms and conditions"}
+            rightTabTitle={"Find a Distributor"}
+            rightTabDescription={"List of distributors"}
+          />
+        </Col>
+      </Row>
     </div>
   );
 }
