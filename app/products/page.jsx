@@ -34,8 +34,6 @@ function Products() {
     ContentTypeEntriesURL("product")
   );
 
-  console.log("Data that has been fetched here ", data);
-
   return (
     <MainLayout>
       <div style={pageStyle}>
