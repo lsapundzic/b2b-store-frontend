@@ -10,6 +10,7 @@
 "use client";
 
 // React
+<<<<<<< HEAD
 import { useContext } from "react";
 import { PageCategoryContext } from "../layout.js";
 import { useDataRetriever } from "../hooks/useDataRetriever.jsx";
@@ -18,10 +19,21 @@ import { useDataRetriever } from "../hooks/useDataRetriever.jsx";
 import { pageStyle } from "../styles/globalStyles";
 import ProductCard from "../components/ProductCard";
 import { ContentTypeEntriesURL } from "../utils/buildURL";
+=======
+import {useContext} from "react";
+import MainLayout, {PageCategoryContext} from "../components/MainLayout.jsx";
+import {useDataRetriever} from "../hooks/useDataRetriever.jsx";
+
+// Project
+import {pageStyle} from "../styles/globalStyles";
+import ProductCard from "../components/ProductCard";
+import {ContentTypeEntriesURL} from "../utils/buildURL";
+>>>>>>> denisbranch/changes
 import filterProducts from "../utils/filterProducts.jsx";
 import CustomSkeleton from "../components/CustomSkeleton.jsx";
 
 // AntD
+<<<<<<< HEAD
 import { Row, Col } from "antd";
 import CustomEmpty from "../components/CustomEmpty.jsx";
 
@@ -70,6 +82,56 @@ function Products() {
       </Row>
     </div>
   );
+=======
+import {Row, Col} from "antd";
+import CustomEmpty from "../components/CustomEmpty.jsx";
+
+function Products() {
+    let {pageCategory} = useContext(PageCategoryContext);
+    console.log(`${pageCategory} rendered`);
+
+    // Fetch all products
+    const {data, isLoading} = useDataRetriever(
+        ContentTypeEntriesURL("product")
+    );
+
+    return (
+        <MainLayout>
+            <div style={pageStyle}>
+                {(isLoading || !data) ?
+                    <CustomSkeleton/>
+                    :
+                    <>
+                        <Row gutter={[32, 64]}>
+                            {/* For filtering products based on their category / navbar option */}
+                            {filterProducts(data, pageCategory).map((product) => (
+                                <Col
+                                    key={product.sys.id}
+                                    span={{
+                                        xs: 24,
+                                        sm: 12,
+                                        md: 8,
+                                        lg: 4,
+                                    }}
+                                >
+                                    <ProductCard
+                                        entryID={product.sys.id}
+                                        assetID={product.fields.image.sys.id}
+                                        name={product.fields.name}
+                                        fullName={product.fields.fullName}
+                                        stockStatus={product.fields.inStock}
+                                        cardWidth={300}
+                                        cardHeight={430}
+                                    />
+                                </Col>
+                            ))}
+                        </Row>
+                    </>
+                }
+            </div>
+        </MainLayout>
+    );
+>>>>>>> denisbranch/changes
 }
 
 export default Products;

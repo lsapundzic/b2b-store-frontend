@@ -7,7 +7,11 @@ import { useContext } from "react";
 // Project
 import { pageStyle, textStyle } from "../styles/globalStyles.js";
 import { ABOUT_ID, AllEntriesURL } from "../utils/buildURL";
+<<<<<<< HEAD
 import { PageCategoryContext } from "../layout.js";
+=======
+import { PageCategoryContext } from "../components/MainLayout.jsx";
+>>>>>>> denisbranch/changes
 
 // AntD
 import { Empty, Skeleton, Typography } from "antd";

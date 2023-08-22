@@ -20,7 +20,11 @@ import {
 
 //AntD components
 import { Menu } from "antd";
+<<<<<<< HEAD
 import { PageCategoryContext } from "../layout";
+=======
+import { PageCategoryContext } from "../components/MainLayout.jsx";
+>>>>>>> denisbranch/changes
 
 // Object from which the navbar is generated
 const menuItems = [
@@ -75,7 +79,11 @@ const menuItems = [
     ],
   },
   {
+<<<<<<< HEAD
     label: <Link href="/distributors">Distributors</Link>,
+=======
+    label: <Link href="/distributors">Find a Distributor</Link>,
+>>>>>>> denisbranch/changes
     key: "distributors",
     icon: <ApartmentOutlined />,
   },

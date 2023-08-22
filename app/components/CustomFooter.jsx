@@ -17,7 +17,11 @@ export default function CustomFooter() {
       <Divider />
       <Row>
         {/* --- COLUMN 1 --- */}
+<<<<<<< HEAD
         <Col xs={24} sm={12} md={6}>
+=======
+        <Col span={8}>
+>>>>>>> denisbranch/changes
           <div>
             <Title level={4}>Contact us</Title>
             <p>Call us 24 / 7</p>
@@ -52,21 +56,33 @@ export default function CustomFooter() {
         </Col>
 
         {/* --- COLUMN 2 --- */}
+<<<<<<< HEAD
         <Col xs={0} sm={12} md={6}>
+=======
+        <Col span={6}>
+>>>>>>> denisbranch/changes
           <Title level={4}>Company</Title>
           <p>About</p>
           <p>Contact</p>
         </Col>
 
         {/* --- COLUMN 3 --- */}
+<<<<<<< HEAD
         <Col xs={0} sm={12} md={6}>
+=======
+        <Col span={6}>
+>>>>>>> denisbranch/changes
           <Title level={4}>Quick Links</Title>
           <p>Shipping</p>
           <p>Return Policy</p>
         </Col>
 
         {/* --- COLUMN 4 --- */}
+<<<<<<< HEAD
         <Col xs={0} sm={12} md={6}>
+=======
+        <Col span={4}>
+>>>>>>> denisbranch/changes
           <Title level={4}>Business</Title>
           <p>About</p>
           <p>Contact</p>
