@@ -6,21 +6,23 @@ import { textStyle } from "../styles/globalStyles.js";
 // AntD imports
 import { Tabs } from "antd";
 
-export default function ProductTabs({
-  productDescription,
-  productSpecifications,
+export default function CustomTabs({
+  leftTitle,
+  leftDetails,
+  rightTitle,
+  rightDetals,
 }) {
   // Content content
   const tabsItems = [
     {
       key: "1",
-      label: `Description`,
-      children: `${productDescription}`,
+      label: `${leftTitle}`,
+      children: `${leftDetails}`,
     },
     {
       key: "2",
-      label: `Specifications`,
-      children: `${productSpecifications} technical specifications placeholder`,
+      label: `${rightTitle}`,
+      children: `${rightDetals}`,
     },
   ];
 

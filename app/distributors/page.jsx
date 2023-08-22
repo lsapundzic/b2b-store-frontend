@@ -12,6 +12,7 @@ import CustomSkeleton from "../components/CustomSkeleton.jsx";
 
 // AntD
 import { Typography } from "antd";
+import CustomTabs from "../components/CustomTabs.jsx";
 
 const { Title, Paragraph } = Typography;
 
@@ -30,6 +31,12 @@ export default function About() {
           <>
             <Title>{data.fields.title}</Title>
             <Paragraph>{data.fields.body}</Paragraph>
+            <CustomTabs
+              leftTabTltle={"Become a Distributor"}
+              leftTabDescription={data.fields.body}
+              rightTitle={"Find Distributors"}
+              rightDetals={"List of distributors"}
+            />
           </>
         )}
       </div>

@@ -14,7 +14,7 @@ import { textStyle, pageStyle } from "../../styles/globalStyles.js";
 import { SingleEntryURL } from "../../utils/buildURL.jsx";
 import ImageAsset from "../../components/ImageAsset.jsx";
 import ProductTCCard from "@/app/components/ProductTCCard.jsx";
-import ProductTabs from "@/app/components/ProductTabs.jsx";
+import CustomTabs from "@/app/components/CustomTabs.jsx";
 import CustomBanner from "@/app/components/CustomBanner.jsx";
 import CustomSkeleton from "@/app/components/CustomSkeleton";
 import CustomEmpty from "@/app/components/CustomEmpty";
@@ -115,7 +115,7 @@ export default function Product({ params }) {
                 {/* Technical Specifications Row */}
                 <Row gutter={[16, 24]}>
                   <Col span={24}>
-                    <ProductTabs
+                    <CustomTabs
                       productDescription={data.fields.description}
                       productSpecifications={
                         data.fields.technicalSpecifications
