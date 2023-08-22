@@ -1,12 +1,10 @@
 "use client";
 
 import { Col, Row, Image, Typography } from "antd";
-const { Title, Paragraph } = Typography;
 
 export default function Certificates() {
   return (
     <div>
-      {/* <Title level={2}>Certificates</Title> */}
       <Row>
         <Col span={8}>
           <Image
