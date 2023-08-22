@@ -2,6 +2,7 @@
 
 // React components
 import { useContext, useState } from "react";
+import { PageCategoryContext } from "../components/MainLayout.jsx";
 import Link from "next/link";
 
 // AntD icons
@@ -20,7 +21,6 @@ import {
 
 //AntD components
 import { Menu } from "antd";
-import { PageCategoryContext } from "../components/MainLayout.jsx";
 
 // Object from which the navbar is generated
 const menuItems = [

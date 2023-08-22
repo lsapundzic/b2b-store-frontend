@@ -4,7 +4,6 @@ import theme from "../../theme/themeConfig.js";
 
 // React
 import { createContext, useState } from "react";
-export const PageCategoryContext = createContext({ pageCategory: "default" });
 
 // Project
 import CustomHeader from "@/app/components/CustomHeader";
@@ -16,6 +15,9 @@ import CustomFooter from "@/app/components/CustomFooter";
 import { ConfigProvider, Layout } from "antd";
 const { Header, Content } = Layout;
 import { Footer } from "antd/es/layout/layout";
+
+// CONTEXT
+export const PageCategoryContext = createContext();
 
 // Used so that the content stretches throughout the page
 const globalLayoutStyle = {
