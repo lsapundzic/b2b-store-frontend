@@ -30,7 +30,7 @@ export default function ProductCard({
   return (
     <Link href={`/products/${entryID}`}>
       <Badge.Ribbon
-        text={stockStatus ? "In stock" : "Not in stock"}
+        text={stockStatus ? "In stock" : "Out of Stock"}
         color={stockStatus ? "blue" : "red"}
       >
         <Card
