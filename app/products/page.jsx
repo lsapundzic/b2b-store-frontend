@@ -11,7 +11,7 @@
 
 // React
 import { useContext } from "react";
-import { PageCategoryContext } from "../layout.js";
+import MainLayout, { PageCategoryContext } from "../components/MainLayout.jsx";
 import { useDataRetriever } from "../hooks/useDataRetriever.jsx";
 
 // Project
@@ -34,41 +34,41 @@ function Products() {
     ContentTypeEntriesURL("product")
   );
 
-  if (isLoading)
-    return (
-      <div style={pageStyle}>
-        <CustomSkeleton />
-      </div>
-    );
-  if (!data) return <CustomEmpty />;
-
   return (
-    <div style={pageStyle}>
-      <Row gutter={[32, 64]}>
-        {/* For filtering products based on their category / navbar option */}
-        {filterProducts(data, pageCategory).map((product) => (
-          <Col
-            key={product.sys.id}
-            span={{
-              xs: 24,
-              sm: 12,
-              md: 8,
-              lg: 4,
-            }}
-          >
-            <ProductCard
-              entryID={product.sys.id}
-              assetID={product.fields.image.sys.id}
-              name={product.fields.name}
-              fullName={product.fields.fullName}
-              stockStatus={product.fields.inStock}
-              cardWidth={300}
-              cardHeight={430}
-            />
-          </Col>
-        ))}
-      </Row>
-    </div>
+    <MainLayout>
+      <div style={pageStyle}>
+        {isLoading || !data ? (
+          <CustomSkeleton />
+        ) : (
+          <>
+            <Row gutter={[32, 64]}>
+              {/* For filtering products based on their category / navbar option */}
+              {filterProducts(data, pageCategory).map((product) => (
+                <Col
+                  key={product.sys.id}
+                  span={{
+                    xs: 24,
+                    sm: 12,
+                    md: 8,
+                    lg: 4,
+                  }}
+                >
+                  <ProductCard
+                    entryID={product.sys.id}
+                    assetID={product.fields.image.sys.id}
+                    name={product.fields.name}
+                    fullName={product.fields.fullName}
+                    stockStatus={product.fields.inStock}
+                    cardWidth={300}
+                    cardHeight={430}
+                  />
+                </Col>
+              ))}
+            </Row>
+          </>
+        )}
+      </div>
+    </MainLayout>
   );
 }
 
