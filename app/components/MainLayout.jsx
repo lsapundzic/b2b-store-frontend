@@ -4,16 +4,16 @@ import theme from "../../theme/themeConfig.js";
 
 // React
 import { createContext, useState } from "react";
-
 export const PageCategoryContext = createContext({ pageCategory: "default" });
 
-// AntD
-import { ConfigProvider, Layout } from "antd";
+// Project
 import CustomHeader from "@/app/components/CustomHeader";
 import Navbar from "@/app/components/Navbar";
 import CustomBanner from "@/app/components/CustomBanner";
 import CustomFooter from "@/app/components/CustomFooter";
 
+// AntD
+import { ConfigProvider, Layout } from "antd";
 const { Header, Content } = Layout;
 import { Footer } from "antd/es/layout/layout";
 
@@ -28,6 +28,7 @@ const headerStyle = {
 };
 export default function MainLayout({ children }) {
   const [pageCategory, setPageCategory] = useState("default");
+  console.log("STATE FROM CONFIG PROVIDER:", pageCategory);
 
   return (
     <ConfigProvider theme={theme}>
@@ -40,7 +41,6 @@ export default function MainLayout({ children }) {
           </Header>
           <CustomBanner bannerContent={""} />
           <Content>{children}</Content>
-          {/* <Newsletter /> */}
           <Footer>
             <CustomFooter />
           </Footer>

@@ -1,3 +1,5 @@
+// Ant Design recommendation for use with NextJS to prevent FOUC (Flash of Unstyled Content)
+
 "use client";
 
 import React from "react";

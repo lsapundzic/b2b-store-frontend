@@ -99,19 +99,14 @@ export default function Navbar() {
   */
   let { pageCategory, setPageCategory } = useContext(PageCategoryContext);
 
-  //
-  // const [current, setCurrent] = useState("default");
-
-  //   Function that changes useState so that the active tab can remain underlined
   const onClick = (e) => {
-    // setCurrent(e.key);
     setPageCategory(e.key);
+    console.log("Passed key from navbar ", pageCategory);
   };
 
   return (
     <nav>
       <Menu
-        // theme="dark"
         onClick={onClick}
         selectedKeys={[pageCategory]}
         mode="horizontal"

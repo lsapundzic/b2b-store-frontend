@@ -4,7 +4,7 @@ export default function filterProducts(data, criteria) {
     ...new Set(data.items.map((item) => item.fields.category)),
   ];
 
-  if (criteria === "products") {
+  if (criteria === "products" || "default") {
     return data.items;
   }
 
