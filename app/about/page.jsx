@@ -7,7 +7,7 @@ import { useDataRetriever } from "../hooks/useDataRetriever.jsx";
 // Project
 import { pageStyle } from "../styles/globalStyles.js";
 import { ABOUT_ID, SingleEntryURL } from "../utils/buildURL";
-import MainLayout, { PageCategoryContext } from "../components/MainLayout.jsx";
+import MainLayout, { PageCategoryContext } from "../MainLayout.jsx";
 import CustomSkeleton from "../components/CustomSkeleton.jsx";
 import CustomBanner from "../components/CustomBanner.jsx";
 import TeamMembers from "../components/TeamMembers.jsx";

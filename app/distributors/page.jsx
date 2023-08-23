@@ -7,7 +7,7 @@ import { useContext } from "react";
 // Project
 import { pageStyle, textStyle } from "../styles/globalStyles.js";
 import { DISTRIBUTORS_ID, SingleEntryURL } from "../utils/buildURL";
-import MainLayout, { PageCategoryContext } from "../components/MainLayout.jsx";
+import MainLayout, { PageCategoryContext } from "../MainLayout.jsx";
 import CustomSkeleton from "../components/CustomSkeleton.jsx";
 
 // AntD

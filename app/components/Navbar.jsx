@@ -2,7 +2,7 @@
 
 // React components
 import { React, useContext, useState } from "react";
-import { PageCategoryContext } from "../components/MainLayout.jsx";
+import { PageCategoryContext } from "../MainLayout.jsx";
 import Link from "next/link";
 
 // AntD icons

@@ -15,7 +15,7 @@ import {
 import { pageStyle } from "./styles/globalStyles";
 
 // AntD
-import MainLayout from "./components/MainLayout.jsx";
+import MainLayout from "./MainLayout.jsx";
 
 const { Title } = Typography;
 

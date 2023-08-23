@@ -25,7 +25,7 @@ import { Button, Col, Divider, Row, Space, Typography } from "antd";
 
 import Layout, { Content } from "antd/es/layout/layout.js";
 import { DownloadOutlined } from "@ant-design/icons";
-import MainLayout from "@/app/components/MainLayout";
+import MainLayout from "@/app/MainLayout";
 
 const { Title, Paragraph } = Typography;
 
