@@ -1,13 +1,8 @@
 "use client";
 
 // React components
-<<<<<<< HEAD
-import { React, useContext, useState } from "react";
-import { PageCategoryContext } from "../components/MainLayout.jsx";
-=======
 import { useContext, useState } from "react";
 import { PageCategoryContext } from "../layout.js";
->>>>>>> danger-2-state-layout
 import Link from "next/link";
 
 // AntD icons
