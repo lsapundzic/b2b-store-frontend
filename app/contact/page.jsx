@@ -15,8 +15,6 @@ import DetailedContact from "../components/DetailedContact.jsx";
 
 // AntD
 import { Col, Divider, Space, Row, Typography } from "antd";
-import ContactForm from "../components/ContactForm.jsx";
-
 const { Title, Paragraph } = Typography;
 
 export default function Contact() {
