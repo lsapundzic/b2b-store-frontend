@@ -1,7 +1,7 @@
 "use client";
 
 // React components
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { PageCategoryContext } from "../layout.js";
 import Link from "next/link";
 

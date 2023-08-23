@@ -18,7 +18,6 @@ import ProductTCCard from "@/app/components/ProductTCCard.jsx";
 import CustomTabs from "@/app/components/CustomTabs.jsx";
 import CustomBanner from "@/app/components/CustomBanner.jsx";
 import CustomSkeleton from "@/app/components/CustomSkeleton";
-import CustomEmpty from "@/app/components/CustomEmpty";
 import CustomModal from "@/app/components/CustomModal";
 
 // AntD
