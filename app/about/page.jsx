@@ -7,7 +7,8 @@ import { useDataRetriever } from "../hooks/useDataRetriever.jsx";
 // Project
 import { pageStyle } from "../styles/globalStyles.js";
 import { ABOUT_ID, SingleEntryURL } from "../utils/buildURL";
-import MainLayout, { PageCategoryContext } from "../components/MainLayout.jsx";
+import MainLayout from "../components/MainLayout.jsx";
+import { PageCategoryContext } from "../layout.js";
 import CustomSkeleton from "../components/CustomSkeleton.jsx";
 import CustomBanner from "../components/CustomBanner.jsx";
 import TeamMembers from "../components/TeamMembers.jsx";
@@ -17,7 +18,7 @@ import { Col, Divider, Image, Row } from "antd";
 import Certificates from "../components/Certificates.jsx";
 
 export default function About() {
-  const { pageCategory } = useContext(PageCategoryContext);
+  let { pageCategory } = useContext(PageCategoryContext);
   console.log(`${pageCategory} rendered`);
 
   const { data, isLoading } = useDataRetriever(SingleEntryURL(ABOUT_ID));

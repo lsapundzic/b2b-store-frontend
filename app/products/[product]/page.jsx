@@ -7,7 +7,8 @@
 "use client";
 
 // React
-import { useState, useDataRetriever } from "../../hooks/useDataRetriever";
+// import { useState, useContext } from "react";
+import { useDataRetriever } from "../../hooks/useDataRetriever";
 
 // Project
 import { textStyle, pageStyle } from "../../styles/globalStyles.js";
