@@ -101,7 +101,7 @@ export default function Navbar() {
 
   const onClick = (e) => {
     setPageCategory(e.key);
-    console.log("Passed key from navbar ", pageCategory);
+    console.log("NAVBAR - pageCategory: ", pageCategory);
   };
 
   return (

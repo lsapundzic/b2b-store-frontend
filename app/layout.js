@@ -10,14 +10,17 @@ export const PageCategoryContext = createContext();
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Sotla Lab Equipment",
-  description:
-    "Manufacturers and distributors of laboratory equipment & lab consumables",
-};
+// ! useState and createContext are client-side hooks and clash with metadata that is a server-side render
+// export const metadata = {
+//   title: "Sotla Lab Equipment",
+//   description:
+//     "Manufacturers and distributors of laboratory equipment & lab consumables",
+// };
 
 export default function RootLayout({ children }) {
   const [pageCategory, setPageCategory] = useState("default");
+
+  console.log("LAYOUT - pageCategory: ", pageCategory);
   return (
     <html lang="en">
       <body className={inter.className}>
