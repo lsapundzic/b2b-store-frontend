@@ -1,7 +1,7 @@
 "use client";
 
 // React components
-import { useContext, useState } from "react";
+import { React, useContext, useState } from "react";
 import { PageCategoryContext } from "../components/MainLayout.jsx";
 import Link from "next/link";
 

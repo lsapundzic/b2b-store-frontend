@@ -1,9 +1,9 @@
 "use client";
 
-import theme from "../../theme/themeConfig.js";
-
 // React
-import { createContext, useState } from "react";
+import { React, createContext, useState } from "react";
+
+import theme from "../../theme/themeConfig.js";
 
 // Project
 import CustomHeader from "@/app/components/CustomHeader";

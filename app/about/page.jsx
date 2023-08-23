@@ -1,8 +1,8 @@
 "use client";
 
 // React
+import { useContext, React } from "react";
 import { useDataRetriever } from "../hooks/useDataRetriever.jsx";
-import { useContext } from "react";
 
 // Project
 import { pageStyle } from "../styles/globalStyles.js";
