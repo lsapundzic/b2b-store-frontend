@@ -1,6 +1,12 @@
+"use client";
+
 import React from "react";
+import { createContext, useContext, useState } from "react";
 import { Inter } from "next/font/google";
 import StyledComponentsRegistry from "@/lib/AntdRegistry";
+
+// CONTEXT
+export const PageCategoryContext = createContext();
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,11 +17,14 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const [pageCategory, setPageCategory] = useState("default");
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* Recommended by AntDesign to prevent FOUC (Flash of Unstyled Content) */}
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <PageCategoryContext.Provider value={{ pageCategory, setPageCategory }}>
+          {/* Recommended by AntDesign to prevent FOUC (Flash of Unstyled Content) */}
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        </PageCategoryContext.Provider>
       </body>
     </html>
   );

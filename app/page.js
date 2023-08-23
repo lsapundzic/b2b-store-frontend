@@ -2,7 +2,8 @@
 
 // React
 import { useContext } from "react";
-import MainLayout, { PageCategoryContext } from "./components/MainLayout.jsx";
+import MainLayout from "./components/MainLayout.jsx";
+import { PageCategoryContext } from "./layout.js";
 
 // AntD
 import {
