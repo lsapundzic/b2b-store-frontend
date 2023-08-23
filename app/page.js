@@ -1,6 +1,9 @@
 "use client";
 
-import React from "react";
+// React
+import { React, useContext } from "react";
+
+// AntD
 import {
   Carousel,
   Col,
@@ -13,13 +16,14 @@ import {
 
 // Project
 import { pageStyle } from "./styles/globalStyles";
-
-// AntD
-import MainLayout from "./MainLayout.jsx";
+import MainLayout, { PageCategoryContext } from "./MainLayout.jsx";
 
 const { Title } = Typography;
 
 export default function Homepage() {
+  const { pageCategory } = useContext(PageCategoryContext);
+  console.log("Can pageCategory be accessed in homepage? ", pageCategory);
+
   return (
     <MainLayout>
       <div style={pageStyle}>

@@ -30,7 +30,7 @@ const headerStyle = {
 };
 export default function MainLayout({ children }) {
   const [pageCategory, setPageCategory] = useState("default");
-  console.log("STATE FROM CONFIG PROVIDER:", pageCategory);
+  console.log("STATE FROM MAIN LAYOUT:", pageCategory);
 
   return (
     <ConfigProvider theme={theme}>
