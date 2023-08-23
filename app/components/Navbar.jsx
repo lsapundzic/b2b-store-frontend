@@ -101,9 +101,8 @@ export default function Navbar() {
 
   const onClick = (e) => {
     setPageCategory(e.key);
-    console.log("NAVBAR - pageCategory: ", pageCategory);
   };
-
+  console.log("NAVBAR - pageCategory: ", pageCategory);
   return (
     <nav>
       <Menu
