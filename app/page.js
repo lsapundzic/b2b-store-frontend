@@ -21,8 +21,8 @@ import MainLayout, { PageCategoryContext } from "./MainLayout.jsx";
 const { Title } = Typography;
 
 export default function Homepage() {
-  const { pageCategory } = useContext(PageCategoryContext);
-  console.log("Can pageCategory be accessed in homepage? ", pageCategory);
+  // const { pageCategory } = useContext(PageCategoryContext);
+  // console.log("Can pageCategory be accessed in homepage? ", pageCategory);
 
   return (
     <MainLayout>

@@ -30,24 +30,24 @@ const headerStyle = {
 };
 export default function MainLayout({ children }) {
   const [pageCategory, setPageCategory] = useState("default");
-  console.log("STATE FROM MAIN LAYOUT:", pageCategory);
+  console.log("-- MAINLAYOUT pageCategory:", pageCategory);
 
   return (
-    <ConfigProvider theme={theme}>
-      <PageCategoryContext.Provider value={{ pageCategory, setPageCategory }}>
-        <Layout style={globalLayoutStyle}>
-          <CustomHeader />
-          {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
-          <Header style={headerStyle}>
-            <Navbar />
-          </Header>
-          <CustomBanner bannerContent={""} />
-          <Content>{children}</Content>
-          <Footer>
-            <CustomFooter />
-          </Footer>
-        </Layout>
-      </PageCategoryContext.Provider>
-    </ConfigProvider>
+    <PageCategoryContext.Provider value={{ pageCategory, setPageCategory }}>
+      {/* <ConfigProvider theme={theme}> */}
+      <Layout style={globalLayoutStyle}>
+        <CustomHeader />
+        {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
+        <Header style={headerStyle}>
+          <Navbar />
+        </Header>
+        <CustomBanner bannerContent={""} />
+        <Content>{children}</Content>
+        <Footer>
+          <CustomFooter />
+        </Footer>
+      </Layout>
+      {/* </ConfigProvider> */}
+    </PageCategoryContext.Provider>
   );
 }

@@ -100,8 +100,19 @@ export default function Navbar() {
   let { pageCategory, setPageCategory } = useContext(PageCategoryContext);
 
   const onClick = (e) => {
+    console.log(
+      "NAVBAR BEFORE PRESS pageCategory:",
+      pageCategory,
+      " e.key:",
+      e.key
+    );
     setPageCategory(e.key);
-    console.log("Passed key from navbar ", pageCategory);
+    console.log(
+      "NAVBAR AFTER PRESS pageCategory:",
+      pageCategory,
+      " e.key:",
+      e.key
+    );
   };
 
   return (

@@ -17,8 +17,8 @@ import { Col, Divider, Image, Row } from "antd";
 import Certificates from "../components/Certificates.jsx";
 
 export default function About() {
-  const { pageCategory } = useContext(PageCategoryContext);
-  console.log(`${pageCategory} rendered`);
+  // const { pageCategory } = useContext(PageCategoryContext);
+  // console.log(`${pageCategory} rendered`);
 
   const { data, isLoading } = useDataRetriever(SingleEntryURL(ABOUT_ID));
 
