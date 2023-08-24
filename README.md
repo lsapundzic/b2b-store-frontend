@@ -19,4 +19,3 @@ TODO: describe the challenges and solutions related to the use of custom hooks.
 #### Displaying Metadata
 
 Incorporating website metadata into the top-level page.js file, following the guidelines outlined in the Next.js documentation, presents challenges due to its server-side functionality. However, rendering the page.js on the client side is necessary as it leverages AntD UI components.
-
