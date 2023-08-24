@@ -7,7 +7,7 @@
 "use client";
 
 // React
-// import { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import { useDataRetriever } from "../../hooks/useDataRetriever";
 
 // Project
@@ -26,6 +26,7 @@ import { Button, Col, Divider, Row, Space, Typography } from "antd";
 import Layout, { Content } from "antd/es/layout/layout.js";
 import { DownloadOutlined } from "@ant-design/icons";
 import MainLayout from "@/app/MainLayout";
+import Link from "next/link";
 
 const { Title, Paragraph } = Typography;
 
@@ -47,6 +48,8 @@ export default function Product({ params }) {
   // const handleCancel = () => {
   //   setIsModalOpen(false);
   // };
+
+  console.log(`Product page rendered`);
 
   return (
     <MainLayout>
@@ -72,40 +75,48 @@ export default function Product({ params }) {
                   {/* Product Overview Column */}
                   <Col xs={24} sm={24} md={14} lg={11} xl={11}>
                     <Typography>
-                      <Title>
+                      <Title level={3}>
                         {data.fields.name} - {data.fields.fullName}
                       </Title>
-                      <div>
-                        <Title level={5}>SKU: {data.fields.sku}</Title>
-                        <div>
-                          <Button>
-                            <DownloadOutlined />
-                            Download Catalogue
-                          </Button>
-                        </div>
-                      </div>
                       <Divider />
                       <Paragraph style={textStyle}>
                         {data.fields.description}
                       </Paragraph>
-                      <Divider />
-                      <Button
-                        type="primary"
-                        // onClick={showModal}
-                        style={{
-                          width: `100%`,
-                          height: 45,
-                          backgroundColor: "green",
-                        }}
-                      >
-                        Request a Quote
-                      </Button>
                     </Typography>
+                    <Divider />
+                    <Button
+                      type="primary"
+                      // onClick={showModal}
+                      style={{
+                        width: `100%`,
+                        height: 45,
+                        backgroundColor: "green",
+                      }}
+                    >
+                      Request a Quote
+                    </Button>
+                    <Divider />
+                    <div style={{ fontSize: "14px" }}>
+                      <Link style={{ margin: "6px" }} href="/">
+                        Terms & Conditions
+                      </Link>
+                      <p style={{ margin: "6px" }}>SKU: {data.fields.sku}</p>
+                      <p style={{ margin: "6px" }}>
+                        Category: {data.fields.category}
+                      </p>
+                      <p style={{ margin: "6px" }}>Tags: </p>
+                    </div>
                   </Col>
 
                   {/* Terms & Conditions Card */}
                   <Col xs={0} sm={0} md={0} lg={7} xl={5}>
-                    <ProductTCCard />
+                    <Space direction="vertical" size={"large"}>
+                      <ProductTCCard />
+                      <Button>
+                        <DownloadOutlined />
+                        Download Catalogue
+                      </Button>
+                    </Space>
                   </Col>
                 </Row>
 
