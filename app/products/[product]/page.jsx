@@ -116,10 +116,10 @@ export default function Product({ params }) {
                 <Row gutter={[16, 24]}>
                   <Col span={24}>
                     <CustomTabs
-                      productDescription={data.fields.description}
-                      productSpecifications={
-                        data.fields.technicalSpecifications
-                      }
+                      leftTitle={"Description"}
+                      leftDetails={data.fields.description}
+                      rightTitle={`Technical Specifications`}
+                      rightDetals={data.fields.technicalSpecifications}
                     />
                   </Col>
 

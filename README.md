@@ -12,10 +12,6 @@ This is a Business to Business eCommerce website built using Contentful content 
 
 Next.js distinguishes between server-side and client-side rendering, which can lead to various technical challenges. Most UI libraries that have been tested in this project such as Mantine, ChakraUI, Flowbite, NextUI and others are able to be rendered only if they are in a client-side component.
 
-### useDataRetriever & useFilterProducts custom hooks
-
-TODO: describe the challenges and solutions related to the use of custom hooks.
-
 #### Displaying Metadata
 
 Incorporating website metadata into the top-level page.js file, following the guidelines outlined in the Next.js documentation, presents challenges due to its server-side functionality. However, rendering the page.js on the client side is necessary as it leverages AntD UI components.
