@@ -24,7 +24,6 @@ import CustomSkeleton from "../components/CustomSkeleton.jsx";
 
 // AntD
 import { Row, Col } from "antd";
-import CustomEmpty from "../components/CustomEmpty.jsx";
 
 function Products() {
   let { pageCategory } = useContext(PageCategoryContext);

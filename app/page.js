@@ -2,18 +2,27 @@
 
 // React
 import { useContext } from "react";
+
+// Project
 import MainLayout from "./MainLayout.jsx";
 import { PageCategoryContext } from "./layout.js";
+import { useDataRetriever } from "./hooks/useDataRetriever.jsx";
+import { ContentTypeEntriesURL } from "./utils/buildURL.jsx";
 
 // AntD
 import { Carousel, Col, Divider, Image, Row, Typography } from "antd";
+
 // Project
 import { pageStyle } from "./styles/globalStyles";
-import DisplayProducts from "@/app/components/DisplayProducts";
+import ProductsOverview from "@/app/components/ProductsOverview.jsx";
 
 const { Title } = Typography;
 
 export default function Homepage() {
+  const { data, isLoading } = useDataRetriever(
+    ContentTypeEntriesURL("product")
+  );
+
   const { pageCategory } = useContext(PageCategoryContext);
   return (
     <MainLayout>
@@ -49,7 +58,7 @@ export default function Homepage() {
         </Row>
         <Row>
           <Col span={24}>
-            <DisplayProducts />
+            <ProductsOverview />
           </Col>
         </Row>
         <Row>
