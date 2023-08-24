@@ -34,8 +34,12 @@ function Products() {
     ContentTypeEntriesURL("product")
   );
 
+  console.log("-- PRODUCTS -- Data fetched: ", data);
+
   // Filter data
-  const { data: filteredData } = useFilterProducts(data, pageCategory);
+  const { filteredData } = useFilterProducts(data, pageCategory);
+
+  console.log("-- PRODUCTS / Filter -- :", filteredData);
 
   return (
     <MainLayout>
@@ -46,7 +50,7 @@ function Products() {
           <>
             <Row gutter={[32, 64]}>
               {/* For filtering products based on their category / navbar option */}
-              {filteredData(data, pageCategory).map((product) => (
+              {filteredData.map((product) => (
                 <Col
                   key={product.sys.id}
                   span={{

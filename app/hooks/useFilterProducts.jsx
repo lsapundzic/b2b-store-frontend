@@ -1,17 +1,28 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function useFilterProducts(data, criteria) {
-  // Get unique categories from the data
+  const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
-    if (criteria === "products" || "default" || "home") {
-      return data.items;
+    if (!data) {
+      setFilteredData([]);
+      return; // Return early if data is not available
     }
 
-    const filteredItems = data.items.filter(
-      (item) => item.fields.category === criteria
-    );
+    if (
+      criteria === "products" ||
+      criteria === "default" ||
+      criteria === "home"
+    ) {
+      setFilteredData(data.items);
+    } else {
+      const filterByCategory = data.items.filter(
+        (item) => item.fields.category === criteria
+      );
 
-    return filteredItems;
-  }, [data.items, criteria]);
+      setFilteredData(filterByCategory);
+    }
+  }, [data, criteria]);
+
+  return { filteredData };
 }

@@ -21,17 +21,17 @@ export function useDataRetriever(url) {
         if (!response.ok) {
           setData(false);
           throw new Error(
-            `Dev. msg: failed to fetch data. HTTP response status: ${response.status}`
+            `useDataRetriever msg: failed to fetch data. HTTP response status: ${response.status}`
           );
         }
 
         const fetchedData = await response.json();
         setData(fetchedData);
         setLoading(false);
-        console.log("Dev. msg: data fetched: ", fetchedData);
+        console.log("useDataRetriever msg: data fetched: ", fetchedData);
       } catch (error) {
         console.error(
-          "Dev. msg: general error occurred while fetching data. Message: ",
+          "useDataRetriever msg: general error occurred while fetching data. Message: ",
           error
         );
       }

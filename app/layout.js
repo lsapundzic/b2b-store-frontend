@@ -20,8 +20,6 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   const [pageCategory, setPageCategory] = useState("default");
 
-
-  console.log("LAYOUT - pageCategory: ", pageCategory);
   return (
     <html lang="en">
       <body className={inter.className}>
