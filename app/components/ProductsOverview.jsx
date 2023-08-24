@@ -2,7 +2,7 @@
 
 // Project
 import ProductCard from "./ProductCard";
-import filterProducts from "../utils/filterProducts";
+import useFilterProducts from "../hooks/useFilterProducts";
 
 // Antd
 import { Row, Col } from "antd";
@@ -11,7 +11,7 @@ export default function ProductsOverview({ data, pageCategory }) {
   return (
     <div>
       {/* For filtering products based on their category / navbar option */}
-      {filterProducts(data, pageCategory).map((product) => (
+      {useFilterProducts(data, pageCategory).map((product) => (
         <Col
           key={product.sys.id}
           span={{

@@ -10,7 +10,7 @@
 "use client";
 
 // React
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import MainLayout from "../MainLayout.jsx";
 import { PageCategoryContext } from "../layout.js";
 import { useDataRetriever } from "../hooks/useDataRetriever.jsx";
@@ -19,7 +19,7 @@ import { useDataRetriever } from "../hooks/useDataRetriever.jsx";
 import { pageStyle } from "../styles/globalStyles";
 import ProductCard from "../components/ProductCard";
 import { ContentTypeEntriesURL } from "../utils/buildURL";
-import filterProducts from "../utils/filterProducts.jsx";
+import useFilterProducts from "../hooks/useFilterProducts.jsx";
 import CustomSkeleton from "../components/CustomSkeleton.jsx";
 
 // AntD
@@ -29,10 +29,13 @@ function Products() {
   let { pageCategory } = useContext(PageCategoryContext);
   console.log(`${pageCategory} rendered`);
 
-  // Fetch all products
+  // Get all data
   const { data, isLoading } = useDataRetriever(
     ContentTypeEntriesURL("product")
   );
+
+  // Filter data
+  const { data: filteredData } = useFilterProducts(data, pageCategory);
 
   return (
     <MainLayout>
@@ -43,7 +46,7 @@ function Products() {
           <>
             <Row gutter={[32, 64]}>
               {/* For filtering products based on their category / navbar option */}
-              {filterProducts(data, pageCategory).map((product) => (
+              {filteredData(data, pageCategory).map((product) => (
                 <Col
                   key={product.sys.id}
                   span={{
