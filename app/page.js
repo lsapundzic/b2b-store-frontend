@@ -58,7 +58,7 @@ export default function Homepage() {
         </Row>
         <Row>
           <Col span={24}>
-            <ProductsOverview />
+            {/* <ProductsOverview data={data} pageCategory={pageCategory} /> */}
           </Col>
         </Row>
         <Row>

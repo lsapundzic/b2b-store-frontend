@@ -7,7 +7,7 @@ import filterProducts from "../utils/filterProducts";
 // Antd
 import { Row, Col } from "antd";
 
-export default function ProductsOverview({ data }) {
+export default function ProductsOverview({ data, pageCategory }) {
   return (
     <div>
       {/* For filtering products based on their category / navbar option */}
