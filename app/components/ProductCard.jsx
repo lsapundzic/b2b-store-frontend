@@ -18,7 +18,7 @@ import { Badge, Card, Divider, Typography } from "antd";
 const { Title, Paragraph } = Typography;
 
 export default function ProductCard({ product, cardWidth, cardHeight }) {
-  console.log("ProductsCard rendered");
+  console.log("ProductCard rendered");
 
   return (
     <Link href={`/products/${product.sys.id}`}>

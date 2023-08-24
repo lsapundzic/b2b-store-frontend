@@ -57,7 +57,7 @@ function Products() {
                   <ProductCard
                     product={product}
                     cardWidth={300}
-                    cardHeight={430}
+                    cardHeight={470}
                   />
                 </Col>
               ))}
