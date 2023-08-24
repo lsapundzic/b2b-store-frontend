@@ -29,17 +29,13 @@ function Products() {
   let { pageCategory } = useContext(PageCategoryContext);
   console.log(`${pageCategory} rendered`);
 
-  // Get all data
+  // Hook for getting data
   const { data, isLoading } = useDataRetriever(
     ContentTypeEntriesURL("product")
   );
 
-  console.log("-- PRODUCTS -- Data fetched: ", data);
-
-  // Filter data
+  // Hook for filtering data
   const { filteredData } = useFilterProducts(data, pageCategory);
-
-  console.log("-- PRODUCTS / Filter -- :", filteredData);
 
   return (
     <MainLayout>
