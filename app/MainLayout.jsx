@@ -3,7 +3,7 @@
 // React
 import { React, createContext, useState } from "react";
 
-import theme from "../../theme/themeConfig.js";
+import theme from "../theme/themeConfig.js";
 
 // Project
 import CustomHeader from "@/app/components/CustomHeader";

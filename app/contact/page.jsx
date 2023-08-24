@@ -7,7 +7,7 @@ import { useContext } from "react";
 // Project
 import { pageStyle, textStyle } from "../styles/globalStyles.js";
 import { CONTACT_ID, SingleEntryURL } from "../utils/buildURL";
-import MainLayout from "../components/MainLayout.jsx";
+import MainLayout from "../MainLayout.jsx";
 import { PageCategoryContext } from "../layout.js";
 import CustomSkeleton from "../components/CustomSkeleton.jsx";
 import CustomEmpty from "../components/CustomEmpty.jsx";

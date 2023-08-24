@@ -13,43 +13,44 @@ import Link from "next/link";
 import ImageAsset from "./ImageAsset";
 
 // AntD imports
-import { Badge, Card, Divider, Space, Typography } from "antd";
-const { Title, Paragraph } = Typography;
+import {Badge, Card, Divider, Typography} from "antd";
+
+const {Title, Paragraph} = Typography;
 
 export default function ProductCard({
-  entryID,
-  assetID,
-  name,
-  fullName,
-  stockStatus,
-  cardWidth,
-  cardHeight,
-}) {
-  console.log("ProductsCard rendered");
+                                        entryID,
+                                        assetID,
+                                        name,
+                                        fullName,
+                                        stockStatus,
+                                        cardWidth,
+                                        cardHeight,
+                                    }) {
+    console.log("ProductsCard rendered");
 
-  return (
-    <Link href={`/products/${entryID}`}>
-      <Badge.Ribbon
-        text={stockStatus ? "In stock" : "Out of Stock"}
-        color={stockStatus ? "blue" : "red"}
-      >
-        <Card
-          style={{ width: `${cardWidth}px`, height: `${cardHeight}px` }}
-          hoverable
-          cover={
-            <ImageAsset
-              assetID={assetID}
-              height={"100%"}
-              width={250}
-              preview={false}
-            />
-          }
-        >
-          <Divider></Divider>
-          <Title level={3}>{name}</Title>
-          <Paragraph ellipsis={(true, { rows: 2 })}>{fullName}</Paragraph>
-        </Card>
-      </Badge.Ribbon>
-    </Link>
-  );
+    return (
+        <Link href={`/products/${entryID}`}>
+            <Badge.Ribbon
+                text={stockStatus ? "In stock" : "Out of Stock"}
+                color={stockStatus ? "blue" : "red"}
+            >
+                <Card
+                    style={{width: `${cardWidth}px`, height: `${cardHeight}px`}}
+                    hoverable
+                    cover={
+                        <ImageAsset
+                            assetID={assetID}
+                            height={"100%"}
+                            width={250}
+                            preview={false}
+                        />
+                    }
+                >
+                    <Divider></Divider>
+                    <Title level={3}>{name}</Title>
+                    <Paragraph ellipsis={(true, {rows: 2})}>{fullName}</Paragraph>
+                </Card>
+            </Badge.Ribbon>
+        </Link>
+    );
 }
