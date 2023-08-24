@@ -6,19 +6,12 @@ import MainLayout from "./MainLayout.jsx";
 import { PageCategoryContext } from "./layout.js";
 
 // AntD
-import {
-  Carousel,
-  Col,
-  ConfigProvider,
-  Divider,
-  Image,
-  Row,
-  Typography,
-} from "antd";
-const { Title } = Typography;
-
+import { Carousel, Col, Divider, Image, Row, Typography } from "antd";
 // Project
 import { pageStyle } from "./styles/globalStyles";
+import DisplayProducts from "@/app/components/DisplayProducts";
+
+const { Title } = Typography;
 
 export default function Homepage() {
   const { pageCategory } = useContext(PageCategoryContext);
@@ -54,8 +47,13 @@ export default function Homepage() {
             </Carousel>
           </Col>
         </Row>
-        <Divider />
         <Row>
+          <Col span={24}>
+            <DisplayProducts />
+          </Col>
+        </Row>
+        <Row>
+          <Divider />
           <Col>
             <Typography>
               <Title level={2}>Special Offers</Title>
