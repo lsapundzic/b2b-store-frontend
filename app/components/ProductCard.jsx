@@ -17,29 +17,21 @@ import { Badge, Card, Divider, Typography } from "antd";
 
 const { Title, Paragraph } = Typography;
 
-export default function ProductCard({
-  entryID,
-  assetID,
-  name,
-  fullName,
-  stockStatus,
-  cardWidth,
-  cardHeight,
-}) {
+export default function ProductCard({ product, cardWidth, cardHeight }) {
   console.log("ProductsCard rendered");
 
   return (
-    <Link href={`/products/${entryID}`}>
+    <Link href={`/products/${product.sys.id}`}>
       <Badge.Ribbon
-        text={stockStatus ? "In stock" : "Out of Stock"}
-        color={stockStatus ? "blue" : "red"}
+        text={product.fields.inStock ? "In stock" : "Out of Stock"}
+        color={product.fields.inStock ? "blue" : "red"}
       >
         <Card
           style={{ width: `${cardWidth}px`, height: `${cardHeight}px` }}
           hoverable
           cover={
             <ImageAsset
-              assetID={assetID}
+              assetID={product.fields.image.sys.id}
               height={"100%"}
               width={250}
               preview={false}
@@ -47,8 +39,10 @@ export default function ProductCard({
           }
         >
           <Divider />
-          <Title level={3}>{name}</Title>
-          <Paragraph ellipsis={(true, { rows: 2 })}>{fullName}</Paragraph>
+          <Title level={3}>{product.fields.name}</Title>
+          <Paragraph ellipsis={(true, { rows: 2 })}>
+            {product.fields.fullName}
+          </Paragraph>
         </Card>
       </Badge.Ribbon>
     </Link>

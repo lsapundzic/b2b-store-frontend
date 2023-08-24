@@ -55,11 +55,7 @@ function Products() {
                   }}
                 >
                   <ProductCard
-                    entryID={product.sys.id}
-                    assetID={product.fields.image.sys.id}
-                    name={product.fields.name}
-                    fullName={product.fields.fullName}
-                    stockStatus={product.fields.inStock}
+                    product={product}
                     cardWidth={300}
                     cardHeight={430}
                   />
