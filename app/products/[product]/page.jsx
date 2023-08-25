@@ -37,6 +37,8 @@ export default function Product({ params }) {
   // Fetch entry data
   const { data, isLoading } = useDataRetriever(SingleEntryURL(product));
 
+  // TODO: enable modal ASAP!
+
   // const [isModalOpen, setIsModalOpen] = useState(false);
 
   // const showModal = () => {
