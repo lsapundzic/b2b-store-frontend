@@ -10,7 +10,7 @@ export default function CustomTabs({
   leftTitle,
   leftDetails,
   rightTitle,
-  rightDetals,
+  rightDetails,
 }) {
   // Content content
   const tabsItems = [
@@ -22,7 +22,7 @@ export default function CustomTabs({
     {
       key: "2",
       label: `${rightTitle}`,
-      children: `${rightDetals}`,
+      children: `${rightDetails}`,
     },
   ];
 

@@ -10,7 +10,7 @@ import CustomSkeleton from "../components/CustomSkeleton.jsx";
 import CustomBanner from "../components/CustomBanner.jsx";
 import TeamMembers from "../components/fragments/TeamMembers.jsx";
 import {Col, Divider, Image, Row} from "antd";
-import Certificates from "../components/Certificates.jsx";
+import Certificates from "../components/fragments/Certificates.jsx";
 
 export default function About() {
     let {pageCategory} = useContext(PageCategoryContext);

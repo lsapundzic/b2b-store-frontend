@@ -12,7 +12,7 @@ import { PageCategoryContext } from "../layout.js";
 import CustomSkeleton from "../components/CustomSkeleton.jsx";
 import CustomEmpty from "../components/CustomEmpty.jsx";
 import CustomBanner from "../components/CustomBanner.jsx";
-import DetailedContact from "../components/DetailedContact.jsx";
+import DetailedContact from "../components/fragments/DetailedContact.jsx";
 
 // AntD
 import { Col, Divider, Space, Row, Typography } from "antd";

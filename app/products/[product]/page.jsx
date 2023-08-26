@@ -14,7 +14,7 @@ import { useDataFetch } from "../../hooks/useDataFetch";
 import { textStyle, pageStyle } from "../../styles/globalStyles.js";
 import { SingleEntryURL } from "../../utils/buildURL.jsx";
 import ImageAsset from "../../components/ImageAsset.jsx";
-import ProductTCCard from "@/app/components/fragments/ProductTCCard.jsx";
+import PerksCard from "@/app/components/fragments/PerksCard.jsx";
 import CustomTabs from "@/app/components/CustomTabs.jsx";
 import CustomBanner from "@/app/components/CustomBanner.jsx";
 import CustomSkeleton from "@/app/components/CustomSkeleton";
@@ -90,7 +90,7 @@ export default function Product({ params }) {
                   {/* Card space */}
                   <Col xs={0} sm={0} md={0} lg={7} xl={5}>
                     <Space direction="vertical" size={"large"}>
-                      <ProductTCCard />
+                      <PerksCard />
                       <Button>
                         <DownloadOutlined />
                         Download Catalogue
@@ -109,7 +109,7 @@ export default function Product({ params }) {
                       leftTitle={"Description"}
                       leftDetails={data.fields.description}
                       rightTitle={`Technical Specifications`}
-                      rightDetals={data.fields.technicalSpecifications}
+                      rightDetails={data.fields.technicalSpecifications}
                     />
                   </Col>
 
