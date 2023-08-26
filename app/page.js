@@ -59,8 +59,9 @@ export default function Homepage() {
 
                 {/* Row for products */}
                 <Row>
+                    <Divider>All Products</Divider>
                     <Col span={24}>
-                        <ProductsDisplayWindow category={"all"}/>
+                        <ProductsDisplayWindow category={pageCategory}/>
                     </Col>
                 </Row>
 

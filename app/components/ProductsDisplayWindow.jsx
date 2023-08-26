@@ -23,8 +23,6 @@ export default function ProductsDisplayWindow({category}) {
     // Hook for filtering data
     const {filteredData} = useFilterProducts(data, category);
 
-    console.log("-- PRODUCTS DISPLAY --- DATA : ", filteredData, "\n--- ARRAY SIZE --- :", filteredData.length);
-
     return (
 
         <div style={pageStyle}>

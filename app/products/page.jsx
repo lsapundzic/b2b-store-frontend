@@ -24,6 +24,7 @@ import CustomSkeleton from "../components/CustomSkeleton.jsx";
 
 // AntD
 import { Row, Col } from "antd";
+import ProductsDisplayWindow from "@/app/components/ProductsDisplayWindow";
 
 function Products() {
   let { pageCategory } = useContext(PageCategoryContext);
@@ -39,34 +40,36 @@ function Products() {
 
   return (
     <MainLayout>
-      <div style={pageStyle}>
-        {isLoading || !data ? (
-          <CustomSkeleton />
-        ) : (
-          <>
-            <Row gutter={[32, 64]}>
-              {/* For filtering products based on their category / navbar option */}
-              {filteredData.map((product) => (
-                <Col
-                  key={product.sys.id}
-                  span={{
-                    xs: 24,
-                    sm: 12,
-                    md: 8,
-                    lg: 4,
-                  }}
-                >
-                  <ProductCard
-                    product={product}
-                    cardWidth={300}
-                    cardHeight={470}
-                  />
-                </Col>
-              ))}
-            </Row>
-          </>
-        )}
-      </div>
+      {/*<div style={pageStyle}>*/}
+      {/*  {isLoading || !data ? (*/}
+      {/*    <CustomSkeleton />*/}
+      {/*  ) : (*/}
+      {/*    <>*/}
+      {/*      <Row gutter={[32, 64]}>*/}
+      {/*        /!* For filtering products based on their category / navbar option *!/*/}
+      {/*        {filteredData.map((product) => (*/}
+      {/*          <Col*/}
+      {/*            key={product.sys.id}*/}
+      {/*            span={{*/}
+      {/*              xs: 24,*/}
+      {/*              sm: 12,*/}
+      {/*              md: 8,*/}
+      {/*              lg: 4,*/}
+      {/*            }}*/}
+      {/*          >*/}
+      {/*            <ProductCard*/}
+      {/*              product={product}*/}
+      {/*              cardWidth={300}*/}
+      {/*              cardHeight={470}*/}
+      {/*            />*/}
+      {/*          </Col>*/}
+      {/*        ))}*/}
+      {/*      </Row>*/}
+      {/*    </>*/}
+      {/*  )}*/}
+      {/*</div>*/}
+
+        <ProductsDisplayWindow category={pageCategory} />
     </MainLayout>
   );
 }
