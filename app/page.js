@@ -40,7 +40,7 @@ export default function Homepage() {
                             <div>
                                 <Image
                                     src="/images/home/carousel-1.jpg"
-                                    alt="placeholder image"
+                                    alt="A laboratory technician performing an experiment"
                                     width={"auto"}
                                     height={"auto"}
                                     preview={false}
@@ -48,15 +48,15 @@ export default function Homepage() {
                             </div>
                             <div>
                                 <Image
+                                    src="https://placekitten.com/1800/500"
                                     alt="A placeholder image"
-                                    src="https://picsum.photos/1800/600"
                                     preview={false}
                                 />
                             </div>
                             <div>
                                 <Image
                                     alt="A placeholder image"
-                                    src="https://placehold.co/1800x600"
+                                    src="https://placehold.co/1800x500"
                                     preview={false}
                                 />
                             </div>
