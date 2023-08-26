@@ -4,29 +4,27 @@
 import { useContext } from "react";
 
 // Project
+import { pageStyle } from "./styles/globalStyles";
+import ProductsDisplay from "@/app/components/ProductsDisplay.jsx";
+
+// Project
 import MainLayout from "./MainLayout.jsx";
 import { PageCategoryContext } from "./layout.js";
-import { useDataRetriever } from "./hooks/useDataRetriever.jsx";
-import { ContentTypeEntriesURL } from "./utils/buildURL.jsx";
 
 // AntD
 import { Carousel, Col, Divider, Image, Row, Typography } from "antd";
-
-// Project
-import { pageStyle } from "./styles/globalStyles";
-import ProductsOverview from "@/app/components/ProductsOverview.jsx";
-
 const { Title } = Typography;
 
 export default function Homepage() {
-  const { data, isLoading } = useDataRetriever(
-    ContentTypeEntriesURL("product")
-  );
-
+  // Global state access
   const { pageCategory } = useContext(PageCategoryContext);
+
+  console.log(`${pageCategory} rendered`);
+
   return (
     <MainLayout>
       <div style={pageStyle}>
+        {/* Row with Carousel */}
         <Row>
           <Col xs={0} sm={0} md={24}>
             <Carousel autoplay>
@@ -56,9 +54,11 @@ export default function Homepage() {
             </Carousel>
           </Col>
         </Row>
+
+        {/* Row for products */}
         <Row>
           <Col span={24}>
-            {/* <ProductsOverview data={data} pageCategory={pageCategory} /> */}
+            <ProductsDisplay />
           </Col>
         </Row>
         <Row>

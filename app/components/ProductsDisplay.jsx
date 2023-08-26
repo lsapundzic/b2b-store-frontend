@@ -7,7 +7,7 @@ import useFilterProducts from "../hooks/useFilterProducts";
 // Antd
 import { Row, Col } from "antd";
 
-export default function ProductsOverview({ data, pageCategory }) {
+export default function ProductsDisplay({ data, pageCategory }) {
   return (
     <div>
       {/* For filtering products based on their category / navbar option */}
