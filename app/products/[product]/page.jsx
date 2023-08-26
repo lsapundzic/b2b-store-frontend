@@ -71,7 +71,6 @@ export default function Product({ params }) {
                         {data.fields.description}
                       </Paragraph>
                     </Typography>
-                    <Divider />
 
                     <CustomModal />
 
