@@ -8,7 +8,7 @@
 
 // React
 import { useState, useContext } from "react";
-import { useDataRetriever } from "../../hooks/useDataRetriever";
+import { useDataFetch } from "../../hooks/useDataFetch";
 
 // Project
 import { textStyle, pageStyle } from "../../styles/globalStyles.js";
@@ -35,7 +35,7 @@ export default function Product({ params }) {
   const { product } = params;
 
   // Fetch entry data
-  const { data, isLoading } = useDataRetriever(SingleEntryURL(product));
+  const { data, isLoading } = useDataFetch(SingleEntryURL(product));
 
   console.log(`Product page rendered`);
 

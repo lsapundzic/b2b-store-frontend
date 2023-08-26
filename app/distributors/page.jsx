@@ -1,7 +1,7 @@
 "use client";
 
 // React
-import { useDataRetriever } from "../hooks/useDataRetriever.jsx";
+import { useDataFetch } from "../hooks/useDataFetch.jsx";
 import { useContext } from "react";
 
 // Project
@@ -21,7 +21,7 @@ export default function About() {
   let { pageCategory } = useContext(PageCategoryContext);
   console.log(`${pageCategory} rendered`);
 
-  const { data, isLoading } = useDataRetriever(SingleEntryURL(DISTRIBUTORS_ID));
+  const { data, isLoading } = useDataFetch(SingleEntryURL(DISTRIBUTORS_ID));
 
   return (
     <MainLayout>

@@ -9,7 +9,7 @@ will be passed to variables and will not be overwritten once fetch is complete.
 
 import { useState, useEffect } from "react";
 
-export function useDataRetriever(url) {
+export function useDataFetch(url) {
   const [data, setData] = useState(null);
   const [isLoading, setLoading] = useState(true);
 
@@ -28,10 +28,10 @@ export function useDataRetriever(url) {
         const fetchedData = await response.json();
         setData(fetchedData);
         setLoading(false);
-        console.log("useDataRetriever msg: data fetched: ", fetchedData);
+        console.log("useDataFetch msg: data fetched: ", fetchedData);
       } catch (error) {
         console.error(
-          "useDataRetriever msg: general error occurred while fetching data. Message: ",
+          "useDataFetch msg: general error occurred while fetching data. Message: ",
           error
         );
       }

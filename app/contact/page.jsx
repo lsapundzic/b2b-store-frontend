@@ -1,7 +1,7 @@
 "use client";
 
 // React
-import { useDataRetriever } from "../hooks/useDataRetriever.jsx";
+import { useDataFetch } from "../hooks/useDataFetch.jsx";
 import { useContext } from "react";
 
 // Project
@@ -22,7 +22,7 @@ export default function Contact() {
   let { pageCategory } = useContext(PageCategoryContext);
   console.log(`${pageCategory} rendered`);
 
-  const { data, isLoading } = useDataRetriever(SingleEntryURL(CONTACT_ID));
+  const { data, isLoading } = useDataFetch(SingleEntryURL(CONTACT_ID));
 
   if (isLoading)
     return (
