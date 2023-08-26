@@ -1,24 +1,19 @@
+// Window object is not accessible on the Server Side so this is a way to force CSR on production
+
 "use client"
 
 import {useEffect, useState} from "react";
 
 export default function useWindowWidth() {
-    const [width, setWidth] = useState(0);
+    const [width, setWidth] = useState(window.innerWidth);
 
+    const updateDimensions = () => {
+        setWidth(window.innerWidth);
+
+    }
     useEffect(() => {
-        const handleResize = () => {
-            setWidth(window.innerWidth);
-        };
-
-        window.addEventListener("resize", handleResize);
-
-        // Initial call to set initial window width
-        handleResize();
-
-        // Clean up event listener on unmount
-        return () => {
-            window.removeEventListener("resize", handleResize);
-        };
+        window.addEventListener("resize", updateDimensions);
+        return () => window.removeEventListener("resize", updateDimensions);
     }, []);
 
     return {width};
