@@ -2,7 +2,6 @@
 
 // React
 import { useState } from "react";
-import Link from "next/link";
 
 // Project
 import { textStyle } from "../styles/globalStyles";
