@@ -1,6 +1,5 @@
 "use client";
 
-
 import useWindowDimension from "@/app/hooks/useWindowDimension";
 import {Col, Row} from "antd"
 import Link from "next/link"

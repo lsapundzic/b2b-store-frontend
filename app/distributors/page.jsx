@@ -1,46 +1,44 @@
 "use client";
 
 // React
-import { useDataFetch } from "../hooks/useDataFetch.jsx";
-import { useContext } from "react";
+import {useDataFetch} from "../hooks/useDataFetch.jsx";
+import {useContext} from "react";
 
 // Project
-import { pageStyle, textStyle } from "../styles/globalStyles.js";
-import { DISTRIBUTORS_ID, SingleEntryURL } from "../utils/buildURL";
+import {pageStyle} from "../styles/globalStyles.js";
+import {DISTRIBUTORS_ID, SingleEntryURL} from "../utils/buildURL";
 import MainLayout from "../MainLayout.jsx";
-import { PageCategoryContext } from "../layout.js";
+import {PageCategoryContext} from "../layout.js";
 import CustomSkeleton from "../components/CustomSkeleton.jsx";
 
 // AntD
-import { Typography } from "antd";
+import {Typography} from "antd";
 import CustomTabs from "../components/CustomTabs.jsx";
 
-const { Title, Paragraph } = Typography;
+const {Title, Paragraph} = Typography;
 
 export default function About() {
-  let { pageCategory } = useContext(PageCategoryContext);
-  console.log(`${pageCategory} rendered`);
+    let {pageCategory} = useContext(PageCategoryContext);
+    console.log(`${pageCategory} rendered`);
 
-  const { data, isLoading } = useDataFetch(SingleEntryURL(DISTRIBUTORS_ID));
+    const {data, isLoading} = useDataFetch(SingleEntryURL(DISTRIBUTORS_ID));
 
-  return (
-    <MainLayout>
-      <div style={pageStyle}>
-        {isLoading || !data ? (
-          <CustomSkeleton />
-        ) : (
-          <>
-            <Title>{data.fields.title}</Title>
-            <Paragraph>{data.fields.body}</Paragraph>
-            <CustomTabs
-              leftTabTltle={"Become a Distributor"}
-              leftTabDescription={data.fields.body}
-              rightTitle={"Find Distributors"}
-              rightDetals={"List of distributors"}
-            />
-          </>
-        )}
-      </div>
-    </MainLayout>
-  );
+    return (
+        <MainLayout>
+            <div style={pageStyle}>
+                {isLoading || !data ? (
+                    <CustomSkeleton/>
+                ) : (
+                    <>
+                        <CustomTabs
+                            rightTitle={"Become a Distributor"}
+                            rightDetails={data.fields.body}
+                            leftTitle={"Find Distributors"}
+                            leftDetails={"List of distributors"}
+                        />
+                    </>
+                )}
+            </div>
+        </MainLayout>
+    );
 }
