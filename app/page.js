@@ -13,14 +13,20 @@ import {PageCategoryContext} from "./layout.js";
 
 // AntD
 import {Carousel, Col, Divider, Image, Row, Typography} from "antd";
+import {useDataRetriever} from "@/app/hooks/useDataRetriever";
+import {ContentTypeEntriesURL} from "@/app/utils/buildURL";
 
 const {Title} = Typography;
 
 export default function Homepage() {
-    // Global state access
-    const {pageCategory} = useContext(PageCategoryContext);
-
+    // Global page category
+    let {pageCategory} = useContext(PageCategoryContext);
     console.log(`${pageCategory} rendered`);
+
+    // Custom hook for getting data
+    const {data, isLoading} = useDataRetriever(
+        ContentTypeEntriesURL("product")
+    );
 
     return (
         <MainLayout>
@@ -61,17 +67,15 @@ export default function Homepage() {
                 <Row>
                     <Divider>All Products</Divider>
                     <Col span={24}>
-                        <ProductsDisplayWindow category={pageCategory}/>
+                        <ProductsDisplayWindow data={data} category={pageCategory}/>
                     </Col>
                 </Row>
 
                 {/* Row for special products */}
                 <Row>
-                    <Divider/>
+                    <Divider>Special Deals</Divider>
                     <Col>
-                        <Typography>
-                            <Title level={2}>Special Offers</Title>
-                        </Typography>
+
                     </Col>
                 </Row>
             </div>

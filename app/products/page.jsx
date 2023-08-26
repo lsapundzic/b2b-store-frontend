@@ -12,10 +12,11 @@ import CustomSkeleton from "@/app/components/CustomSkeleton";
 import ProductCard from "@/app/components/ProductCard";
 
 function Products() {
+    // Global page category
     let {pageCategory} = useContext(PageCategoryContext);
     console.log(`${pageCategory} rendered`);
 
-    // Hook for getting data
+    // Custom hook for getting data
     const {data, isLoading} = useDataRetriever(
         ContentTypeEntriesURL("product")
     );
