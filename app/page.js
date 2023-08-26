@@ -5,7 +5,7 @@ import {useContext} from "react";
 
 // Project
 import {pageStyle} from "./styles/globalStyles";
-import ProductsDisplay from "@/app/components/ProductsDisplay.jsx";
+import ProductsDisplayWindow from "@/app/components/ProductsDisplayWindow.jsx";
 
 // Project
 import MainLayout from "./MainLayout.jsx";
@@ -60,7 +60,7 @@ export default function Homepage() {
                 {/* Row for products */}
                 <Row>
                     <Col span={24}>
-                        <ProductsDisplay/>
+                        <ProductsDisplayWindow category={"all"}/>
                     </Col>
                 </Row>
 
