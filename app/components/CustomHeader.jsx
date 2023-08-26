@@ -25,8 +25,6 @@ export default function CustomHeader() {
         setPageCategory("home")
     }
 
-    console.log("-- CUSTOM HEADER -- ", pageCategory)
-
     // TODO: Check if invoking pageCategory like this is actually dangerous
 
     return (
