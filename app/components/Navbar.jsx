@@ -19,7 +19,7 @@ import {
 } from "@ant-design/icons";
 
 //AntD components
-import {Menu} from "antd";
+import {Col, Menu, Row} from "antd";
 
 // Object from which the navbar is generated
 const menuItems = [
@@ -98,12 +98,24 @@ export default function Navbar() {
 
     return (
         <nav>
-            <Menu
-                onClick={onClick}
-                selectedKeys={[pageCategory]}
-                mode="horizontal"
-                items={menuItems}
-            />
+            <Row>
+                <Col span={3}>
+                    <div style={{width: "60px", height: "60px", backgroundColor: "blue"}}>
+                        ABC CBA
+                    </div>
+                </Col>
+                <Col span={21}>
+                    <Menu
+                        onClick={onClick}
+                        selectedKeys={[pageCategory]}
+                        mode="horizontal"
+                        items={menuItems}
+                    />
+                </Col>
+
+
+            </Row>
+
         </nav>
     );
 }
