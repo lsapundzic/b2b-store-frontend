@@ -37,18 +37,6 @@ export default function Product({ params }) {
   // Fetch entry data
   const { data, isLoading } = useDataRetriever(SingleEntryURL(product));
 
-  // Modal functionality
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
-
   console.log(`Product page rendered`);
 
   return (
@@ -84,33 +72,9 @@ export default function Product({ params }) {
                       </Paragraph>
                     </Typography>
                     <Divider />
-                    <Button
-                      type="primary"
-                      onClick={showModal}
-                      style={{
-                        width: `100%`,
-                        height: 45,
-                        backgroundColor: "green",
-                      }}
-                    >
-                      Request a Quote
-                    </Button>
-                    <CustomModal
-                      modalTitle={"Hello"}
-                      openStatus={isModalOpen}
-                      okStatus={handleOk}
-                      cancelStatus={handleCancel}
-                    />
-                    {/* <Modal
-                      title="Basic Modal"
-                      open={isModalOpen}
-                      onOk={handleOk}
-                      onCancel={handleCancel}
-                    >
-                      <p>Some contents...</p>
-                      <p>Some contents...</p>
-                      <p>Some contents...</p>
-                    </Modal> */}
+
+                    <CustomModal />
+
                     <Divider />
                     <div style={{ fontSize: "14px" }}>
                       <Link style={{ margin: "6px" }} href="/">
