@@ -4,6 +4,23 @@
 
 import {useEffect, useState} from "react";
 
+export default function useWindowWidth() {
+    const [width, setWidth] = useState(0);
+
+    useEffect(() => {
+        const updateDimensions = () => {
+            setWidth(window.innerWidth);
+        }
+
+        window.addEventListener("resize", updateDimensions);
+        return () => window.removeEventListener("resize", updateDimensions);
+    }, []);
+
+    return {width};
+}
+
+// Safer Alternative:
+
 // export default function useWindowWidth() {
 //     const [width, setWidth] = useState(0);
 //
@@ -25,21 +42,4 @@ import {useEffect, useState} from "react";
 //
 //     return {width};
 // }
-
-export default function useWindowWidth() {
-    const [width, setWidth] = useState(0);
-
-    useEffect(() => {
-        const updateDimensions = () => {
-            setWidth(window.innerWidth);
-        }
-
-        window.addEventListener("resize", updateDimensions);
-        return () => window.removeEventListener("resize", updateDimensions);
-    }, []);
-
-    return {width};
-}
-
-
 
