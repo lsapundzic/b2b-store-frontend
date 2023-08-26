@@ -1,29 +1,28 @@
 "use client";
 
 // Project
-import ProductCard from "./ProductCard";
-import useFilterProducts from "../hooks/useFilterProducts";
 
 // Antd
-import { Row, Col } from "antd";
+
+import {useDataRetriever} from "@/app/hooks/useDataRetriever";
+import {ContentTypeEntriesURL} from "@/app/utils/buildURL";
+import useFilterProducts from "@/app/hooks/useFilterProducts";
 
 export default function ProductsDisplay() {
-  return (
-    <div>
-      {/* For filtering products based on their category / navbar option */}
-      {useFilterProducts(data, pageCategory).map((product) => (
-        <Col
-          key={product.sys.id}
-          span={{
-            xs: 24,
-            sm: 12,
-            md: 8,
-            lg: 4,
-          }}
-        >
-          <ProductCard product={product} cardWidth={300} cardHeight={470} />
-        </Col>
-      ))}
-    </div>
-  );
+    console.log("ProductsDisplay.jsx rendered")
+
+    // Hook for getting data
+    const { data, isLoading } = useDataRetriever(
+        ContentTypeEntriesURL("product")
+    );
+
+    // Hook for filtering data
+    const { filteredData } = useFilterProducts(data, "home");
+
+
+    return (
+        <div>
+            <h1>Hello from Products Display</h1>
+        </div>
+    );
 }

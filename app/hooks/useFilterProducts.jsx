@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function useFilterProducts(data, criteria) {
+export default function useFilterProducts(data, category) {
   const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
@@ -10,19 +10,19 @@ export default function useFilterProducts(data, criteria) {
     }
 
     if (
-      criteria === "products" ||
-      criteria === "default" ||
-      criteria === "home"
+      category === "products" ||
+      category === "default" ||
+      category === "home"
     ) {
       setFilteredData(data.items);
     } else {
       const filterByCategory = data.items.filter(
-        (item) => item.fields.category === criteria
+        (item) => item.fields.category === category
       );
 
       setFilteredData(filterByCategory);
     }
-  }, [data, criteria]);
+  }, [data, category]);
 
   return { filteredData };
 }
