@@ -1,6 +1,6 @@
 "use client";
 
-import useWindowDimension from "@/app/hooks/useWindowDimension";
+import useWindowWidth from "@/app/hooks/useWindowWidth";
 import {Col, Row} from "antd"
 import Link from "next/link"
 import Image from "next/image"
@@ -11,8 +11,7 @@ const customHeaderStyle = {
 };
 
 export default function CustomHeader() {
-    let {width, height} = useWindowDimension();
-
+    let {width} = useWindowWidth();
 
     return (
         <div>
