@@ -21,7 +21,7 @@ import CustomSkeleton from "@/app/components/CustomSkeleton";
 import CustomModal from "@/app/components/CustomModal";
 
 // AntD
-import { Button, Col, Divider, Row, Space, Typography } from "antd";
+import { Button, Col, Divider, Row, Space, Typography, Modal } from "antd";
 
 import Layout, { Content } from "antd/es/layout/layout.js";
 import { DownloadOutlined } from "@ant-design/icons";
@@ -37,19 +37,17 @@ export default function Product({ params }) {
   // Fetch entry data
   const { data, isLoading } = useDataRetriever(SingleEntryURL(product));
 
-  // TODO: enable modal ASAP!
-
-  // const [isModalOpen, setIsModalOpen] = useState(false);
-
-  // const showModal = () => {
-  //   setIsModalOpen(true);
-  // };
-  // const handleOk = () => {
-  //   setIsModalOpen(false);
-  // };
-  // const handleCancel = () => {
-  //   setIsModalOpen(false);
-  // };
+  // Modal functionality
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
 
   console.log(`Product page rendered`);
 
@@ -88,7 +86,7 @@ export default function Product({ params }) {
                     <Divider />
                     <Button
                       type="primary"
-                      // onClick={showModal}
+                      onClick={showModal}
                       style={{
                         width: `100%`,
                         height: 45,
@@ -97,6 +95,22 @@ export default function Product({ params }) {
                     >
                       Request a Quote
                     </Button>
+                    <CustomModal
+                      modalTitle={"Hello"}
+                      openStatus={isModalOpen}
+                      okStatus={handleOk}
+                      cancelStatus={handleCancel}
+                    />
+                    {/* <Modal
+                      title="Basic Modal"
+                      open={isModalOpen}
+                      onOk={handleOk}
+                      onCancel={handleCancel}
+                    >
+                      <p>Some contents...</p>
+                      <p>Some contents...</p>
+                      <p>Some contents...</p>
+                    </Modal> */}
                     <Divider />
                     <div style={{ fontSize: "14px" }}>
                       <Link style={{ margin: "6px" }} href="/">
@@ -110,7 +124,7 @@ export default function Product({ params }) {
                     </div>
                   </Col>
 
-                  {/* Terms & Conditions Card */}
+                  {/* Card space */}
                   <Col xs={0} sm={0} md={0} lg={7} xl={5}>
                     <Space direction="vertical" size={"large"}>
                       <ProductTCCard />

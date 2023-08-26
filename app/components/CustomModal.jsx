@@ -7,10 +7,15 @@ import { textStyle } from "../styles/globalStyles";
 import { Modal, Typography } from "antd";
 const { Paragraph } = Typography;
 
-export default function CustomModal({ openStatus, okStatus, cancelStatus }) {
+export default function CustomModal({
+  modalTitle,
+  openStatus,
+  okStatus,
+  cancelStatus,
+}) {
   return (
     <Modal
-      title="Purchase Process Information"
+      title={`${modalTitle}`}
       open={openStatus}
       onOk={okStatus}
       onCancel={cancelStatus}
