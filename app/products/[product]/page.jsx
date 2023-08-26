@@ -14,7 +14,7 @@ import { useDataFetch } from "../../hooks/useDataFetch";
 import { textStyle, pageStyle } from "../../styles/globalStyles.js";
 import { SingleEntryURL } from "../../utils/buildURL.jsx";
 import ImageAsset from "../../components/ImageAsset.jsx";
-import ProductTCCard from "@/app/components/ProductTCCard.jsx";
+import ProductTCCard from "@/app/components/fragments/ProductTCCard.jsx";
 import CustomTabs from "@/app/components/CustomTabs.jsx";
 import CustomBanner from "@/app/components/CustomBanner.jsx";
 import CustomSkeleton from "@/app/components/CustomSkeleton";
