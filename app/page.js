@@ -15,6 +15,7 @@ import {PageCategoryContext} from "./layout.js";
 import {Carousel, Col, Divider, Image, Row, Typography} from "antd";
 import {useDataFetch} from "@/app/hooks/useDataFetch";
 import {ContentTypeEntriesURL} from "@/app/utils/buildURL";
+import CustomSkeleton from "@/app/components/CustomSkeleton";
 
 const {Title} = Typography;
 
@@ -67,7 +68,11 @@ export default function Homepage() {
                 <Row>
                     <Divider>All Products</Divider>
                     <Col span={24}>
-                        <ProductsDisplayWindow data={data} category={pageCategory}/>
+                        {isLoading || !data ? (
+                            <CustomSkeleton/>
+                        ) : (
+                            <ProductsDisplayWindow data={data} category={pageCategory}/>
+                        )}
                     </Col>
                 </Row>
 
@@ -75,7 +80,11 @@ export default function Homepage() {
                 <Row>
                     <Divider>Special Deals</Divider>
                     <Col>
-
+                        {isLoading || !data ? (
+                            <CustomSkeleton/>
+                        ) : (
+                            <ProductsDisplayWindow data={data} category={"microscopes"}/>
+                        )}
                     </Col>
                 </Row>
             </div>
