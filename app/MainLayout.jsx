@@ -1,7 +1,7 @@
 "use client";
 
 // React
-import { React, createContext, useState } from "react";
+import {React} from "react";
 
 import theme from "../theme/themeConfig.js";
 
@@ -12,34 +12,35 @@ import CustomBanner from "@/app/components/CustomBanner";
 import CustomFooter from "@/app/components/CustomFooter";
 
 // AntD
-import { ConfigProvider, Layout } from "antd";
-const { Header, Content } = Layout;
-import { Footer } from "antd/es/layout/layout";
+import {ConfigProvider, Layout} from "antd";
+import {Footer} from "antd/es/layout/layout";
+
+const {Header, Content} = Layout;
 
 // Used so that the content stretches throughout the page
 const globalLayoutStyle = {
-  minHeight: "100vh",
+    minHeight: "100vh",
 };
 
 // Prevents black boxes appearing on the sides of the navbar
 const headerStyle = {
-  backgroundColor: "white",
+    backgroundColor: "white",
 };
-export default function MainLayout({ children }) {
-  return (
-    <ConfigProvider theme={theme}>
-      <Layout style={globalLayoutStyle}>
-        <CustomHeader />
-        {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
-        <Header style={headerStyle}>
-          <Navbar />
-        </Header>
-        <CustomBanner bannerContent={""} />
-        <Content>{children}</Content>
-        <Footer>
-          <CustomFooter />
-        </Footer>
-      </Layout>
-    </ConfigProvider>
-  );
+export default function MainLayout({children}) {
+    return (
+        <ConfigProvider theme={theme}>
+            <Layout style={globalLayoutStyle}>
+                <CustomHeader/>
+                {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
+                <Header style={headerStyle}>
+                    <Navbar/>
+                </Header>
+                <CustomBanner bannerContent={""}/>
+                <Content>{children}</Content>
+                <Footer>
+                    <CustomFooter/>
+                </Footer>
+            </Layout>
+        </ConfigProvider>
+    );
 }
