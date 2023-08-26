@@ -2,13 +2,14 @@
 
 // React
 import { useState } from "react";
+import Link from "next/link";
 
 // Project
 import { textStyle } from "../styles/globalStyles";
 
 // AntD
-import { Button, Modal, Typography } from "antd";
-const { Paragraph } = Typography;
+import { Button, Modal, Space, Typography } from "antd";
+const { Paragraph, Title } = Typography;
 
 export default function CustomModal() {
   // Modal functionality
@@ -39,13 +40,14 @@ export default function CustomModal() {
       </Button>
 
       <Modal
-        title="Contact Customer Service"
+        title="Request a Quote"
         open={isModalOpen}
         onOk={handleOk}
         onCancel={handleCancel}
         centered={true}
+        footer={null}
       >
-        <div>
+        <Space direction="vertical">
           <Paragraph style={textStyle}>
             Thank you for visiting Sotla Lab Equipment We value your interest in
             our products. Please note that our B2B platform does not currently
@@ -56,16 +58,20 @@ export default function CustomModal() {
             are ready to assist you in finding the best solutions to meet your
             specific needs.
           </Paragraph>
-          <Paragraph>Contact our Sales Team</Paragraph>
+          <Title level={5}>Contact our Sales Team</Title>
           <Paragraph style={textStyle}>
-            Email: sales@sotla.si - Phone: +386 655 7254 At Sotla Lab Experts,
-            we are committed to delivering exceptional products and services to
-            our valued partners. Contact us today to explore how we can support
-            your requirements and facilitate a seamless purchasing experience.
-            Thank you for considering Sotla Lab Experts as your trusted
-            supplier. We look forward to serving you with excellence.
+            Email: <a href="mailto:sales@sotla.si">sales@sotla.si</a> | Phone:
+            +386 655 7254 At Sotla Lab Experts, we are committed to delivering
+            exceptional products and services to our valued partners. Contact us
+            today to explore how we can support your requirements and facilitate
+            a seamless purchasing experience. Thank you for considering Sotla
+            Lab Experts as your trusted supplier. We look forward to serving you
+            with excellence.
           </Paragraph>
-        </div>
+        </Space>
+        <Button type="dashed" onClick={handleOk}>
+          OK
+        </Button>
       </Modal>
     </div>
   );
