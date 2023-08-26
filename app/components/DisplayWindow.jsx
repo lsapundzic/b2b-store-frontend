@@ -1,13 +1,13 @@
 "use client";
 
-import useFilterProducts from "@/app/hooks/useFilterProducts";
+import useFilter from "@/app/hooks/useFilter";
 import {Col, Row} from "antd";
 import ProductCard from "@/app/components/ProductCard";
 
-export default function ProductsDisplayWindow({data, category}) {
+export default function DisplayWindow({data, category}) {
 
     // Hook for filtering data
-    const {filteredData} = useFilterProducts(data, category);
+    const {filteredData} = useFilter(data, category);
 
     return (
         <>

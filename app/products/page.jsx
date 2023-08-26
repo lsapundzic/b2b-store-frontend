@@ -3,7 +3,7 @@
 import {useContext} from "react";
 import MainLayout from "../MainLayout.jsx";
 import {PageCategoryContext} from "../layout.js";
-import ProductsDisplayWindow from "@/app/components/ProductsDisplayWindow";
+import DisplayWindow from "@/app/components/DisplayWindow";
 import {Col, Row} from "antd";
 import {useDataFetch} from "@/app/hooks/useDataFetch";
 import {ContentTypeEntriesURL} from "@/app/utils/buildURL";
@@ -27,7 +27,7 @@ function Products() {
                 {isLoading || !data ? (
                     <CustomSkeleton/>
                 ) : (
-                    <ProductsDisplayWindow data={data} category={pageCategory} />
+                    <DisplayWindow data={data} category={pageCategory} />
                 )}
             </div>
         </MainLayout>

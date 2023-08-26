@@ -5,7 +5,7 @@ import {useContext} from "react";
 
 // Project
 import {pageStyle} from "./styles/globalStyles";
-import ProductsDisplayWindow from "@/app/components/ProductsDisplayWindow.jsx";
+import DisplayWindow from "@/app/components/DisplayWindow.jsx";
 
 // Project
 import MainLayout from "./MainLayout.jsx";
@@ -71,7 +71,7 @@ export default function Homepage() {
                         {isLoading || !data ? (
                             <CustomSkeleton/>
                         ) : (
-                            <ProductsDisplayWindow data={data} category={pageCategory}/>
+                            <DisplayWindow data={data} category={pageCategory}/>
                         )}
                     </Col>
                 </Row>
@@ -83,7 +83,7 @@ export default function Homepage() {
                         {isLoading || !data ? (
                             <CustomSkeleton/>
                         ) : (
-                            <ProductsDisplayWindow data={data} category={"microscopes"}/>
+                            <DisplayWindow data={data} category={"microscopes"}/>
                         )}
                     </Col>
                 </Row>

@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-export default function useFilterProducts(data, category) {
+export default function useFilter(data, category) {
     const [filteredData, setFilteredData] = useState([]);
 
 
@@ -14,10 +14,9 @@ export default function useFilterProducts(data, category) {
             setFilteredData(data.items);
         } else {
             const filterByCategory = data.items.filter((item) => item.fields.category === category);
-
             setFilteredData(filterByCategory);
         }
-    }, [category]);
+    }, [data, category]);
 
     return {filteredData};
 }
