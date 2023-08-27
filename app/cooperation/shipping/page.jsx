@@ -3,7 +3,7 @@
 import {useContext} from "react";
 import {useDataFetch} from "../../hooks/useDataFetch.jsx";
 import {pageStyle} from "../../styles/globalStyles.js";
-import {CAREERS_ID, SHIPPING_ID, SingleEntryURL} from "../../utils/buildURL";
+import {SHIPPING_ID, SingleEntryURL} from "../../utils/buildURL";
 import MainLayout from "../../MainLayout.jsx";
 import {PageCategoryContext} from "../../layout.js";
 import CustomSkeleton from "../../components/CustomSkeleton.jsx";

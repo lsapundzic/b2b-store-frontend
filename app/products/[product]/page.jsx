@@ -91,7 +91,7 @@ export default function Product({ params }) {
                   <Col xs={0} sm={0} md={0} lg={7} xl={5}>
                     <Space direction="vertical" size={"large"}>
                       <PerksCard />
-                      <Button>
+                      <Button style={{width: "100%"}}>
                         <DownloadOutlined />
                         Download Catalogue
                       </Button>
