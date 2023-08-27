@@ -17,8 +17,11 @@ import {
     DashboardOutlined,
     FireOutlined,
     ReconciliationOutlined,
+    RocketOutlined,
     ShareAltOutlined,
-    ShopOutlined
+    ShopOutlined,
+    ShoppingCartOutlined,
+    AuditOutlined,
 } from "@ant-design/icons";
 
 //AntD components
@@ -30,7 +33,7 @@ const menuItems = [
     {
         label: "Products",
         key: "products",
-        icon: <ShopOutlined/>,
+        icon: <ShoppingCartOutlined/>,
         children: [
             {
                 label: <Link href="/products">Equipment</Link>,
@@ -61,14 +64,24 @@ const menuItems = [
         ],
     },
     {
-        label: "Cooperation",
-        key: "cooperation",
+        label: "Support",
+        key: "support",
         icon: <ShopOutlined/>,
         children: [
             {
-                label: <Link href="/cooperation/distributors">Distributors</Link>,
+                label: <Link href="/support/distributors">Distributors</Link>,
                 key: "distributors",
                 icon: <ShareAltOutlined/>,
+            },
+            {
+                label: <Link href="/support/shipping">Shipping</Link>,
+                key: "shipping",
+                icon: <RocketOutlined/>,
+            },
+            {
+                label: <Link href="/support/shipping">Terms & Conditions</Link>,
+                key: "terms-conditions",
+                icon: <AuditOutlined />,
             },
         ]
     },
