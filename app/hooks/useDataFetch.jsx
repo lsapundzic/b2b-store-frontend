@@ -7,38 +7,38 @@ will be passed to variables and will not be overwritten once fetch is complete.
 2. It is used for controling placeholder UI elements
 */
 
-import { useState, useEffect } from "react";
+import {useEffect, useState} from "react";
 
 export function useDataFetch(url) {
-  const [data, setData] = useState(null);
-  const [isLoading, setLoading] = useState(true);
+    const [data, setData] = useState(null);
+    const [isLoading, setLoading] = useState(true);
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch(url);
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const response = await fetch(url);
 
-        if (!response.ok) {
-          setData(false);
-          throw new Error(
-            `useDataRetriever msg: failed to fetch data. HTTP response status: ${response.status}`
-          );
+                if (!response.ok) {
+                    setData(false);
+                    throw new Error(
+                        `useDataRetriever msg: failed to fetch data. HTTP response status: ${response.status}`
+                    );
+                }
+
+                const fetchedData = await response.json();
+                setData(fetchedData);
+                setLoading(false);
+                console.log("useDataFetch msg: data fetched: ", fetchedData);
+            } catch (error) {
+                console.error(
+                    "useDataFetch msg: general error occurred while fetching data. Message: ",
+                    error
+                );
+            }
         }
 
-        const fetchedData = await response.json();
-        setData(fetchedData);
-        setLoading(false);
-        console.log("useDataFetch msg: data fetched: ", fetchedData);
-      } catch (error) {
-        console.error(
-          "useDataFetch msg: general error occurred while fetching data. Message: ",
-          error
-        );
-      }
-    }
+        fetchData();
+    }, [url]);
 
-    fetchData();
-  }, [url]);
-
-  return { data, isLoading };
+    return {data, isLoading};
 }

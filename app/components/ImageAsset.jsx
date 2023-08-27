@@ -2,9 +2,9 @@
 Fetching an asset from Contentful is convoluted. 
 - Entries with which asset is associated with only contain assetID, not the direct URL
 - AssetID is used create another URL that fetches that specific asset data
-- Inside of the asset data is the URL to the actual image
+- Inside the asset data is the URL to the actual image
 
-Asset retreival procedure ends up being the same like for an entry. Get the ID, generate URL, fetch data according to the url
+Asset retrieval procedure ends up being the same like for an entry. Get the ID, generate URL, fetch data according to the url
 
 ! There is a way to create image URL directly without fetching, but parameters are unclear or inconvenient
 */
@@ -12,31 +12,31 @@ Asset retreival procedure ends up being the same like for an entry. Get the ID, 
 "use client";
 
 // React imports
-import { useDataFetch } from "../hooks/useDataFetch.jsx";
+import {useDataFetch} from "../hooks/useDataFetch.jsx";
 
 // Project imports
-import { AssetURL } from "../utils/buildURL.jsx";
+import {AssetURL} from "../utils/buildURL.jsx";
 
 // AntD imports
-import { Image, Skeleton, Empty } from "antd";
+import {Image} from "antd";
 import CustomSkeleton from "./CustomSkeleton.jsx";
 import CustomEmpty from "./CustomEmpty.jsx";
 
-export default function ImageAsset({ assetID, width, height, preview }) {
-  const { data, isLoading } = useDataFetch(AssetURL(assetID));
+export default function ImageAsset({assetID, width, height, preview}) {
+    const {data, isLoading} = useDataFetch(AssetURL(assetID));
 
-  if (isLoading) return <CustomSkeleton />;
-  if (!data) return <CustomEmpty />;
+    if (isLoading) return <CustomSkeleton/>;
+    if (!data) return <CustomEmpty/>;
 
-  return (
-    <div>
-      <Image
-        src={data.fields.file.url}
-        alt={data.fields.description}
-        width={width}
-        height={height}
-        preview={preview}
-      />
-    </div>
-  );
+    return (
+        <div>
+            <Image
+                src={data.fields.file.url}
+                alt={data.fields.description}
+                width={width}
+                height={height}
+                preview={preview}
+            />
+        </div>
+    );
 }
