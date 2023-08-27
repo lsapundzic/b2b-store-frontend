@@ -68,17 +68,17 @@ const menuItems = [
     icon: <ShopOutlined />,
     children: [
       {
-        label: <Link href="/support/distributors">Distributors</Link>,
+        label: <Link href="/cooperation/distributors">Distributors</Link>,
         key: "distributors",
         icon: <ShareAltOutlined />,
       },
       {
-        label: <Link href="/support/shipping">Shipping</Link>,
+        label: <Link href="/cooperation/shipping">Shipping</Link>,
         key: "shipping",
         icon: <RocketOutlined />,
       },
       {
-        label: <Link href="/support/terms">Terms & Conditions</Link>,
+        label: <Link href="/cooperation/terms">Terms & Conditions</Link>,
         key: "terms-conditions",
         icon: <AuditOutlined />,
       },
@@ -95,7 +95,7 @@ const menuItems = [
         icon: <CoffeeOutlined />,
       },
       {
-        label: <Link href="/company/about">Careers</Link>,
+        label: <Link href="/company/careers">Careers</Link>,
         key: "careers",
         icon: <CoffeeOutlined />,
       },
