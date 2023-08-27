@@ -48,15 +48,15 @@ export default function Homepage() {
                             </div>
                             <div>
                                 <Image
-                                    src="https://placekitten.com/1800/500"
+                                    src="https://placehold.co/1800x500"
                                     alt="A placeholder image"
                                     preview={false}
                                 />
                             </div>
                             <div>
                                 <Image
-                                    alt="A placeholder image"
                                     src="https://placehold.co/1800x500"
+                                    alt="A placeholder image"
                                     preview={false}
                                 />
                             </div>

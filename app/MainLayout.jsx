@@ -33,7 +33,7 @@ export default function MainLayout({children}) {
                 <Header style={headerStyle}>
                     <Navbar/>
                 </Header>
-                <CustomBanner bannerContent={""}/>
+                {/*<CustomBanner bannerContent={""}/>*/}
                 <Content>{children}</Content>
                 <Footer>
                     <CustomFooter/>

@@ -30,12 +30,7 @@ export default function Distributors() {
           <CustomSkeleton />
         ) : (
           <>
-            <CustomTabs
-              rightTitle={"Become a Distributor"}
-              rightDetails={data.fields.body}
-              leftTitle={"Find Distributors"}
-              leftDetails={"List of distributors"}
-            />
+            <h1>Empty</h1>
           </>
         )}
       </div>
