@@ -1,3 +1,5 @@
+// The header has been disabled. Alternative and more streamlined UI is being attempted.
+
 "use client";
 
 import useWindowWidth from "@/app/hooks/useWindowWidth";
@@ -14,11 +16,11 @@ const customHeaderStyle = {
 };
 
 export default function CustomHeader() {
-    // Window width listener
-    let {width} = useWindowWidth();
-
     // Accessing global category context
     let {pageCategory, setPageCategory} = useContext(PageCategoryContext);
+
+    // Window width listener
+    let {width} = useWindowWidth();
 
     // Changing category / key
     const changeCategory = () => {

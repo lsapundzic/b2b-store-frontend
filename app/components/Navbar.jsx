@@ -1,9 +1,13 @@
 "use client";
 
-// React components
+// React
 import {useContext} from "react";
 import {PageCategoryContext} from "../layout.js";
 import Link from "next/link";
+import Image from "next/image";
+
+// Project
+import useWindowWidth from "@/app/hooks/useWindowWidth";
 
 // AntD icons
 import {
@@ -20,6 +24,8 @@ import {
 
 //AntD components
 import {Col, Menu, Row} from "antd";
+
+
 
 // Object from which the navbar is generated
 const menuItems = [
@@ -92,21 +98,37 @@ export default function Navbar() {
     */
     let {pageCategory, setPageCategory} = useContext(PageCategoryContext);
 
-    const onClick = (e) => {
+    // Window width listener
+    let {width} = useWindowWidth();
+
+    const onNavClick = (e) => {
         setPageCategory(e.key);
     };
 
+    const onLogoClick = () => {
+        setPageCategory("home")
+    }
+
     return (
         <nav>
-            <Row>
-                <Col span={3}>
-                    <div style={{width: "60px", height: "60px", backgroundColor: "blue"}}>
-                        ABC CBA
-                    </div>
+            <Row align="top">
+
+                {/* Logo space */}
+                <Col flex="110px">
+                    <Link href="/" onClick={onLogoClick}>
+                        <Image
+                            src="/icons/png/logo-no-background.png"
+                            alt="Company Logo"
+                            width={89}
+                            height={"57"}
+                        />
+                    </Link>
                 </Col>
-                <Col span={21}>
+
+                {/* Navbar space */}
+                <Col flex="auto">
                     <Menu
-                        onClick={onClick}
+                        onClick={onNavClick}
                         selectedKeys={[pageCategory]}
                         mode="horizontal"
                         items={menuItems}

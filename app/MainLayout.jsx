@@ -1,12 +1,10 @@
 "use client";
 
 // React
-import {React} from "react";
 
 import theme from "../theme/themeConfig.js";
 
 // Project
-import CustomHeader from "@/app/components/CustomHeader";
 import Navbar from "@/app/components/Navbar";
 import CustomBanner from "@/app/components/CustomBanner";
 import CustomFooter from "@/app/components/CustomFooter";
@@ -30,7 +28,7 @@ export default function MainLayout({children}) {
     return (
         <ConfigProvider theme={theme}>
             <Layout style={globalLayoutStyle}>
-                <CustomHeader/>
+                {/*<CustomHeader/>*/}
                 {/* Force-changed style, otherwise it leaves a black padding box on both sides of the navbar */}
                 <Header style={headerStyle}>
                     <Navbar/>
