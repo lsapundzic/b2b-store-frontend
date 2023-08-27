@@ -29,7 +29,7 @@ export default function About() {
                             <Col xs={0} sm={0} md={24}>
                                 <Image
                                     alt="Placeholder team picture"
-                                    src="https://placekitten.com/1800/400"
+                                    src="https://placehold.co/1800x500"
                                     // width={1800}
                                     // height={600}
                                     preview={false}

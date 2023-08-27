@@ -121,6 +121,7 @@ export default function Product({ params }) {
                 <Row gutter={[16, 24]}>
                   <Col xs={0} sm={24}>
                     <Divider orientation="left">Similar Products</Divider>
+
                   </Col>
                 </Row>
               </Content>
