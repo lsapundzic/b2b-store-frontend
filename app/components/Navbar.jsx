@@ -44,21 +44,21 @@ const menuItems = [{
     },],
 }, {
     label: "Working Together", key: "cooperation", icon: <InteractionOutlined/>, children: [{
-        label: <Link href="/cooperation/distributors">Distributors</Link>,
+        label: <Link href="/app/cooperation/distributors">Distributors</Link>,
         key: "distributors",
         icon: <ShareAltOutlined/>,
     }, {
-        label: <Link href="/cooperation/shipping">Shipping</Link>, key: "shipping", icon: <RocketOutlined/>,
+        label: <Link href="/app/cooperation/shipping">Shipping</Link>, key: "shipping", icon: <RocketOutlined/>,
     }, {
-        label: <Link href="/cooperation/terms">Terms & Conditions</Link>,
+        label: <Link href="/app/cooperation/terms">Terms & Conditions</Link>,
         key: "terms-conditions",
         icon: <AuditOutlined/>,
     },],
 }, {
     label: "Company", key: "company", icon: <ShopOutlined/>, children: [{
-        label: <Link href="/company/about">About Us</Link>, key: "about", icon: <CoffeeOutlined/>,
+        label: <Link href="/app/company/about">About Us</Link>, key: "about", icon: <CoffeeOutlined/>,
     }, {
-        label: <Link href="/company/careers">Careers</Link>, key: "careers", icon: <CoffeeOutlined/>,
+        label: <Link href="/app/company/careers">Careers</Link>, key: "careers", icon: <CoffeeOutlined/>,
     },],
 },
 
