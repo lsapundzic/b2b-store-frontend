@@ -10,7 +10,7 @@ export default function useFilter(data, category) {
             return; // Return early if data is not available
         }
 
-        if (category === "products" || category === "default" || category === "home") {
+        if (category === "equipment" || category === "default" || category === "home") {
             setFilteredData(data.items);
         } else {
             const filterByCategory = data.items.filter((item) => item.fields.category === category);

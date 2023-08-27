@@ -1,16 +1,16 @@
 "use client";
 
 import {useContext} from "react";
-import {useDataFetch} from "../hooks/useDataFetch.jsx";
-import {pageStyle} from "../styles/globalStyles.js";
-import {ABOUT_ID, SingleEntryURL} from "../utils/buildURL";
-import MainLayout from "../MainLayout.jsx";
-import {PageCategoryContext} from "../layout.js";
-import CustomSkeleton from "../components/CustomSkeleton.jsx";
-import CustomBanner from "../components/CustomBanner.jsx";
-import TeamMembers from "../components/fragments/TeamMembers.jsx";
+import {useDataFetch} from "../../hooks/useDataFetch.jsx";
+import {pageStyle} from "../../styles/globalStyles.js";
+import {ABOUT_ID, SingleEntryURL} from "../../utils/buildURL";
+import MainLayout from "../../MainLayout.jsx";
+import {PageCategoryContext} from "../../layout.js";
+import CustomSkeleton from "../../components/CustomSkeleton.jsx";
+import CustomBanner from "../../components/CustomBanner.jsx";
+import TeamMembers from "../../components/fragments/TeamMembers.jsx";
 import {Col, Divider, Image, Row} from "antd";
-import Certificates from "../components/fragments/Certificates.jsx";
+import Certificates from "../../components/fragments/Certificates.jsx";
 
 export default function About() {
     let {pageCategory} = useContext(PageCategoryContext);

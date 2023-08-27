@@ -12,36 +12,34 @@ import useWindowWidth from "@/app/hooks/useWindowWidth";
 // AntD icons
 import {
     AimOutlined,
-    ApartmentOutlined,
-    BookOutlined,
     CoffeeOutlined,
     CustomerServiceOutlined,
     DashboardOutlined,
-    ExperimentOutlined,
     FireOutlined,
-    ShopOutlined,
+    ReconciliationOutlined,
+    ShareAltOutlined,
+    ShopOutlined
 } from "@ant-design/icons";
 
 //AntD components
 import {Col, Menu, Row} from "antd";
 
 
-
 // Object from which the navbar is generated
 const menuItems = [
     {
-        label: "Store",
-        key: "store",
+        label: "Products",
+        key: "products",
         icon: <ShopOutlined/>,
         children: [
             {
-                label: <Link href="/products">All Products</Link>,
-                key: "products",
-                icon: <BookOutlined/>,
+                label: <Link href="/products">Equipment</Link>,
+                key: "equipment",
+                icon: <ReconciliationOutlined/>,
             },
             {
                 type: "group",
-                label: "Equipment",
+                // label: "Equipment",
                 children: [
                     {
                         label: <Link href="/products">Microscopes</Link>,
@@ -60,29 +58,34 @@ const menuItems = [
                     },
                 ],
             },
-            {
-                type: "group",
-                label: "Glassware",
-                children: [
-                    {
-                        label: <Link href="/products">Flasks</Link>,
-                        key: "flasks",
-                        icon: <ExperimentOutlined/>,
-                    },
-                ],
-            },
         ],
     },
     {
-        label: <Link href="/distributors">Distributors</Link>,
-        key: "distributors",
-        icon: <ApartmentOutlined/>,
+        label: "Cooperation",
+        key: "cooperation",
+        icon: <ShopOutlined/>,
+        children: [
+            {
+                label: <Link href="/cooperation/distributors">Distributors</Link>,
+                key: "distributors",
+                icon: <ShareAltOutlined/>,
+            },
+        ]
     },
     {
-        label: <Link href="/about">About</Link>,
-        key: "about",
-        icon: <CoffeeOutlined/>,
+        label: "Company",
+        key: "company",
+        icon: <ShopOutlined/>,
+        children: [
+            {
+                label: <Link href="/company/about">About Us</Link>,
+                key: "about",
+                icon: <CoffeeOutlined/>,
+            },
+        ]
     },
+
+
     {
         label: <Link href="/contact">Contact Us</Link>,
         key: "contact",
