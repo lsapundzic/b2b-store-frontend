@@ -78,7 +78,7 @@ const menuItems = [
         icon: <RocketOutlined />,
       },
       {
-        label: <Link href="/support/shipping">Terms & Conditions</Link>,
+        label: <Link href="/support/terms">Terms & Conditions</Link>,
         key: "terms-conditions",
         icon: <AuditOutlined />,
       },
@@ -92,6 +92,11 @@ const menuItems = [
       {
         label: <Link href="/company/about">About Us</Link>,
         key: "about",
+        icon: <CoffeeOutlined />,
+      },
+      {
+        label: <Link href="/company/about">Careers</Link>,
+        key: "careers",
         icon: <CoffeeOutlined />,
       },
     ],
