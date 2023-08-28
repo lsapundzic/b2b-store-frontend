@@ -4,7 +4,7 @@ isLoading Use State has two purposes.
 1. Until the data is fetched there needs to be a placeholder, otherwise only initial state 
 will be passed to variables and will not be overwritten once fetch is complete. 
 
-2. It is used for controling placeholder UI elements
+2. It is used for controlling placeholder UI elements
 */
 
 import {useEffect, useState} from "react";
