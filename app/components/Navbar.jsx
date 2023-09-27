@@ -7,7 +7,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Project
-import useWindowWidth from "@/app/hooks/useWindowWidth";
 
 // AntD icons
 import {
@@ -119,7 +118,7 @@ export default function Navbar() {
     let {pageCategory, setPageCategory} = useContext(PageCategoryContext);
 
     // Window width listener
-    // let {width} = useWindowWidth();
+    let {width} = useWindowWidth();
 
     const onNavClick = (e) => {
         setPageCategory(e.key);
