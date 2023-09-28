@@ -5,8 +5,8 @@ import {useContext} from "react";
 import {PageCategoryContext} from "../layout.js";
 import Link from "next/link";
 import Image from "next/image";
+import useWindowWidth from "@/app/hooks/useWindowWidth";
 
-// Project
 
 // AntD icons
 import {
@@ -27,6 +27,7 @@ import {
 
 //AntD components
 import {Col, Menu, Row} from "antd";
+import Search from "antd/es/input/Search";
 
 // Object from which the navbar is generated
 const menuItems = [
@@ -117,6 +118,7 @@ export default function Navbar() {
         */
     let {pageCategory, setPageCategory} = useContext(PageCategoryContext);
 
+    // TODO: It is possible that this hook is causing errors on Vercel
     // Window width listener
     let {width} = useWindowWidth();
 
@@ -131,7 +133,8 @@ export default function Navbar() {
     return (
         <nav>
             <Row align="top">
-                {/* Logo space */}
+
+                {/* LOGO SPACE */}
                 <Col flex="110px">
                     <Link href="/" onClick={onLogoClick}>
                         <Image
@@ -143,7 +146,7 @@ export default function Navbar() {
                     </Link>
                 </Col>
 
-                {/* Navbar space */}
+                {/* NAVBAR SPACE */}
                 <Col flex="auto">
                     <Menu
                         onClick={onNavClick}
@@ -152,7 +155,21 @@ export default function Navbar() {
                         items={menuItems}
                     />
                 </Col>
-                <Col></Col>
+
+                {/*
+                Future search bar location
+                */}
+                <Col>
+                    <div>
+                        <Search
+                            placeholder="input product name"
+                            enterButton="Search catalog"
+                            size="large"
+                            // suffix={suffix}
+                            // onSearch={onSearch}
+                        />
+                    </div>
+                </Col>
             </Row>
         </nav>
     );
