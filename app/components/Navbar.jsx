@@ -157,13 +157,13 @@ export default function Navbar() {
                 </Col>
 
                 {/*
-                Future search bar location
+                Search bar location
                 */}
                 <Col>
                     <div>
                         <Search
                             placeholder="input product name"
-                            enterButton="Search catalog"
+                            enterButton="Search"
                             size="large"
                             // suffix={suffix}
                             // onSearch={onSearch}
