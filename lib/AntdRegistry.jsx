@@ -1,4 +1,4 @@
-// Ant Design recommendation for use with NextJS to prevent FOUC (Flash of Unstyled Content)
+// Ant Design recommendation for use with Next.js to prevent FOUC (Flash of Unstyled Content)
 
 "use client";
 
