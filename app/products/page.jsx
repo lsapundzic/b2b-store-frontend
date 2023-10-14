@@ -27,7 +27,7 @@ function Products() {
                 {isLoading || !data ? (
                     <CustomSkeleton/>
                 ) : (
-                    <DisplayWindow data={data} category={pageCategory} />
+                    <DisplayWindow data={data} category={pageCategory}/>
                 )}
             </div>
         </MainLayout>
