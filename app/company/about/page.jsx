@@ -14,8 +14,11 @@ import Certificates from "../../components/fragments/Certificates.jsx";
 
 export default function About() {
   let { pageCategory } = useContext(PageCategoryContext);
+
+  // Get page name and display it
   console.log(`${pageCategory} rendered`);
 
+  // Custom hook for fetching data
   const { data, isLoading } = useFetchData(SingleEntryURL(ABOUT_ID));
 
   return (
