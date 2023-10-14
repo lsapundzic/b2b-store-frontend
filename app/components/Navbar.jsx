@@ -153,21 +153,6 @@ export default function Navbar() {
                         items={menuItems}
                     />
                 </Col>
-
-                {/*
-                Search bar location
-                */}
-                {/* <Col>
-                    <div>
-                        <Search
-                            placeholder="input product name"
-                            enterButton="Search"
-                            size="large"
-                            // suffix={suffix}
-                            // onSearch={onSearch}
-                        />
-                    </div>
-                </Col> */}
             </Row>
         </nav>
     );
