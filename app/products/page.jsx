@@ -5,7 +5,7 @@ import MainLayout from "../MainLayout.jsx";
 import {PageCategoryContext} from "../layout.js";
 import DisplayWindow from "@/app/components/DisplayWindow";
 import {Col, Row} from "antd";
-import {useDataFetch} from "@/app/hooks/useDataFetch";
+import {useFetchData} from "@/app/hooks/useFetchData";
 import {ContentTypeEntriesURL} from "@/app/utils/buildURL";
 import {pageStyle} from "@/app/styles/globalStyles";
 import CustomSkeleton from "@/app/components/CustomSkeleton";
@@ -17,7 +17,7 @@ function Products() {
     console.log(`${pageCategory} rendered`);
 
     // Custom hook for getting data
-    const {data, isLoading} = useDataFetch(
+    const {data, isLoading} = useFetchData(
         ContentTypeEntriesURL("product")
     );
 

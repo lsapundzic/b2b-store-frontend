@@ -1,7 +1,7 @@
 "use client";
 
 import {useContext} from "react";
-import {useDataFetch} from "../../hooks/useDataFetch.jsx";
+import {useFetchData} from "../../hooks/useFetchData.jsx";
 import {pageStyle} from "../../styles/globalStyles.js";
 import {SingleEntryURL, TERMS_ID} from "../../utils/buildURL";
 import MainLayout from "../../MainLayout.jsx";
@@ -15,7 +15,7 @@ export default function Shipping() {
     let {pageCategory} = useContext(PageCategoryContext);
     console.log(`${pageCategory} rendered`);
 
-    const {data, isLoading} = useDataFetch(SingleEntryURL(TERMS_ID));
+    const {data, isLoading} = useFetchData(SingleEntryURL(TERMS_ID));
 
     return (<MainLayout>
         <div style={pageStyle}>

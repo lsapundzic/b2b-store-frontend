@@ -12,7 +12,7 @@ Asset retrieval procedure ends up being the same like for an entry. Get the ID, 
 "use client";
 
 // React imports
-import {useDataFetch} from "../hooks/useDataFetch.jsx";
+import {useFetchData} from "../hooks/useFetchData.jsx";
 
 // Project imports
 import {AssetURL} from "../utils/buildURL.jsx";
@@ -23,7 +23,7 @@ import CustomSkeleton from "./CustomSkeleton.jsx";
 import CustomEmpty from "./CustomEmpty.jsx";
 
 export default function ImageAsset({assetID, width, height, preview}) {
-    const {data, isLoading} = useDataFetch(AssetURL(assetID));
+    const {data, isLoading} = useFetchData(AssetURL(assetID));
 
     if (isLoading) return <CustomSkeleton/>;
     if (!data) return <CustomEmpty/>;

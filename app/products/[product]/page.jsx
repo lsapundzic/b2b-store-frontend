@@ -7,7 +7,7 @@
 "use client";
 
 // React
-import {useDataFetch} from "../../hooks/useDataFetch";
+import {useFetchData} from "../../hooks/useFetchData";
 
 // Project
 import {pageStyle, textStyle} from "../../styles/globalStyles.js";
@@ -34,7 +34,7 @@ export default function Product({params}) {
     const {product} = params;
 
     // Fetch entry data
-    const {data, isLoading} = useDataFetch(SingleEntryURL(product));
+    const {data, isLoading} = useFetchData(SingleEntryURL(product));
 
     console.log(`Product page rendered`);
 

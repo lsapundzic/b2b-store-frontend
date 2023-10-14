@@ -13,7 +13,7 @@ import {PageCategoryContext} from "./layout.js";
 
 // AntD
 import {Carousel, Col, Divider, Image, Row, Typography} from "antd";
-import {useDataFetch} from "@/app/hooks/useDataFetch";
+import {useFetchData} from "@/app/hooks/useFetchData";
 import {ContentTypeEntriesURL} from "@/app/utils/buildURL";
 import CustomSkeleton from "@/app/components/CustomSkeleton";
 
@@ -25,7 +25,7 @@ export default function Homepage() {
     console.log(`${pageCategory} rendered`);
 
     // Custom hook for getting data
-    const {data, isLoading} = useDataFetch(
+    const {data, isLoading} = useFetchData(
         ContentTypeEntriesURL("product")
     );
 

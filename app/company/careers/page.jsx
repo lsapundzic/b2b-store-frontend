@@ -1,7 +1,7 @@
 "use client";
 
 import {useContext} from "react";
-import {useDataFetch} from "../../hooks/useDataFetch.jsx";
+import {useFetchData} from "../../hooks/useFetchData.jsx";
 import {pageStyle} from "../../styles/globalStyles.js";
 import {CAREERS_ID, SingleEntryURL} from "../../utils/buildURL";
 import MainLayout from "../../MainLayout.jsx";
@@ -18,7 +18,7 @@ export default function Careers() {
     let {pageCategory} = useContext(PageCategoryContext);
     console.log(`${pageCategory} rendered`);
 
-    const {data, isLoading} = useDataFetch(SingleEntryURL(CAREERS_ID));
+    const {data, isLoading} = useFetchData(SingleEntryURL(CAREERS_ID));
 
     return (
         <MainLayout>

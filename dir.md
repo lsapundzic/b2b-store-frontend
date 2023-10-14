@@ -36,7 +36,7 @@ b2b-ecommerce
 │  │  └─ terms
 │  │     └─ page.jsx
 │  ├─ hooks
-│  │  ├─ useDataFetch.jsx
+│  │  ├─ useFetchData.jsx
 │  │  ├─ useFilter.jsx
 │  │  └─ useWindowWidth.jsx
 │  ├─ icon.png
