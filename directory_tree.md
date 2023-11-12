@@ -58,27 +58,10 @@ b2b-ecommerce
 ├─ package.json
 ├─ public
 │  ├─ icons
-│  │  ├─ png
-│  │  │  ├─ logo-black.png
-│  │  │  ├─ logo-color.png
-│  │  │  ├─ logo-no-background.png
-│  │  │  ├─ logo-reduced.png
-│  │  │  └─ logo-white.png
-│  │  ├─ sotla-lab-low-resolution-logo-color-on-transparent-background.png
-│  │  └─ svg
 │  │     ├─ logo-black.svg
 │  │     ├─ logo-color.svg
 │  │     ├─ logo-no-background.svg
 │  │     └─ logo-white.svg
-│  └─ images
-│     ├─ about
-│     │  └─ awards
-│     │     ├─ certificate.jpg
-│     │     ├─ ce_certificate.jpg
-│     │     └─ iso.jpg
-│     ├─ contact
-│     └─ home
-│        └─ carousel-1.jpg
 ├─ README.md
 └─ theme
 └─ themeConfig.js
