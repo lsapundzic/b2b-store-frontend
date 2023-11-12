@@ -6,7 +6,7 @@ import { useContext } from "react";
 
 // Project
 import { pageStyle } from "../../styles/globalStyles.js";
-import { DISTRIBUTORS_ID, SingleEntryURL } from "../../utils/buildURL";
+import { SingleEntryURL } from "../../utils/buildURL";
 import MainLayout from "../../MainLayout.jsx";
 import { PageCategoryContext } from "../../layout.js";
 import CustomSkeleton from "../../components/CustomSkeleton.jsx";
@@ -14,6 +14,7 @@ import CustomSkeleton from "../../components/CustomSkeleton.jsx";
 // AntD
 import { Typography } from "antd";
 import CustomTabs from "../../components/CustomTabs.jsx";
+import { DISTRIBUTORS_ID } from "@/app/utils/pageID";
 
 const { Title, Paragraph } = Typography;
 

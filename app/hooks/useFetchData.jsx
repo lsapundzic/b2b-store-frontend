@@ -21,7 +21,7 @@ export function useFetchData(url) {
         if (!response.ok) {
           setData(false);
           throw new Error(
-            `Developer error message: failed to fetch data. HTTP response status: ${response.status}`
+            `Developer error message: failed to fetch data. HTTP response status: ${response.status}`,
           );
         }
 
@@ -32,7 +32,7 @@ export function useFetchData(url) {
       } catch (error) {
         console.error(
           "useFetchData msg: general error occurred while fetching data. Message: ",
-          error
+          error,
         );
       }
     }
