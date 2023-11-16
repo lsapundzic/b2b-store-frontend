@@ -52,7 +52,6 @@ export default function About() {
               <Col span={24}>
                 <CustomBanner bannerContent={""} />
                 <Divider orientation="left">Certificates</Divider>
-                {/*  TODO: Delete the certificates, they are entirely irrelevant, or put them somewhere else*/}
                 <Certificates />
               </Col>
             </Row>
