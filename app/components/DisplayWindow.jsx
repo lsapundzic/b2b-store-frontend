@@ -8,6 +8,7 @@ export default function DisplayWindow({ data, category }) {
   // Hook for filtering data
   const { filteredData } = useFilter(data, category);
 
+  // Trivial comment to publish the branch
   return (
     <div>
       <Row gutter={[32, 64]}>
