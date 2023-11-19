@@ -6,11 +6,11 @@ import { pageStyle } from "../../styles/globalStyles.js";
 import { SingleEntryURL } from "../../utils/buildURL";
 import MainLayout from "../../MainLayout.jsx";
 import { PageCategoryContext } from "../../layout.js";
-import CustomSkeleton from "../../components/CustomSkeleton.jsx";
-import CustomBanner from "../../components/CustomBanner.jsx";
-import TeamMembers from "../../components/fragments/TeamMembers.jsx";
+import CustomSkeleton from "../../../components/CustomSkeleton";
+import CustomBanner from "../../../components/CustomBanner.jsx";
+import TeamMembers from "../../../components/fragments/TeamMembers.jsx";
 import { Col, Divider, Image, Row } from "antd";
-import Certificates from "../../components/fragments/Certificates.jsx";
+import Certificates from "../../../components/fragments/Certificates.jsx";
 import { ABOUT_ID } from "@/app/utils/pageID";
 
 export default function About() {
