@@ -29,6 +29,11 @@ import SearchBar from "@/components/SearchBar";
 // Object from which the navbar is generated
 const menuItems = [
   {
+    label: <Link href="/company/about">About</Link>,
+    key: "about",
+    icon: <CoffeeOutlined />,
+  },
+  {
     label: "Products",
     key: "products",
     icon: <ShoppingCartOutlined />,
@@ -61,20 +66,7 @@ const menuItems = [
     ],
   },
   {
-    label: "Company",
-    key: "company",
-    icon: <ShopOutlined />,
-    children: [
-      {
-        label: <Link href="/company/about">About Us</Link>,
-        key: "about",
-        icon: <CoffeeOutlined />,
-      },
-    ],
-  },
-
-  {
-    label: <Link href="/contact">Contact Us</Link>,
+    label: <Link href="/contact">Contact</Link>,
     key: "contact",
     icon: <CustomerServiceOutlined />,
   },
