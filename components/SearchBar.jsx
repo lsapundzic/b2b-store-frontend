@@ -8,15 +8,12 @@ const {Search} = Input;
 
 export default function SearchBar() {
     return (
-        <Space direction="vertical">
             <Search
-                placeholder="input search text"
+                placeholder="Search for products..."
                 allowClear
                 enterButton="Search"
                 size="large"
                 // onSearch={onSearch}
             />
-        </Space>
     )
-
 };

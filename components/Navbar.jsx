@@ -130,7 +130,7 @@ export default function Navbar() {
 
       {/*  SEARCH BAR SPACE */}
 
-        <Col flex="auto">
+        <Col flex="290px">
           <SearchBar/>
         </Col>
       </Row>
