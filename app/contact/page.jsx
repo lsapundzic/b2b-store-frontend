@@ -11,7 +11,7 @@ import MainLayout from "../MainLayout.jsx";
 import { PageCategoryContext } from "../layout.js";
 import CustomSkeleton from "../../components/CustomSkeleton";
 import CustomEmpty from "../../components/CustomEmpty.jsx";
-import DetailedContact from "../../components/fragments/DetailedContact.jsx";
+import DetailedContact from "../../components/DetailedContact.jsx";
 import { CONTACT_ID } from "@/app/utils/pageID";
 
 // AntD

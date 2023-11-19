@@ -10,24 +10,21 @@ import useWindowWidth from "@/app/hooks/useWindowWidth";
 // AntD icons
 import {
   AimOutlined,
-  AuditOutlined,
+
   CoffeeOutlined,
   CustomerServiceOutlined,
   DashboardOutlined,
   FireOutlined,
-  InteractionOutlined,
-  LaptopOutlined,
+
   ReconciliationOutlined,
-  RocketOutlined,
-  ShareAltOutlined,
+
   ShopOutlined,
   ShoppingCartOutlined,
 } from "@ant-design/icons";
 
 //AntD components
 import { Col, Menu, Row } from "antd";
-import Search from "antd/es/input/Search";
-import SearchBar from "@/components/fragments/SearchBar";
+import SearchBar from "@/components/SearchBar";
 
 // Object from which the navbar is generated
 const menuItems = [
@@ -129,7 +126,6 @@ export default function Navbar() {
         </Col>
 
       {/*  SEARCH BAR SPACE */}
-
         <Col flex="290px">
           <SearchBar/>
         </Col>
