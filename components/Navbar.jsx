@@ -27,6 +27,7 @@ import {
 //AntD components
 import { Col, Menu, Row } from "antd";
 import Search from "antd/es/input/Search";
+import SearchBar from "@/components/fragments/SearchBar";
 
 // Object from which the navbar is generated
 const menuItems = [
@@ -125,6 +126,12 @@ export default function Navbar() {
             mode="horizontal"
             items={menuItems}
           />
+        </Col>
+
+      {/*  SEARCH BAR SPACE */}
+
+        <Col flex="auto">
+          <SearchBar/>
         </Col>
       </Row>
     </nav>
