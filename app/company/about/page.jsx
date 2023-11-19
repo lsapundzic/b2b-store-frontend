@@ -10,7 +10,6 @@ import CustomSkeleton from "../../../components/CustomSkeleton";
 import CustomBanner from "../../../components/CustomBanner.jsx";
 import TeamMembers from "../../../components/TeamMembers.jsx";
 import { Col, Divider, Image, Row } from "antd";
-import Certificates from "../../../components/Certificates.jsx";
 import { ABOUT_ID } from "@/app/utils/pageID";
 
 export default function About() {
@@ -46,13 +45,6 @@ export default function About() {
                   componentTitle={data.fields.title}
                   componentBody={data.fields.body}
                 />
-              </Col>
-            </Row>
-            <Row>
-              <Col span={24}>
-                <CustomBanner bannerContent={""} />
-                <Divider orientation="left">Certificates</Divider>
-                <Certificates />
               </Col>
             </Row>
           </>
