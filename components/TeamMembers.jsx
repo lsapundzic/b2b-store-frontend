@@ -1,7 +1,7 @@
 "use client";
 
 // Project
-import {textStyle} from "../../app/styles/globalStyles";
+import {textStyle} from "../app/styles/globalStyles";
 
 // AntD
 import {Card, Col, Image, Row, Space, Typography} from "antd";
