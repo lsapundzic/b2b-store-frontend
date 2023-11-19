@@ -3,9 +3,9 @@
 import theme from "../theme/themeConfig.js";
 
 // Project
-import Navbar from "@/app/components/Navbar";
-import CustomBanner from "@/app/components/CustomBanner";
-import CustomFooter from "@/app/components/CustomFooter";
+import Navbar from "@/components/Navbar";
+import CustomBanner from "@/components/CustomBanner";
+import CustomFooter from "@/components/CustomFooter";
 
 // AntD
 import {ConfigProvider, Layout} from "antd";

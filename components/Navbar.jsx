@@ -2,7 +2,7 @@
 
 // React
 import { useContext } from "react";
-import { PageCategoryContext } from "../layout.js";
+import { PageCategoryContext } from "../app/layout.js";
 import Link from "next/link";
 import Image from "next/image";
 import useWindowWidth from "@/app/hooks/useWindowWidth";
@@ -63,28 +63,6 @@ const menuItems = [
     ],
   },
   {
-    label: "Working Together",
-    key: "cooperation",
-    icon: <InteractionOutlined />,
-    children: [
-      {
-        label: <Link href="/cooperation/distributors">Distributors</Link>,
-        key: "distributors",
-        icon: <ShareAltOutlined />,
-      },
-      {
-        label: <Link href="/cooperation/shipping">Shipping</Link>,
-        key: "shipping",
-        icon: <RocketOutlined />,
-      },
-      {
-        label: <Link href="/cooperation/terms">Terms & Conditions</Link>,
-        key: "terms-conditions",
-        icon: <AuditOutlined />,
-      },
-    ],
-  },
-  {
     label: "Company",
     key: "company",
     icon: <ShopOutlined />,
@@ -93,11 +71,6 @@ const menuItems = [
         label: <Link href="/company/about">About Us</Link>,
         key: "about",
         icon: <CoffeeOutlined />,
-      },
-      {
-        label: <Link href="/company/careers">Careers</Link>,
-        key: "careers",
-        icon: <LaptopOutlined />,
       },
     ],
   },

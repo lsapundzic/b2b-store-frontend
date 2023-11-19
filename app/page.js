@@ -5,7 +5,7 @@ import {useContext} from "react";
 
 // Project
 import {pageStyle} from "./styles/globalStyles";
-import DisplayWindow from "@/app/components/DisplayWindow.jsx";
+import DisplayWindow from "@/components/DisplayWindow.jsx";
 
 // Project
 import MainLayout from "./MainLayout.jsx";
@@ -15,7 +15,7 @@ import {PageCategoryContext} from "./layout.js";
 import {Carousel, Col, Divider, Image, Row, Typography} from "antd";
 import {useFetchData} from "@/app/hooks/useFetchData";
 import {ContentTypeEntriesURL} from "@/app/utils/buildURL";
-import CustomSkeleton from "@/app/components/CustomSkeleton";
+import CustomSkeleton from "@/components/CustomSkeleton";
 
 const {Title} = Typography;
 

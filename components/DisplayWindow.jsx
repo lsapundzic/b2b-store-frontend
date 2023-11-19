@@ -2,7 +2,7 @@
 
 import useFilter from "@/app/hooks/useFilter";
 import { Col, Row } from "antd";
-import ProductCard from "@/app/components/ProductCard";
+import ProductCard from "@/components/ProductCard";
 
 export default function DisplayWindow({ data, category }) {
   // Hook for filtering data
