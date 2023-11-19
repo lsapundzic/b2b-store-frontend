@@ -12,12 +12,12 @@ import { useFetchData } from "../../hooks/useFetchData";
 // Project
 import { pageStyle, textStyle } from "../../styles/globalStyles.js";
 import { SingleEntryURL } from "../../utils/buildURL.jsx";
-import ImageAsset from "../../components/ImageAsset.jsx";
-import PerksCard from "@/app/components/fragments/PerksCard.jsx";
-import CustomTabs from "@/app/components/CustomTabs.jsx";
-import CustomBanner from "@/app/components/CustomBanner.jsx";
-import CustomSkeleton from "@/app/components/CustomSkeleton";
-import CustomModal from "@/app/components/CustomModal";
+import ImageAsset from "../../../components/ImageAsset";
+import PerksCard from "../../../components/fragments/PerksCard.jsx";
+import CustomTabs from "../../../components/CustomTabs.jsx";
+import CustomBanner from "../../../components/CustomBanner.jsx";
+import CustomSkeleton from "../../../components/CustomSkeleton";
+import CustomModal from "../../../components/CustomModal";
 
 // AntD
 import { Button, Col, Divider, Row, Space, Typography } from "antd";

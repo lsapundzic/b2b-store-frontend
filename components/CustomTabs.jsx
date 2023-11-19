@@ -1,7 +1,7 @@
 "use state";
 
 // Project imports
-import {textStyle} from "../styles/globalStyles.js";
+import {textStyle} from "../app/styles/globalStyles";
 
 // AntD imports
 import {Tabs} from "antd";

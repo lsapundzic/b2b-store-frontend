@@ -4,7 +4,7 @@
 import {useState} from "react";
 
 // Project
-import {textStyle} from "../styles/globalStyles";
+import {textStyle} from "../app/styles/globalStyles";
 
 // AntD
 import {Button, Divider, Modal, Space, Typography} from "antd";

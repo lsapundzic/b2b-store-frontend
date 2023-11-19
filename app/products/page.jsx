@@ -3,13 +3,11 @@
 import {useContext} from "react";
 import MainLayout from "../MainLayout.jsx";
 import {PageCategoryContext} from "../layout.js";
-import DisplayWindow from "@/app/components/DisplayWindow";
-import {Col, Row} from "antd";
+import DisplayWindow from "../../components/DisplayWindow";
 import {useFetchData} from "@/app/hooks/useFetchData";
 import {ContentTypeEntriesURL} from "@/app/utils/buildURL";
 import {pageStyle} from "@/app/styles/globalStyles";
-import CustomSkeleton from "@/app/components/CustomSkeleton";
-import ProductCard from "@/app/components/ProductCard";
+import CustomSkeleton from "../../components/CustomSkeleton";
 
 function Products() {
     // Global page category
