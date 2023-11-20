@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import useWindowWidth from "@/app/hooks/useWindowWidth";
 
-// AntD icons
+// AntD icons AB
 import {
   AimOutlined,
 
