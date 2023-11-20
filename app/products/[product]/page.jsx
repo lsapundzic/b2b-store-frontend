@@ -13,7 +13,7 @@ import { useFetchData } from "../../hooks/useFetchData";
 import { pageStyle, textStyle } from "../../styles/globalStyles.js";
 import { SingleEntryURL } from "../../utils/buildURL.jsx";
 import ImageAsset from "../../../components/ImageAsset";
-import PerksCard from "../../../components/fragments/PerksCard.jsx";
+import PerksCard from "../../../components/PerksCard.jsx";
 import CustomTabs from "../../../components/CustomTabs.jsx";
 import CustomBanner from "../../../components/CustomBanner.jsx";
 import CustomSkeleton from "../../../components/CustomSkeleton";
