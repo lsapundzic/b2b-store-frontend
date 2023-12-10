@@ -20,14 +20,17 @@ export function useFetchData(url) {
 
         if (!response.ok) {
           setData(false);
+
           throw new Error(
             `Developer error message: failed to fetch data. HTTP response status: ${response.status}`,
           );
         }
 
         const fetchedData = await response.json();
+
         setData(fetchedData);
         setLoading(false);
+
         console.log("useFetchData msg: data fetched: ", fetchedData);
       } catch (error) {
         console.error(
