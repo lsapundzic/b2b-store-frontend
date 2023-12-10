@@ -107,12 +107,6 @@ const menuItems = [
     key: "contact",
     icon: <CustomerServiceOutlined />,
   },
-
-  {
-    label: <Link href="/">Implement Marker</Link>,
-    key: "contact",
-    icon: <CustomerServiceOutlined />,
-  },
 ];
 
 export default function Navbar() {
@@ -120,7 +114,8 @@ export default function Navbar() {
             Serves dual function:
             1. For keeping track of the navbar highlight based on the page the user is on
             2. Global context that is used as a product filter based on navigation location
-          */
+
+   */
   let { pageCategory, setPageCategory } = useContext(PageCategoryContext);
 
   // TODO: It is possible that this hook is causing errors on Vercel
