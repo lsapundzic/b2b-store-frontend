@@ -107,6 +107,12 @@ const menuItems = [
     key: "contact",
     icon: <CustomerServiceOutlined />,
   },
+
+  {
+    label: <Link href="/">Implement Marker</Link>,
+    key: "contact",
+    icon: <CustomerServiceOutlined />,
+  },
 ];
 
 export default function Navbar() {
