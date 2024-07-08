@@ -118,7 +118,6 @@ export default function Navbar() {
    */
   let { pageCategory, setPageCategory } = useContext(PageCategoryContext);
 
-  // TODO: It is possible that this hook is causing errors on Vercel
   // Window width listener
   let { width } = useWindowWidth();
 
